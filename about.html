@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
     <link rel="stylesheet" href="honey.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
@@ -494,12 +497,9 @@
                     </div>
                     <div class="text-box-center">
 
-                        <div id="carousel">
-                            <div class="carousel-button-slide-left">
-                                <span class="fa fa-angle-left"></span>
-                            </div>
-                            <ul class="caro_ul" id="main_caro">
-                                <li>
+                        <div class="honeyBeeTeam" id="honeyBeeTeam">
+                            <div>
+                                <div class="honeyBeeTeamReview">
                                     <h2>Diana Low</h2>
                                     <h4>Senior Personal Wealth Manager</h4>
                                     <p>
@@ -513,8 +513,15 @@
                                         impacts on
                                         their lives. ​
                                     </p>
-                                </li>
-                                <li>
+                                    <div class="teg-btn">
+                                        <ul>
+                                            <li>5x MDRT Qualifier</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="honeyBeeTeamReview">
                                     <h2>Diana High</h2>
                                     <h4>Senior Personal Wealth Manager</h4>
                                     <p>Being a financial services consultant, I see myself being tasked with a big
@@ -527,8 +534,15 @@
                                         impacts on
                                         their lives. ​
                                     </p>
-                                </li>
-                                <li>
+                                    <div class="teg-btn">
+                                        <ul>
+                                            <li>5x MDRT Qualifier</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="honeyBeeTeamReview">
                                     <h2>Diana Low - 3</h2>
                                     <h4>Senior Personal Wealth Manager</h4>
                                     <p>
@@ -542,8 +556,15 @@
                                         impacts on
                                         their lives. ​
                                     </p>
-                                </li>
-                                <li>
+                                    <div class="teg-btn">
+                                        <ul>
+                                            <li>5x MDRT Qualifier</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="honeyBeeTeamReview">
                                     <h2>Diana Low- midum</h2>
                                     <h4>Senior Personal Wealth Manager</h4>
                                     <p>
@@ -557,8 +578,15 @@
                                         impacts on
                                         their lives.
                                     </p>
-                                </li>
-                                <li>
+                                    <div class="teg-btn">
+                                        <ul>
+                                            <li>5x MDRT Qualifier</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="honeyBeeTeamReview">
                                     <h2>Diana Low - last one</h2>
                                     <h4>Senior Personal Wealth Manager</h4>
                                     <p>
@@ -572,25 +600,15 @@
                                         impacts on
                                         their lives. ​
                                     </p>
-                                </li>
-                            </ul>
-                            <div class="carousel-button-slide-right">
-                                <span class="fa fa-angle-right"></span>
+                                    <div class="teg-btn">
+                                        <ul>
+                                            <li>5x MDRT Qualifier</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- <div class="carousel-controls">
-                                <div class="dot active"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div> -->
                         </div>
-
-                        <div class="teg-btn">
-                            <ul>
-                                <li>5x MDRT Qualifier</li>
-                            </ul>
-                        </div>
+                        
                     </div>
                     <div class="lest-img">
                         <img src="./image/Group 211.png" alt="">
@@ -599,17 +617,9 @@
                 <div class="last-sec">
                     <h1>What’s does people say?</h1>
                 </div>
-                
-                <div class="container_cus" id="custom_slider_testimonial">
-                    <input type="radio" name="nav" id="first" checked />
-                    <input type="radio" name="nav" id="second" />
-                    <input type="radio" name="nav" id="third" />
 
-                    <label for="first" class="first"></label>
-                    <label for="second" class="second"></label>
-                    <label for="third" class="third"></label>
-
-                    <div class="one slide">
+                <div class="testimonial" id="testimonial">
+                    <div class="testimonial_slide">
                         <blockquote>
                             <span class="leftq quotes"></span> I have always thought of the importance of savings and
                             getting insurance for myself but I do not know where to start from. Kylie is very
@@ -618,26 +628,32 @@
                             Thanks to her, I now understand how to manage my financials better! <span
                                 class="rightq quotes"> </span>
                         </blockquote>
-                        <img src="./assests/Ellipse 5.png" alt="">
-                        <h2>Eileen Goh, Human Resource Executive</h2>
-                        <h6>Client of Kylie Ng</h6>
+                        <div class="testimonial_author">
+                            <img src="./assests/Ellipse 5.png" alt="">
+                            <div class="testimonial_author_detail">
+                                <h2>Eileen Goh, Human Resource Executive</h2>
+                                <h6>Client of Kylie Ng</h6>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="two slide">
+                    <div class="testimonial_slide">
                         <blockquote>
                             <span class="leftq quotes"></span> Agnes has been a reliable financial consultant with good
                             knowledge of different solutions. The key differentiator I liked about her is that she is
                             very trustworthy when it came to my investment decisions.<span class="rightq quotes">
                             </span>
                         </blockquote>
-                        <img src="./assests/Ellipse 5.png" width="170" height="130" />
-                        <h2>Muru CM, Director
-
-                        </h2>
-                        <h6> Client of Agnes Lew</h6>
+                        <div class="testimonial_author">
+                            <img src="./assests/Ellipse 5.png" width="170" height="130" />
+                            <div class="testimonial_author_detail">
+                                <h2>Muru CM, Director</h2>
+                                <h6> Client of Agnes Lew</h6>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="three slide">
+                    <div class="testimonial_slide">
                         <blockquote>
                             <span class="quotes leftq"></span> During this short time that we have known Kenneth, he has
                             been really helpful. Not only will he accommodate to my timing, he will try to come down to
@@ -645,16 +661,16 @@
 
                             ​ <span class="rightq quotes"></span>
                         </blockquote>
-                        <img src="./assests/Ellipse 5.png" width="170" height="130" />
-                        <h2>Jie Wei, Marketing Analyst
-
-                        </h2>
-                        <h6> Client of Kenneth Chng</h6>
+                        <div class="testimonial_author">
+                            <img src="./assests/Ellipse 5.png" width="170" height="130" />
+                            <div class="testimonial_author_detail">
+                                <h2>Jie Wei, Marketing Analyst</h2>
+                                <h6> Client of Kenneth Chng</h6>
+                            </div>
+                        </div>
                     </div>
-
-
-                </div>
-            </div>
+        </div>
+        </div>
         </div>
     </section>
 
@@ -723,119 +739,26 @@
             </div>
         </div>
         </div>
+
+        
     </section>
 
 
+   
 
-    <script>
-        $(function () {
-            var carouselList = $('#carousel ul');
-            carouselList.css({
-                "marginLeft": "-=400px"
+    <script src="slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#testimonial').slick({
+                slidesToShow: 1,
+                speed: 300,
             });
 
-            function changeSlide() {
-                if ((carouselList).is(':animated')) {
-                    return false;
-                } else {
-                    carouselList.animate({
-                        "marginLeft": "-=400px"
-                    }, 500, moveFirstSlide);
-                }
-            };
-
-            function moveFirstSlide() {
-                var firstItem = carouselList.find("li:first");
-                var lastItem = carouselList.find("li:last");
-                lastItem.after(firstItem);
-                carouselList.css({
-                    "marginLeft": "+=400px"
-                });
-                var active = $('.carousel-controls .active');
-                var next = active.next();
-                if (next.length == 0) {
-                    next = $('.carousel-controls div').first();
-                }
-                next.addClass('active');
-                active.removeClass('active');
-            }
-
-            function moveFirstSlideRightButton() {
-                var firstItem = carouselList.find("li:first");
-                var lastItem = carouselList.find("li:last");
-                lastItem.after(firstItem);
-                carouselList.css({
-                    "left": "+=400px"
-                });
-            }
-
-            function moveFirstSlideLeftButton() {
-                var firstItem = carouselList.find("li:first");
-                var lastItem = carouselList.find("li:last");
-                firstItem.before(lastItem);
-                carouselList.css({
-                    "left": "-=400px"
-                });
-            }
-            setInterval(changeSlide, 3000);
-            var slideLeft = $('.carousel-button-slide-left');
-            slideLeft.on('click', function () {
-                if ((carouselList).is(':animated')) {
-                    return false;
-                } else {
-                    carouselList.animate({
-                        "left": "+=400px"
-                    }, 300, moveFirstSlideLeftButton());
-                    var active = $('.carousel-controls .active');
-                    var prev = active.prev();
-                    if (prev.length == 0) {
-                        prev = $('.carousel-controls div').last();
-                    }
-                    prev.addClass('active');
-                    active.removeClass('active');
-                }
+            $('#honeyBeeTeam').slick({
+                arrows : false,
+                draggable: true,
             });
-            var slideRight = $('.carousel-button-slide-right');
-            slideRight.on('click', function () {
-                if ((carouselList).is(':animated')) {
-                    return false;
-                } else {
-                    carouselList.animate({
-                        "left": "-=400px"
-                    }, 300, moveFirstSlideRightButton());
-                    var active = $('.carousel-controls .active');
-                    var next = active.next();
-                    if (next.length == 0) {
-                        next = $('.carousel-controls div').first();
-                    }
-                    next.addClass('active');
-                    active.removeClass('active');
-                }
-            });
-        });
-
-
-
-        $(document).ready(function () {
-            var labels = $('.container_cus label');
-            var currentIndex = 0;
-            var interval;
-
-            function clickNextLabel() {
-                labels.eq(currentIndex).trigger('click');
-                currentIndex = (currentIndex + 1) % labels.length;
-            }
-
-            function resetInterval() {
-                clearInterval(interval);
-                interval = setInterval(clickNextLabel, 2000);
-            }
-
-            resetInterval(); // Initial setup
-
-            // Reattach interval after scroll
-            $(window).on('scroll', resetInterval);
-        });
+        });     
     </script>
 </body>
 

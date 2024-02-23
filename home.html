@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="honey.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link rel="modulepreload" href="https://unpkg.com/@splinetool/runtime@1.0.51/build/runtime.js">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
     div#img-container {
       display: flex;
@@ -401,13 +402,13 @@
 
   <section class="blue_bg" style="background-image: url(./assests/bluebg.png);">
     <div class="runnig_structure">
-      <div class="runnng_white runnng_white_two yellow_running">
-        <marquee direction="right"> where learning meets laughter and memories are made
+      <div class="runnng_white runnng_white_two yellow_running" style="padding: 20px 0 10px 0px;">
+        <marquee direction="left" style="margin: 0;"> where learning meets laughter and memories are made
           <img src="./assests/Vector (1).png" alt="">
         </marquee>
       </div>
-      <div class="runnng_white runnng_white_two">
-        <marquee direction="right"> where learning meets laughter and memories are made
+      <div class="runnng_white runnng_white_two" style="padding: 20px 0 10px 0px;">
+        <marquee direction="left" style="margin: 0;"> where learning meets laughter and memories are made
           <img src="./assests/Vector (2).png" alt="">
         </marquee>
       </div>
@@ -422,14 +423,14 @@
 
   <section class="loren_sectiom" style="background-image: url(./assests/third-bg.png);">
 
-    <div class="runnng_orange blue_runing">
-      <marquee direction="right"> where learning meets laughter and memories are made
+    <div class="runnng_orange blue_runing"  style="padding: 20px 0 10px 0px;">
+      <marquee direction="left" style="margin: 0;"> where learning meets laughter and memories are made
         <img src="./assests/Vector (1).png" alt="">
       </marquee>
     </div>
 
-    <div class="runnng_orange">
-      <marquee direction="right"> where learning meets laughter and memories are made
+    <div class="runnng_orange"  style="padding: 20px 0 10px 0px;">
+      <marquee direction="left" style="margin: 0;"> where learning meets laughter and memories are made
         <img src="./assests/Vector (1).png" alt="">
       </marquee>
     </div>
@@ -501,7 +502,7 @@
     </div>
   </section>
 
-  <section class="event_section" style="background-image: url(./assests/bg-footer-up.png);">
+  <section class="event_section" style="background-image: url(./assests/bg-footer-up.png); background-size: cover;">
 
     <div class="runnng_white" style="    transform: rotate(0deg);">
       <marquee direction="left" style="margin: 0%;"> where learning meets laughter and memories are made
@@ -517,39 +518,28 @@
         <h1 class="upcoming-events">Upcoming events</h1>
       </div>
 
-      <!-- <div class="section_mine">
-        <div class="secion_left">
-          <img class="evet_1" src="./assests/up-events.png" alt="">
-          <img class="evet_2  " src="./assests/up-event-2.png" alt="">
-        </div>
-        <div class="secion_right">
-          <h2 class="freedom-is-empowering">Freedom is Empowering</h2>
-          <p>I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is
-            gonna change. What?</p>
 
-
-          <div class="section_btn">
-            <span>
-              <li><a href="">lopremlopremlopremloprem</a> </li>
-            </span>
-            <span>
-              <li><a href="">lopremlopremlopremloprem</a> </li>
-            </span>
-          </div>
-          <div class="section_btn">
-            <span>
-              <li><a href="">lopremlopremlopremloprem</a> </li>
-            </span>
-            <span>
-              <li><a href="">lopremlopremlopremloprem</a> </li>
-            </span>
+      <div class="upcoming-events-slider-parent">
+        <div class="swiper upcomingEvent">
+          <div class="swiper-wrapper upcoming-events-swiper-wrapper">
+            <div class="swiper-slide upcoming-swiper-slide">
+              <img src="assests/freedom.png" alt="Freedom">
+            </div>
+            <div class="swiper-slide upcoming-swiper-slide">
+              <img src="assests/freedom.png" alt="Women">
+            </div>
+            <div class="swiper-slide upcoming-swiper-slide">
+              <img src="assests/freedom.png" alt="Art">
+            </div>
           </div>
         </div>
-      </div> -->
-      <div id="img-container">
+      </div>
+    
+
+      <!-- <div id="img-container">
         <img src="./assests/Events.png" class=" img-expand">
 
-      </div>
+      </div> -->
 
 
     </div>
@@ -677,6 +667,10 @@
     // });
 
     $(document).ready(function () {
+      let swiper = new Swiper(".upcomingEvent", {
+        spaceBetween: 20,
+      });
+      
       $('.block_cus_one').hover(function () {
         $(this).hide(); // Hide the hovered div
         $('.block_cus_one_hiden').css('display', 'block'); // Display the hidden div
@@ -741,6 +735,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>

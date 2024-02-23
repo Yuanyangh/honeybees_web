@@ -379,6 +379,7 @@ body {
 
   .runnng_white marquee {
     font-size: 45px;
+    line-height: 45px;
     outline: #29446d;
     color: transparent;
     -webkit-text-stroke: 1px #ffffff;

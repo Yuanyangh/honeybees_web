@@ -229,8 +229,9 @@ navbar a,navbar a:hover{
     padding: 80px 0;
 }
 .section-orange h3{
-    width: 600px;
+    width: 65%;
     margin: 0 auto;
+    font-size: 55px;
     text-transform: uppercase;
 }
 .section-orange p{
@@ -242,9 +243,11 @@ navbar a,navbar a:hover{
 }
 .words{
     font-family: 'Agrandir-TextBold';
-    font-size: 40px;
+    font-size: 55px;
     font-weight: 800;
+    line-height: 49.8px;
     color: #29446D;
+    width: max-content;
     -webkit-text-fill-color: #ffffff00; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;    color: #29446D;
 }
@@ -271,7 +274,7 @@ navbar a,navbar a:hover{
     
 }
 .contact-section{
-    height: 650px;
+    height: 550px;
     align-self: baseline;
 }
 .contact-section .col-7{
@@ -294,10 +297,10 @@ navbar a,navbar a:hover{
     align-self: center !important;
     font-family: 'Agrandir-TextBold';
     text-transform: uppercase;
-    font-size: 30px;
-    line-height: 27px;
+    font-size: 55px;
+    line-height: 49.8px;
     color: #fff;
-    width: 500px;
+    width: 60%;
     margin:0 auto;
     text-align: center;
 }
@@ -602,4 +605,79 @@ input[type="radio"] {
             opacity: 1;
             transform: translateY(0); /* Move the element to its final position */
         }
+    }
+
+    .upcoming-events-slider-parent{
+        max-width: 90%;
+        margin: auto;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .upcoming-events-swiper-wrapper{
+        max-width: max-content;
+        margin: auto;
+    }
+
+    .upcoming-swiper-slide{
+        text-align: center;
+    }
+
+    .upcoming_event_slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .testimonial_slide{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin: auto;
+    }
+
+   
+    
+    .testimonial_slide h2, h6{
+        color: white;
+        margin: 8px;
+    }
+
+    .testimonial_slide  h6{
+        font-size: 16px;
+    }
+
+    .testimonial_author{
+        display: flex;
+        column-gap: 10px;
+        color: white;
+        width: 100%;
+        max-width: 630px;
+        margin: auto;
+    }
+
+    .testimonial_slide blockquote{
+        margin: auto;
+    }
+
+    .testimonial_author img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .testimonial_author_detail{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .honeyBeeTeamReview{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .honeyBeeTeamReview .teg-btn ul li{
+        background: #EEAF30 !important;
     }
