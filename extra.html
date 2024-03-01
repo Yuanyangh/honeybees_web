@@ -1,0 +1,2218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="honey.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</head>
+<style>
+    #carousel {
+        margin-top: 100px !important;
+        margin: 0 auto;
+        height: 400px;
+        width: 550px;
+        /* border: 1px solid black; */
+        overflow: hidden;
+        position: relative;
+    }
+
+    ul.caro_ul li {
+        display: inline-block;
+        height: 400px;
+        width: 400px;
+        list-style: none;
+        float: left;
+    }
+
+    .caro_ul {
+        margin: 0 auto;
+        padding: 0;
+        /* width: 2000px; */
+        position: absolute;
+    }
+
+    [class*="carousel-button"] {
+        position: absolute;
+        transform: translate(0, -50%);
+        height: 30px;
+        width: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    .carousel-button-slide-left {
+        display: none;
+        left: 0;
+        top: 50%;
+        z-index: 2;
+    }
+
+    .carousel-button-slide-left:hover span {
+        color: grey;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    .carousel-button-slide-left span {
+        color: white;
+        top: 50%;
+        transform: translate(0, -50%);
+        position: absolute;
+        transition: 0.5s;
+        font-size: 30px;
+    }
+
+    .carousel-button-slide-left span:hover {
+        color: grey;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    .carousel-button-slide-right {
+        display: none;
+        right: 0;
+        top: 50%;
+    }
+
+    .carousel-button-slide-right:hover span {
+        color: grey;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    .carousel-button-slide-right span {
+        color: white;
+        top: 50%;
+        transform: translate(0, -50%);
+        position: absolute;
+        transition: 0.5s;
+        font-size: 30px;
+        right: 0;
+    }
+
+    .carousel-button-slide-right span:hover {
+        color: grey;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    .carousel-controls {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        text-align: center;
+        width: 400px;
+    }
+
+    .dot {
+        background-color: #ccd4e2;
+        width: 8px;
+        height: 8px;
+        border: 1px solid #ccd4e2;
+        display: inline-block;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .active {
+        width: 8px;
+        height: 8px;
+        background-color: #293df2;
+        border-color: #293df2;
+        display: inline-block;
+    }
+
+    .inactive {
+        background-color: #ccd4e2;
+        width: 8px;
+        height: 8px;
+        border: 1px solid #ccd4e2;
+        display: inline-block;
+    }
+</style>
+<style>
+    div#custom_slider_testimonial label {
+        opacity: 0;
+    }
+
+    .container_cus {
+        width: 50%;
+        min-height: 315px;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 30px;
+        overflow: hidden;
+    }
+
+    #custom_slider_testimonial h1 {
+        text-align: center;
+        text-shadow: 0 1px white;
+        color: #02303F;
+    }
+
+    #custom_slider_testimonial h2 {
+        color: white;
+        margin: 15px 0 5px;
+        /* text-shadow:0 1px rgba(255,255,255,0.5); */
+    }
+
+    #custom_slider_testimonial h6 {
+        color: white;
+        margin: 0;
+    }
+
+    input[type="radio"] {
+        position: absolute;
+        width: 1px;
+        /* Setting this to 0 make it invisible for VoiceOver */
+        height: 1px;
+        /* Setting this to 0 make it invisible for VoiceOver */
+        padding: 0;
+        margin: -1px;
+        border: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    #custom_slider_testimonial label {
+        display: block;
+        width: 32%;
+        border: 4px solid white;
+        position: absolute;
+        bottom: 5px;
+        cursor: pointer;
+        transition: border-color 0.3s linear;
+    }
+
+    label.second {
+        left: 34%;
+    }
+
+    label.third {
+        left: 68%;
+    }
+    .custome-slider{
+        width: fit-content;
+    }
+    blockquote {
+        margin: 0;
+        padding: 20px;
+        /* background-color: white; */
+        color: black;
+        transition: background-color 0.6s linear;
+        font-weight: 600;
+        line-height: 19.8px;
+        border-radius: 20px;
+        background-image: url("./assests/Union.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left center;
+        
+        min-width: max-content !important;
+    }
+
+    /* blockquote:after { 
+  content: " "; 
+  height: 0; 
+  width: 0; 
+  position: absolute; 
+  top: 100%; 
+  border: solid transparent; 
+  border-top-color: #DA532B;
+  border-left-color:#DA532B;
+  border-width: 10px; 
+  left: 10%; 
+}  */
+    /* #second:checked ~ .two blockquote {
+  background-color:purple;
+} */
+    .two blockquote:after {
+        border: solid transparent;
+        border-top-color: purple;
+        border-left-color: purple;
+        border-width: 10px;
+    }
+
+    /* #third:checked ~ .three blockquote{
+  background-color:#54885F;
+} */
+    .three blockquote:after {
+        border: solid transparent;
+        border-top-color: #54885F;
+        border-left-color: #54885F;
+        border-width: 10px;
+    }
+
+    .quotes {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 5em;
+    }
+
+    .leftq {
+        top: -25px;
+        left: 5px;
+    }
+
+    .rightq {
+        bottom: -10px;
+        right: 5px;
+    }
+
+    #custom_slider_testimonial img {
+        float: left;
+        margin-right: 20px;
+        width: 65px;
+        height: 65px;
+        margin-top: 23px;
+        border-radius: 100%;
+        object-fit: cover;
+        /* border: solid 4px #eeaf30; */
+    }
+
+    .slide {
+        position: absolute;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.6s ease-in;
+    }
+
+    #first:checked~label.first {
+        border-width: 6px;
+        border-color: #eeaf30;
+    }
+
+    #second:checked~label.second {
+        border-width: 6px;
+        border-color: #eeaf30;
+    }
+
+    #third:checked~label.third {
+        border: 6px solid #eeaf30;
+    }
+
+    #first:checked~div.one {
+        left: 0;
+        opacity: 1;
+    }
+
+    #second:checked~div.two {
+        left: 0;
+        opacity: 1;
+    }
+
+    #third:checked~div.three {
+        left: 0;
+        opacity: 1;
+    }
+</style>
+
+<body>
+    <navbar>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12">
+
+                    <div>
+                        <li>
+                            <a href="/honey.html">HOME</a>
+                        </li>
+                        <li>
+                            <a href="/index-2.html">ABOUT US</a>
+                        </li>
+                        <li>
+                            <a href="/career.html">CAREER</a>
+                        </li>
+                        <li>
+                            <a href="/contact.html">QUIZ</a>
+                        </li>
+                        <li>
+                            <a href="/fearless.html">Be Fearless</a>
+                        </li>
+                    </div>
+                    <a href="#"><img src="asssets/Group 149.png" alt=""></a>
+
+                </div>
+
+            </div>
+        </div>
+    </navbar>
+    <section class="hero-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col center-img">
+                    <img src="./image/Honeybees_logo.png" alt="">
+                </div>
+                <div class="col right-img">
+                    <img src="./image/music.png" alt="">
+                </div>
+            </div>
+
+            <div class="hero-hed-sec">
+                <h1>All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it?</h1>
+                <p>Obi-Wan is here. The Force is with him.</p>
+                <img src="./image/Group 175.png" alt="" style="margin-top: -100px;">
+            </div>
+
+
+
+            <div class="sendo-section">
+                <h2>
+                    Lorem ipsum
+                </h2>
+                <p>
+                    You don't believe in the Force, do you?
+                </p>
+            </div>
+            <div class="risk-sec">
+                <div class="img-box">
+                    <img src="./image/Rectangle 69.png" alt="">
+                </div>
+                <div class="text-box">
+                    <h1>Risk management</h1>
+                    <p>I've been there. My folks were always on me to groom myself and wear underpants. What am I, the
+                        pope? Yes! In your face, Gandhi! You guys go on without me! I'm going to go… look for more stuff
+                        to steal!</p>
+                    <div class="teg-btn">
+                        <ul>
+                            <li>Life Insurance</li>
+                            <li>Health Insurance</li>
+                            <li>Critical Illness Insurance</li>
+                        </ul>
+                    </div>
+                    <div class="teg-btn">
+                        <ul>
+                            <li>Maternity Insurance</li>
+                            <li>Personal Accident</li>
+                            <li>Disability Income</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wealth-bg-after">
+                <div class="wealth-sec">
+                    <div class="text-box-right">
+                        <h1>wealth management</h1>
+                        <p>I've been there. My folks were always on me to groom myself and wear underpants. What am I,
+                            the pope? Yes! In your face, Gandhi! You guys go on without me! I'm going to go… look for
+                            more stuff to steal!</p>
+                        <div class="teg-btn-right">
+                            <ul>
+                                <li>Savings & Investments</li>
+                                <li>Legacy Planning</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <img src="./image/Rectangle 69 (1).png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="corporate-sec">
+                <div class="img-box">
+                    <img src="./image/Rectangle 69 (2).png" alt="">
+                </div>
+                <div class="text-box">
+                    <h1>Corporate solution</h1>
+                    <p>I've been there. My folks were always on me to groom myself and wear underpants. What am I, the
+                        pope? Yes! In your face, Gandhi! You guys go on without me! I'm going to go… look for more stuff
+                        to steal!</p>
+                    <div class="teg-btn">
+                        <ul>
+                            <li>Employee Health & Benefits</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider slider1" style="background-color: #EE7430;margin: 150px 0;">
+                <div class="d-flex">
+                    <h3 class="words"><span style="width: 300px;display: inline;">Honeybees offer</span><span
+                            style="width: 300px;display: inline;margin-left:200px;">Honeybees offer</span></h3>
+                </div>
+            </div>
+
+            <div class="history-sec">
+                <h1>History/Journey</h1>
+                <div class="his-img"><img src="./image/Group 212.png" alt=""></div>
+
+                <div class="box-wrap">
+                    <div class="his-text-box">
+                        <h2>2017</h1>
+                            <p>I call it luck. Obi-Wan is here. The Force is with him. I call it luck. I don't know what
+                                you're talking about. I am a member of the Imperial Senate on a diplomatic mission to
+                                Alderaan</p>
+                    </div>
+                    <div class="his-text-box">
+                        <h2>2018</h1>
+                            <p>I call it luck. Obi-Wan is here. The Force is with him. I call it luck. I don't know what
+                                you're talking about. I am a member of the Imperial Senate on a diplomatic mission to
+                                Alderaan</p>
+                    </div>
+                    <div class="his-text-box">
+                        <h2>2019</h1>
+                            <p>I call it luck. Obi-Wan is here. The Force is with him. I call it luck. I don't know what
+                                you're talking about. I am a member of the Imperial Senate on a diplomatic mission to
+                                Alderaan</p>
+                    </div>
+                    <div class="his-text-box">
+                        <h2>2020</h1>
+                            <p>I call it luck. Obi-Wan is here. The Force is with him. I call it luck. I don't know what
+                                you're talking about. I am a member of the Imperial Senate on a diplomatic mission to
+                                Alderaan</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="testimnial-bg-after">
+                <div class="testimnial-sec">
+                    <h1>work hard. play hard. rest even harder.</h1>
+                    <img src="./image/Mask group.png" alt="">
+                    <p>Advise from Founder,<br> the AIA Financial Advisor</p>
+                </div>
+            </div>
+
+            <div class="slider slider1"
+                style="background-color: #EEAF30;margin: 0px 0;-webkit-transform: rotate(-1deg) !important;">
+                <div class="d-flex">
+                    <h3 class="words"><span style="width: 300px;display: inline;">Honeybees offer</span><span
+                            style="width: 300px;display: inline;margin-left:200px;">Honeybees offer</span></h3>
+                </div>
+            </div>
+
+            <div class="honeybees-sec">
+                <h1>The Honeybees</h1>
+                <div class="ing-text-wrap">
+                    <div class="right-img-honey">
+                        <img src="./image/Group 210.png" alt="">
+                    </div>
+                    <div class="text-box-center">
+
+                        <div id="carousel">
+                            <div class="carousel-button-slide-left">
+                                <span class="fa fa-angle-left"></span>
+                            </div>
+                            <ul class="caro_ul" id="main_caro">
+                                <li>
+                                    <h2>Diana Low</h2>
+                                    <h4>Senior Personal Wealth Manager</h4>
+                                    <p>
+                                        Being a financial services consultant, I see myself being tasked with a big
+                                        responsibility to
+                                        educate and guide my clients through big financial decisions to achieve their
+                                        goals in life.
+                                        Through my work, the most rewarding and fulfilling experiences is being able to
+                                        develop
+                                        relationships with people from different walks of life and making significant
+                                        impacts on
+                                        their lives. ​
+                                    </p>
+                                </li>
+                                <li>
+                                    <h2>Diana High</h2>
+                                    <h4>Senior Personal Wealth Manager</h4>
+                                    <p>Being a financial services consultant, I see myself being tasked with a big
+                                        responsibility to
+                                        educate and guide my clients through big financial decisions to achieve their
+                                        goals in life.
+                                        Through my work, the most rewarding and fulfilling experiences is being able to
+                                        develop
+                                        relationships with people from different walks of life and making significant
+                                        impacts on
+                                        their lives. ​
+                                    </p>
+                                </li>
+                                <li>
+                                    <h2>Diana Low - 3</h2>
+                                    <h4>Senior Personal Wealth Manager</h4>
+                                    <p>
+                                        Being a financial services consultant, I see myself being tasked with a big
+                                        responsibility to
+                                        educate and guide my clients through big financial decisions to achieve their
+                                        goals in life.
+                                        Through my work, the most rewarding and fulfilling experiences is being able to
+                                        develop
+                                        relationships with people from different walks of life and making significant
+                                        impacts on
+                                        their lives. ​
+                                    </p>
+                                </li>
+                                <li>
+                                    <h2>Diana Low- midum</h2>
+                                    <h4>Senior Personal Wealth Manager</h4>
+                                    <p>
+                                        Being a financial services consultant, I see myself being tasked with a big
+                                        responsibility to
+                                        educate and guide my clients through big financial decisions to achieve their
+                                        goals in life.
+                                        Through my work, the most rewarding and fulfilling experiences is being able to
+                                        develop
+                                        relationships with people from different walks of life and making significant
+                                        impacts on
+                                        their lives.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h2>Diana Low - last one</h2>
+                                    <h4>Senior Personal Wealth Manager</h4>
+                                    <p>
+                                        Being a financial services consultant, I see myself being tasked with a big
+                                        responsibility to
+                                        educate and guide my clients through big financial decisions to achieve their
+                                        goals in life.
+                                        Through my work, the most rewarding and fulfilling experiences is being able to
+                                        develop
+                                        relationships with people from different walks of life and making significant
+                                        impacts on
+                                        their lives. ​
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="carousel-button-slide-right">
+                                <span class="fa fa-angle-right"></span>
+                            </div>
+                            <!-- <div class="carousel-controls">
+                                <div class="dot active"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div> -->
+                        </div>
+
+                        <div class="teg-btn">
+                            <ul>
+                                <li>5x MDRT Qualifier</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="lest-img">
+                        <img src="./image/Group 211.png" alt="">
+                    </div>
+                </div>
+                <div class="last-sec">
+                    <h1>What’s does people say?</h1>
+                </div>
+
+                <div class="container_cus" id="custom_slider_testimonial">
+                    <input type="radio" name="nav" id="first" checked />
+                    <input type="radio" name="nav" id="second" />
+                    <input type="radio" name="nav" id="third" />
+
+                    <label for="first" class="first"></label>
+                    <label for="second" class="second"></label>
+                    <label for="third" class="third"></label>
+
+                    <div class="one slide">
+                        <blockquote>
+                            <span class="leftq quotes"></span> I have always thought of the importance of savings and
+                            getting insurance for myself but I do not know where to start from. Kylie is very
+                            knowledgable and has been nice patient as she answers my queries.
+
+                            Thanks to her, I now understand how to manage my financials better! <span
+                                class="rightq quotes"> </span>
+                        </blockquote>
+                        <img src="./assests/Ellipse 5.png" alt="">
+                        <h2>Eileen Goh, Human Resource Executive</h2>
+                        <h6>Client of Kylie Ng</h6>
+                    </div>
+
+                    <div class="two slide">
+                        <blockquote>
+                            <span class="leftq quotes"></span> Agnes has been a reliable financial consultant with good
+                            knowledge of different solutions. The key differentiator I liked about her is that she is
+                            very trustworthy when it came to my investment decisions.<span class="rightq quotes">
+                            </span>
+                        </blockquote>
+                        <img src="./assests/Ellipse 5.png" width="170" height="130" />
+                        <h2>Muru CM, Director
+
+                        </h2>
+                        <h6> Client of Agnes Lew</h6>
+                    </div>
+
+                    <div class="three slide">
+                        <blockquote>
+                            <span class="quotes leftq"></span> During this short time that we have known Kenneth, he has
+                            been really helpful. Not only will he accommodate to my timing, he will try to come down to
+                            the most convenient location to have an appointment.
+
+                            ​ <span class="rightq quotes"></span>
+                        </blockquote>
+                        <img src="./assests/Ellipse 5.png" width="170" height="130" />
+                        <h2>Jie Wei, Marketing Analyst
+
+                        </h2>
+                        <h6> Client of Kenneth Chng</h6>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <style>
+        .custome-slider {
+            overflow: hidden;
+        }
+        .custome-slider img{
+            width: 60px !important;
+            height: 60px !important;
+            object-fit: cover !important;
+        }.custome-slider blockquote{
+            font-size: 16px;
+            font-family: 'AvenirNextlight' !important;
+        }
+    </style>
+    <section>
+        <div class="gtco-testimonials">
+            <h2>Testimonials Carousel - Cards Comments</h2>
+            <div class="owl-carousel owl-carousel1 owl-theme">
+                <div class="sizewidth">
+                    <div class="custome-slider">
+                        <blockquote>
+                            <span class="leftq quotes"></span>Even if I reach....<span
+                                class="rightq quotes"> </span>
+                        </blockquote>
+                        <img src="./assests/Ellipse 5.png" alt="">
+                        <h6>Eileen Goh, Human Resource Executive</h6>
+                        <p>Client of Kylie Ng</p>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="custome-slider">
+                        <blockquote>
+                            <span class="leftq quotes"></span> I have always thought of the importance of savings and
+                            getting insurance for myself but I do not know where to start from. Kylie is very
+                            knowledgable and has been nice patient as she answers my queries.
+
+                            Thanks to her, I now understand how to manage my financials better! <span
+                                class="rightq quotes"> </span>
+                        </blockquote>
+                        <img src="./assests/Ellipse 5.png" alt="">
+                        <h6>Eileen Goh, Human Resource Executive</h6>
+                        <p>Client of Kylie Ng</p>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="custome-slider">
+                        <blockquote>
+                            <span class="leftq quotes"></span> My requirem....<span
+                                class="rightq quotes"> </span>
+                        </blockquote>
+                        <img src="./assests/Ellipse 5.png" alt="">
+                        <h6>Eileen Goh, Human Resource Executive</h6>
+                        <p>Client of Kylie Ng</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section class="frame-section about_footer">
+        <div class="mask-group-parent-wrapper">
+            <div class="footer-wrapper">
+                <div class="footer">
+                    <div class="footer-inner">
+                        <form class="drop-your-question-and-email-o-parent">
+                            <h2 class="drop-your-question">
+                                Drop your question and email or you can tell us your
+                                favourite song?
+                            </h2>
+
+                            <div class="input-details-group-parent">
+                                <div class="title_filed">
+                                    <input class="input-details-group" type="text" placeholder="Your Title" />
+                                    <img class="icon-chevron-bottom" alt="" src="./assests/Vector.png" />
+                                </div>
+
+                                <div class="name_field">
+                                    <input class="input-details-group" type="text" placeholder="Your Title" />
+                                </div>
+
+                            </div>
+
+                            <div class="group-div">
+                                <div class="frame-child5"></div>
+                                <input class="your-email" placeholder="Your Email..." type="text" />
+                            </div>
+                            <div class="rectangle-parent3">
+
+                                <div class="whats-in-your">What’s in your mind?</div>
+                                <button class="send-wrapper">
+                                    <div class="send">send</div>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="rematch-quote">
+                        <div class="authorized-representation-a-i">
+                            <h2 class="i-think-we">
+                                I think we need a rematch. Ronald Reagon. Marty, you seem
+                                so nervous, is something wrong?
+                            </h2>
+                        </div>
+                        <div class="social-media-icons">
+                            <img class="icon-linkedin" loading="eager" alt="" src="./assests/🦆 icon _linkedin_.png" />
+
+                            <img class="icon-instagram" loading="eager" alt=""
+                                src="./assests/🦆 icon _instagram_.png" />
+
+                            <img class="icon-facebook-squared" loading="eager" alt=""
+                                src="./assests/🦆 icon _facebook squared_.png" />
+                        </div>
+                    </div>
+                    <div class="authorized-representative-msg">
+                        <div class="sp-honeybees-is-an-container">
+                            <p class="sp-honeybees-is-an">
+                                SP-HONEYBEES is an authorised representative of AIA
+                                Singapore Private Limited (Reg. No. 201106386R)
+                            </p>
+                            <p class="by-sp-honeybees">© 2022 by SP-HONEYBEES</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!-- <script>
+        $(function () {
+            var carouselList = $('#carousel ul');
+            carouselList.css({
+                "marginLeft": "-=400px"
+            });
+
+            function changeSlide() {
+                if ((carouselList).is(':animated')) {
+                    return false;
+                } else {
+                    carouselList.animate({
+                        "marginLeft": "-=400px"
+                    }, 500, moveFirstSlide);
+                }
+            };
+
+            function moveFirstSlide() {
+                var firstItem = carouselList.find("li:first");
+                var lastItem = carouselList.find("li:last");
+                lastItem.after(firstItem);
+                carouselList.css({
+                    "marginLeft": "+=400px"
+                });
+                var active = $('.carousel-controls .active');
+                var next = active.next();
+                if (next.length == 0) {
+                    next = $('.carousel-controls div').first();
+                }
+                next.addClass('active');
+                active.removeClass('active');
+            }
+
+            function moveFirstSlideRightButton() {
+                var firstItem = carouselList.find("li:first");
+                var lastItem = carouselList.find("li:last");
+                lastItem.after(firstItem);
+                carouselList.css({
+                    "left": "+=400px"
+                });
+            }
+
+            function moveFirstSlideLeftButton() {
+                var firstItem = carouselList.find("li:first");
+                var lastItem = carouselList.find("li:last");
+                firstItem.before(lastItem);
+                carouselList.css({
+                    "left": "-=400px"
+                });
+            }
+            setInterval(changeSlide, 3000);
+            var slideLeft = $('.carousel-button-slide-left');
+            slideLeft.on('click', function () {
+                if ((carouselList).is(':animated')) {
+                    return false;
+                } else {
+                    carouselList.animate({
+                        "left": "+=400px"
+                    }, 300, moveFirstSlideLeftButton());
+                    var active = $('.carousel-controls .active');
+                    var prev = active.prev();
+                    if (prev.length == 0) {
+                        prev = $('.carousel-controls div').last();
+                    }
+                    prev.addClass('active');
+                    active.removeClass('active');
+                }
+            });
+            var slideRight = $('.carousel-button-slide-right');
+            slideRight.on('click', function () {
+                if ((carouselList).is(':animated')) {
+                    return false;
+                } else {
+                    carouselList.animate({
+                        "left": "-=400px"
+                    }, 300, moveFirstSlideRightButton());
+                    var active = $('.carousel-controls .active');
+                    var next = active.next();
+                    if (next.length == 0) {
+                        next = $('.carousel-controls div').first();
+                    }
+                    next.addClass('active');
+                    active.removeClass('active');
+                }
+            });
+        });
+
+
+
+        $(document).ready(function () {
+            var labels = $('.container_cus label');
+            var currentIndex = 0;
+            var interval;
+
+            function clickNextLabel() {
+                labels.eq(currentIndex).trigger('click');
+                currentIndex = (currentIndex + 1) % labels.length;
+            }
+
+            function resetInterval() {
+                clearInterval(interval);
+                interval = setInterval(clickNextLabel, 2000);
+            }
+
+            resetInterval(); // Initial setup
+
+            // Reattach interval after scroll
+            $(window).on('scroll', resetInterval);
+        });
+    </script> -->
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- Owl Carousel JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        (function () {
+            "use strict";
+
+            var carousels = function () {
+                $(".owl-carousel1").owlCarousel({
+                    loop: true,
+                    center: true,
+                    margin: 0,
+                    responsiveClass: true,
+                    nav: false,
+                    responsive: {
+                        0: {
+                            items: 1,
+                            nav: false
+                        },
+                        680: {
+                            items: 2,
+                            nav: false,
+                            loop: false
+                        },
+                        1000: {
+                            items: 3,
+                            nav: true
+                        }
+                    }
+                });
+            };
+
+            (function ($) {
+                carousels();
+            })(jQuery);
+        })();
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(./assests/Agrandir\ -\ Free\ For\ Personal\ Use/!important);
+  }
+  body {
+    font-family: system-ui;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+
+
+
+  .section_mine {
+    display: flex;
+    width: 82%;
+    align-items: center;
+  }
+
+  .section_btn li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .secion_left {
+    width: 50% !important;
+    z-index: 9999 !important;
+  }
+
+  .secion_right {
+    width: 50%;
+    text-align: left;
+  }
+
+  .section_btn {
+    display: flex;
+    gap: 12px;
+  }
+
+  .section_btn li {
+    background: #eeaf30;
+    /* width: 31%; */
+    font-size: 15px;
+    margin-bottom: 5px;
+    padding: 4px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .section_mine {
+    position: relative;
+  }
+
+  /* .section_mine:after {
+  background-image: url("./assests/up-events.png");
+    content: "";
+    background: red;
+    width: 600px;
+    position: absolute;
+    right: 46%;
+    height: 100%;
+} */
+
+  /* .section_mine:after {
+    position: absolute;
+    height: 213px !important;
+    width: 50% !important;
+    z-index: 3;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    content: "";
+    background: red;
+    background-image: url("./assests/up-events.png");
+} */
+
+  /* .secion_left img {
+    margin-left: 104px;
+} */
+
+  .secion_left:before {
+    background-image: url(./assests/up-eve-left.png);
+    position: absolute;
+    height: 100% !important;
+    width: 20%;
+    z-index: 3;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0%;
+    right: -22%;
+  }
+
+  /* .secion_left img {
+    width: 80%;
+} */
+  .runnng_orange {
+    width: 100%;
+    padding: 20px 0px;
+    background: #ee7430;
+    transform: rotate(-1deg);
+  }
+
+  .runnng_orange marquee {
+    color: transparent;
+    font-size: 45px;
+    outline: white;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+
+    text-transform: uppercase;
+    letter-spacing: -4px;
+  }
+
+  h1.upcoming-events {
+    /* margin: 0; */
+    flex: 1;
+    /* position: relative; */
+    font-size: 55px;
+    /* line-height: 90%; */
+    text-transform: uppercase;
+    font-weight: 400;
+    /* font-family: inherit; */
+    /* display: inline-block; */
+    max-width: 100%;
+    /* z-index: 2; */
+    color: white;
+    text-align: center;
+  }
+
+  .freedom-is-empowering {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: inherit;
+    z-index: 2;
+    color: white;
+  }
+
+  .secion_right p {
+    font-size: 18px;
+    color: white;
+  }
+
+  .secion_left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 0;
+    align-items: center;
+  }
+
+  img.evet_1 {
+    width: 300px;
+  }
+
+  img.evet_2 {
+    margin-left: -115px;
+
+    z-index: 1;
+    width: 308px;
+  }
+
+  .note_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    position: relative;
+    margin: 75px auto;
+    gap: 25px;
+  }
+
+  .not_img h2 {
+    width: 100%;
+    text-align: right;
+    font-size: 40px;
+    color: white;
+    /* position: relative; */
+    position: absolute;
+    top: -67px;
+    right: 43%;
+  }
+
+  .not_text div {
+    color: white;
+    font-size: 19px;
+  }
+
+  .i-think-i1 {
+    margin-top: 24px;
+  }
+
+  .content_container {
+    width: 49%;
+    font-size: 55px;
+    text-align: center;
+    margin: auto;
+    color: white;
+    margin-top: 230px;
+    position: relative;
+  }
+
+  button.sign_up {
+    font-weight: 800;
+    font-size: 13px;
+    background: white;
+    padding: 9px 20px;
+    border: 3px solid #eeaf30;
+    border-radius: 30px;
+    margin-left: 25px;
+    box-shadow: -9px 10px 2px 0px rgba(187, 170, 204, 1);
+    -webkit-box-shadow: -9px 10px 2px 0px #3061ab;
+    -moz-box-shadow: -9px 10px 2px 0px rgba(187, 170, 204, 1);
+    margin-top: 13px;
+  }
+
+  .content_container:before {
+    content: "";
+    background-image: url("./assests/bee_mesage.png");
+    /* background: forestgreen; */
+    width: 67%;
+    height: 100%;
+    position: absolute;
+    right: initial;
+    bottom: -240px;
+    background-repeat: no-repeat;
+    left: 86%;
+  }
+
+  section.event_section {
+    padding-bottom: 300px;
+    margin-top: -16px;
+  }
+
+  /* form */
+  .input-details-group-parent {
+    display: flex;
+  }
+
+  input {
+    border: solid 1px black;
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 15px;
+  }
+
+  .title_filed {
+    position: relative;
+    width: 32%;
+  }
+
+  img.icon-chevron-bottom {
+    position: absolute;
+    right: 32px;
+    top: 15px;
+  }
+
+  .title_filed input {
+    border: solid 3px #eeaf30;
+    width: 75%;
+  }
+
+  .name_field {
+    width: 100% !important;
+    text-align: justify;
+  }
+
+  .name_field input {
+    width: 91%;
+  }
+
+  .group-div input {
+    width: 90%;
+    margin-top: 12px;
+  }
+
+  .footer-wrapper {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+
+  section.frame-section {
+    background: #3061ab;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    margin-top: -59px;
+    padding-bottom: 3px;
+  }
+
+  .mask-group-parent-wrapper {
+    background-image: url("./assests/Honeybees_logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100% !important;
+  }
+
+  h2.drop-your-question {
+    color: white;
+    padding-top: 150px;
+    font-size: 30px;
+  }
+
+  .rectangle-parent3 {
+    display: flex;
+    align-items: baseline;
+    justify-content: end;
+    width: 96%;
+    position: relative;
+  }
+
+  .whats-in-your {
+    background: white;
+    width: 93%;
+    margin-top: 12px;
+    padding: 8px;
+    border-radius: 20px;
+    text-align: left;
+    /* position: relative; */
+  }
+
+  button.send-wrapper {
+    border-radius: 20px;
+    padding: 8px 25px;
+    border: solid #eeaf30 3px;
+    position: absolute;
+    top: 10px;
+  }
+
+  .rematch-quote {
+    padding-top: 120px;
+    display: flex;
+    text-align: left;
+    gap: 236px;
+    align-items: center;
+  }
+
+  .authorized-representation-a-i {
+    width: 48%;
+    color: white;
+    font-size: 17px;
+  }
+
+  .authorized-representative-msg {
+    margin-top: 60px;
+  }
+
+
+  .sp-honeybees-is-an-container p {
+    color: white;
+    font-size: 12px;
+  }
+
+  input::placeholder {
+    font-size: 18px;
+    font-weight: 700;
+    color: 29446d;
+  }
+
+  .runnng_white {
+    width: 100%;
+    padding: 20px 0px;
+    background: white;
+    transform: rotate(-2deg);
+    margin-bottom: -3px;
+  }
+
+  .runnng_white marquee {
+    font-size: 45px;
+    outline: #29446d;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px #29446d;
+    text-stroke: 1px #ffffff;
+    letter-spacing: -4px;
+  }
+
+
+  .main_heading {
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  .main_heading h1 {
+    font-size: 60px;
+    color: white;
+  }
+
+  .main_heading p {
+    margin-top: -29px;
+    color: white;
+    font-size: 15px;
+    padding-bottom: 20px;
+  }
+
+  .block_sec {
+    text-align: center;
+  }
+
+
+  .blocks {
+    width: 100%;
+  }
+
+  .blocks img {
+    width: 40%;
+    padding-bottom: 51px;
+  }
+
+  .blocks.blocks_join {
+    padding-bottom: 150px;
+  }
+  .block_text {
+    text-align: center;
+    width: 38%;
+    margin: auto;
+    padding-bottom: 200px;
+}
+
+.block_text h1 {
+    color: white;
+    font-size: 41px;
+}
+
+.block_text p {
+    color: white;
+    font-size: 18px;
+}
+.block_text {
+    position: relative;
+}.block_text {}
+
+.block_text:before {
+    content: "";
+    background-image: url("./assests/bee_mesage.png");
+    /* background: forestgreen; */
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    right: initial;
+    bottom: -78px;
+    background-repeat: no-repeat;
+    left: 114%;
+}
+
+section.loren_sectiom {
+    padding-bottom: 130px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.block_text:after {
+  content: "";
+    background-image: url("./assests/left-bee.png");
+    /* background: forestgreen; */
+    width: 67%;
+    height: 100%;
+    position: absolute;
+    bottom: -89px;
+    background-repeat: no-repeat;
+    right: 117%;
+}
+.runnng_orange.blue_runing {
+    background: #29446d;
+    margin-bottom: 0px;
+    transform: rotate(1deg);
+}
+.runnng_orange.blue_runing marquee img {
+   
+    margin-left: 18px;
+}
+section.blue_bg {
+  background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 8px 0 100px 0;
+    text-align: center;
+}
+
+.main_content h1 {
+    color: white;
+    font-size: 60px;
+    text-transform: uppercase;
+  padding-top: 60px;  
+  }
+
+.main_content {
+    width: 75%;
+    margin: auto;
+}
+.main_content p {
+    color: white;
+    margin-bottom: 20px;
+}
+span.strok_text {
+    color: transparent;
+    -webkit-text-stroke: 2px #ffffff;
+    text-stroke: 1px #ffffff;
+}
+.runnng_white.runnng_white_two {
+    transform: rotate(1deg);
+}
+.runnng_white.runnng_white_two.yellow_running {
+  background: #eeaf30;
+    margin-bottom: -4px;
+    transform: rotate(2deg);
+    margin-top: -31px;}
+.runnng_white.runnng_white_two.yellow_running marquee {
+    font-size: 45px;
+    outline: white;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    text-stroke: 1px #ffffff;
+    letter-spacing: -4px;
+}
+section.banner_Section {
+    background-size: cover;
+    background: no-repeat;
+    background-position: center;
+    padding-top: 30px;
+    padding-bottom: 90px;
+}
+
+.main_head_content {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.main_head_content h1 {
+    width: 52%;
+    margin: auto;
+    font-size: 55px;
+    color: #29446d;
+}
+
+.main_head_content p {
+    color: #29446d;
+    font-size: 14px;
+    font-weight: 700;
+}
+.running_banner {
+    padding-top: 50px;
+    padding-bottom: 32px;
+}
+.menu-list ul {
+    display: flex;
+    justify-content: center;
+    background: #fffbf559;
+    width: 62%;
+    margin: auto;
+    border-radius: 50px;
+    padding: 0;
+}
+
+.menu-list ul li {
+    padding: 15px 40px;
+    list-style-type: none;
+    text-transform: uppercase;
+    color: #29446d;
+    font-weight: 800 !important;
+}
+li.btn {
+    background: #FF6464;
+    border-radius: 50px;
+    margin-left: 11px;
+}
+.menu-list ul li:hover {
+  color: white;
+    background-color: #3061AB;
+    border-radius: 50px;
+}
+.home_meu .menu-list ul li:hover {
+    background-color: white;
+      color: #3061AB;
+      border-radius: 50px;
+  }
+  .home_meu li.btn:hover {
+    color: #3061AB !important;
+    border-radius: 50px;
+    margin-left: 11px;
+}
+.main_menue:before {
+  background-image: url("./assests/btn-top.png");
+    content: "";
+    position: absolute;
+    /* background: red; */
+    width: 200px;
+    height: 100%;
+    right: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -37px;
+}
+.main_menue {
+    position: relative;
+}
+.menu-list {
+    padding-bottom: 30px;
+}
+li.btn {
+    color: white !important;
+}
+li.btn:hover{
+  background-color: white;
+  color: #3061AB !important;
+}
+section.hero-sec .col {
+    width: 33%;
+}
+
+section.hero-sec .row {
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+.right-img {
+    display: flex;
+    justify-content: end;
+}
+section.banner_Section:after {
+background-image: url("./assests/main_bee.png");
+    content: "";
+    /* background: red; */
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+/* / */
+body{
+    background: url(./images/bg.png), #1558bc !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+}
+section.hero-sec {
+    background: #04347bc2;
+}
+section.hero-sec .col {
+    width: 33%;
+}
+
+section.hero-sec .row {
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+.right-img {
+    display: flex;
+    justify-content: end;
+}
+.center-img{
+    display: flex;
+    justify-content: center;
+}
+.hero-hed-sec {
+    padding: 150px 0px 50px;
+}
+
+.hero-hed-sec h1 {
+    font-size: 55px;
+    color: #FFFBF5;
+    width: 65%;
+    margin: auto;
+    font-family: 'Agrandir-TextBold';
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hero-hed-sec p {
+  font-family: 'AvenirNextlight' !important;
+  font-size: 18px;
+    color: #FFFBF5;
+    text-align: center;
+}
+.hero-hed-sec img {
+    margin-left: 50px;
+}
+.hero-sec .container{
+    background-image: url(./images/hive.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding-bottom: 100px;
+}
+
+
+
+navbar .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  navbar .container {
+      max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  navbar .container {
+      max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  navbar .container {
+      max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  navbar .container {
+      max-width: 1140px;
+  }
+}
+
+.menu-list ul {
+    display: flex;
+    justify-content: center;
+    background: #fffbf559;
+    width: 61%;
+    margin: auto;
+    border-radius: 50px;
+    padding: 0;
+}
+
+.menu-list ul li {
+    padding: 15px 40px;
+    list-style-type: none;
+    text-transform: uppercase;
+    color: #FFFBF5;
+    font-weight: 800 !important;
+}
+li.btn {
+    background: #FF6464;
+    border-radius: 50px;
+    margin-left: 11px;
+}
+.menu-list ul li:hover {
+    background: #3061AB;
+    border-radius: 50px;
+}
+.menu-list {
+    padding-bottom: 30px;
+}
+.text-dlise {
+    background: #EEAF30;
+    height: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(359deg);
+}
+.text-dlise span {
+    color: white;
+    -webkit-text-fill-color: transparent;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    font-size: 38px;
+    display: inline-block;
+width: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+.text-dlise-snd {
+    background: #EE7430;
+    height: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(360deg);
+}
+.text-dlise-snd span {
+    color: white;
+    -webkit-text-fill-color: transparent;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    font-size: 38px;
+    display: inline-block;
+width: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+
+  .risk-sec {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+}
+.risk-sec .text-box {
+  margin-right: 30px;
+}
+.text-box h1 {
+    color: #FFFBF5;
+    font-weight: 700 !important;
+    font-size: 30px;
+    line-height: 27px;
+    text-transform: uppercase;
+    font-family: 'Agrandir-TextBold';
+}
+.text-box p {
+    color: #FFFBF5;
+    font-size: 18px;
+    line-height: 19.8px;
+    font-family: 'AvenirNextlight' !important;
+}
+.teg-btn ul {
+    display: flex;
+    margin: 0px;
+    padding: 0;
+    margin:0px -10px !important;
+}
+.teg-btn ul li {
+  font-size: 14px;
+  line-height: 16.8px;
+    font-family: 'AvenirNextlight' !important;
+    padding: 7px 25px;
+    background: #EEAF30;
+    margin: 5px 10px;
+    border-radius: 10px;
+    list-style-type: none;
+    color: #FFFBF5;
+    min-width: max-content;
+}
+.teg-btn li:before {
+    top: 16px;
+    content: "";
+    background: #FFFBF5;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50px;
+    margin-left: -16px;
+}
+.teg-btn-right li:before {
+    top: 20px;
+    content: "";
+    background: #FFFBF5;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50px;
+    margin-left: -16px;
+}
+
+.teg-btn {
+    position: relative;
+}
+.wealth-sec {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    width: 70%;
+    margin: auto;
+    margin-top: 150px;
+    padding-bottom: 80px;
+}
+.text-box-right {
+    text-align: end;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.text-box-right h1 {
+  color: #FFFBF5;
+  font-weight: 700 !important;
+  font-size: 30px;
+  line-height: 27px;
+  text-transform: uppercase;
+  font-family: 'Agrandir-TextBold';
+}
+.text-box-right p {
+    color: #FFFBF5;
+    font-size: 18px;
+    font-family: 'AvenirNextlight' !important;
+}
+.teg-btn-right ul {
+    display: flex;
+    margin: 0px;padding: 0;
+    justify-content: end;
+    margin-right: -10px;
+}
+.teg-btn-right ul li {
+    padding: 7px 25px;
+    background: #EEAF30;
+    margin: 5px 10px;
+    border-radius: 10px;
+    list-style-type: none;
+    color: #FFFBF5;
+    font-size: 14px;
+    font-family: 'AvenirNextlight' !important;
+}
+.teg-btn-right ul li:before{
+  top: 16px;
+    content: "";
+    background: #FFFBF5;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50px;
+    margin-left: -16px;
+}
+.teg-btn-right {
+    position: relative;
+}
+.wealth-bg-after::after {
+    content: "";
+    background-image: url('./images/Group 208.png');
+    position: absolute;
+    height: 100px;
+    width: 170px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 50%;
+}
+
+.wealth-bg-after {
+    position: relative;
+}
+.corporate-sec {
+    display: grid;
+    grid-template-columns: 32% 73%;
+    width: 70%;
+    margin: auto;
+    margin-top: 70px;
+    align-items: center;
+}
+.corporate-sec .text-box{
+  margin-right: 70px;
+}
+.history-sec h1 {
+    color: #FFFBF5;
+    text-align: center;
+    font-size: 55px;
+    line-height: 49.8px;
+    text-transform: uppercase;
+    font-family: 'Agrandir-TextBold';
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+.his-img {
+    text-align: end;
+}   
+.box-wrap {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 90%;
+    margin-left: 10%;
+}
+
+.his-text-box {
+    padding: 10px 30px;
+}
+.his-text-box h2 {
+    color: #FFFBF5;
+}
+
+.his-text-box p {
+    color: #FFFBF5;
+}
+.history-sec {
+    margin-top: 0px;
+}
+.testimnial-sec {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.testimnial-sec h1 {
+    text-transform: uppercase;
+    color: #FFFBF5;
+    font-size: 55px;
+    line-height: 49.8px;
+    text-transform: uppercase;
+    font-family: 'Agrandir-TextBold';
+}
+
+.testimnial-sec p {
+    color: #FFFBF5;
+}
+.testimnial-bg-after {
+    padding-bottom: 100px;
+}
+.testimnial-bg-after:after {
+    content: "";
+    background-image: url('./images/Group 209.png');
+    position: absolute;
+    height: 300px;
+    width: 450px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 40%;
+    right: 0;
+}
+
+.testimnial-bg-after {
+    position: relative;
+}
+.ing-text-wrap {
+    display: grid;
+    grid-template-columns: 28% 48% 18%;
+    gap: 40px;
+    width: 100%;
+    align-items: center;
+}
+
+.right-img-honey img {
+    width: 100%;
+}
+
+.lest-img img {
+    width: 100%;
+}
+
+.honeybees-sec {
+    background-image: url('./images/Group 173.png');
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+.ing-text-wrap h1 {
+    font-size: 50px;
+}
+
+.honeybees-sec h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #FFFBF5;
+}
+.text-box-center h2 {
+    color: #FFFBF5;
+    font-size: 28px;
+    margin: 0;
+}
+
+.text-box-center h4 {
+    color: #FFFBF5;
+    margin: 0;
+}
+
+.text-box-center p {
+    color: #FFFBF5;
+    margin: 10px 0;
+}
+.img-wrap {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.fst-img {
+    text-align: center;
+}
+.fst-img img {
+    width: 80%;
+}
+
+.snd-img img {
+    width: 60%;
+}
+
+.snd-img {
+    text-align: center;
+}
+.trd-img img {
+    width: 100%;
+}
+.about_footer{
+    margin-top: -143px !important; 
+}
+li.btn:hover {
+    color: white !important;
+}
+.home_row.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 40px;
+}
+
+.home_row .center-img {
+    display: flex;
+    justify-content: end;
+}
+.sendo-section{
+  text-align: center;
+  padding-top: 120px;
+}
+.sendo-section h2{
+  font-family: 'Agrandir-TextBold';
+  font-size: 55px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 49.5px;
+  margin: 0%;
+}
+.sendo-section p{
+  font-family: 'AvenirNextlight' !important;
+  font-size: 18px;
+  line-height: 19.8px;
+  color: #fff;
+}
+/* Testimonials Section */
+.gtco-testimonials {
+  position: relative;
+  margin-top: 30px;
+}
+
+.gtco-testimonials .owl-stage-outer {
+  padding: 30px 0;
+}
+
+.gtco-testimonials .owl-nav {
+  display: none;
+}
+
+.gtco-testimonials .owl-dots {
+  text-align: center;
+}
+
+.gtco-testimonials .owl-dots span {
+  position: relative;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: block;
+  background: #fff;
+  border: 2px solid #01b0f8;
+  margin: 0 5px;
+}
+
+.gtco-testimonials .owl-dots .active {
+  box-shadow: none;
+}
+
+.gtco-testimonials .owl-dots .active span {
+  background: #01b0f8;
+  box-shadow: none;
+  height: 12px;
+  width: 12px;
+  margin-bottom: -1px;
+}
+
+.gtco-testimonials .card {
+  background: #fff;
+  box-shadow: 0 8px 30px -7px #c9dff0;
+  margin: 0 20px;
+  padding: 0 10px;
+  border-radius: 20px;
+  border: 0;
+}
+
+.gtco-testimonials .card .card-img-top {
+  max-width: 100px;
+  border-radius: 50%;
+  margin: 15px auto 0;
+  box-shadow: 0 8px 20px -4px #95abbb;
+  width: 100px;
+  height: 100px;
+}
+
+.gtco-testimonials .card h5 {
+  color: #01b0f8;
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.gtco-testimonials .card h5 span {
+  font-size: 18px;
+  color: #666666;
+}
+
+.gtco-testimonials .card p {
+  font-size: 18px;
+  color: #555;
+  padding-bottom: 15px;
+}
+
+.gtco-testimonials .active {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+.gtco-testimonials .center {
+  opacity: 1;
+}
+
+.gtco-testimonials .center h5 {
+  font-size: 24px;
+}
+
+.gtco-testimonials .center h5 span {
+  font-size: 20px;
+}
+
+.gtco-testimonials .center .card-img-top {
+  max-width: 100%;
+  height: 120px;
+  width: 120px;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .gtco-testimonials {
+    margin-top: 20px;
+  }
+}
+
+/* Owl Carousel Styles */
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot {
+  outline: 0;
+}
+.sizewidth{
+  width: fit-content !important;
+}
