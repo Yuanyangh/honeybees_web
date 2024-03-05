@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="honey.css">
 
 </head>
 
@@ -89,18 +90,17 @@
 
                 }
             </style>
-            <div style="position: relative !important;">
+            <!-- <div style="position: relative !important;">
                 <canvas id="canvas3d" data-engine=""></canvas>
-            </div>
+            </div> -->
 
 
         </div>
 
     </main>
-    <div class="slider slider1">
-
+    <div class="slider slider1" style="margin-top: -20px;">
         <div class="d-flex">
-            <h3 class="words"><span style="width: 300px;display: inline;">Honeybees offer</span></h3>
+            <h3 class="words">Honeybees offer <img src="./assests/whitebees.png" />   </h3>
         </div>
     </div>
     <div class="image-section">
@@ -257,57 +257,79 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div style="width: 100%;">
-                    <h3>
-                        <p class="text-lowercase drop_text">Drop your question and email or you can tell us your
-                            favourite song?</p>
-                    </h3>
-                    <div class="inform">
-                        <form action="" class="formfooter">
-                            <div class="d-flex mb-3">
-                                <select name="" id="" class="select">
-                                    <option selected disabled value="">Your Title</option>
-                                    <option value="">Mr</option>
-                                    <option value="">Mrs</option>
-                                </select>
-                                <input type="text" placeholder="Your Name..." class="name">
+    
+    
+    <section class="frame-section about_footer">
+        <div class="mask-group-parent-wrapper">
+            <div class="footer-wrapper">
+                <div class="footer">
+                    <div class="footer-inner">
+                        <form class="drop-your-question-and-email-o-parent">
+                            <h2 class="drop-your-question">
+                                Drop your question and email or you can tell us your favourite song?
+                            </h2>
+    
+                            <div class="input-details-group-parent">
+                                <div class="title_filed">
+                                    <input class="input-details-group yourtitle" type="text" placeholder="Your Title" />
+                                    <img class="icon-chevron-bottom" alt="" src="./assests/Vector.png" />
+                                </div>
+    
+                                <div class="name_field">
+                                    <input class="input-details-group yourname" type="text" placeholder="Your Title" />
+                                </div>
+    
                             </div>
-                            <input class="email mb-3" type="email" name="" id="" placeholder="Your Email...">
-                            <div class="d-flex formend w-100">
-                                <input type="text" placeholder="What’s in your mind?" class="message">
-                                <button style="color: #29446D;"> Send </button>
+    
+                            <div class="group-div">
+                                <div class="frame-child5"></div>
+                                <input class="your-email" placeholder="Your Email..." type="text" />
+                            </div>
+                            <div class="rectangle-parent3">
+    
+                                <div class="whats-in-your">What’s in your mind?</div>
+                                <button class="send-wrapper">
+                                    <div class="send">send</div>
+                                </button>
                             </div>
                         </form>
                     </div>
+                    
                 </div>
-                <div style="width: 100%; margin-top: 150px; margin-bottom: 100px;">
-                    <div class="row">
-                        <div class="col-6">
-                            <h4 class="text-left text-lowercase">
-                                I think we need a rematch. <span class="text-uppercase">Ronald Reagon. Marty</span>, you
-                                seem so nervous, is something wrong?
-                            </h4>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex socialicondiv">
-                                <img src="asssets/icon_linkedin.png" alt="">
-                                <img src="asssets/icon_instagram.png" alt="">
-                                <img src="asssets/icon_facebook_squared.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="width: 100%;">
-                    <p class="fontfooterend">SP-HONEYBEES is an authorised representative of AIA Singapore Private
-                        Limited (Reg. No. 201106386R)
-                        © 2022 by SP-HONEYBEES</p>
-                </div>
+    
+                
             </div>
+            <div class="rematch-quote">
+              <div class="authorized-representation-a-i">
+                  <h2 class="i-think-we">
+                      I think we need a rematch. Ronald Reagon. Marty, you seem
+                      so nervous, is something wrong?
+                  </h2>
+              </div>
+              <div class="social-media-icons">
+                  <img class="icon-linkedin" loading="eager" alt="" src="./assests/sameediconlinkedin.png" />
+    
+                  <img class="icon-instagram" loading="eager" alt="" src="./assests/sameediconinstagram.png" />
+                
+                  <img class="icon-facebook-squared" loading="eager" alt=""
+                      src="./assests/sameed-iconfacebooksquared.png" />
+              </div>
+          </div>
+          <div class="authorized-representative-msg">
+              <div class="sp-honeybees-is-an-container">
+                  <p class="sp-honeybees-is-an">
+                      SP-HONEYBEES is an authorised representative of AIA
+                      Singapore Private Limited (Reg. No. 201106386R)
+                  </p>
+                  <p class="by-sp-honeybees">© 2022 by SP-HONEYBEES</p>
+              </div>
+          </div>
         </div>
-    </footer>
+        </div>
+    </section>
+
+
+    
     <script type="module">
         import { Application } from 'https://unpkg.com/@splinetool/runtime@1.0.18/build/runtime.js';
         const canvas = document.getElementById('canvas3d');

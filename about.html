@@ -137,7 +137,7 @@
         display: inline-block;
     }
 
-    .owl-item.active{
+    .owl-item.active {
         background: none;
     }
 </style>
@@ -335,15 +335,14 @@
         opacity: 1;
     }
 
-    .gtco-testimonials img{
+    .gtco-testimonials img {
         max-height: 145px;
         object-fit: contain;
     }
 
-    .owl-stage{
+    .owl-stage {
         height: 400px;
     }
-
 </style>
 
 <body>
@@ -405,12 +404,12 @@
                     You don't believe in the Force, do you?
                 </p>
             </div>
-            <div class="risk-sec">
+            <div class="corporate-sec">
                 <div class="img-box">
                     <img src="./image/Rectangle 69.png" alt="">
                 </div>
                 <div class="text-box">
-                    <h1>Risk management</h1>
+                    <h1>Risk Management</h1>
                     <p>I've been there. My folks were always on me to groom myself and wear underpants. What am I, the
                         pope? Yes! In your face, Gandhi! You guys go on without me! I'm going to go… look for more stuff
                         to steal!</p>
@@ -419,13 +418,7 @@
                             <li>Life Insurance</li>
                             <li>Health Insurance</li>
                             <li>Critical Illness Insurance</li>
-                        </ul>
-                    </div>
-                    <div class="teg-btn">
-                        <ul>
-                            <li>Maternity Insurance</li>
-                            <li>Personal Accident</li>
-                            <li>Disability Income</li>
+
                         </ul>
                     </div>
                 </div>
@@ -471,8 +464,7 @@
 
             <div class="slider slider1" style="background-color: #EE7430;margin: 150px 0;">
                 <div class="d-flex">
-                    <h3 class="words"><span style="width: 300px;display: inline;">Honeybees offer</span><span
-                            style="width: 300px;display: inline;margin-left:200px;">Honeybees offer</span></h3>
+                    <h3 class="words">WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" /> </h3>
                 </div>
             </div>
 
@@ -520,13 +512,31 @@
             <div class="slider slider1"
                 style="background-color: #EEAF30;margin: 0px 0;-webkit-transform: rotate(-1deg) !important;">
                 <div class="d-flex">
-                    <h3 class="words"><span style="width: 300px;display: inline;">Honeybees offer</span><span
-                            style="width: 300px;display: inline;margin-left:200px;">Honeybees offer</span></h3>
+                    <h3 class="words">WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" /> </h3>
                 </div>
             </div>
 
+
+
+
+
+
+
+
+
+
+
+
             <div class="honeybees-sec">
                 <h1>The Honeybees</h1>
+
+
+
+
+
+
+
+
                 <div class="ing-text-wrap">
                     <div class="right-img-honey">
                         <img src="./image/Group 210.png" alt="">
@@ -808,8 +818,14 @@
 
 
 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+    </script>
 
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src="slick/slick.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
     <script type="text/javascript">
@@ -849,7 +865,7 @@
                 function scaleCenterItem(event) {
                     // Reset scale for all items
                     $(event.target).find('.owl-item').css('transform', 'scale(1)');
-                    
+
                     // Scale up the center item
                     $(event.target).find('.owl-item.center').css('transform', 'scale(1.4)');
                 }
@@ -863,7 +879,7 @@
                 arrows: false,
                 draggable: true,
             });
-        });     
+        });
     </script>
 </body>
 
