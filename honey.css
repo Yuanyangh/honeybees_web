@@ -114,7 +114,7 @@ body {
     width: 100%;
     padding: 20px 0px;
     background: #ee7430;
-    transform: rotate(-1deg);
+    transform: rotate(0deg);
   }
 
   .runnng_orange marquee {
@@ -122,7 +122,7 @@ body {
     font-size: 55px;
     outline: white;
     color: transparent;
-    -webkit-text-stroke: 1px #ffffff;
+    -webkit-text-stroke: 2px #ffffff;
 
     text-transform: uppercase;
     letter-spacing: -4px;
@@ -225,7 +225,7 @@ body {
     position: relative;
   }
   .honey_bee_section   .content_container {
-    width: 70%;
+    width: 55%;
     font-size: 55px;
     text-align: center;
     margin: auto;
@@ -254,7 +254,8 @@ body {
 
   .content_container:before {
     content: "";
-    background-image: url("./assests/bee_mesage.png");
+    background-image: url(./assests/bee_mesage.png), url(./assests/bee-logo.gif);
+    background-position: 0 0, -9px 96px;
     /* background: forestgreen; */
     width: 67%;
     height: 100%;
@@ -264,7 +265,7 @@ body {
     background-repeat: no-repeat;
     right: 0;
     left: 100%;
-    background-size: contain;
+    background-size: contain, 120px 120px;
   }
 
   section.event_section {
@@ -282,7 +283,7 @@ body {
   input {
     border: solid 1px black;
     border-radius: 20px;
-    padding: 8px;
+    padding: 5px 10px 5px 10px;
     font-size: 15px;
   }
 
@@ -373,7 +374,7 @@ body {
     background: white;
     width: 100%;
     margin-top: 10px;
-    padding: 8px;
+    padding: 5px 10px 5px 10px;
     border-radius: 20px;
     text-align: left;
     /* position: relative; */
@@ -381,7 +382,7 @@ body {
 
   button.send-wrapper {
     border-radius: 20px;
-    padding: 8px 25px;
+    padding: 5px 25px;
     border: solid #eeaf30 3px;
     position: absolute;
     top: 10px;
@@ -449,11 +450,11 @@ body {
     line-height: 55px;
     outline: #29446d;
     color: transparent;
-    -webkit-text-stroke: 1px #ffffff;
+    -webkit-text-stroke: 2px #ffffff;
     text-transform: uppercase;
     color: transparent;
-    -webkit-text-stroke: 1px #29446d;
-    text-stroke: 1px #ffffff;
+    -webkit-text-stroke: 2px #29446d;
+    text-stroke: 2px #ffffff;
     letter-spacing: -4px;  
   }
   marquee,.custo-main h1{
@@ -516,7 +517,7 @@ body {
   }
 
   .blocks img {
-    width: 40%;
+    /* width: 40%; */
     padding-bottom: 51px;
   }
 
@@ -551,18 +552,20 @@ body {
 
 .block_text:before {
   content: "";
-    background-image: url(./assests/bee_mesage.png);
+    background-image: url(./assests/bee_mesage.png), url(./assests/bee-logo.gif);
+    background-position: 0 0, 10px 110px;
     max-width: 450px;
     max-height: 222px;
     width: 100%;
     height: 100%;
-    background-size: contain;
+    background-size: contain, 80px 80px;
     position: absolute;
     right: 0;
     left: 100%;
     bottom: 100px;
     background-repeat: no-repeat;
 }
+
 
 section.loren_sectiom {
     padding-bottom: 0px;
@@ -572,18 +575,20 @@ section.loren_sectiom {
 }
 .block_text:after {
   content: "";
-    background-image: url("./assests/left-bee.png");
-    /* background: forestgreen; */
-    width: 67%;
-    height: 100%;
-    position: absolute;
-    bottom: -89px;
-    background-repeat: no-repeat;
-    right: 117%;
+  background-image: url(./assests/left-bee.png), url(./assests/bee-logo2.gif);
+  background-position: 13px 22px, 194px 13px;
+  /* background: forestgreen; */
+  width: 67%;
+  height: 100%;
+  position: absolute;
+  bottom: -4px;
+  background-repeat: no-repeat;
+  right: 70%;
+  background-size: 250px 150px, 80px 80px;
 }
 .runnng_orange.blue_runing {
-    background: #29446d;
-    margin-bottom: 0px;
+    background: #3061AB;
+    margin-bottom: -100px;
     transform: rotate(1deg);
 }
 .runnng_orange.blue_runing marquee img {
@@ -618,13 +623,9 @@ section.blue_bg {
     font-family: 'AvenirNextlight' !important;
     font-size: 18px;
 }
-span.strok_text {
-    color: transparent;
-    -webkit-text-stroke: 2px #ffffff;
-    text-stroke: 1px #ffffff;
-}
+
 .runnng_white.runnng_white_two {
-    transform: rotate(1deg);
+    transform: rotate(0deg);
 }
 .runnng_white.runnng_white_two.yellow_running {
   background: #eeaf30;
@@ -635,11 +636,11 @@ span.strok_text {
     font-size: 55px;
     outline: white;
     color: transparent;
-    -webkit-text-stroke: 1px #ffffff;
+    -webkit-text-stroke: 2px #ffffff;
     text-transform: uppercase;
     color: transparent;
-    -webkit-text-stroke: 1px white;
-    text-stroke: 1px #ffffff;
+    -webkit-text-stroke: 2px white;
+    text-stroke: 2px #ffffff;
     letter-spacing: -4px;
 }
 section.banner_Section {
@@ -747,10 +748,6 @@ section.hero-sec .row {
     height: 60px;
     align-items: center;
 }
-.right-img {
-    display: flex;
-    justify-content: end;
-}
 
 /* / */
 body{
@@ -776,6 +773,10 @@ section.hero-sec .row {
 .right-img {
     display: flex;
     justify-content: end;
+    padding-right: 40px;
+}
+.right-img-honey img {
+  width: 100%;
 }
 .center-img{
     display: flex;
@@ -1203,10 +1204,6 @@ width: 100%;
     align-items: center;
 }
 
-.right-img-honey img {
-    width: 100%;
-}
-
 .lest-img img {
     width: 100%;
 }
@@ -1309,14 +1306,15 @@ li.btn:hover {
 .yourtitle,.send{
   font-size: 18px;
   color: #29446D !important;
-  line-height: 27px;
+  line-height: 24px;
   font-family: 'Agrandir-TextBold';
   text-transform: capitalize;
 }
 .yourname,.your-email,.whats-in-your{
   font-size: 18px;
   color: #29446D !important;
-  line-height: 27px;
+  height: 40px;
+  /* line-height: 28px; */
   font-family: 'AvenirNextlight' !important;
   text-transform: capitalize;
   padding-left: 20px;
@@ -1410,7 +1408,7 @@ li.btn:hover {
 }
 
 .block .overlay .overlay_icon img {
-  max-width: 100px;
+  /* max-width: 100px; */
   position: absolute;
   inset: 0;
   margin: auto;
@@ -1440,11 +1438,11 @@ li.btn:hover {
   color: transparent;
   font-size: 30px;
   outline: #29446d;
-  -webkit-text-stroke: 1px #ffffff;
+  -webkit-text-stroke: 2px #ffffff;
   text-transform: uppercase;
-  text-stroke: 1px #ffffff;
-  -webkit-text-stroke: 1px #ffffff;
-  letter-spacing: -4px;
+  text-stroke: 2px #ffffff;
+  -webkit-text-stroke: 2px #ffffff;
+  letter-spacing: 0px;
   font-family: 'Agrandir-TextBold' !important;
   width: 100%;
   margin: 0;

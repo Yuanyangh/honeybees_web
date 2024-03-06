@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="slick/slick-theme.css">
   <link rel="stylesheet" href="slick/slick.css">
   <style>
+
     div#img-container {
       display: flex;
       flex-direction: row;
@@ -343,10 +344,236 @@
       /* send canvas to the background */
       position: fixed;
     }
+    @keyframes scaleDown {
+        from {
+            transform: scale(1.4); /* Start from a slightly larger scale */
+        }
+        to {
+            transform: scale(1); /* Scale down to the original size */
+        }
+    }
+
+    /* Apply the background image/GIF and animation to your element */
+    .scale-background {
+        width: 100%; /* Full width */
+        height: 100vh; /* Full height of the viewport */
+        background-image: url('./assests/bann.png'); /* Replace with your image/GIF path */
+        background-size: cover; /* Cover the entire area of the div */
+        background-position: center; /* Center the background image */
+        animation: scaleDown 1s ease-in-out forwards; /* Apply the animation */
+
+        /* Preserve 3D to fix flickering in some browsers */
+        transform-style: preserve-3d;
+
+        /* Make sure the background scales within the div */
+        overflow: hidden;
+
+        /* Use a pseudo-element to apply the background for smoother scaling */
+        position: relative;
+    }
+    .scale-background:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: inherit;
+        background-size: cover;
+        background-position: center;
+        animation: inherit;
+        transform: inherit;
+        transform-style: inherit;
+    }
+
+    .gif-container {
+        width: 100%; /* Adjust based on your preference */
+        height: 100%; /* Adjust based on your preference */
+        background-image: url('./image/3Beesfloating.gif'); /* Path to your GIF image */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        z-index: 1;
+        /* The scaling animation is inherited from the parent container */
+    }
+
+    @keyframes floatInAndColorChange {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px); /* Start above the final position */
+            color: transparent;
+            visibility:visible;
+        }
+        50% {
+            opacity: 1;
+            transform: translateY(0);
+            color: transparent;
+        }
+        100% {
+          color: #29446D; /* End with the same color as the border */
+            visibility:visible;
+        }
+    }
+    @keyframes floatInAndColorChange2 {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px); /* Start above the final position */
+            visibility:visible;
+        }
+        50% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        100% {
+            visibility:visible;
+        }
+    }
+
+    .text-caption {
+        /* position: absolute; */
+        visibility: hidden;
+        /* top: 50%; */
+        /* left: 50%; */
+        /* transform: translate(-50%, -50%); */
+         /* Initial font color */
+        -webkit-text-stroke: 2px #29446D;
+        color: transparent;
+        /* padding: 10px; */
+        animation: floatInAndColorChange 1s ease-in-out 2s forwards; /* Delay animation */
+        animation-fill-mode: forwards; /* Keep the final state after animation ends */
+        /* white-space: nowrap; */
+    }
+
+    .text-caption2 {
+        /* position: absolute; */
+        visibility: hidden;
+        /* top: 50%; */
+        /* left: 50%; */
+        /* transform: translate(-50%, -50%); */
+         /* Initial font color */
+        /* -webkit-text-stroke: 2px #29446D; */
+        color: transparent;
+        /* padding: 10px; */
+        animation: floatInAndColorChange2 0.5s ease-in-out 2s forwards; /* Delay animation */
+        animation-fill-mode: forwards; /* Keep the final state after animation ends */
+        /* white-space: nowrap; */
+    }
+
+    @keyframes floatInMarquee {
+        0% {
+            /* opacity: 0; */
+            transform: translateY(50px); /* Start above the final position */
+            visibility:visible;
+        }
+        100% {
+            /* opacity: 1; */
+            transform: translateY(0);
+            visibility:visible;
+            transform: rotate(1deg);
+        }
+    }
+
+    .runnng_white_two1 {
+      visibility: hidden;
+      padding: 20px 0 10px 0px;
+      margin-top: -260px;
+      animation: floatInMarquee 0.5s ease-in-out 2s forwards; /* Delay animation */
+      transform: rotate(2deg) !important;
+
+    }
+
+    navbar {
+      visibility: hidden;
+      animation: floatInMarquee 0.5s ease-in-out 3s forwards; /* Delay animation */
+    }
+
+    @keyframes floatInTopdown {
+        0% {
+            /* opacity: 0; */
+            transform: translateY(-50px); /* Start above the final position */
+            visibility:visible;
+        }
+        100% {
+            /* opacity: 1; */
+            transform: translateY(0);
+            visibility:visible;
+        }
+    }
+    
+    .home_row_img {
+      /* position: fixed; */
+      z-index: 100;
+    }
+
+    .home_row {
+      visibility: hidden;
+      animation: floatInTopdown 0.5s ease-in-out 3s forwards; /* Delay animation */
+      
+    }
+
+    .home_row_parent {
+      position: fixed;
+      z-index: 999;
+      width: 100%;
+      top: 30px;
+    }
+
+    @keyframes amiStrokText {
+        0% {
+            color: white;
+        }
+        100% {
+            color: transparent;
+            -webkit-text-stroke: 2px #ffffff;
+        }
+    }
+
+    .animate_strok_text {
+      animation: amiStrokText 1s ease-in-out forwards;
+    }
+
+
   </style>
+
+<script>
+  // Function to check if the element is in the viewport
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+  
+  // Function to run on scroll
+  function runOnScroll() {
+    const elements = document.querySelectorAll('.strok_text');
+    for (let i = 0; i < elements.length; i++) {
+      if (isInViewport(elements[i])) {
+        elements[i].classList.add('animate_strok_text');
+      }
+    }
+  }
+  
+  // Attach the event listener to window scroll
+  window.addEventListener('scroll', runOnScroll);
+  </script>
 
 <body>
 
+  <div class="home_row_parent">
+    <div class="home_row row">
+      <div class="col center-img home_row_img">
+        <img src="./assests/Honeybees_logo (1).png" alt="" style="margin-right: -100px !important;">
+      </div>
+      <div class="col right-img home_row_img">
+        <img src="./assests/music.png" alt="">
+      </div>
+    </div>
+  </div>
   <navbar>
     <div class="container">
         <div class="row">
@@ -375,30 +602,27 @@
             </div>
 
         </div>
-    </div>
-</navbar>
+      </div>
+  </navbar>
 
-  <section class="banner_Section" style="background-image: url('./assests/bann.png'); background-size: cover;">
+  <section class="scale-background" >
     <!-- <canvas id="canvas3d"></canvas> -->
-    <div class="home_row row">
-      <div class="col center-img">
-        <img src="./assests/Honeybees_logo (1).png" alt="" style="margin-right: -100px !important;">
-      </div>
-      <div class="col right-img">
-        <img src="./assests/music.png" alt="">
+    <div class="gif-container">
+
+      <div class="main_head_content" style="padding:280px 0">     
+        <h1 class="text-caption">
+          Welcome to our corner of the creative bugs, we think you’re going to like it here.
+        </h1>
+        <p class="text-caption2">
+          Bzzz.. first impression are awkward but we’ll try to make this smooth.
+        </p>
+
       </div>
     </div>
-
-
-    <div class="main_head_content" style="padding:150px 0">     
-      <h1>
-        Welcome to our corner of the creative bugs, we think you’re going to like it here.
-      </h1>
-      <p>
-        Bzzz.. first impression are awkward but we’ll try to make this smooth.
-      </p>
-
-    </div>
+      <div class="runnng_white runnng_white_two runnng_white_two1">
+        <marquee direction="left" scrollamount="10" style="margin: 0;" loop hspace="10"> Thanks for passing by <img style="width: 50px;"> Thanks for passing by <img style="width: 50px;"> Thanks for passing by <img style="width: 50px;"> Thanks for passing by <img style="width: 50px;"> Thanks for passing by <img style="width: 50px;"> Thanks for passing by <img style="width: 50px;">
+        </marquee>
+      </div>
 
 
   </section>
@@ -407,12 +631,27 @@
   <section class="blue_bg" style="background-image: url(./assests/bluebg.png);">
     <div class="runnig_structure">
       <div class="runnng_white runnng_white_two yellow_running" style="padding: 20px 0 10px 0px;position:relative;z-index: 1;">
-        <marquee direction="left" style="margin: 0;"> where learning meets laughter and memories are made
+        <marquee direction="left" scrollamount="10" style="margin: 0;"> WAY TO BE FEARLESS THROUGH LIFE
+          <img src="./assests/whitebees.png" alt="">
+          WAY TO BE FEARLESS THROUGH LIFE
+          <img src="./assests/whitebees.png" alt="">
+          WAY TO BE FEARLESS THROUGH LIFE
+          <img src="./assests/whitebees.png" alt="">
+           WAY TO BE FEARLESS THROUGH LIFE
+          <img src="./assests/whitebees.png" alt="">
+          WAY TO BE FEARLESS THROUGH LIFE
+          <img src="./assests/whitebees.png" alt="">
+          WAY TO BE FEARLESS THROUGH LIFE
           <img src="./assests/whitebees.png" alt="">
         </marquee>
       </div>
       <div class="runnng_white runnng_white_two" style="padding: 20px 0 10px 0px;">
-        <marquee direction="left" style="margin: 0;"> where learning meets laughter and memories are made
+        <marquee direction="left" scrollamount="10" style="margin: 0;"> WAY TO BE FEARLESS THROUGH LIFE
+          <img src="./assests/bluebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE
+          <img src="./assests/bluebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE
+          <img src="./assests/bluebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE
+          <img src="./assests/bluebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE
+          <img src="./assests/bluebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE
           <img src="./assests/bluebees.png" alt="">
         </marquee>
       </div>
@@ -423,18 +662,29 @@
       <p>Nicki Minaj</p>
       <button class="sign_up">How?</button>
     </div>
+    <div class="runnng_orange blue_runing"  style="padding: 20px 0 10px 0px;">
+      <marquee direction="left" scrollamount="10" style="margin: 0;"> WAY TO BE FEARLESS THROUGH LIFE 
+        <img src="./assests/whitebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE 
+        <img src="./assests/whitebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE 
+        <img src="./assests/whitebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE 
+        <img src="./assests/whitebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE 
+        <img src="./assests/whitebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE 
+        <img src="./assests/whitebees.png" alt="">
+      </marquee>
+    </div>
   </section>
 
   <section class="loren_sectiom" style="background-image: url(./assests/third-bg.png);">
 
-    <div class="runnng_orange blue_runing"  style="padding: 20px 0 10px 0px;">
-      <marquee direction="left" style="margin: 0;"> where learning meets laughter and memories are made
-        <img src="./assests/whitebees.png" alt="">
-      </marquee>
-    </div>
+    
 
     <div class="runnng_orange"  style="padding: 20px 0 10px 0px;">
-      <marquee direction="left" style="margin: 0;"> where learning meets laughter and memories are made
+      <marquee direction="left" scrollamount="10" style="margin: 0;"> WAY TO BE FEARLESS THROUGH LIFE 
+        <img src="./assests/whitebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE 
+        <img src="./assests/whitebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE 
+        <img src="./assests/whitebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE 
+        <img src="./assests/whitebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE 
+        <img src="./assests/whitebees.png" alt=""> WAY TO BE FEARLESS THROUGH LIFE 
         <img src="./assests/whitebees.png" alt="">
       </marquee>
     </div>
@@ -505,7 +755,7 @@
               <div class="overlay">
                   <div class="overlay_icon">
                       <div class="marquee_text">
-                          <marquee>nderstand  Understand  Understand  Understand</marquee>
+                          <marquee direction="left" style="margin: 0;" loop hspace="10">Understand <img style="width: 50px;"> Understand Understand Understand Understand Understand Understand Understand Understand Understand Understand Understand Understand Understand Understand Understand Understand</marquee>
                       </div>
                       <img src="./assests/VectorFace.png" alt="VectorFace">
                   </div>
@@ -524,7 +774,7 @@
             <div class="overlay">
                 <div class="overlay_icon">
                     <div class="marquee_text">
-                        <marquee>Story  Story  Story  Story</marquee>
+                        <marquee>Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story</marquee>
                     </div>
                     <img src="assests/hive.png" alt="Hive">
                 </div>
@@ -543,7 +793,7 @@
             <div class="overlay">
                 <div class="overlay_icon">
                     <div class="marquee_text">
-                        <marquee>Join  Join  Join  Join</marquee>
+                        <marquee>Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join</marquee>
                     </div>
                     <img src="./assests/Honeybees_shape.png" alt="Honeybees_shape">
                 </div>
@@ -560,22 +810,36 @@
         
       </div>
   </div>
-
+  <div>
+    <!-- <div class="block_text_after"></div> -->
     <div class="block_text">
       <h1>We take our work seriously! we have something else for you</h1>
       <p>You don't believe in the Force, do you?</p>
     </div>
+  </div>
+    
   </section>
 
   <section class="event_section" style="background-image: url(./assests/bg-footer-up.png); background-size: cover;">
 
     <div class="runnng_white" style="    transform: rotate(0deg);">
       <marquee direction="left" style="margin: 0;"> where learning meets laughter and memories are made
+        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
+        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
+        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
+        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
+        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
         <img src="./assests/whitebees.png" alt="">
       </marquee>
     </div>
-    <div class="runnng_orange">
+    <div class="runnng_orange" style="    transform: rotate(-2deg);
+    margin-top: -24px;">
       <marquee direction="left" style="margin: 0;"> where learning meets laughter and memories are made
+        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
+        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
+        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
+        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
+        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
         <img src="./assests/whitebees.png" alt="">
       </marquee>
 
