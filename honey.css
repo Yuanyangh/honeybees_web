@@ -616,6 +616,7 @@ section.blue_bg {
 .main_content {
     width: 65%;
     margin: auto;
+    text-align: center;
 }
 .main_content p {
     color: white;

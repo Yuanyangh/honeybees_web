@@ -238,7 +238,7 @@ navbar a,navbar a:hover{
     color: #fff;
     font-family: 'Agrandir-TextBold';
     text-align: center;
-    padding: 80px 0;
+    padding: 165px 0;
 }
 .section-orange h3{
     width: 65%;
@@ -278,9 +278,19 @@ navbar a,navbar a:hover{
 
 
 .contact{
-    background: url('asssets/Group\ 204.png');
-    height: 900px;
-    background-size: cover;
+    background: url('./asssets/contact_bg1.png');
+    /* height: 1200px; */
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    animation: scaleDown 1s ease-in-out forwards; /* Apply the animation */
+    
+}
+
+.contact-inner{
+    background: linear-gradient(1deg, rgba(238, 116, 48, 1) 0%,rgba(238, 116, 48, 1) 50%, rgba(238, 116, 48, 0.3));
+    height: 1960px;
+    /* background-size: cover; */
     background-position: top;
     background-repeat: no-repeat;
     
@@ -289,8 +299,15 @@ navbar a,navbar a:hover{
     height: 550px;
     align-self: baseline;
 }
+
+.contact-section-people{
+    margin-left: -200px;
+    visibility: hidden;
+    animation: scaleDownAndShow 1s ease-in-out 1s forwards; /* Apply the animation */
+}
 .contact-section .col-7{
     align-self: center;
+    z-index: 1;
 }
 .contact-section h3{
     align-self: center !important;
@@ -304,6 +321,9 @@ navbar a,navbar a:hover{
     font-family: 'AvenirNextlight' !important;
     font-size: 18px;
     color: #fff;
+}
+.contact-banner-text {
+    margin: 400px 0 126px 0;
 }
 .contact-banner-text h3{
     align-self: center !important;
@@ -327,8 +347,10 @@ navbar a,navbar a:hover{
 
 
 .formsection{
-    border-radius: 25px 25px 0 0;
-    margin-top: -20px;
+    border-radius: 50px 50px 0 0;
+    margin-top: -50px;    
+    z-index: 1;
+    position: relative;
 }
 
 
@@ -348,6 +370,8 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    z-index: 2;
+    position: relative;
 }
 
 .inform{
@@ -364,9 +388,13 @@ footer h3{
 }
 .formfooter select,.formfooter input,.formfooter button{
     border-radius: 25px;
-    padding: 7px 12px;
+    padding: 5px 12px;
     font-size: 18px;
     text-transform: capitalize;
+    height: 40px;
+}
+.formfooter select{
+    width: 178px;
 }
 .formfooter button{
     text-transform: uppercase; 
@@ -857,7 +885,8 @@ input[type="radio"] {
   }
 
   .topbar{
-    position: absolute;
+    position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
     right: 0;
@@ -898,3 +927,6 @@ input[type="radio"] {
         letter-spacing: -0.02em;
         text-align: left;
         }
+
+
+/* contact */
