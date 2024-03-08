@@ -1272,6 +1272,8 @@ width: 100%;
 }
 .about_footer{
     margin-top: -143px !important; 
+    z-index: 2;
+    position: relative;
 }
 li.btn:hover {
     color: white !important;
