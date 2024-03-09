@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="honey.css">
+    <link rel="stylesheet" href="contact.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="swiper.css">
+
+    <!-- Swiper's JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="swiper.js"></script>
 </head>
 <style>
     #carousel {
@@ -343,9 +354,54 @@
     .owl-stage {
         height: 400px;
     }
+
+
+
+    @keyframes floatInAndColorChangeHeroSec {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+            /* Start above the final position */
+            color: transparent;
+            visibility: visible;
+        }
+
+        50% {
+            opacity: 1;
+            transform: translateY(0);
+            color: transparent;
+        }
+
+        100% {
+            color: #ffffff;
+            /* End with the same color as the border */
+            visibility: visible;
+        }
+    }
+
+    .hero-hed-sec-text-caption {
+        /* position: absolute; */
+        visibility: hidden;
+        /* top: 50%; */
+        /* left: 50%; */
+        /* transform: translate(-50%, -50%); */
+        /* Initial font color */
+        -webkit-text-stroke: 2px #ffffff;
+        color: transparent;
+        /* padding: 10px; */
+        animation: floatInAndColorChangeHeroSec 1.5s ease-in-out 2s forwards;
+        /* Delay animation */
+        animation-fill-mode: forwards;
+        /* Keep the final state after animation ends */
+        /* white-space: nowrap; */
+    }
 </style>
 
 <body>
+    <div class="topbar">
+        <div class="honeybeeLogo"><img src="assests/Honeybees_logo.svg" alt="HoneybeeLogo"></div>
+        <div class="honeybeeMusic"><img src="assests/music.svg" alt="Music"></div>
+    </div>
     <navbar>
         <div class="container">
             <div class="row">
@@ -378,20 +434,13 @@
     </navbar>
     <section class="hero-sec">
         <div class="container">
-            <div class="row">
-                <div class="col"></div>
-                <div class="col center-img">
-                    <img src="./image/Honeybees_logo.png" alt="">
-                </div>
-                <div class="col right-img">
-                    <img src="./image/music.png" alt="">
-                </div>
-            </div>
 
             <div class="hero-hed-sec">
-                <h1>All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it?</h1>
-                <p>Obi-Wan is here. The Force is with him.</p>
-                <img src="./image/Group 175.png" alt="" style="margin-top: -100px;">
+                <h1 class="hero-hed-sec-text-caption">All right. Well, take care of yourself, Han. I guess that's what
+                    you're best at, ain't it?</h1>
+                <p class="text-caption2">Obi-Wan is here. The Force is with him.</p>
+                <img class="hero-hed-sec-img" src="./image/Group 175.png" alt="" style="">
+                <img class="hero-hed-sec-gif" src="./assests/bee-logo2.gif">
             </div>
 
 
@@ -418,6 +467,9 @@
                             <li>Life Insurance</li>
                             <li>Health Insurance</li>
                             <li>Critical Illness Insurance</li>
+                            <li>Maternity Insurance</li>
+                            <li>Personal Accident</li>
+                            <li>Disability Income</li>
 
                         </ul>
                     </div>
@@ -529,6 +581,24 @@
 
             <div class="honeybees-sec">
                 <h1>The Honeybees</h1>
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="assests/wiper1.png" alt="Slide 1"></div>
+                        <div class="swiper-slide"><img src="assests/wiper2.png" alt="Slide 2"></div>
+                        <div class="swiper-slide"><img src="assests/wiper1.png" alt="Slide 3"></div>
+                        <div class="swiper-slide"><img src="assests/wiper2.png" alt="Slide 4"></div>
+                        <div class="swiper-slide"><img src="assests/wiper1.png" alt="Slide 5"></div>
+                        <!-- Add more slides as needed -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <!-- Text related to each slide -->
+                <!-- <div class="slide-text" style="text-align: center;">
+                    <p id="current-slide-text">asdf</p>
+                </div> -->
 
 
 
@@ -538,9 +608,9 @@
 
 
                 <div class="ing-text-wrap">
-                    <div class="right-img-honey">
+                    <!-- <div class="right-img-honey">
                         <img src="./image/Group 210.png" alt="">
-                    </div>
+                    </div> -->
                     <div class="text-box-center">
 
                         <div class="honeyBeeTeam" id="honeyBeeTeam">
@@ -656,9 +726,9 @@
                         </div>
 
                     </div>
-                    <div class="lest-img">
+                    <!-- <div class="lest-img">
                         <img src="./image/Group 211.png" alt="">
-                    </div>
+                    </div> -->
                 </div>
                 <div class="last-sec">
                     <h1>What’s does people say?</h1>
@@ -818,8 +888,6 @@
 
 
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
     <script>
         $(document).ready(function () {
             $('.carousel').carousel();
@@ -875,10 +943,6 @@
                 })(jQuery);
             })();
 
-            $('#honeyBeeTeam').slick({
-                arrows: false,
-                draggable: true,
-            });
         });
     </script>
 </body>
