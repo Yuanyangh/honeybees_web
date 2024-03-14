@@ -401,13 +401,18 @@
         /* white-space: nowrap; */
     }
 </style>
-<script src="sound.js"></script>
+
 
 <body>
     <div class="topbar">
         <div class="honeybeeLogo"><img src="assests/Honeybees_logo.svg" alt="HoneybeeLogo"></div>
-        <div class="honeybeeMusic"><img src="assests/music.svg" onclick="toggleSound()" style="cursor:pointer;" alt="Music"></div>
-        <audio id="myAudio" src="./HB_assest/SoundTest.mp3"></audio>
+        <div class="honeybeeMusic">
+            <div class="music-icon" onclick="toggleSound()">
+                <img class="playing-music" src="assests/music_light.svg" alt="Music">
+                <img class="mute-music" src="assests/music_light_mute.svg" alt="Mute Music">
+            </div>
+            <audio id="myAudio" src="./HB_assest/good-night-160166.mp3"></audio>     
+        </div>
     </div>
     <navbar>
         <div class="container">
@@ -910,6 +915,7 @@
     <script src="slick/slick.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
     <script src="about.js"></script>
+    <script src="sound.js"></script>
 </body>
 
 </html>

@@ -576,7 +576,6 @@ navbar {
   // Attach the event listener to window scroll
   window.addEventListener('scroll', runOnScroll);
   </script>
-  <script src="sound.js"></script>
 
 <body>
 
@@ -586,8 +585,11 @@ navbar {
         <img src="./assests/Honeybees_logo (1).png" alt="" style="margin-right: -100px !important;">
       </div>
       <div class="col right-img home_row_img">
-        <img src="./assests/music.png" onclick="toggleSound()" style="cursor:pointer;" alt="">
-        <audio id="myAudio" src="./HB_assest/SoundTest.mp3"></audio>
+        <div class="music-icon" onclick="toggleSound()">
+          <img class="playing-music" src="assests/music_dark.svg" alt="Music">
+          <img class="mute-music" src="assests/music_dark_mute.svg" alt="Mute Music">
+        </div>
+        <audio id="myAudio" src="./HB_assest/good-night-160166.mp3"></audio>
       </div>
     </div>
   </div>
@@ -1133,6 +1135,7 @@ navbar {
     </script>
 
     <script src="slick/slick.min.js"></script>
+    <script src="sound.js"></script>
 
     <script>
       $(document).ready(function () {

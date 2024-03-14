@@ -1868,3 +1868,21 @@ li.btn:hover {
   font-family: 'AvenirNextlight';
   color: #1558bc;
 }
+
+.music-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  .playing-music {
+    display: none;
+  }
+}
+
+.music-icon.playing {
+  .playing-music {
+    display: block;
+  }
+  .mute-music {
+    display: none;
+  }
+}
