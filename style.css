@@ -844,10 +844,11 @@ input[type="radio"] {
         background: #EEAF30 !important;
     }
     .honeyBeeTeam{
-        width: 80%;
+        max-width: 1200px;
+        width: 100%;
     /* justify-content: center; */
     /* display: flex; */
-    margin: 0 auto;
+        margin: 0 auto;
     }
 
 
