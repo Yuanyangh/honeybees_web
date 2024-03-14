@@ -1084,3 +1084,7 @@ input[type="radio"] {
 
 
 /* contact */
+
+.text-nowrap {
+    text-wrap: nowrap;
+}
