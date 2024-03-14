@@ -149,6 +149,7 @@
     }
 
     .owl-item.active {
+        /* margin-right: 0px !important; */
         background: none;
     }
 </style>
@@ -350,6 +351,10 @@
         max-height: 145px;
         object-fit: contain;
     }
+    .gtco-testimonials-container{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
 
     .owl-stage {
         height: 400px;
@@ -396,42 +401,44 @@
         /* white-space: nowrap; */
     }
 </style>
+<script src="sound.js"></script>
 
 <body>
     <div class="topbar">
         <div class="honeybeeLogo"><img src="assests/Honeybees_logo.svg" alt="HoneybeeLogo"></div>
-        <div class="honeybeeMusic"><img src="assests/music.svg" alt="Music"></div>
+        <div class="honeybeeMusic"><img src="assests/music.svg" onclick="toggleSound()" style="cursor:pointer;" alt="Music"></div>
+        <audio id="myAudio" src="./HB_assest/SoundTest.mp3"></audio>
     </div>
     <navbar>
         <div class="container">
             <div class="row">
-
+    
                 <div class="col-12">
-
-                    <div>
-                        <li>
-                            <a href="index.html">HOME</a>
-                        </li>
-                        <li>
-                            <a href="about.html">ABOUT US</a>
-                        </li>
-                        <li>
-                            <a href="career.html">CAREER</a>
-                        </li>
-                        <li>
-                            <a href="knowyourself.html">KNOW YOURSELF</a>
-                        </li>
-                        <li>
-                            <a href="fearless.html">Be Fearless</a>
-                        </li>
-                    </div>
-                    <a href="#"><img src="asssets/Group 149.png" alt=""></a>
-
+                   
+                        <div>
+                            <li>
+                                <a href="index.html">HOME</a>
+                            </li>
+                            <li>
+                                <a href="about.html">ABOUT US</a>
+                            </li>
+                            <li>
+                                <a href="career.html">CAREER</a>
+                            </li>
+                            <li>
+                                <a href="knowyourself.html">KNOW YOURSELF</a>
+                            </li>
+                            <li>
+                                <a href="fearless.html">Be Fearless</a>
+                            </li>
+                        </div>
+                            <a href="#"><img src="asssets/Group 149.png" alt=""></a>
+                    
                 </div>
-
+    
             </div>
-        </div>
-    </navbar>
+          </div>
+      </navbar>
     <section class="hero-sec">
         <div class="container">
 
@@ -516,14 +523,13 @@
 
             <div class="slider slider1" style="background-color: #EE7430;margin: 150px 0;">
                 <div class="d-flex">
-                    <h3 class="words">WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" /> </h3>
+                    <h3 class="words">WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" />WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" />WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" />WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" /> WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" />WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" />WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" />WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" /></h3>
                 </div>
             </div>
 
             <div class="history-sec">
                 <h1>History/Journey</h1>
-                <div class="his-img"><img src="./image/Group 212.png" alt=""></div>
-
+                <!-- <div class="his-img"><img src="./image/Group 212.png" alt=""></div> -->
                 <div class="box-wrap">
                     <div class="his-text-box">
                         <h2>2017</h1>
@@ -564,7 +570,7 @@
             <div class="slider slider1"
                 style="background-color: #EEAF30;margin: 0px 0;-webkit-transform: rotate(-1deg) !important;">
                 <div class="d-flex">
-                    <h3 class="words">WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" /> </h3>
+                    <h3 class="words">WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" />&nbsp; WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" />WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" />WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" />WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" />WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" />WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" />&nbsp;WAY TO BE FEARLESS THROUGH LIFE <img src="./assests/whitebees.png" /> </h3>
                 </div>
             </div>
 
@@ -583,13 +589,18 @@
                 <h1>The Honeybees</h1>
                 <!-- Swiper -->
                 <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper" id="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide"><img src="assests/wiper1.png" alt="Slide 1"></div>
-                        <div class="swiper-slide"><img src="assests/wiper2.png" alt="Slide 2"></div>
-                        <div class="swiper-slide"><img src="assests/wiper1.png" alt="Slide 3"></div>
-                        <div class="swiper-slide"><img src="assests/wiper2.png" alt="Slide 4"></div>
-                        <div class="swiper-slide"><img src="assests/wiper1.png" alt="Slide 5"></div>
+                        <!-- <div class="swiper-slide"><img src="asssets/images/TeamMembers/Diana_Low.png" alt="Slide 1"></div>
+                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Ian_Lin.png" alt="Slide 2"></div>
+                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Wang_Yaxiang.png" alt="Slide 3"></div>
+                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Kylie_Ng.png" alt="Slide 4"></div>
+                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Kenneth_Chng.png" alt="Slide 5"></div>
+                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Pamela_Ng.png" alt="Slide 6"></div>
+                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Jacqueline_Tan.png" alt="Slide 7"></div>
+                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Goh_Li_Ying.png" alt="Slide 8"></div>
+                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Lim_Yu_Heng.png" alt="Slide 9"></div> -->
+                        
                         <!-- Add more slides as needed -->
                     </div>
                     <div class="swiper-pagination"></div>
@@ -613,8 +624,8 @@
                     </div> -->
                     <div class="text-box-center">
 
-                        <div class="honeyBeeTeam" id="honeyBeeTeam">
-                            <div>
+                         <div class="honeyBeeTeam" id="honeyBeeTeam">
+                        <!--    <div>
                                 <div class="honeyBeeTeamReview">
                                     <h2>Diana Low</h2>
                                     <h4>Senior Personal Wealth Manager</h4>
@@ -722,7 +733,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
 
                     </div>
@@ -787,6 +798,7 @@
                     </div>
                 </div> -->
 
+                <div class="gtco-testimonials-container">
                 <div class="gtco-testimonials">
                     <div class="owl-carousel owl-carousel1 owl-theme">
                         <!-- Item 1 -->
@@ -810,6 +822,7 @@
                         </div>
 
                     </div>
+                </div>
                 </div>
 
 
@@ -896,55 +909,7 @@
 
     <script src="slick/slick.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            (function () {
-                "use strict";
-
-                var carousels = function () {
-                    $(".owl-carousel1").owlCarousel({
-                        loop: true,
-                        center: true,
-                        margin: 200,
-                        responsiveClass: true,
-                        nav: false,
-                        dots: false,
-                        responsive: {
-                            0: {
-                                items: 1,
-                                nav: false
-                            },
-                            680: {
-                                items: 2,
-                                nav: false,
-                                loop: false
-                            },
-                            1000: {
-                                items: 3,
-                                nav: true
-                            }
-                        },
-                        onInitialized: scaleCenterItem,
-                        onTranslated: scaleCenterItem
-                    });
-                };
-
-                function scaleCenterItem(event) {
-                    // Reset scale for all items
-                    $(event.target).find('.owl-item').css('transform', 'scale(1)');
-
-                    // Scale up the center item
-                    $(event.target).find('.owl-item.center').css('transform', 'scale(1.4)');
-                }
-
-                (function ($) {
-                    carousels();
-                })(jQuery);
-            })();
-
-        });
-    </script>
+    <script src="about.js"></script>
 </body>
 
 </html>

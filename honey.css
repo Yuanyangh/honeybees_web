@@ -123,7 +123,7 @@ body {
   font-size: 55px;
   outline: white;
   color: transparent;
-  -webkit-text-stroke: 2px #ffffff;
+  -webkit-text-stroke: 3px #ffffff;
 
   text-transform: uppercase;
   letter-spacing: -4px;
@@ -223,7 +223,7 @@ img.evet_2 {
   margin: auto;
   color: white;
   margin-top: 230px;
-  position: relative;
+  /* position: relative; */
 }
 
 .honey_bee_section .content_container {
@@ -233,6 +233,10 @@ img.evet_2 {
   margin: auto;
   color: white;
   margin-top: 230px;
+  /* position: relative; */
+}
+
+.honey_bee_section {
   position: relative;
 }
 
@@ -241,33 +245,63 @@ img.evet_2 {
 button.sign_up {
   font-weight: 800;
   font-size: 18px;
-  color: #1558bc;
+  color: #29446D;
   background: white;
   padding: 9px 20px;
-  border: 3px solid #eeaf30;
+  border: 4px solid #eeaf30;
   border-radius: 30px;
   margin-left: 25px;
   box-shadow: -9px 10px 2px 0px rgba(187, 170, 204, 1);
-  -webkit-box-shadow: -9px 10px 2px 0px #3061ab;
+  -webkit-box-shadow: -9px 10px #3061ab;
   -moz-box-shadow: -9px 10px 2px 0px rgba(187, 170, 204, 1);
   margin-top: 13px;
   font-family: 'Agrandir-TextBold';
 }
 
+button.seemore {
+  font-weight: 800;
+  font-size: 18px;
+  color: #29446D;
+  background: white;
+  padding: 5px 20px;
+  border: 4px solid #eeaf30;
+  border-radius: 30px;
+  /* margin-left: 25px; */
+  box-shadow: -9px 10px 2px 0px rgba(187, 170, 204, 1);
+  -webkit-box-shadow: -9px 10px #3061ab;
+  -moz-box-shadow: -9px 10px 2px 0px rgba(187, 170, 204, 1);
+  margin-top: 13px;
+  font-family: 'Agrandir-TextBold';
+  height: 40px;
+  margin: 0 auto;
+  /* justify-content: center; */
+  display: flex;
+}
+
 .content_container:before {
   content: "";
-  background-image: url(./assests/bee_mesage.png), url(./assests/bee-logo.gif);
-  background-position: 0 0, -9px 96px;
-  /* background: forestgreen; */
-  width: 67%;
-  height: 100%;
-  position: absolute;
-  right: initial;
-  bottom: -160px;
-  background-repeat: no-repeat;
-  right: 0;
-  left: 100%;
-  background-size: contain, 120px 120px;
+    background-image: url(./assests/bee_mesage.png), url(./assests/bee-logo.gif);
+    background-position: 0 0, -9px 96px;
+    /* background: forestgreen; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: initial;
+    bottom: -160px;
+    background-repeat: no-repeat;
+    right: 0;
+    /* left: 100%; */
+    background-size: 450px 230px, 120px 120px;
+    max-width: 450px;
+    max-height: 230px;
+    width: 100%;
+    height: 230px;
+    /* background-size: contain, 80px 80px; */
+    position: absolute;
+    right: 0;
+    /* left: 100%; */
+    /* bottom: 100px; */
+    background-repeat: no-repeat;
 }
 
 section.event_section {
@@ -457,7 +491,7 @@ input::placeholder {
   -webkit-text-stroke: 2px #ffffff;
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 2px #29446d;
+  -webkit-text-stroke: 3px #29446d;
   text-stroke: 2px #ffffff;
   letter-spacing: -4px;
 }
@@ -556,10 +590,12 @@ marquee,
 }
 
 .block_text {
-  position: relative;
+  /* position: relative; */
 }
 
-.block_text {}
+.block_text_container {
+  position: relative;
+}
 
 .block_text:before {
   content: "";
@@ -572,7 +608,7 @@ marquee,
   background-size: contain, 80px 80px;
   position: absolute;
   right: 0;
-  left: 100%;
+  /* left: 100%; */
   bottom: 100px;
   background-repeat: no-repeat;
 }
@@ -595,8 +631,9 @@ section.loren_sectiom {
   position: absolute;
   bottom: -4px;
   background-repeat: no-repeat;
-  right: 70%;
+  /* right: 70%; */
   background-size: 250px 150px, 80px 80px;
+  left: 0;
 }
 
 .runnng_orange.blue_runing {
@@ -843,14 +880,18 @@ section.hero-sec .row {
   color: #FFFBF5;
   text-align: center;
 }
+
 @keyframes scaleUp {
   from {
-      transform: scale(0); /* Start from a slightly larger scale */
-      visibility: visible;
+    transform: scale(0);
+    /* Start from a slightly larger scale */
+    visibility: visible;
   }
+
   to {
-      transform: scale(1); /* Scale down to the original size */
-      visibility: visible;
+    transform: scale(1);
+    /* Scale down to the original size */
+    visibility: visible;
   }
 }
 
@@ -1283,6 +1324,14 @@ p {
 }
 
 .box-wrap {
+  /* background-size: contain; */
+  background-image: url('./image/Group 212.png');
+  background-size: 95%;
+  background-repeat: no-repeat;
+  background-position: 27px 0px;
+  padding-top: -33px;
+  /* position: absolute; */
+  padding-top: 65px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   width: 90%;
@@ -1341,7 +1390,7 @@ p {
   width: 450px;
   /* background-size: contain; */
   background-repeat: no-repeat;
-  top: 40%;
+  top: 22%;
   right: 0;
 }
 
@@ -1352,11 +1401,11 @@ p {
 .ing-text-wrap {
   margin-top: 30px;
   display: grid;
-    /* grid-template-columns: 28% 48% 18%; */
-    gap: 40px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  /* grid-template-columns: 28% 48% 18%; */
+  gap: 40px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .lest-img img {
@@ -1704,7 +1753,7 @@ li.btn:hover {
   background-color: #fbeee0;
   border: 4px solid #EEAF30;
   border-radius: 30px;
-  box-shadow: -4px 4px 0 blue;
+  box-shadow: -9px 10px #3061ab;
   /* Changed box-shadow values */
   color: #29446D;
   cursor: pointer;
@@ -1727,7 +1776,7 @@ li.btn:hover {
 }
 
 .button-74:active {
-  box-shadow: -2px 2px 0 blue;
+  box-shadow: -2px 2px 0 #3061ab;
   /* Changed box-shadow values */
   transform: translate(2px, 2px);
 }
@@ -1800,7 +1849,7 @@ li.btn:hover {
 }
 
 .honeyBeeTeamReview {
-  max-width: 540px;
+  /* max-width: 540px; */
 }
 
 .honeyBeeTeamReview h2 {

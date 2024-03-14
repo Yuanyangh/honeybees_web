@@ -125,6 +125,7 @@ navbar li img{
 navbar a,navbar a:hover{
     text-decoration: none;
     color: #29446D;
+    margin-bottom: 28px;
 }
 
 @media screen and (max-width:767px){
@@ -220,6 +221,8 @@ navbar a,navbar a:hover{
     margin-right: 60px;
     margin-bottom: 30px;
     width: 300px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .formsection .form{
     margin-top: 40px;
@@ -262,11 +265,11 @@ navbar a,navbar a:hover{
     color: #29446D;
     width: max-content;
     -webkit-text-fill-color: #ffffff00; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;    color: #29446D;
+    -webkit-text-stroke-width: 3px;    color: #29446D;
 }
 .words {
   position: relative;
-  animation: move-words 20s linear infinite;
+  animation: move-words 30s linear infinite;
   margin: 0;
 }@keyframes move-words {
   0% {
@@ -303,8 +306,12 @@ navbar a,navbar a:hover{
 
 .contact-section-people{
     margin-left: -200px;
-    visibility: hidden;
-    animation: scaleDownAndShow 1s ease-in-out 1s forwards; /* Apply the animation */
+    /* visibility: hidden; */
+    /* animation: scaleDownAndShow 1s ease-in-out 1s forwards; Apply the animation */
+}
+.contact-section-people-lottie{
+    width: 900px;
+    height: 100%;
 }
 .contact-section .col-7{
     align-self: center;
@@ -474,26 +481,31 @@ margin-bottom: 12px;
         background: url('./asssets/careerbees1.png');
         visibility: visible;
         background-repeat: no-repeat;
+        background-size: contain;
     }
     25% {
         background: url('./asssets/careerbees2.png');
         visibility: visible;
         background-repeat: no-repeat;
+        background-size: contain;
     }
     50% {
         background: url('./asssets/careerbees3.png');
         visibility: visible;
         background-repeat: no-repeat;
+        background-size: contain;
     }
     75% {
         background: url('./asssets/careerbees4.png');
         visibility: visible;
         background-repeat: no-repeat;
+        background-size: contain;
     }
     100% {
         background: url('./asssets/careerbees5.png');
         visibility: visible;
         background-repeat: no-repeat;
+        background-size: contain;
     }
 }
 .career-bg2{
@@ -831,6 +843,12 @@ input[type="radio"] {
     .honeyBeeTeamReview .teg-btn ul li{
         background: #EEAF30 !important;
     }
+    .honeyBeeTeam{
+        width: 80%;
+    /* justify-content: center; */
+    /* display: flex; */
+    margin: 0 auto;
+    }
 
 
 
@@ -961,7 +979,50 @@ input[type="radio"] {
 .options .option .label .info .sub {
     transition-delay: .1s; }
       
-
+.options .option:not(.active) .options-textbox1 {
+    visibility: hidden;
+}
+.options .option:not(.active) .options-textbox2 {
+    visibility: hidden;
+}
+.options .option:not(.active) .options-textbox3 {
+    visibility: hidden;
+}
+.options-textbox1 {
+    bottom: 0px;
+    /* top: 100%; */
+    position: absolute;
+    background-color: #ea4500cc;
+    padding: 20px;
+}
+.options-textbox2 {
+    bottom: 0px;
+    /* top: 100%; */
+    position: absolute;
+    background-color: #485E65cc;
+    padding: 20px;
+}
+.options-textbox3 {
+    bottom: 0px;
+    /* top: 100%; */
+    position: absolute;
+    background-color: #3F3F66cc;
+    padding: 20px;
+}
+.options-textbox-h3{
+    font-family: 'Agrandir-TextBold';
+    font-weight: 800;
+    font-size: 30px;
+    color: white;
+    margin: 0;
+}
+.options-textbox-p{
+    font-family: 'Agrandir-Text';
+    /* font-weight: 800; */
+    font-size: 18px;
+    color: white;
+    margin: 0;
+}
 /* Testimonial Slider */
 .swiper-container {
     width: 100%;

@@ -392,7 +392,7 @@
         background-image: url('./image/3Beesfloating.gif'); /* Path to your GIF image */
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: left;
         position: relative;
         z-index: 1;
         /* The scaling animation is inherited from the parent container */
@@ -483,10 +483,25 @@
 
     }
 
-    navbar {
-      visibility: hidden;
-      animation: floatInMarquee 0.5s ease-in-out 3s forwards; /* Delay animation */
+    
+
+@keyframes floatInNavbar {
+    0% {
+        /* opacity: 0; */
+        transform: translateY(50px); /* Start above the final position */
+        visibility:visible;
     }
+    100% {
+        /* opacity: 1; */
+        transform: translateY(0);
+        visibility:visible;
+    }
+}
+
+navbar {
+  visibility: hidden;
+  animation: floatInNavbar 0.5s ease-in-out 3s forwards; /* Delay animation */
+}
 
     @keyframes floatInTopdown {
         0% {
@@ -561,6 +576,7 @@
   // Attach the event listener to window scroll
   window.addEventListener('scroll', runOnScroll);
   </script>
+  <script src="sound.js"></script>
 
 <body>
 
@@ -570,7 +586,8 @@
         <img src="./assests/Honeybees_logo (1).png" alt="" style="margin-right: -100px !important;">
       </div>
       <div class="col right-img home_row_img">
-        <img src="./assests/music.png" alt="">
+        <img src="./assests/music.png" onclick="toggleSound()" style="cursor:pointer;" alt="">
+        <audio id="myAudio" src="./HB_assest/SoundTest.mp3"></audio>
       </div>
     </div>
   </div>
@@ -620,7 +637,7 @@
       </div>
     </div>
       <div class="runnng_white runnng_white_two runnng_white_two1">
-        <marquee direction="left" scrollamount="10" style="margin: 0;" loop hspace="10"> Thanks for passing by <img style="width: 50px;"> Thanks for passing by <img style="width: 50px;"> Thanks for passing by <img style="width: 50px;"> Thanks for passing by <img style="width: 50px;"> Thanks for passing by <img style="width: 50px;"> Thanks for passing by <img style="width: 50px;">
+        <marquee direction="left" scrollamount="10" style="margin: 0;" loop hspace="10"> Thanks for passing by <img src="./assests/whitebees.png" alt=""> Thanks for passing by <img src="./assests/whitebees.png" alt=""> Thanks for passing by <img src="./assests/whitebees.png" alt=""> Thanks for passing by <img src="./assests/whitebees.png" alt=""> Thanks for passing by <img src="./assests/whitebees.png" alt=""> Thanks for passing by <img src="./assests/whitebees.png" alt="">
         </marquee>
       </div>
 
@@ -810,7 +827,7 @@
         
       </div>
   </div>
-  <div>
+  <div class="block_text_container">
     <!-- <div class="block_text_after"></div> -->
     <div class="block_text">
       <h1>We take our work seriously! we have something else for you</h1>
@@ -824,12 +841,12 @@
 
     <div class="runnng_white" style="    transform: rotate(0deg);">
       <marquee direction="left" style="margin: 0;"> where learning meets laughter and memories are made
-        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
-        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
-        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
-        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
-        <img src="./assests/whitebees.png" alt="">where learning meets laughter and memories are made
-        <img src="./assests/whitebees.png" alt="">
+        <img src="./assests/bluebees.png" alt="">where learning meets laughter and memories are made
+        <img src="./assests/bluebees.png" alt="">where learning meets laughter and memories are made
+        <img src="./assests/bluebees.png" alt="">where learning meets laughter and memories are made
+        <img src="./assests/bluebees.png" alt="">where learning meets laughter and memories are made
+        <img src="./assests/bluebees.png" alt="">where learning meets laughter and memories are made
+        <img src="./assests/bluebees.png" alt="">
       </marquee>
     </div>
     <div class="runnng_orange" style="    transform: rotate(-2deg);
@@ -853,7 +870,14 @@
       <div class="options">
         <div class="option active"
             style="--optionBackground:url(./assests/freedom.png);">
-            <div class="shadow"></div>
+            <div class="options-textbox1">
+              <h3 class="options-textbox-h3">Freedom is Empowering</h3>
+              <p class="options-textbox-p">I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What? I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What?</p>
+              <div>
+                <button class="seemore">See More</button>
+              </div>
+              
+            </div>
             <!-- <div class="label">
                 <div class="icon">
                     <i class="fas fa-walking"></i>
@@ -866,7 +890,14 @@
         </div>
         <div class="option"
             style="--optionBackground:url(./assests/womenfull.png);">
-            <div class="shadow"></div>
+            <div class="options-textbox2">
+              <h3 class="options-textbox-h3">Women Talking</h3>
+              <p class="options-textbox-p">I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What? I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What?</p>
+              <div>
+                <button class="seemore">See More</button>
+              </div>
+              
+            </div>
             <!-- <div class="label">
                 <div class="icon">
                     <i class="fas fa-snowflake"></i>
@@ -879,7 +910,14 @@
         </div>
         <div class="option"
             style="--optionBackground:url(./assests/artfull.png);">
-            <div class="shadow"></div>
+            <div class="options-textbox3">
+              <h3 class="options-textbox-h3">Crosstown Art</h3>
+              <p class="options-textbox-p">I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What? I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What?</p>
+              <div>
+                <button class="seemore">See More</button>
+              </div>
+              
+            </div>
             <!-- <div class="label">
                 <div class="icon">
                     <i class="fas fa-tree"></i>

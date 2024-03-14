@@ -10,13 +10,18 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="honey.css">
     <link rel="stylesheet" href="contact.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src="knowyourself.js"></script>
+    <script src="sound.js"></script>
 
 </head>
 
 <body style="background-color: #FFF4D5;">
     <div class="topbar">
         <div class="honeybeeLogo"><img src="assests/Honeybees_logo.svg" alt="HoneybeeLogo"></div>
-        <div class="honeybeeMusic"><img src="assests/music.svg" alt="Music"></div>
+        <div class="honeybeeMusic"><img src="assests/music.svg" onclick="toggleSound()" style="cursor:pointer;" alt="Music"></div>
+        <audio id="myAudio" src="./HB_assest/SoundTest.mp3"></audio>
     </div>
     <navbar>
         <div class="container">
@@ -61,7 +66,8 @@
                         </p>
                     </div>
                     <div class="col-5 contact-section-people">
-                        <img src="./asssets/human_head.png">
+                        <div class="contact-section-people-lottie" id="lottie-animation"></div>
+                        <!-- <img src="./asssets/human_head.png"> -->
                     </div>
                 </div>
             </div>

@@ -148,9 +148,22 @@
 
 }
 
+@keyframes floatInNavbar {
+    0% {
+        /* opacity: 0; */
+        transform: translateY(50px); /* Start above the final position */
+        visibility:visible;
+    }
+    100% {
+        /* opacity: 1; */
+        transform: translateY(0);
+        visibility:visible;
+    }
+}
+
 navbar {
   visibility: hidden;
-  animation: floatInMarquee 0.5s ease-in-out 3s forwards; /* Delay animation */
+  animation: floatInNavbar 0.5s ease-in-out 3s forwards; /* Delay animation */
 }
 
 @keyframes floatInTopdown {
