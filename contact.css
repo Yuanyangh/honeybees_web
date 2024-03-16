@@ -1,142 +1,130 @@
 @keyframes scaleDown {
-    from {
-        transform: scale(1.4); /* Start from a slightly larger scale */
-    }
-    to {
-        transform: scale(1); /* Scale down to the original size */
-    }
+  from {
+    transform: scale(1.4); /* Start from a slightly larger scale */
+  }
+  to {
+    transform: scale(1); /* Scale down to the original size */
+  }
 }
 
 @keyframes scaleDownAndShow {
-    from {
-        transform: scale(1.4); /* Start from a slightly larger scale */
-        visibility: visible;
-    }
-    to {
-        transform: scale(1); /* Scale down to the original size */
-        visibility: visible;
-    }
+  from {
+    transform: scale(1.4); /* Start from a slightly larger scale */
+    visibility: visible;
+  }
+  to {
+    transform: scale(1); /* Scale down to the original size */
+    visibility: visible;
+  }
 }
 
 /* Apply the background image/GIF and animation to your element */
 .scale-background {
-    width: 100%; /* Full width */
-    height: 100vh; /* Full height of the viewport */
-    background-image: url('./assests/bann.png'); /* Replace with your image/GIF path */
-    background-size: cover; /* Cover the entire area of the div */
-    background-position: center; /* Center the background image */
-    animation: scaleDown 1s ease-in-out forwards; /* Apply the animation */
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height of the viewport */
+  background-image: url("./assests/bann.png"); /* Replace with your image/GIF path */
+  background-size: cover; /* Cover the entire area of the div */
+  background-position: center; /* Center the background image */
+  animation: scaleDown 1s ease-in-out forwards; /* Apply the animation */
 
-    /* Preserve 3D to fix flickering in some browsers */
-    transform-style: preserve-3d;
+  /* Preserve 3D to fix flickering in some browsers */
+  transform-style: preserve-3d;
 
-    /* Make sure the background scales within the div */
-    overflow: hidden;
+  /* Make sure the background scales within the div */
+  overflow: hidden;
 
-    /* Use a pseudo-element to apply the background for smoother scaling */
-    position: relative;
+  /* Use a pseudo-element to apply the background for smoother scaling */
+  position: relative;
 }
 .scale-background:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: inherit;
-    background-size: cover;
-    background-position: center;
-    animation: inherit;
-    transform: inherit;
-    transform-style: inherit;
-}
-
-.gif-container {
-    width: 100%; /* Adjust based on your preference */
-    height: 100%; /* Adjust based on your preference */
-    background-image: url('./image/3Beesfloating.gif'); /* Path to your GIF image */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    z-index: 1;
-    /* The scaling animation is inherited from the parent container */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  animation: inherit;
+  transform: inherit;
+  transform-style: inherit;
 }
 
 @keyframes floatInAndColorChange {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px); /* Start above the final position */
-        color: transparent;
-        visibility:visible;
-    }
-    50% {
-        opacity: 1;
-        transform: translateY(0);
-        color: transparent;
-    }
-    100% {
-      color: #ffffff; /* End with the same color as the border */
-        visibility:visible;
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Start above the final position */
+    color: transparent;
+    visibility: visible;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+    color: transparent;
+  }
+  100% {
+    color: #ffffff; /* End with the same color as the border */
+    visibility: visible;
+  }
 }
 @keyframes floatInAndColorChange2 {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px); /* Start above the final position */
-        visibility:visible;
-    }
-    50% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        visibility:visible;
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Start above the final position */
+    visibility: visible;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    visibility: visible;
+  }
 }
 
 .text-caption-contact1 {
-    /* position: absolute; */
-    visibility: hidden;
-    /* top: 50%; */
-    /* left: 50%; */
-    /* transform: translate(-50%, -50%); */
-     /* Initial font color */
-    -webkit-text-stroke: 2px #ffffff;
-    color: transparent;
-    /* padding: 10px; */
-    animation: floatInAndColorChange 1s ease-in-out 2s forwards; /* Delay animation */
-    animation-fill-mode: forwards; /* Keep the final state after animation ends */
-    /* white-space: nowrap; */
+  /* position: absolute; */
+  visibility: hidden;
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  /* Initial font color */
+  -webkit-text-stroke: 2px #ffffff;
+  color: transparent;
+  /* padding: 10px; */
+  animation: floatInAndColorChange 1s ease-in-out 2s forwards; /* Delay animation */
+  animation-fill-mode: forwards; /* Keep the final state after animation ends */
+  /* white-space: nowrap; */
 }
 
 .text-caption2 {
-    /* position: absolute; */
-    visibility: hidden;
-    /* top: 50%; */
-    /* left: 50%; */
-    /* transform: translate(-50%, -50%); */
-     /* Initial font color */
-    /* -webkit-text-stroke: 2px #29446D; */
-    color: transparent;
-    /* padding: 10px; */
-    animation: floatInAndColorChange2 0.5s ease-in-out 2s forwards; /* Delay animation */
-    animation-fill-mode: forwards; /* Keep the final state after animation ends */
-    /* white-space: nowrap; */
+  /* position: absolute; */
+  visibility: hidden;
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  /* Initial font color */
+  /* -webkit-text-stroke: 2px #29446D; */
+  color: transparent;
+  /* padding: 10px; */
+  animation: floatInAndColorChange2 0.5s ease-in-out 2s forwards; /* Delay animation */
+  animation-fill-mode: forwards; /* Keep the final state after animation ends */
+  /* white-space: nowrap; */
 }
 
 @keyframes floatInMarquee {
-    0% {
-        /* opacity: 0; */
-        transform: translateY(50px); /* Start above the final position */
-        visibility:visible;
-    }
-    100% {
-        /* opacity: 1; */
-        transform: translateY(0);
-        visibility:visible;
-        transform: rotate(1deg);
-    }
+  0% {
+    /* opacity: 0; */
+    transform: translateY(50px); /* Start above the final position */
+    visibility: visible;
+  }
+  100% {
+    /* opacity: 1; */
+    transform: translateY(0);
+    visibility: visible;
+    transform: rotate(1deg);
+  }
 }
 
 .runnng_white_two1 {
@@ -145,20 +133,19 @@
   margin-top: -260px;
   animation: floatInMarquee 0.5s ease-in-out 2s forwards; /* Delay animation */
   transform: rotate(2deg) !important;
-
 }
 
 @keyframes floatInNavbar {
-    0% {
-        /* opacity: 0; */
-        transform: translateY(50px); /* Start above the final position */
-        visibility:visible;
-    }
-    100% {
-        /* opacity: 1; */
-        transform: translateY(0);
-        visibility:visible;
-    }
+  0% {
+    /* opacity: 0; */
+    transform: translateY(50px); /* Start above the final position */
+    visibility: visible;
+  }
+  100% {
+    /* opacity: 1; */
+    transform: translateY(0);
+    visibility: visible;
+  }
 }
 
 navbar {
@@ -167,16 +154,16 @@ navbar {
 }
 
 @keyframes floatInTopdown {
-    0% {
-        /* opacity: 0; */
-        transform: translateY(-50px); /* Start above the final position */
-        visibility:visible;
-    }
-    100% {
-        /* opacity: 1; */
-        transform: translateY(0);
-        visibility:visible;
-    }
+  0% {
+    /* opacity: 0; */
+    transform: translateY(-50px); /* Start above the final position */
+    visibility: visible;
+  }
+  100% {
+    /* opacity: 1; */
+    transform: translateY(0);
+    visibility: visible;
+  }
 }
 
 .home_row_img {
@@ -187,7 +174,6 @@ navbar {
 .home_row {
   visibility: hidden;
   animation: floatInTopdown 0.5s ease-in-out 3s forwards; /* Delay animation */
-  
 }
 
 .home_row_parent {
@@ -198,13 +184,13 @@ navbar {
 }
 
 @keyframes amiStrokText {
-    0% {
-        color: white;
-    }
-    100% {
-        color: transparent;
-        -webkit-text-stroke: 2px #ffffff;
-    }
+  0% {
+    color: white;
+  }
+  100% {
+    color: transparent;
+    -webkit-text-stroke: 2px #ffffff;
+  }
 }
 
 .animate_strok_text {

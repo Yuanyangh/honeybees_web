@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="honey.css">
     <link rel="stylesheet" href="contact.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+    <link rel="stylesheet" href="assets/css/navbtn.css">
+    <script src="assets/scripts/navbtn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+    <script src="assets/scripts/lottie-light.js"></script>
 
 </head>
 
@@ -22,7 +28,8 @@
             </div>
             <div class="col right-img home_row_img">
                 <div class="music-icon" onclick="toggleSound()">
-                    <img class="playing-music" src="assests/music_dark.svg" alt="Music">
+                    <div class="lottie-sound" id="lottie-sound"></div>
+                    <!-- <img class="playing-music" src="assests/music_dark.svg" alt="Music"> -->
                     <img class="mute-music" src="assests/music_dark_mute.svg" alt="Mute Music">
                 </div>
                 <audio id="myAudio" src="./HB_assest/good-night-160166.mp3"></audio>
@@ -36,19 +43,19 @@
                 <div class="col-12">
                    
                         <div>
-                            <li>
+                            <li id="homeButton" class="home-btn">
                                 <a href="index.html">HOME</a>
                             </li>
-                            <li>
+                            <li id="aboutButton" class="about-btn">
                                 <a class="text-nowrap" href="about.html">ABOUT US</a>
                             </li>
-                            <li>
+                            <li id="careerButton" class="career-btn">
                                 <a href="career.html">CAREER</a>
                             </li>
-                            <li>
+                            <li id="knowButton" class="know-btn">
                                 <a class="text-nowrap" href="knowyourself.html">KNOW YOURSELF</a>
                             </li>
-                            <li>
+                            <li id="fearlessButton" class="fearless-btn">
                                 <a class="text-nowrap" href="fearless.html">Be Fearless</a>
                             </li>
                         </div>
@@ -203,7 +210,7 @@
                         The plans you refer to will soon be back in our hands.
                     </h3>
                 </div>
-                <div class="col-12">
+                <div class="col-12 career-form-content">
                     <div class="row">
                         <form action="">
                             <div class="form">
@@ -224,10 +231,13 @@
                                     </div>
                                     <div>
                                         <label for="">Mobile Number</label>
-                                        <input type="text">
+                                        <div class="input-phone-container">
+                                            <span>+65</span>
+                                            <input type="tel" id="phoneNumber" >
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-12 my-3">
+                                <div class="col-12 my-3 align-items-start">
                                     <div style="margin-right: 40px;">
                                         <label for="" class="pr-4">Highest Qualification</label>
                                         <div class="d-flex radioint">
@@ -250,23 +260,23 @@
                                     </div>
                                     <div>
                                         <label for="" class="pr-4">Interested in?</label>
-                                        <div class="d-flex radioint radioint">
+                                        <div class="d-flex radioint">
                                             <input type="radio" id="r1" name="rr">
                                             <label for="r1">The career of a financial services consultant</label>
                                         </div>
-                                        <div class="d-flex radioint radioint">
+                                        <div class="d-flex radioint">
                                             <input type="radio" id="r1" name="rr">
                                             <label for="r1">Internship position/programme</label>
                                         </div>
-                                        <div class="d-flex radioint radioint">
+                                        <div class="d-flex radioint">
                                             <input type="radio" id="r1" name="rr">
                                             <label for="r1">Other job positions</label>
                                         </div>
-                                        <div class="d-flex radioint radioint"></div>
+                                        <div class="d-flex radioint"></div>
                                     </div>
                                 </div>
-                                <div style="padding-left: 22%;" class="label">Consent Form</div>
-                                <div style="padding-left: 22%;" class="radioint radioint">
+                                <div class="col-12 label">Consent Form</div>
+                                <div class="radioint" style="padding: 0px 15px;">
                                     <div>
                                         <label for="r1">By providing your personal data to us, you consent to your
                                             personal data being used, disclosed, stored, retained and processed by AIA
@@ -370,8 +380,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-    <script src="sound.js"></script>
-
+    <script src="assets/scripts/sound.js"></script>
 </body>
 
 </html>

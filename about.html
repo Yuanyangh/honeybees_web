@@ -15,12 +15,18 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="swiper.css">
-
+    
     <!-- Swiper's JS -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="swiper.js"></script>
+
+    <link rel="stylesheet" href="assets/css/navbtn.css">
+    <script src="assets/scripts/navbtn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+    <script src="assets/scripts/lottie-dark.js"></script>
+    <script src="assets/scripts/hive.js"></script>
 </head>
 <style>
     #carousel {
@@ -412,32 +418,33 @@
         <div class="honeybeeLogo"><img src="assests/Honeybees_logo.svg" alt="HoneybeeLogo"></div>
         <div class="honeybeeMusic">
             <div class="music-icon" onclick="toggleSound()">
-                <img class="playing-music" src="assests/music_light.svg" alt="Music">
+                <div class="lottie-sound" id="lottie-sound"></div>
+                <!-- <img class="playing-music" src="assests/music_light.svg" alt="Music"> -->
                 <img class="mute-music" src="assests/music_light_mute.svg" alt="Mute Music">
             </div>
             <audio id="myAudio" src="./HB_assest/good-night-160166.mp3"></audio>     
         </div>
     </div>
-    <navbar>
+    <navbar class="about-nav">
         <div class="container">
             <div class="row">
     
                 <div class="col-12">
                    
                         <div>
-                            <li>
+                            <li id="homeButton" class="home-btn">
                                 <a href="index.html">HOME</a>
                             </li>
-                            <li>
+                            <li id="aboutButton" class="about-btn">
                                 <a class="text-nowrap" href="about.html">ABOUT US</a>
                             </li>
-                            <li>
+                            <li id="careerButton" class="career-btn">
                                 <a href="career.html">CAREER</a>
                             </li>
-                            <li>
+                            <li id="knowButton" class="know-btn">
                                 <a class="text-nowrap" href="knowyourself.html">KNOW YOURSELF</a>
                             </li>
-                            <li>
+                            <li id="fearlessButton" class="fearless-btn">
                                 <a class="text-nowrap" href="fearless.html">Be Fearless</a>
                             </li>
                         </div>
@@ -450,17 +457,14 @@
       </navbar>
     <section class="hero-sec">
         <div class="container">
-
             <div class="hero-hed-sec">
+                <div class="lottie-hive-content" id="lottie-hive"></div>
                 <h1 class="hero-hed-sec-text-caption">All right. Well, take care of yourself, Han. I guess that's what
                     you're best at, ain't it?</h1>
                 <p class="text-caption2">Obi-Wan is here. The Force is with him.</p>
                 <img class="hero-hed-sec-img" src="./image/Group 175.png" alt="" style="">
                 <img class="hero-hed-sec-gif" src="./assests/bee-logo2.gif">
             </div>
-
-
-
             <div class="sendo-section">
                 <h2>
                     Lorem ipsum
@@ -533,7 +537,7 @@
             <div class="" style="margin: 150px 0;">
                 <div class="d-flex">
                     <div class="runnng_white runnng_white_two yellow_running" style="background-color: #EE7430; padding: 20px 0 10px 0px;position:relative;z-index: 1;">
-                        <marquee direction="left" scrollamount="10" style="margin: 0;"> WAY TO BE FEARLESS THROUGH LIFE
+                        <marquee direction="left" scrollamount="10" style="margin: 0; width: 100%; white-space: nowrap;"> WAY TO BE FEARLESS THROUGH LIFE
                           <img src="./assests/whitebees.png" style="padding-left: 10px;" alt="">
                           WAY TO BE FEARLESS THROUGH LIFE
                           <img src="./assests/whitebees.png" style="padding-left: 10px;" alt="">
@@ -607,169 +611,21 @@
                     </marquee>
                 </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
             <div class="honeybees-sec">
                 <h1>The Honeybees</h1>
                 <!-- Swiper -->
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper" id="swiper-wrapper">
-                        <!-- Slides -->
-                        <!-- <div class="swiper-slide"><img src="asssets/images/TeamMembers/Diana_Low.png" alt="Slide 1"></div>
-                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Ian_Lin.png" alt="Slide 2"></div>
-                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Wang_Yaxiang.png" alt="Slide 3"></div>
-                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Kylie_Ng.png" alt="Slide 4"></div>
-                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Kenneth_Chng.png" alt="Slide 5"></div>
-                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Pamela_Ng.png" alt="Slide 6"></div>
-                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Jacqueline_Tan.png" alt="Slide 7"></div>
-                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Goh_Li_Ying.png" alt="Slide 8"></div>
-                        <div class="swiper-slide"><img src="asssets/images/TeamMembers/Lim_Yu_Heng.png" alt="Slide 9"></div> -->
-                        
-                        <!-- Add more slides as needed -->
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-
-                <!-- Text related to each slide -->
-                <!-- <div class="slide-text" style="text-align: center;">
-                    <p id="current-slide-text">asdf</p>
-                </div> -->
-
-
-
-
-
-
-
-
                 <div class="ing-text-wrap">
                     <!-- <div class="right-img-honey">
                         <img src="./image/Group 210.png" alt="">
                     </div> -->
                     <div class="text-box-center">
-
                          <div class="honeyBeeTeam" id="honeyBeeTeam">
-                        <!--    <div>
-                                <div class="honeyBeeTeamReview">
-                                    <h2>Diana Low</h2>
-                                    <h4>Senior Personal Wealth Manager</h4>
-                                    <p>
-                                        Being a financial services consultant, I see myself being tasked with a big
-                                        responsibility to
-                                        educate and guide my clients through big financial decisions to achieve their
-                                        goals in life.
-                                        Through my work, the most rewarding and fulfilling experiences is being able to
-                                        develop
-                                        relationships with people from different walks of life and making significant
-                                        impacts on
-                                        their lives. ​
-                                    </p>
-                                    <div class="teg-btn">
-                                        <ul>
-                                            <li>5x MDRT Qualifier</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="honeyBeeTeamReview">
-                                    <h2>Diana High</h2>
-                                    <h4>Senior Personal Wealth Manager</h4>
-                                    <p>Being a financial services consultant, I see myself being tasked with a big
-                                        responsibility to
-                                        educate and guide my clients through big financial decisions to achieve their
-                                        goals in life.
-                                        Through my work, the most rewarding and fulfilling experiences is being able to
-                                        develop
-                                        relationships with people from different walks of life and making significant
-                                        impacts on
-                                        their lives. ​
-                                    </p>
-                                    <div class="teg-btn">
-                                        <ul>
-                                            <li>5x MDRT Qualifier</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="honeyBeeTeamReview">
-                                    <h2>Diana Low - 3</h2>
-                                    <h4>Senior Personal Wealth Manager</h4>
-                                    <p>
-                                        Being a financial services consultant, I see myself being tasked with a big
-                                        responsibility to
-                                        educate and guide my clients through big financial decisions to achieve their
-                                        goals in life.
-                                        Through my work, the most rewarding and fulfilling experiences is being able to
-                                        develop
-                                        relationships with people from different walks of life and making significant
-                                        impacts on
-                                        their lives. ​
-                                    </p>
-                                    <div class="teg-btn">
-                                        <ul>
-                                            <li>5x MDRT Qualifier</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="honeyBeeTeamReview">
-                                    <h2>Diana Low- midum</h2>
-                                    <h4>Senior Personal Wealth Manager</h4>
-                                    <p>
-                                        Being a financial services consultant, I see myself being tasked with a big
-                                        responsibility to
-                                        educate and guide my clients through big financial decisions to achieve their
-                                        goals in life.
-                                        Through my work, the most rewarding and fulfilling experiences is being able to
-                                        develop
-                                        relationships with people from different walks of life and making significant
-                                        impacts on
-                                        their lives.
-                                    </p>
-                                    <div class="teg-btn">
-                                        <ul>
-                                            <li>5x MDRT Qualifier</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="honeyBeeTeamReview">
-                                    <h2>Diana Low - last one</h2>
-                                    <h4>Senior Personal Wealth Manager</h4>
-                                    <p>
-                                        Being a financial services consultant, I see myself being tasked with a big
-                                        responsibility to
-                                        educate and guide my clients through big financial decisions to achieve their
-                                        goals in life.
-                                        Through my work, the most rewarding and fulfilling experiences is being able to
-                                        develop
-                                        relationships with people from different walks of life and making significant
-                                        impacts on
-                                        their lives. ​
-                                    </p>
-                                    <div class="teg-btn">
-                                        <ul>
-                                            <li>5x MDRT Qualifier</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div> -->
                         </div>
-
                     </div>
                     <!-- <div class="lest-img">
                         <img src="./image/Group 211.png" alt="">
@@ -778,60 +634,6 @@
                 <div class="last-sec">
                     <h1>What’s does people say?</h1>
                 </div>
-
-                <!-- <div class="testimonial" id="testimonial">
-                    <div class="testimonial_slide">
-                        <blockquote>
-                            <span class="leftq quotes"></span> I have always thought of the importance of savings and
-                            getting insurance for myself but I do not know where to start from. Kylie is very
-                            knowledgable and has been nice patient as she answers my queries.
-
-                            Thanks to her, I now understand how to manage my financials better! <span
-                                class="rightq quotes"> </span>
-                        </blockquote>
-                        <div class="testimonial_author">
-                            <img src="./assests/Ellipse 5.png" alt="">
-                            <div class="testimonial_author_detail">
-                                <h2>Eileen Goh, Human Resource Executive</h2>
-                                <h6>Client of Kylie Ng</h6>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial_slide">
-                        <blockquote>
-                            <span class="leftq quotes"></span> Agnes has been a reliable financial consultant with good
-                            knowledge of different solutions. The key differentiator I liked about her is that she is
-                            very trustworthy when it came to my investment decisions.<span class="rightq quotes">
-                            </span>
-                        </blockquote>
-                        <div class="testimonial_author">
-                            <img src="./assests/Ellipse 5.png" width="170" height="130" />
-                            <div class="testimonial_author_detail">
-                                <h2>Muru CM, Director</h2>
-                                <h6> Client of Agnes Lew</h6>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial_slide">
-                        <blockquote>
-                            <span class="quotes leftq"></span> During this short time that we have known Kenneth, he has
-                            been really helpful. Not only will he accommodate to my timing, he will try to come down to
-                            the most convenient location to have an appointment.
-
-                            ​ <span class="rightq quotes"></span>
-                        </blockquote>
-                        <div class="testimonial_author">
-                            <img src="./assests/Ellipse 5.png" width="170" height="130" />
-                            <div class="testimonial_author_detail">
-                                <h2>Jie Wei, Marketing Analyst</h2>
-                                <h6> Client of Kenneth Chng</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
                 <div class="gtco-testimonials-container">
                 <div class="gtco-testimonials">
                     <div class="owl-carousel owl-carousel1 owl-theme">
@@ -944,7 +746,7 @@
     <script src="slick/slick.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
     <script src="about.js"></script>
-    <script src="sound.js"></script>
+    <script src="assets/scripts/sound.js"></script>
 </body>
 
 </html>

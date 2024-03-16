@@ -1,0 +1,16 @@
+.home-btn.nav-active {
+  background-color: #fff;
+  border-radius: 25px;
+}
+.about-btn.nav-active {
+  background-color: #3061ab;
+  border-radius: 25px;
+}
+.career-btn.nav-active {
+  background-color: #eeaf30;
+  border-radius: 25px;
+}
+.know-btn.nav-active {
+  background-color: #ee7430;
+  border-radius: 25px;
+}

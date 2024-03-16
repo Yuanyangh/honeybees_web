@@ -1,232 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fearless</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="honey.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-    
-</head>
-<script>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="honey.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script src="assets/scripts/lottie-dark.js"></script>
+
+  <script>
     // Function to check if the element is in the viewport
     function isInViewport(element) {
       const rect = element.getBoundingClientRect();
       return (
         rect.top >= 0 &&
         rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
       );
     }
-    
+
     // Function to run on scroll
     function runOnScroll() {
-      const elements = document.querySelectorAll('.strok_text');
+      const elements = document.querySelectorAll(".strok_text");
       for (let i = 0; i < elements.length; i++) {
         if (isInViewport(elements[i])) {
-          elements[i].classList.add('animate_strok_text');
+          elements[i].classList.add("animate_strok_text");
         }
       }
     }
-    
+
     // Attach the event listener to window scroll
-    window.addEventListener('DOMContentLoaded', runOnScroll);
-</script>
-<body>
+    window.addEventListener("DOMContentLoaded", runOnScroll);
+  </script>
+  <body>
     <div class="topbar">
-        <div class="honeybeeLogo"><img src="assests/Honeybees_logo.svg" alt="HoneybeeLogo"></div>
-        <div class="honeybeeMusic">
-            <div class="music-icon" onclick="toggleSound()">
-                <img class="playing-music" src="assests/music_light.svg" alt="Music">
-                <img class="mute-music" src="assests/music_light_mute.svg" alt="Mute Music">
-            </div>
-            <audio id="myAudio" src="./HB_assest/good-night-160166.mp3"></audio>     
+      <div class="honeybeeLogo">
+        <img src="assests/Honeybees_logo.svg" alt="HoneybeeLogo" />
+      </div>
+      <div class="honeybeeMusic">
+        <div class="music-icon" onclick="toggleSound()">
+          <div class="lottie-sound" id="lottie-sound"></div>
+          <!-- <img
+            class="playing-music"
+            src="assests/music_light.svg"
+            alt="Music"
+          /> -->
+          <img
+            class="mute-music"
+            src="assests/music_light_mute.svg"
+            alt="Mute Music"
+          />
         </div>
+        <audio id="myAudio" src="./HB_assest/good-night-160166.mp3"></audio>
+      </div>
     </div>
     <navbar>
-        <div class="container">
-            <div class="row">
-    
-                <div class="col-12">
-                   
-                        <div>
-                            <li>
-                                <a href="index.html">HOME</a>
-                            </li>
-                            <li>
-                                <a class="text-nowrap" href="about.html">ABOUT US</a>
-                            </li>
-                            <li>
-                                <a href="career.html">CAREER</a>
-                            </li>
-                            <li>
-                                <a class="text-nowrap" href="knowyourself.html">KNOW YOURSELF</a>
-                            </li>
-                            <li>
-                                <a class="text-nowrap" href="fearless.html">Be Fearless</a>
-                            </li>
-                        </div>
-                            <a href="#"><img src="asssets/Group 149.png" alt=""></a>
-                    
-                </div>
-    
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div>
+              <li>
+                <a href="index.html">HOME</a>
+              </li>
+              <li>
+                <a class="text-nowrap" href="about.html">ABOUT US</a>
+              </li>
+              <li>
+                <a href="career.html">CAREER</a>
+              </li>
+              <li>
+                <a class="text-nowrap" href="knowyourself.html"
+                  >KNOW YOURSELF</a
+                >
+              </li>
+              <li>
+                <a class="text-nowrap" href="fearless.html">Be Fearless</a>
+              </li>
             </div>
+            <a href="#"><img src="asssets/Group 149.png" alt="" /></a>
           </div>
-      </navbar>
+        </div>
+      </div>
+    </navbar>
     <section class="fearless_main">
-        
-        <div class="fearless_background">
-                <!---------------------------------------New Section--------------------------------------------------------------->
-                <!-- <div class="top_section">
+      <div class="fearless_background">
+        <!---------------------------------------New Section--------------------------------------------------------------->
+        <!-- <div class="top_section">
                     <div class="custom_container container">
                         <h2 class="fearless_heading">my <span>happiness</span> DOESN’T come from money or fame. My happiness comes from seeing life without <span>struggle.</span> </h2>
                         <p class="name" style="margin:0 auto !important;">Nicki Minaj</p>
                     </div>
                 </div> -->
-                <div class="main_content" style="padding:100px 0;">
-                    <h1>MY <span class="strok_text">HAPPINESS</span> DOESN’T come from money or fame. My happiness comes from seeing
-                      life without <span class="strok_text">struggle.</span></h1>
-                    <p>Nicki Minaj</p>
-                    <!-- <button class="sign_up">How?</button> -->
-                </div>
-                <!---------------------------------------New Section--------------------------------------------------------------->
-                <div class="timer custom_container container">
-                    <h2 calss="timer">16436 DAYS<br>23 : 45 : 12</h2>
-                    <p>Junjie is 25 years old today; this is the time he has until he turns 80.
-                        It should be full of enjoyment and happiness!</p>
-                </div>
-                <!---------------------------------------New Section--------------------------------------------------------------->
-                <div class="text_box container custom_container">
-                    <div class="row text_row">
-                        <div class="col-md-8 text_area">
-                            <h2>No! Don't jump! No! The kind with looting and maybe starting a few fires! I just want to talk.</h2>
-                            <p>No! Don't jump! No! The kind with looting and maybe starting a few fires! I just want to talk. It has nothing to do with mating. Fry, that doesn't make sense. Robot 1-X, save my friends! And Zoidberg!</p>
-                        </div>
-                        <div class="col-md-4 imag_text">
-                            <img src="images/Union.png" width="80%">
-                            <p class="blue">Fear of bla I don't want to bla bla bla.</p>
-                        </div>
-
-                    </div>
-                </div>
-                <!---------------------------------------New Section--------------------------------------------------------------->
-                <div class="text_box container custom_container">
-                    <div class="row text_row">
-                        <div class="col-md-8 text_area">
-                            <h2>No! Don't jump! No! The kind with looting and maybe starting a few fires! I just want to talk.</h2>
-                            <p>No! Don't jump! No! The kind with looting and maybe starting a few fires! I just want to talk. It has nothing to do with mating. Fry, that doesn't make sense. Robot 1-X, save my friends! And Zoidberg!</p>
-                        </div>
-                        <div class="col-md-4 imag_text">
-                            <img src="images/Union.png" width="80%">
-                            <p class="blue">Fear of bla I don't want to bla bla bla.</p>
-                        </div>
-
-                    </div>
-                </div>
-                <!---------------------------------------New Section--------------------------------------------------------------->
-                <div class="text_box container custom_container">
-                    <div class="row text_row">
-                        <div class="col-md-8 text_area">
-                            <h2>No! Don't jump! No! The kind with looting and maybe starting a few fires! I just want to talk.</h2>
-                            <p>No! Don't jump! No! The kind with looting and maybe starting a few fires! I just want to talk. It has nothing to do with mating. Fry, that doesn't make sense. Robot 1-X, save my friends! And Zoidberg!</p>
-                        </div>
-                        <div class="col-md-4 imag_text">
-                            <img src="images/Union.png" width="80%">
-                            <p class="blue">Fear of bla I don't want to bla bla bla.</p>
-                        </div>
-
-                    </div>
-                </div>
-                <!---------------------------------------New Section--------------------------------------------------------------->
-                <div class="fearless_bottom_section">
-                    <div class="row fearless_bottom">
-                        
-                    <div class="col-md-12 fearless_bottom_text">
-                        
-                        <img src="images/union2.png">
-                        <p class="blue">Woof! Gotcha, pal! I'm all ears and ready to lend a paw. What's the barkin' issue? 🐾</p>
-                    
-                    </div>  
-                    <div class="dog_section col-md-12">
-                        <img src="images/Ellipse5.png" width="60px">
-                        <p>Sunny, Human Best Friend</p>
-                    </div>
-                    <div class="input col-md-12">
-                        <label for="inputField" class="fearless_input_label">
-                            
-                            <input class="fearless_input" type="text" id="inputField" placeholder="Maybe I can give it a try?">
-                            <button class="fearless_btn" class="send-button">Send</button>
-                        </label>
-                    </div>
-                </div>
-                </div>
+        <div class="main_content" style="padding: 150px 0">
+          <h1>
+            MY <span class="strok_text">HAPPINESS</span> DOESN’T come from money
+            or fame. My happiness comes from seeing life without
+            <span class="strok_text">struggle.</span>
+          </h1>
+          <p>Nicki Minaj</p>
+          <!-- <button class="sign_up">How?</button> -->
         </div>
-    </section>
-    <img src="asssets/exportfence1.png" alt="" class="exportfence">
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div style="width: 100%;">
-                    <h3>
-                        <p class="text-lowercase drop_text">Drop your question and email or you can tell us your favourite song?</p>
-                    </h3>
-                    <div class="inform">
-                        <form action="" class="formfooter">
-                            <div class="d-flex mb-3">
-                                <select name="" id="" class="select">
-                                    <option selected disabled value="">Your Title</option>
-                                    <option value="">Mr</option>
-                                    <option value="">Mrs</option>
-                                </select>
-                                <input type="text" placeholder="Your Name..." class="name">
-                            </div>
-                            <input class="email mb-3" type="email" name="" id="" placeholder="Your Email...">
-                            <div class="d-flex formend w-100">
-                                <input type="text" placeholder="What’s in your mind?" class="message">
-                                <button style="color: #29446D;"> Send </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div style="width: 100%; margin-top: 150px; margin-bottom: 100px;">
-                    <div class="row">
-                        <div class="col-6">
-                            <h4 class="text-left text-lowercase">
-                                I think we need a rematch. <span class="text-uppercase">Ronald Reagon. Marty</span>, you seem so nervous, is something wrong?
-                            </h4>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex socialicondiv">
-                                <img src="asssets/icon_linkedin.png" alt="">
-                                <img src="asssets/icon_instagram.png" alt="">
-                                <img src="asssets/icon_facebook_squared.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="width: 100%;">
-                    <p class="fontfooterend">SP-HONEYBEES is an authorised representative of AIA Singapore Private Limited (Reg. No. 201106386R)
-                        © 2022 by SP-HONEYBEES</p>
-                </div>
+        <!---------------------------------------New Section--------------------------------------------------------------->
+        <div class="timer custom_container container">
+          <h2 calss="timer">16436 DAYS<br />23 : 45 : 12</h2>
+          <p>
+            Junjie is 25 years old today; this is the time he has until he turns
+            80. It should be full of enjoyment and happiness!
+          </p>
+        </div>
+        <!---------------------------------------New Section--------------------------------------------------------------->
+        <div class="text_box container custom_container">
+          <div class="row text_row">
+            <div class="col-md-8 text_area">
+              <h2>
+                No! Don't jump! No! The kind with looting and maybe starting a
+                few fires! I just want to talk.
+              </h2>
+              <p>
+                No! Don't jump! No! The kind with looting and maybe starting a
+                few fires! I just want to talk. It has nothing to do with
+                mating. Fry, that doesn't make sense. Robot 1-X, save my
+                friends! And Zoidberg!
+              </p>
             </div>
+            <div class="col-md-4 imag_text">
+              <img src="images/Union.png" width="80%" />
+              <p class="blue">Fear of bla I don't want to bla bla bla.</p>
+            </div>
+          </div>
         </div>
-
-
+        <!---------------------------------------New Section--------------------------------------------------------------->
+        <div class="text_box container custom_container">
+          <div class="row text_row">
+            <div class="col-md-8 text_area">
+              <h2>
+                No! Don't jump! No! The kind with looting and maybe starting a
+                few fires! I just want to talk.
+              </h2>
+              <p>
+                No! Don't jump! No! The kind with looting and maybe starting a
+                few fires! I just want to talk. It has nothing to do with
+                mating. Fry, that doesn't make sense. Robot 1-X, save my
+                friends! And Zoidberg!
+              </p>
+            </div>
+            <div class="col-md-4 imag_text">
+              <img src="images/Union.png" width="80%" />
+              <p class="blue">Fear of bla I don't want to bla bla bla.</p>
+            </div>
+          </div>
+        </div>
+        <!---------------------------------------New Section--------------------------------------------------------------->
+        <div class="text_box container custom_container">
+          <div class="row text_row">
+            <div class="col-md-8 text_area">
+              <h2>
+                No! Don't jump! No! The kind with looting and maybe starting a
+                few fires! I just want to talk.
+              </h2>
+              <p>
+                No! Don't jump! No! The kind with looting and maybe starting a
+                few fires! I just want to talk. It has nothing to do with
+                mating. Fry, that doesn't make sense. Robot 1-X, save my
+                friends! And Zoidberg!
+              </p>
+            </div>
+            <div class="col-md-4 imag_text">
+              <img src="images/Union.png" width="80%" />
+              <p class="blue">Fear of bla I don't want to bla bla bla.</p>
+            </div>
+          </div>
+        </div>
+        <!---------------------------------------New Section--------------------------------------------------------------->
+        <div class="fearless_bottom_section">
+          <div class="row fearless_bottom">
+            <div class="col-md-12 fearless_bottom_text">
+              <img src="images/union2.png" />
+              <p class="blue">
+                Woof! Gotcha, pal! I'm all ears and ready to lend a paw. What's
+                the barkin' issue? 🐾
+              </p>
+            </div>
+            <div class="dog_section col-md-12">
+              <img src="images/Ellipse5.png" width="60px" />
+              <p>Sunny, Human Best Friend</p>
+            </div>
+            <div class="input col-md-12">
+              <label for="inputField" class="fearless_input_label">
+                <input
+                  class="fearless_input"
+                  type="text"
+                  id="inputField"
+                  placeholder="Maybe I can give it a try?"
+                />
+                <button class="fearless_btn" class="send-button">Send</button>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <img src="asssets/exportfence1.png" alt="" class="exportfence" />
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div style="width: 100%">
+            <h3>
+              <p class="text-lowercase drop_text">
+                Drop your question and email or you can tell us your favourite
+                song?
+              </p>
+            </h3>
+            <div class="inform">
+              <form action="" class="formfooter">
+                <div class="d-flex mb-3">
+                  <select name="" id="" class="select">
+                    <option selected disabled value="">Your Title</option>
+                    <option value="">Mr</option>
+                    <option value="">Mrs</option>
+                  </select>
+                  <input type="text" placeholder="Your Name..." class="name" />
+                </div>
+                <input
+                  class="email mb-3"
+                  type="email"
+                  name=""
+                  id=""
+                  placeholder="Your Email..."
+                />
+                <div class="d-flex formend w-100">
+                  <input
+                    type="text"
+                    placeholder="What’s in your mind?"
+                    class="message"
+                  />
+                  <button style="color: #29446d">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div style="width: 100%; margin-top: 150px; margin-bottom: 100px">
+            <div class="row">
+              <div class="col-6">
+                <h4 class="text-left text-lowercase">
+                  I think we need a rematch.
+                  <span class="text-uppercase">Ronald Reagon. Marty</span>, you
+                  seem so nervous, is something wrong?
+                </h4>
+              </div>
+              <div class="col-6">
+                <div class="d-flex socialicondiv">
+                  <img src="asssets/icon_linkedin.png" alt="" />
+                  <img src="asssets/icon_instagram.png" alt="" />
+                  <img src="asssets/icon_facebook_squared.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="width: 100%">
+            <p class="fontfooterend">
+              SP-HONEYBEES is an authorised representative of AIA Singapore
+              Private Limited (Reg. No. 201106386R) © 2022 by SP-HONEYBEES
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-    <script src="sound.js"></script>
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/scripts/sound.js"></script>
+  </body>
 </html>

@@ -13,6 +13,7 @@
   <link rel="modulepreload" href="https://unpkg.com/@splinetool/runtime@1.0.51/build/runtime.js">
   <link rel="stylesheet" href="slick/slick-theme.css">
   <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="assets/css/navbtn.css">
   <style>
 
     div#img-container {
@@ -390,7 +391,7 @@
         width: 100%; /* Adjust based on your preference */
         height: 100%; /* Adjust based on your preference */
         background-image: url('./image/3Beesfloating.gif'); /* Path to your GIF image */
-        background-size: cover;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
         background-position: left;
         position: relative;
@@ -550,7 +551,10 @@ navbar {
 
 
   </style>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src="assets/scripts/lottie-light.js"></script>
+    <script src="assets/scripts/navbtn.js"></script>
 <script>
   // Function to check if the element is in the viewport
   function isInViewport(element) {
@@ -586,10 +590,11 @@ navbar {
       </div>
       <div class="col right-img home_row_img">
         <div class="music-icon" onclick="toggleSound()">
-          <img class="playing-music" src="assests/music_dark.svg" alt="Music">
+          <div class="lottie-sound" id="lottie-sound"></div>
+          <!-- <img class="playing-music" src="assests/music_dark.svg" alt="Music"> -->
           <img class="mute-music" src="assests/music_dark_mute.svg" alt="Mute Music">
         </div>
-        <audio id="myAudio" src="./HB_assest/good-night-160166.mp3"></audio>
+        <audio id="myAudio" src="./HB_assest/good-night-160166.mp3" loop></audio>
       </div>
     </div>
   </div>
@@ -600,19 +605,19 @@ navbar {
             <div class="col-12">
                
                     <div>
-                        <li>
+                        <li id="homeButton" class="home-btn">
                             <a href="index.html">HOME</a>
                         </li>
-                        <li>
+                        <li id="aboutButton" class="about-btn">
                             <a class="text-nowrap" href="about.html">ABOUT US</a>
                         </li>
-                        <li>
+                        <li id="careerButton" class="career-btn">
                             <a href="career.html">CAREER</a>
                         </li>
-                        <li>
+                        <li id="knowButton" class="know-btn">
                             <a class="text-nowrap" href="knowyourself.html">KNOW YOURSELF</a>
                         </li>
-                        <li>
+                        <li id="fearlessButton" class="fearless-btn">
                             <a class="text-nowrap" href="fearless.html">Be Fearless</a>
                         </li>
                     </div>
@@ -1119,7 +1124,7 @@ navbar {
     </script>
 
     <script src="slick/slick.min.js"></script>
-    <script src="sound.js"></script>
+    <script src="assets/scripts/sound.js"></script>
 
     <script>
       $(document).ready(function () {
