@@ -15,8 +15,6 @@ $(document).ready(async function () {
     path: "./HB_assest/quiz.json", // the path to the animation json
   });
 
-  // animation.play();
-  // animation2.play();
   setTimeout(() => {
     animation.play();
     animation2.play();

@@ -120,9 +120,13 @@ body {
   outline: white;
   color: transparent;
   -webkit-text-stroke: 3px #ffffff;
-
   text-transform: uppercase;
   letter-spacing: -4px;
+  line-height: 70px;
+}
+
+.runnng_orange marquee img {
+  margin-top: -10px;
 }
 
 h1.upcoming-events {
@@ -223,7 +227,7 @@ img.evet_2 {
 }
 
 .honey_bee_section .content_container {
-  width: 55%;
+  max-width: 800px;
   font-size: 55px;
   text-align: center;
   margin: auto;
@@ -490,7 +494,7 @@ input::placeholder {
 
 .runnng_white marquee {
   font-size: 55px;
-  line-height: 55px;
+  line-height: 70px;
   outline: #29446d;
   color: transparent;
   -webkit-text-stroke: 2px #ffffff;
@@ -499,6 +503,12 @@ input::placeholder {
   -webkit-text-stroke: 3px #29446d;
   text-stroke: 2px #ffffff;
   letter-spacing: -4px;
+  display: inline-block; /* Ensures the span takes up only the necessary width */
+  vertical-align: middle; /* Aligns the text vertically in the middle */
+}
+
+.runnng_white marquee img {
+  margin-top: -10px;
 }
 
 marquee,
@@ -591,10 +601,6 @@ marquee,
   font-size: 18px;
 }
 
-.block_text {
-  /* position: relative; */
-}
-
 .block_text_container {
   position: relative;
 }
@@ -637,6 +643,21 @@ section.loren_sectiom {
   left: 0;
 }
 
+@media (max-width: 1600px) {
+  .block_text {
+    padding-bottom: 300px;
+  }
+  .block_text:before {
+    bottom: 50px;
+  }
+  .block_text:after {
+    bottom: 100px;
+  }
+  .content_container:before {
+    bottom: -230px;
+  }
+}
+
 .runnng_orange.blue_runing {
   background: #3061ab;
   margin-bottom: -100px;
@@ -645,6 +666,7 @@ section.loren_sectiom {
 
 .runnng_orange.blue_runing marquee img {
   margin-left: 18px;
+  margin-top: -10px;
 }
 
 section.blue_bg {
@@ -832,7 +854,8 @@ body {
 }
 
 section.hero-sec {
-  background: #04347bc2;
+  background: url(./images/bg.png);
+  background-size: contain;
 }
 
 section.hero-sec .col {

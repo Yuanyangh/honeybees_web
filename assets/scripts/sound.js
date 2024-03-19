@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  var playingStatus = localStorage.getItem("music_play");
   $(".music-icon").click(function () {
     if ($(".music-icon").hasClass("playing")) {
       $(".music-icon").removeClass("playing");

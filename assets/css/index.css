@@ -1,0 +1,29 @@
+@keyframes flowAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Apply animation to the flowing text */
+.flowing-text {
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  animation: flowAnimation 20s linear infinite;
+}
+
+.flowing-text span {
+  font-size: 55px;
+  line-height: 55px;
+  outline: #29446d;
+  color: transparent;
+  -webkit-text-stroke: 2px #ffffff;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 3px #29446d;
+  text-stroke: 2px #ffffff;
+  letter-spacing: -4px;
+}
