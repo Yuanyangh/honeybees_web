@@ -3,9 +3,9 @@
   src: url("./assests/Agrandir - Free For Personal Use/Agrandir-GrandHeavy.otf");
 }
 
-body {
+/* body {
   overflow-x: hidden;
-}
+} */
 navbar {
   z-index: 99;
 }
@@ -157,6 +157,13 @@ navbar.know-nav a:hover {
   margin-bottom: 28px;
 }
 
+navbar.fearless-nav a,
+navbar.fearless-nav a:hover {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 28px;
+}
+
 @media screen and (max-width: 767px) {
   .home .container-fluid {
     padding: 0 20px;
@@ -184,13 +191,13 @@ navbar.know-nav a:hover {
   justify-content: center !important;
   text-align: center;
   background-color: #fff4d5;
-  padding-top: 100px;
+  padding-top: 300px;
   background: url("asssets/6497069.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 25px 25px 0 0;
-  padding-bottom: 200px;
+  padding-bottom: 300px;
   margin-bottom: -100px;
 }
 .formsection .row {

@@ -19,7 +19,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .section_mine {
@@ -288,23 +288,20 @@ button.seemore {
   bottom: -160px;
   background-repeat: no-repeat;
   right: 0;
-  /* left: 100%; */
   background-size: 450px 230px, 120px 120px;
   max-width: 450px;
   max-height: 230px;
   width: 100%;
   height: 230px;
-  /* background-size: contain, 80px 80px; */
   position: absolute;
   right: 0;
-  /* left: 100%; */
-  /* bottom: 100px; */
   background-repeat: no-repeat;
 }
 
 section.event_section {
-  padding-bottom: 400px;
-  margin-top: -16px;
+  padding: 400px 0px;
+  margin-top: -305px;
+  position: relative;
 }
 
 /* form */
@@ -544,7 +541,7 @@ marquee,
 
 .main_heading {
   text-align: center;
-  padding-top: 226px;
+  padding-top: 400px;
 }
 
 .main_heading h1 {
@@ -622,10 +619,11 @@ marquee,
 }
 
 section.loren_sectiom {
-  padding-bottom: 0px;
+  padding-bottom: 400px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .block_text:after {
@@ -1455,6 +1453,7 @@ p {
   background-size: cover;
   padding-top: 100px;
   padding-bottom: 150px;
+  position: relative;
 }
 
 .ing-text-wrap h1 {
