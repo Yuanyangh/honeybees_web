@@ -331,12 +331,6 @@
   .spline-watermark:hover {
     background: linear-gradient(180deg, #1B1C21 0%, #17181C 100%);
   } */
-
-    .main_head_content {
-      position: relative;
-      /* make it a positioning context for the canvas */
-    }
-
     #canvas3d {
       position: absolute;
       top: 0;
@@ -382,18 +376,6 @@
         animation: inherit;
         transform: inherit;
         transform-style: inherit;
-    }
-
-    .gif-container {
-        width: 100%; /* Adjust based on your preference */
-        height: 100%; /* Adjust based on your preference */
-        background-image: url('./image/3Beesfloating.gif'); /* Path to your GIF image */
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-position: left;
-        position: relative;
-        z-index: 1;
-        /* The scaling animation is inherited from the parent container */
     }
 
     @keyframes floatInAndColorChange {
@@ -582,7 +564,7 @@ navbar {
   <div class="home_row_parent">
     <div class="home_row row">
       <div class="col center-img home_row_img">
-        <img src="./assests/Honeybees_logo (1).png" alt="" style="margin-right: -100px !important;">
+        <img src="./assests/Honeybees_logo (1).png" alt="">
       </div>
       <div class="col right-img home_row_img">
         <div class="music-icon" onclick="toggleSound()">
@@ -590,7 +572,7 @@ navbar {
           <!-- <img class="playing-music" src="assests/music_dark.svg" alt="Music"> -->
           <img class="mute-music" src="assests/music_dark_mute.svg" alt="Mute Music">
         </div>
-        <audio id="myAudio" src="./HB_assest/good-night-160166.mp3" loop></audio>
+        <audio id="myAudio" src="./HB_assest/good-night-160166.mp3" loop autoplay></audio>
       </div>
     </div>
   </div>
@@ -627,9 +609,20 @@ navbar {
 
   <section class="scale-background" >
     <!-- <canvas id="canvas3d"></canvas> -->
-    <div class="gif-container">
-
-      <div class="main_head_content" style="padding:280px 0">     
+    <div class="banner-container">
+      <div class="banner-bee-top">
+        <img src="./assets/img/Home_Bee_A.png" alt="beeA"/>
+        <img src="./assets/img/Home_Bee_A.gif" alt="beeA_gif" class="bee-gif-A"/>
+      </div>
+      <div class="banner-bee-mid">
+        <img src="./assets/img/Home_Bee_B.png" alt="beeB" class="bee-gif-line"/>
+        <img src="./assets/img/Home_Bee_B.gif" alt="beeB_gif" class="bee-gif-B"/>
+      </div>
+      <div class="banner-bee-bottom">
+        <img src="./assets/img/Home_Bee_C.png" alt="beeC"/>
+        <img src="./assets/img/Home_Bee_C.gif" alt="beeC_gif" class="bee-gif-C"/>
+      </div>
+      <div class="main_head_content">     
         <h1 class="text-caption">
           Welcome to our corner of the creative bugs, we think you’re going to like it here.
         </h1>
@@ -639,7 +632,7 @@ navbar {
 
       </div>
     </div>
-    <div class="index-marquee-content rotate white" style="margin-top: -400px;">
+    <div class="index-marquee-content rotate white" style="margin-top: -20%;">
       <div class="marquee">
         <span>Thanks for passing by</span>
         <img src="./assests/bluebees.png" alt="">
@@ -1039,18 +1032,7 @@ navbar {
 </section>
 
   <script>
-    //  jQuery(document).ready(function(){
-    //   jQuery('.block_cus_one').hover(function(){
-    //     jQuery(this).hide(); // Hide the hovered div
-    //     jQuery('.block_cus_one_hiden').css('display', 'block'); // Display the hidden div
-    //   });
-    // });
-
     $(document).ready(function () {
-      // let swiper = new Swiper(".upcomingEvent", {
-      //   spaceBetween: 20,
-      // });
-      
       $('.block_cus_one').hover(function () {
         $(this).hide(); // Hide the hovered div
         $('.block_cus_one_hiden').css('display', 'block'); // Display the hidden div
@@ -1060,9 +1042,6 @@ navbar {
         $('.block_cus_one').show(); // Show the previously hidden div
         $(this).css('display', 'none'); // Hide the current div again
       });
-
-
-
 
       $('.block_cus_two').hover(function () {
         $(this).hide(); // Hide the hovered div
@@ -1084,8 +1063,6 @@ navbar {
         $('.block_cus_3').show(); // Show the previously hidden div
         $(this).css('display', 'none'); // Hide the current div again
       });
-
-
 
     });
   </script>

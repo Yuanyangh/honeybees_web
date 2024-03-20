@@ -19,7 +19,8 @@ body {
 body {
   margin: 0;
   padding: 0;
-  /* overflow-x: hidden; */
+  background-color: #efb127;
+  overflow: hidden;
 }
 
 .section_mine {
@@ -730,29 +731,6 @@ section.banner_Section {
   padding-bottom: 90px;
 }
 
-.main_head_content {
-  text-align: center;
-  margin: auto;
-}
-
-.main_head_content h1 {
-  width: 100%;
-  max-width: 800px;
-  margin: auto;
-  font-size: 55px;
-  color: #29446d;
-  line-height: 60px;
-  font-family: "Agrandir-TextBold";
-  text-transform: uppercase;
-}
-
-.main_head_content p {
-  color: #29446d;
-  font-size: 18px;
-  font-weight: 700;
-  font-family: "AvenirNextlight" !important;
-}
-
 .running_banner {
   padding-top: 50px;
   padding-bottom: 32px;
@@ -840,15 +818,14 @@ section.hero-sec .row {
   align-items: center;
 }
 
-/* / */
 body {
   /* background: url(./images/bg.png), #f0b226 !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: center center; */
-  margin: 0;
+  /* margin: 0;
   padding: 0;
-  background-color: #efb127;
+  background-color: #efb127; */
 }
 
 section.hero-sec {
