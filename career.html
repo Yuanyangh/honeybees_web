@@ -24,21 +24,19 @@
 </head>
 
 <body>
-    <div class="home_row_parent">
-        <div class="home_row row">
-            <div class="col center-img home_row_img">
-                <img src="./assests/Honeybees_logo (1).png" alt="" style="margin-right: -100px !important;">
-            </div>
-            <div class="col right-img home_row_img">
-                <div class="music-icon" onclick="toggleSound()">
-                    <div class="lottie-sound" id="lottie-sound"></div>
-                    <!-- <img class="playing-music" src="assests/music_dark.svg" alt="Music"> -->
-                    <img class="mute-music" src="assests/music_dark_mute.svg" alt="Mute Music">
-                </div>
-                <audio id="myAudio" src="./HB_assest/good-night-160166.mp3" loop></audio>
-            </div>
+    <div class="topbar">
+        <div class="honeybeeLogo">
+        <img src="./assests/Honeybees_logo (1).png" alt="">
         </div>
-      </div>
+        <div class="honeybeeMusic">
+        <div class="music-icon" onclick="toggleSound()">
+            <div class="lottie-sound" id="lottie-sound"></div>
+            <!-- <img class="playing-music" src="assests/music_dark.svg" alt="Music"> -->
+            <img class="mute-music" src="assests/music_dark_mute.svg" alt="Mute Music">
+        </div>
+        <audio id="myAudio" src="./HB_assest/good-night-160166.mp3" loop autoplay></audio>
+        </div>
+    </div>
       <navbar>
         <div class="container">
             <div class="row">

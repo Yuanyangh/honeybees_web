@@ -7,6 +7,48 @@
   }
 }
 
+@keyframes scaleDown {
+  from {
+    transform: scale(1.4); /* Start from a slightly larger scale */
+  }
+  to {
+    transform: scale(1); /* Scale down to the original size */
+  }
+}
+
+/* Apply the background image/GIF and animation to your element */
+
+.scale-background {
+  width: 100%;
+  height: 100vh;
+  /* background-image: url('./assests/bann.png'); */
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url("../img/bann.png");
+  background-size: cover;
+  background-position: center;
+  animation: scaleDown 1s ease-in-out forwards;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  position: relative;
+}
+.scale-background:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  animation: inherit;
+  transform: inherit;
+  transform-style: inherit;
+}
+
 .banner-container {
   position: relative;
   z-index: 1;
@@ -31,9 +73,8 @@
 
 .banner-bee-mid {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 0%;
-  transform: translate(0%, -50%);
   width: 80%;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
@@ -46,7 +87,7 @@
 
 .bee-gif-B {
   position: absolute;
-  top: -80%;
+  top: -100%;
   right: -20%;
 }
 
@@ -63,6 +104,10 @@
   position: absolute;
   top: 50%;
   right: -50%;
+}
+
+.index-banner-marquee {
+  margin-top: -20%;
 }
 
 .index-happen-marquee {
@@ -120,10 +165,75 @@
 }
 
 @media (max-width: 1600px) {
+  .banner-bee-top {
+    transform: scale(0.8);
+  }
+  .bee-gif-B {
+    transform: scale(0.7);
+  }
+  .banner-bee-bottom {
+    transform: scale(0.8) translateX(-15%);
+  }
 }
 
 @media (max-width: 1366px) {
+  .banner-bee-top {
+    transform: scale(0.6);
+  }
   .banner-bee-mid {
     display: none;
+  }
+  .banner-bee-bottom {
+    transform: scale(0.6) translateX(-35%);
+  }
+}
+
+@media (max-width: 1200px) {
+  .main_head_content h1 {
+    font-size: 45px;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 900px) {
+  .scale-background {
+    height: fit-content;
+  }
+  .main_head_content {
+    padding: 200px 20px 150px;
+  }
+  .index-banner-marquee {
+    margin-bottom: 200px;
+    margin-top: 0px;
+  }
+  .banner-bee-bottom {
+    bottom: 3%;
+  }
+}
+
+@media (max-width: 500px) {
+  .scale-background {
+    height: fit-content;
+  }
+  .main_head_content {
+    padding: 200px 20px 150px;
+  }
+  .main_head_content h1 {
+    font-size: 30px;
+    line-height: normal;
+  }
+  .main_head_content p {
+    font-size: 14px;
+  }
+  .banner-bee-top {
+    left: -30%;
+  }
+  .banner-bee-bottom {
+    transform: scale(0.6) translateX(-80%);
+    bottom: 3%;
+  }
+  .index-banner-marquee {
+    margin-bottom: 200px;
+    margin-top: 0px;
   }
 }

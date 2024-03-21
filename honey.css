@@ -978,38 +978,6 @@ section.hero-sec .row {
   animation: containerAni 2s ease-in-out 0.5s forwards; */
 }
 
-navbar .container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 576px) {
-  navbar .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  navbar .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  navbar .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  navbar .container {
-    max-width: 1140px;
-  }
-}
-
 .menu-list ul {
   display: flex;
   justify-content: center;
@@ -1496,17 +1464,6 @@ p {
 
 li.btn:hover {
   color: white !important;
-}
-
-.home_row.row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 40px;
-}
-
-.home_row .center-img {
-  display: flex;
-  justify-content: end;
 }
 
 .sendo-section {

@@ -1,3 +1,109 @@
+@keyframes floatInNavbar {
+  0% {
+    /* opacity: 0; */
+    transform: translateY(50px); /* Start above the final position */
+    visibility: visible;
+  }
+  100% {
+    /* opacity: 1; */
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+navbar {
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  visibility: hidden;
+  animation: floatInNavbar 0.5s ease-in-out 3s forwards;
+}
+
+navbar .col-12 {
+  list-style: none;
+  justify-content: space-between;
+  display: flex;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+navbar .col-12 div {
+  display: flex;
+  width: 100%;
+  background-color: #ffffff4d;
+  justify-content: space-between;
+  margin: auto;
+  border-radius: 25px;
+  margin-right: 50px;
+  gap: 20px;
+}
+navbar li {
+  align-self: center;
+  padding: 12px 20px;
+  font-family: "Agrandir-TextBold";
+  text-transform: uppercase;
+  color: #29446d;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 19.8px;
+  text-decoration: none;
+  text-align: center;
+}
+navbar li:hover {
+  background-color: #fff;
+  border-radius: 25px;
+}
+
+navbar.about-nav li:hover {
+  background-color: #3061ab;
+  border-radius: 25px;
+}
+
+navbar.know-nav li:hover {
+  background-color: #ee7430;
+  border-radius: 25px;
+}
+
+li:last-child {
+  background-color: #ff6464 !important;
+  border-radius: 25px;
+}
+li:last-child a,
+li:last-child a:hover {
+  color: white;
+}
+navbar li img {
+  width: 150px;
+}
+navbar a,
+navbar a:hover {
+  text-decoration: none;
+  color: #29446d;
+  margin-bottom: 28px;
+}
+
+navbar.about-nav a,
+navbar.about-nav a:hover {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 28px;
+}
+
+navbar.know-nav a,
+navbar.know-nav a:hover {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 28px;
+}
+
+navbar.fearless-nav a,
+navbar.fearless-nav a:hover {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 28px;
+}
+
 .home-btn.nav-active {
   background-color: #fff;
   border-radius: 25px;
@@ -13,4 +119,51 @@
 .know-btn.nav-active {
   background-color: #ee7430;
   border-radius: 25px;
+}
+
+navbar .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 1200px) {
+  navbar li {
+    font-size: 12px;
+  }
+  .nav-ad {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  navbar {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  navbar .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  navbar .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  navbar .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  navbar .container {
+    max-width: 1140px;
+  }
 }

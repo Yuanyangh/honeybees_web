@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="assets/css/navbtn.css">
   <link rel="stylesheet" href="assets/css/marquee.css">
   <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/modal.css">
   <style>
 
     div#img-container {
@@ -280,57 +281,10 @@
   </style>
 
   <style>
-    /* html, body {
-    height: 100%;
-  }
-  body {
-    margin: 0;
-    overflow: hidden;
-    background: rgba(216,216,216, 0);
-    disables highlighting on mobile
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-  } */
     canvas {
       outline: none;
       display: block;
     }
-
-    /* 
-  
-  
-  .spline-watermark {
-    position: absolute;
-    z-index: 2;
-    bottom: 20px;
-    right: 20px;
-    width: 137px;
-    height: 36px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    border-radius: 12px;
-    background: linear-gradient(180deg, #16181C 0%, #121316 100%);
-    box-shadow: inset 0px -2px 0px -1px #060709, inset 0px 1px 0px rgba(255, 255, 255, 0.04);
-  }
-  .spline-watermark span {
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-image: url(https://app.spline.design/_assets/_icons/icon_favicon32x32.png);
-    background-size: cover;
-  }
-  .spline-watermark svg {
-    display: block;
-    margin-right: 2px;
-  }
-  .spline-watermark:hover {
-    background: linear-gradient(180deg, #1B1C21 0%, #17181C 100%);
-  } */
     #canvas3d {
       position: absolute;
       top: 0;
@@ -341,42 +295,7 @@
       /* send canvas to the background */
       position: fixed;
     }
-    @keyframes scaleDown {
-        from {
-            transform: scale(1.4); /* Start from a slightly larger scale */
-        }
-        to {
-            transform: scale(1); /* Scale down to the original size */
-        }
-    }
 
-    /* Apply the background image/GIF and animation to your element */
-    .scale-background {
-        width: 100%;
-        height: 100vh;
-        /* background-image: url('./assests/bann.png'); */
-        background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('./assests/bann.png');
-        background-size: cover;
-        background-position: center;
-        animation: scaleDown 1s ease-in-out forwards; 
-        transform-style: preserve-3d;
-        overflow: hidden;
-        position: relative;
-    }
-    .scale-background:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: inherit;
-        background-size: cover;
-        background-position: center;
-        animation: inherit;
-        transform: inherit;
-        transform-style: inherit;
-    }
 
     @keyframes floatInAndColorChange {
         0% {
@@ -463,26 +382,6 @@
 
     }
 
-    
-
-@keyframes floatInNavbar {
-    0% {
-        /* opacity: 0; */
-        transform: translateY(50px); /* Start above the final position */
-        visibility:visible;
-    }
-    100% {
-        /* opacity: 1; */
-        transform: translateY(0);
-        visibility:visible;
-    }
-}
-
-navbar {
-  visibility: hidden;
-  animation: floatInNavbar 0.5s ease-in-out 3s forwards; /* Delay animation */
-}
-
     @keyframes floatInTopdown {
         0% {
             /* opacity: 0; */
@@ -495,25 +394,6 @@ navbar {
             visibility:visible;
         }
     }
-    
-    .home_row_img {
-      /* position: fixed; */
-      z-index: 100;
-    }
-
-    .home_row {
-      visibility: hidden;
-      animation: floatInTopdown 0.5s ease-in-out 3s forwards; /* Delay animation */
-      
-    }
-
-    .home_row_parent {
-      position: fixed;
-      z-index: 999;
-      width: 100%;
-      top: 30px;
-    }
-
     @keyframes amiStrokText {
         0% {
             color: white;
@@ -534,6 +414,7 @@ navbar {
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src="assets/scripts/lottie-light.js"></script>
     <script src="assets/scripts/navbtn.js"></script>
+    <script src="assets/scripts/modal.js"></script>
 <script>
   // Function to check if the element is in the viewport
   function isInViewport(element) {
@@ -561,48 +442,46 @@ navbar {
 
 <body>
 
-  <div class="home_row_parent">
-    <div class="home_row row">
-      <div class="col center-img home_row_img">
-        <img src="./assests/Honeybees_logo (1).png" alt="">
+  <div class="topbar">
+    <div class="honeybeeLogo">
+      <img src="./assests/Honeybees_logo (1).png" alt="">
+    </div>
+    <div class="honeybeeMusic">
+      <div class="music-icon" onclick="toggleSound()">
+        <div class="lottie-sound" id="lottie-sound"></div>
+        <!-- <img class="playing-music" src="assests/music_dark.svg" alt="Music"> -->
+        <img class="mute-music" src="assests/music_dark_mute.svg" alt="Mute Music">
       </div>
-      <div class="col right-img home_row_img">
-        <div class="music-icon" onclick="toggleSound()">
-          <div class="lottie-sound" id="lottie-sound"></div>
-          <!-- <img class="playing-music" src="assests/music_dark.svg" alt="Music"> -->
-          <img class="mute-music" src="assests/music_dark_mute.svg" alt="Mute Music">
-        </div>
-        <audio id="myAudio" src="./HB_assest/good-night-160166.mp3" loop autoplay></audio>
-      </div>
+      <audio id="myAudio" src="./HB_assest/good-night-160166.mp3" loop autoplay></audio>
     </div>
   </div>
+  <button id="openModalBtn" class="mobile-nav-btn">
+    <img src="./assets/img/Menu.png" alt="menu"/>
+    <span>Menu</span>
+  </button>
   <navbar>
     <div class="container">
         <div class="row">
-
             <div class="col-12">
-               
-                    <div>
-                        <li id="homeButton" class="home-btn">
-                            <a href="index.html">HOME</a>
-                        </li>
-                        <li id="aboutButton" class="about-btn">
-                            <a class="text-nowrap" href="about.html">ABOUT US</a>
-                        </li>
-                        <li id="careerButton" class="career-btn">
-                            <a href="career.html">CAREER</a>
-                        </li>
-                        <li id="knowButton" class="know-btn">
-                            <a class="text-nowrap" href="knowyourself.html">KNOW YOURSELF</a>
-                        </li>
-                        <li id="fearlessButton" class="fearless-btn">
-                            <a class="text-nowrap" href="fearless.html">Be Fearless</a>
-                        </li>
-                    </div>
-                        <a href="#"><img src="asssets/Group 149.png" alt=""></a>
-                
+                <div>
+                    <li id="homeButton" class="home-btn">
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li id="aboutButton" class="about-btn">
+                        <a class="text-nowrap" href="about.html">ABOUT US</a>
+                    </li>
+                    <li id="careerButton" class="career-btn">
+                        <a href="career.html">CAREER</a>
+                    </li>
+                    <li id="knowButton" class="know-btn">
+                        <a class="text-nowrap" href="knowyourself.html">KNOW YOURSELF</a>
+                    </li>
+                    <li id="fearlessButton" class="fearless-btn">
+                        <a class="text-nowrap" href="fearless.html">Be Fearless</a>
+                    </li>
+                </div>
+                <a href="#" class="nav-ad"><img src="asssets/Group 149.png" alt=""></a>
             </div>
-
         </div>
       </div>
   </navbar>
@@ -632,7 +511,7 @@ navbar {
 
       </div>
     </div>
-    <div class="index-marquee-content rotate white" style="margin-top: -20%;">
+    <div class="index-banner-marquee index-marquee-content rotate white">
       <div class="marquee">
         <span>Thanks for passing by</span>
         <img src="./assests/bluebees.png" alt="">
@@ -960,7 +839,38 @@ navbar {
       </div>
     </div>
   </section>
-
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="topbar">
+        <div class="honeybeeLogo">
+          <img src="./assests/Honeybees_logo (1).png" alt="">
+        </div>
+      </div>
+      <div class="nav-modal-link-content">
+          <li class="nav-modal-link">
+              <a href="index.html">HOME</a>
+          </li>
+          <li class="nav-modal-link">
+              <a class="text-nowrap" href="about.html">ABOUT US</a>
+          </li>
+          <li class="nav-modal-link">
+              <a href="career.html">CAREER</a>
+          </li>
+          <li class="nav-modal-link">
+              <a class="text-nowrap" href="knowyourself.html">KNOW YOURSELF</a>
+          </li>
+          <li class="nav-modal-link-last ">
+              <a class="text-nowrap" href="fearless.html">Be Fearless</a>
+          </li>
+      </div>
+      <div>
+          <button class="close-nav-modal">
+            <img src="./assets/img/Close_round.png" alt="close"/>
+            <span>Close</span>
+          </button>
+      </div>
+    </div>
+  </div>
 
   <section class="frame-section about_footer">
     <div class="mask-group-parent-wrapper">

@@ -275,7 +275,7 @@ main .container-fluid {
   margin-right: auto !important;
   margin-left: auto !important;
 }
-navbar {
+/* navbar {
   position: fixed;
   width: 100%;
   bottom: 0px;
@@ -324,7 +324,7 @@ navbar a,
 navbar a:hover {
   text-decoration: none;
   color: #29446d;
-}
+} */
 
 @media screen and (max-width: 767px) {
   main .container-fluid {

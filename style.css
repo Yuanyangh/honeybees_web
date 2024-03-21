@@ -6,9 +6,7 @@
 /* body {
   overflow-x: hidden;
 } */
-navbar {
-  z-index: 99;
-}
+
 @font-face {
   font-family: "Agrandir-TextBold"; /* Choose a name for your font */
   src: url("asssets/font/Agrandir-GrandHeavy.otf") format("woff");
@@ -75,93 +73,6 @@ navbar {
 .flex {
   margin-right: auto !important;
   margin-left: auto !important;
-}
-navbar {
-  position: fixed;
-  width: 100%;
-  bottom: 0px;
-}
-navbar .col-12 {
-  list-style: none;
-  justify-content: space-between;
-  display: flex;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-navbar .col-12 div {
-  display: flex;
-  width: 100%;
-  background-color: #ffffff4d;
-  justify-content: space-between;
-  margin: auto;
-  border-radius: 25px;
-  margin-right: 50px;
-  gap: 20px;
-}
-navbar li {
-  align-self: center;
-  padding: 12px 20px;
-  font-family: "Agrandir-TextBold";
-  text-transform: uppercase;
-  color: #29446d;
-  font-size: 18px !important;
-  font-weight: 800;
-  line-height: 19.8px;
-  text-decoration: none;
-  text-align: center;
-}
-navbar li:hover {
-  background-color: #fff;
-  border-radius: 25px;
-}
-
-navbar.about-nav li:hover {
-  background-color: #3061ab;
-  border-radius: 25px;
-}
-
-navbar.know-nav li:hover {
-  background-color: #ee7430;
-  border-radius: 25px;
-}
-
-li:last-child {
-  background-color: #ff6464 !important;
-  border-radius: 25px;
-}
-li:last-child a {
-  color: white;
-}
-navbar li img {
-  width: 150px;
-}
-navbar a,
-navbar a:hover {
-  text-decoration: none;
-  color: #29446d;
-  margin-bottom: 28px;
-}
-
-navbar.about-nav a,
-navbar.about-nav a:hover {
-  text-decoration: none;
-  color: white;
-  margin-bottom: 28px;
-}
-
-navbar.know-nav a,
-navbar.know-nav a:hover {
-  text-decoration: none;
-  color: white;
-  margin-bottom: 28px;
-}
-
-navbar.fearless-nav a,
-navbar.fearless-nav a:hover {
-  text-decoration: none;
-  color: white;
-  margin-bottom: 28px;
 }
 
 @media screen and (max-width: 767px) {
@@ -962,38 +873,7 @@ h6 {
   margin: auto;
   column-gap: 20px;
 }
-@media screen and (max-width: 718px) {
-  .options {
-    min-width: 520px;
-  }
-  .options .option:nth-child(5) {
-    display: none;
-  }
-}
-@media screen and (max-width: 638px) {
-  .options {
-    min-width: 440px;
-  }
-  .options .option:nth-child(4) {
-    display: none;
-  }
-}
-@media screen and (max-width: 558px) {
-  .options {
-    min-width: 360px;
-  }
-  .options .option:nth-child(3) {
-    display: none;
-  }
-}
-@media screen and (max-width: 478px) {
-  .options {
-    min-width: 280px;
-  }
-  .options .option:nth-child(2) {
-    display: none;
-  }
-}
+
 .options .option {
   position: relative;
   overflow: hidden;
@@ -1166,7 +1046,7 @@ h6 {
 
 .topbar {
   position: fixed;
-  z-index: 999;
+  z-index: 100;
   top: 0;
   left: 0;
   right: 0;
@@ -1229,4 +1109,46 @@ h6 {
 
 .input-phone-container input[type="tel"] {
   padding-left: 50px;
+}
+
+@media screen and (max-width: 718px) {
+  .options {
+    min-width: 520px;
+  }
+  .options .option:nth-child(5) {
+    display: none;
+  }
+}
+@media screen and (max-width: 638px) {
+  .options {
+    min-width: 440px;
+  }
+  .options .option:nth-child(4) {
+    display: none;
+  }
+}
+@media screen and (max-width: 558px) {
+  .options {
+    min-width: 360px;
+  }
+  .options .option:nth-child(3) {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .options {
+    min-width: 280px;
+  }
+  .options .option:nth-child(2) {
+    display: none;
+  }
+  .honeybeeLogo img {
+    width: 140px;
+    height: 20px;
+  }
+  .honeybeeMusic {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+  }
 }
