@@ -37,6 +37,7 @@ navbar .col-12 div {
   border-radius: 25px;
   margin-right: 50px;
   gap: 20px;
+  backdrop-filter: blur(2px);
 }
 navbar li {
   align-self: center;
@@ -62,6 +63,11 @@ navbar.about-nav li:hover {
 
 navbar.know-nav li:hover {
   background-color: #ee7430;
+  border-radius: 25px;
+}
+
+navbar.fearless-nav li:hover {
+  background-color: #ff6464;
   border-radius: 25px;
 }
 

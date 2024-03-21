@@ -276,7 +276,7 @@
   position: absolute;
   right: -300px;
   top: -150px;
-  z-index: 100;
+  z-index: 95;
   /* margin-left: -200px; */
   /* visibility: hidden; */
   /* animation: scaleDownAndShow 1s ease-in-out 1s forwards; Apply the animation */

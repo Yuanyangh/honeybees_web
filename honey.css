@@ -301,7 +301,7 @@ button.seemore {
 
 section.event_section {
   padding: 400px 0px;
-  margin-top: -305px;
+  margin-top: 0px;
   position: relative;
 }
 
@@ -582,7 +582,7 @@ marquee,
   max-width: 800px;
   width: 100%;
   margin: auto;
-  padding-bottom: 226px;
+  padding-bottom: 400px;
 }
 
 .block_text h1 {
@@ -619,14 +619,6 @@ marquee,
   background-repeat: no-repeat;
 }
 
-section.loren_sectiom {
-  padding-bottom: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
 .block_text:after {
   content: "";
   background-image: url(./assests/left-bee.png), url(./assests/bee-logo2.gif);
@@ -643,15 +635,6 @@ section.loren_sectiom {
 }
 
 @media (max-width: 1600px) {
-  .block_text {
-    padding-bottom: 300px;
-  }
-  .block_text:before {
-    bottom: 50px;
-  }
-  .block_text:after {
-    bottom: 100px;
-  }
   .content_container:before {
     bottom: -230px;
   }
