@@ -904,7 +904,7 @@ h6 {
   --defaultBackground: #ac92ec;
 }
 .options .option.active {
-  flex-grow: 10000;
+  flex-grow: 2;
   transform: scale(1);
   max-width: 800px;
   margin: 0px;
@@ -1131,17 +1131,8 @@ h6 {
   .options {
     min-width: 360px;
   }
-  .options .option:nth-child(3) {
-    display: none;
-  }
 }
 @media screen and (max-width: 500px) {
-  .options {
-    min-width: 280px;
-  }
-  .options .option:nth-child(2) {
-    display: none;
-  }
   .honeybeeLogo img {
     width: 140px;
     height: 20px;

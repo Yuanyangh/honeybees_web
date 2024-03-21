@@ -1,0 +1,76 @@
+@media (max-width: 1200px) {
+  .rematch-quote {
+    padding: 200px 20px 0px;
+    justify-content: space-between;
+    gap: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  h2.drop-your-question {
+    margin: 20px;
+  }
+  .rematch-quote {
+    text-align: left;
+    padding-top: 150px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .rectangle-parent3 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  section.frame-section {
+    margin-top: -50px;
+    padding-top: 30px;
+  }
+
+  h2.drop-your-question {
+    padding: 30px 0px;
+    font-size: 20px;
+  }
+
+  .input-details-group-parent {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .input-details-group-parent .name_field {
+    padding-left: 0px;
+  }
+  .drop-your-question-and-email-o-parent {
+    max-width: 300px;
+    margin: auto;
+  }
+  .rectangle-parent3 {
+    width: 100%;
+  }
+  .title_filed {
+    width: auto;
+  }
+  button.send-wrapper {
+    transform: translate(-75%, 25%);
+    top: 125%;
+    right: 0%;
+  }
+  .rematch-quote {
+    max-width: 300px;
+    text-align: left;
+    padding-top: 150px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .i-think-we {
+    font-size: 20px;
+    line-height: 1;
+  }
+  .sp-honeybees-is-an-container {
+    max-width: 300px;
+    margin: auto;
+  }
+  .sp-honeybees-is-an-container p {
+    font-size: 10px;
+  }
+}

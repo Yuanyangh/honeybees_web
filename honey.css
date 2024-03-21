@@ -241,22 +241,6 @@ img.evet_2 {
   position: relative;
 }
 
-button.sign_up {
-  font-weight: 800;
-  font-size: 18px;
-  color: #29446d;
-  background: white;
-  padding: 9px 20px;
-  border: 4px solid #eeaf30;
-  border-radius: 30px;
-  margin-left: 25px;
-  box-shadow: -9px 10px 2px 0px rgba(187, 170, 204, 1);
-  -webkit-box-shadow: -9px 10px #3061ab;
-  -moz-box-shadow: -9px 10px 2px 0px rgba(187, 170, 204, 1);
-  margin-top: 13px;
-  font-family: "Agrandir-TextBold";
-}
-
 button.seemore {
   font-weight: 800;
   font-size: 18px;
@@ -297,12 +281,6 @@ button.seemore {
   position: absolute;
   right: 0;
   background-repeat: no-repeat;
-}
-
-section.event_section {
-  padding: 400px 0px;
-  margin-top: 0px;
-  position: relative;
 }
 
 /* form */
@@ -426,6 +404,9 @@ h2.drop-your-question::first-letter {
   text-align: left;
   /* position: relative; */
 }
+.whats-in-your:focus-visible {
+  outline: none;
+}
 
 button.send-wrapper {
   border-radius: 20px;
@@ -513,8 +494,6 @@ marquee,
 .custo-main h1 {
   font-family: "Agrandir-TextBold" !important;
   text-transform: uppercase;
-  line-height: 49.8px;
-  margin-bottom: 24px;
 }
 
 .custo-main p {
@@ -528,33 +507,16 @@ marquee,
 }
 
 .honey_bee_section .honey_bee_section_container p {
-  max-width: 600px !important;
+  max-width: 600px;
   width: 100%;
   margin: auto;
-  line-height: 110% !important;
+  line-height: 110%;
 }
 
 .honey_bee_section_heading {
-  margin-top: 442px !important;
+  margin-top: 442px;
   font-size: 55px;
-  margin-bottom: 10px !important;
-}
-
-.main_heading {
-  text-align: center;
-  padding-top: 400px;
-}
-
-.main_heading h1 {
-  font-size: 55px;
-  color: white;
-}
-
-.main_heading p {
-  margin-top: -29px;
-  color: white;
-  font-size: 18px;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .block_sec {
@@ -655,7 +617,7 @@ section.blue_bg {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 8px 0 100px 0;
+  padding: 0px 0 100px 0;
   text-align: center;
 }
 
@@ -1440,13 +1402,13 @@ p {
 }
 
 .about_footer {
-  margin-top: -143px !important;
+  margin-top: -143px;
   z-index: 2;
   position: relative;
 }
 
 li.btn:hover {
-  color: white !important;
+  color: white;
 }
 
 .sendo-section {
@@ -1464,7 +1426,7 @@ li.btn:hover {
 }
 
 .sendo-section p {
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNextlight";
   font-size: 18px;
   line-height: 19.8px;
   color: #fff;
@@ -1497,15 +1459,6 @@ li.btn:hover {
   height: 100%;
   background: #050021;
   min-height: 100vh;
-}
-
-.blocks_container {
-  max-width: 800px;
-  margin: auto;
-}
-
-.blocks_container .blocks {
-  margin-bottom: 301px;
 }
 
 .blocks {
