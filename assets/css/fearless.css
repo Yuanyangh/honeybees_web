@@ -1,0 +1,193 @@
+.row.fearless_text_row {
+  justify-content: center;
+  display: flex;
+}
+
+.fearless_text_row_img p {
+  margin-bottom: 0;
+  top: 18px;
+  left: 50px;
+  font-family: "AvenirNext" !important;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 900 !important;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  width: 70%;
+  position: absolute;
+}
+
+input#inputField:focus-visible {
+  outline: none;
+}
+input#inputField {
+  outline: none;
+  border: 3px solid #29446d;
+}
+input#inputField::placeholder {
+  font-family: "AvenirNext";
+}
+
+.text_area h2 {
+  word-spacing: 4px;
+  margin-bottom: 1px;
+  color: white;
+  font-family: "Agrandir-TextBold";
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text_area {
+  padding-top: 25px;
+  max-width: 66%;
+}
+
+.text_area p {
+  color: #fffbf5;
+  font-family: "AvenirNext" !important;
+  font-size: 18px;
+  font-weight: 900 !important;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+.fearless_text_row_img {
+  max-width: 33%;
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  .main_content h1 {
+    font-size: 45px;
+    line-height: 1;
+    width: 100%;
+    margin: auto;
+  }
+  .custom_container h2 {
+    font-size: 45px;
+    line-height: 1;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .row.fearless_text_row {
+    flex-direction: column-reverse;
+  }
+  .text_area {
+    max-width: 100%;
+  }
+  .fearless_text_row_img {
+    max-width: 100%;
+    margin-left: 0px;
+    text-align: end;
+    margin-right: 20px;
+  }
+  .fearless_text_row_img img {
+    width: 40%;
+    height: 100px;
+  }
+  .fearless_text_row_img p {
+    font-size: 14px;
+    right: 20px;
+    left: auto;
+    width: 30%;
+  }
+}
+
+@media (max-width: 500px) {
+  .main_content {
+    width: 100%;
+  }
+  .main_content h1 {
+    font-size: 30px;
+    line-height: 1;
+    max-width: 320px;
+  }
+  .main_content p {
+    font-size: 14px;
+  }
+  .custom_container h2 {
+    font-size: 30px;
+    line-height: 1;
+    max-width: 300px;
+    margin: 0px auto;
+  }
+  .timer p {
+    font-size: 14px;
+    max-width: 300px;
+    margin: 30px auto;
+  }
+  .timer.custom_container.container {
+    margin: 200px 0px;
+  }
+  .text_area p {
+    font-size: 14px;
+    max-width: 300px;
+    margin: 30px auto;
+  }
+  .fearless_text_row_img {
+    margin-left: 0px;
+    text-align: end;
+    margin-right: 20px;
+  }
+  .fearless_text_row_img img {
+    width: 60%;
+    height: 100px;
+  }
+  .fearless_text_row_img p {
+    font-size: 14px;
+    right: 20px;
+    left: auto;
+    width: 45%;
+  }
+  .text_box.container.custom_container {
+    padding-top: 0px;
+  }
+
+  .row.fearless_bottom {
+    max-width: 320px;
+  }
+  .fearless_bottom_text p {
+    font-size: 14px;
+    left: 45px;
+    top: 10px;
+  }
+  .fearless_bottom_text img {
+    width: 100%;
+  }
+
+  .fearless_input_label {
+    width: 100%;
+  }
+  input#inputField {
+    width: 100%;
+    box-shadow: -8px 8px 0 0 #3061ab;
+    border: 3px solid #29446d;
+  }
+
+  button.fearless_btn {
+    width: 89px;
+    height: 25px;
+    border: 2px solid #eeaf30;
+    padding: 2px 0px;
+    font-size: 12px;
+    margin: 0 auto;
+    box-shadow: -8px 8px 0 0 #3061ab;
+    border-radius: 25px;
+    font-family: "Agrandir-TextBold";
+    text-transform: uppercase;
+    color: #29446d;
+    background-color: #fffbf5;
+    right: 35%;
+    bottom: -50px;
+  }
+  .fearless_main {
+    padding-bottom: 200px;
+  }
+}

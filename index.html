@@ -665,7 +665,7 @@
     <div class="blocks_container">
       <div class="blocks">
           <div class="block blockImage">
-              <div class="overlay">
+              <div class="overlay" onclick="toggleDialog('lorem_first')">
                   <div class="overlay_icon">
                       <div class="marquee_text">
                           <marquee direction="left" style="margin: 0;" loop hspace="10">Understand <img style="width: 50px;"> Understand Understand Understand Understand Understand Understand Understand Understand Understand Understand Understand Understand Understand Understand Understand Understand</marquee>
@@ -839,43 +839,10 @@
       </div>
     </div>
   </section>
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <div class="topbar">
-        <div class="honeybeeLogo">
-          <img src="./assests/Honeybees_logo (1).png" alt="">
-        </div>
-      </div>
-      <div class="nav-modal-link-content">
-          <li class="nav-modal-link">
-              <a href="index.html">HOME</a>
-          </li>
-          <li class="nav-modal-link">
-              <a class="text-nowrap" href="about.html">ABOUT US</a>
-          </li>
-          <li class="nav-modal-link">
-              <a href="career.html">CAREER</a>
-          </li>
-          <li class="nav-modal-link">
-              <a class="text-nowrap" href="knowyourself.html">KNOW YOURSELF</a>
-          </li>
-          <li class="nav-modal-link-last ">
-              <a class="text-nowrap" href="fearless.html">Be Fearless</a>
-          </li>
-      </div>
-      <div>
-          <button class="close-nav-modal">
-            <img src="./assets/img/Close_round.png" alt="close"/>
-            <span>Close</span>
-          </button>
-      </div>
-    </div>
-  </div>
-
   <section class="frame-section about_footer">
     <div class="mask-group-parent-wrapper">
-        <div class="footer-wrapper">
-            <div class="footer">
+      <div class="footer-wrapper">
+        <div class="footer">
                 <div class="footer-inner">
                     <form class="drop-your-question-and-email-o-parent">
                         <h2 class="drop-your-question">
@@ -938,8 +905,7 @@
       </div>
     </div>
     </div>
-</section>
-
+  </section>
   <script>
     $(document).ready(function () {
       $('.block_cus_one').hover(function () {
@@ -975,6 +941,51 @@
 
     });
   </script>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="topbar">
+        <div class="honeybeeLogo">
+          <img src="./assests/Honeybees_logo (1).png" alt="">
+        </div>
+      </div>
+      <div class="nav-modal-link-content">
+          <li class="nav-modal-link">
+              <a href="index.html">HOME</a>
+          </li>
+          <li class="nav-modal-link">
+              <a class="text-nowrap" href="about.html">ABOUT US</a>
+          </li>
+          <li class="nav-modal-link">
+              <a href="career.html">CAREER</a>
+          </li>
+          <li class="nav-modal-link">
+              <a class="text-nowrap" href="knowyourself.html">KNOW YOURSELF</a>
+          </li>
+          <li class="nav-modal-link-last ">
+              <a class="text-nowrap" href="fearless.html">Be Fearless</a>
+          </li>
+      </div>
+      <div>
+          <button class="close-nav-modal">
+            <img src="./assets/img/Close_round.png" alt="close"/>
+            <span>Close</span>
+          </button>
+      </div>
+    </div>
+  </div>
+
+<div id="lorem_first" class="dialog">
+  <div class="block blockImage mobile-lorem-dialog">
+    <div class="block_content_container ">
+        <div class="block_content">
+            <h3>A Perfect guide to understand yourself</h3>
+            <p>I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Yes! In your face, Gandhi! You guys go on without me! I'm going to go… look for more stuff to steal!</p>
+            <button class="button-74" role="button">Find Out More</button>
+        </div>
+    </div>
+  </div>
+</div>
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">

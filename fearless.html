@@ -15,10 +15,14 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/navbtn.css" />
+        <link rel="stylesheet" href="assets/css/modal.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/fearless.css" />
   </head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
   <script src="assets/scripts/lottie-dark.js"></script>
+  <script src="assets/scripts/modal.js"></script>
 
   <script>
     // Function to check if the element is in the viewport
@@ -73,6 +77,10 @@
         ></audio>
       </div>
     </div>
+    <button id="openModalBtn" class="mobile-nav-btn">
+      <img src="./assets/img/Menu.png" alt="menu" />
+      <span>Menu</span>
+    </button>
     <navbar class="fearless-nav">
       <div class="container">
         <div class="row">
@@ -103,13 +111,6 @@
     </navbar>
     <section class="fearless_main">
       <div class="fearless_background">
-        <!---------------------------------------New Section--------------------------------------------------------------->
-        <!-- <div class="top_section">
-                    <div class="custom_container container">
-                        <h2 class="fearless_heading">my <span>happiness</span> DOESN’T come from money or fame. My happiness comes from seeing life without <span>struggle.</span> </h2>
-                        <p class="name" style="margin:0 auto !important;">Nicki Minaj</p>
-                    </div>
-                </div> -->
         <div class="main_content" style="padding: 150px 0">
           <h1>
             MY <span class="strok_text">HAPPINESS</span> DOESN’T come from money
@@ -118,7 +119,6 @@
           </h1>
           <p>Nicki Minaj</p>
         </div>
-        <!---------------------------------------New Section--------------------------------------------------------------->
         <div class="timer custom_container container">
           <h2 calss="timer">16436 DAYS<br />23 : 45 : 12</h2>
           <p>
@@ -126,10 +126,9 @@
             80. It should be full of enjoyment and happiness!
           </p>
         </div>
-        <!---------------------------------------New Section--------------------------------------------------------------->
         <div class="text_box container custom_container">
-          <div class="row text_row">
-            <div class="col-md-8 text_area">
+          <div class="row fearless_text_row">
+            <div class="text_area">
               <h2>
                 No! Don't jump! No! The kind with looting and maybe starting a
                 few fires! I just want to talk.
@@ -141,16 +140,16 @@
                 friends! And Zoidberg!
               </p>
             </div>
-            <div class="col-md-4 imag_text">
-              <img src="images/Union.png" width="80%" />
+            <div class="fearless_text_row_img">
+              <img src="images/Union.png"/>
               <p class="blue">Fear of bla I don't want to bla bla bla.</p>
             </div>
           </div>
         </div>
         <!---------------------------------------New Section--------------------------------------------------------------->
         <div class="text_box container custom_container">
-          <div class="row text_row">
-            <div class="col-md-8 text_area">
+          <div class="row fearless_text_row">
+            <div class="text_area">
               <h2>
                 No! Don't jump! No! The kind with looting and maybe starting a
                 few fires! I just want to talk.
@@ -162,16 +161,16 @@
                 friends! And Zoidberg!
               </p>
             </div>
-            <div class="col-md-4 imag_text">
-              <img src="images/Union.png" width="80%" />
+            <div class="fearless_text_row_img">
+              <img src="images/Union.png"/>
               <p class="blue">Fear of bla I don't want to bla bla bla.</p>
             </div>
           </div>
         </div>
         <!---------------------------------------New Section--------------------------------------------------------------->
         <div class="text_box container custom_container">
-          <div class="row text_row">
-            <div class="col-md-8 text_area">
+          <div class="row fearless_text_row">
+            <div class="text_area">
               <h2>
                 No! Don't jump! No! The kind with looting and maybe starting a
                 few fires! I just want to talk.
@@ -183,8 +182,8 @@
                 friends! And Zoidberg!
               </p>
             </div>
-            <div class="col-md-4 imag_text">
-              <img src="images/Union.png" width="80%" />
+            <div class="fearless_text_row_img">
+              <img src="images/Union.png"/>
               <p class="blue">Fear of bla I don't want to bla bla bla.</p>
             </div>
           </div>
@@ -219,71 +218,106 @@
       </div>
     </section>
     <img src="asssets/exportfence1.png" alt="" class="exportfence" />
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div style="width: 100%">
-            <h3>
-              <p class="text-lowercase drop_text">
-                Drop your question and email or you can tell us your favourite
-                song?
-              </p>
-            </h3>
-            <div class="inform">
-              <form action="" class="formfooter">
-                <div class="d-flex mb-3">
-                  <select name="" id="" class="select">
-                    <option selected disabled value="">Your Title</option>
-                    <option value="">Mr</option>
-                    <option value="">Mrs</option>
-                  </select>
-                  <input type="text" placeholder="Your Name..." class="name" />
+     <section class="frame-section about_footer">
+        <div class="mask-group-parent-wrapper">
+            <div class="footer-wrapper">
+                <div class="footer">
+                    <div class="footer-inner">
+                        <form class="drop-your-question-and-email-o-parent">
+                            <h2 class="drop-your-question">
+                                Drop your question and email or you can tell us your favourite song?
+                            </h2>
+    
+                            <div class="input-details-group-parent">
+                                <div class="title_filed">
+                                    <input class="input-details-group yourtitle" type="text" placeholder="Your Title" />
+                                    <img class="icon-chevron-bottom" alt="" src="./assests/Vector.png" />
+                                </div>
+    
+                                <div class="name_field">
+                                    <input class="input-details-group yourname" type="text" placeholder="Your Title" />
+                                </div>
+    
+                            </div>
+    
+                            <div class="group-div">
+                                <div class="frame-child5"></div>
+                                <input class="your-email" placeholder="Your Email..." type="text" />
+                            </div>
+                            <div class="rectangle-parent3">
+    
+                                <textarea id="message"class="whats-in-your" placeholder="What’s in your mind?"></textarea>
+                                <button class="send-wrapper">
+                                    <div class="send">send</div>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
                 </div>
-                <input
-                  class="email mb-3"
-                  type="email"
-                  name=""
-                  id=""
-                  placeholder="Your Email..."
-                />
-                <div class="d-flex formend w-100">
-                  <input
-                    type="text"
-                    placeholder="What’s in your mind?"
-                    class="message"
-                  />
-                  <button style="color: #29446d">Send</button>
-                </div>
-              </form>
+    
+                
             </div>
-          </div>
-          <div style="width: 100%; margin-top: 150px; margin-bottom: 100px">
-            <div class="row">
-              <div class="col-6">
-                <h4 class="text-left text-lowercase">
-                  I think we need a rematch.
-                  <span class="text-uppercase">Ronald Reagon. Marty</span>, you
-                  seem so nervous, is something wrong?
-                </h4>
+            <div class="rematch-quote">
+              <div class="authorized-representation-a-i">
+                  <h2 class="i-think-we">
+                      I think we need a rematch. Ronald Reagon. Marty, you seem
+                      so nervous, is something wrong?
+                  </h2>
               </div>
-              <div class="col-6">
-                <div class="d-flex socialicondiv">
-                  <img src="asssets/icon_linkedin.png" alt="" />
-                  <img src="asssets/icon_instagram.png" alt="" />
-                  <img src="asssets/icon_facebook_squared.png" alt="" />
-                </div>
+              <div class="social-media-icons">
+                  <img class="icon-linkedin" loading="eager" alt="" src="./assests/sameediconlinkedin.png" />
+    
+                  <img class="icon-instagram" loading="eager" alt="" src="./assests/sameediconinstagram.png" />
+                
+                  <img class="icon-facebook-squared" loading="eager" alt=""
+                      src="./assests/sameed-iconfacebooksquared.png" />
               </div>
-            </div>
           </div>
-          <div style="width: 100%">
-            <p class="fontfooterend">
-              SP-HONEYBEES is an authorised representative of AIA Singapore
-              Private Limited (Reg. No. 201106386R) © 2022 by SP-HONEYBEES
-            </p>
+          <div class="authorized-representative-msg">
+              <div class="sp-honeybees-is-an-container">
+                  <p class="sp-honeybees-is-an">
+                      SP-HONEYBEES is an authorised representative of AIA
+                      Singapore Private Limited (Reg. No. 201106386R)
+                  </p>
+                  <p class="by-sp-honeybees">© 2022 by SP-HONEYBEES</p>
+              </div>
           </div>
         </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="topbar">
+          <div class="honeybeeLogo">
+            <img src="./assests/Honeybees_logo (1).png" alt="" />
+          </div>
+        </div>
+        <div class="nav-modal-link-content">
+          <li class="nav-modal-link">
+            <a href="index.html">HOME</a>
+          </li>
+          <li class="nav-modal-link">
+            <a class="text-nowrap" href="about.html">ABOUT US</a>
+          </li>
+          <li class="nav-modal-link">
+            <a href="career.html">CAREER</a>
+          </li>
+          <li class="nav-modal-link">
+            <a class="text-nowrap" href="knowyourself.html">KNOW YOURSELF</a>
+          </li>
+          <li class="nav-modal-link-last">
+            <a class="text-nowrap" href="fearless.html">Be Fearless</a>
+          </li>
+        </div>
+        <div>
+          <button class="close-nav-modal">
+            <img src="./assets/img/Close_round.png" alt="close" />
+            <span>Close</span>
+          </button>
+        </div>
       </div>
-    </footer>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

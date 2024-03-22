@@ -42,7 +42,7 @@ body {
   background-size: cover;
 }
 .custom_container {
-  width: 950px !important;
+  width: 900px;
 }
 h2.fearless_heading {
   margin-bottom: 0;
@@ -86,58 +86,10 @@ p.name {
   letter-spacing: -0.02em;
   text-align: center;
 }
-.text_area h2 {
-  word-spacing: 4px;
-  margin-bottom: 1px;
-  color: white;
-  font-family: Agrandir;
-  font-size: 40px;
-  font-weight: 800;
-  line-height: 50px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-.text_area p {
-  color: #fffbf5;
-  font-family: Avenir Next;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: -0.02em;
-  text-align: left;
-}
+
 .text_box.container.custom_container {
   padding-bottom: 40px;
   padding-top: 150px;
-}
-.col-md-8.text_area {
-  padding-top: 25px;
-}
-.col-md-4.imag_text {
-  margin-left: -25px;
-}
-.row .text_row {
-  justify-content: center;
-  display: flex;
-}
-.imag_text p {
-  margin-bottom: 0;
-  top: 18px;
-  left: 60px;
-  font-family: "AvenirNext";
-  font-size: 18px;
-  text-transform: uppercase;
-  line-height: 19.8px;
-  font-weight: 900;
-  line-height: 20px;
-  letter-spacing: -0.02em;
-  text-align: left;
-  width: 45%;
-  position: absolute;
-}
-.row.text_row {
-  justify-content: center;
-  display: flex;
 }
 .fearless_bottom_section {
   padding: 10% 0 10% 0;

@@ -23,3 +23,9 @@
   border-radius: 20px;
   box-shadow: -8px 8px 0 0 #3061ab;
 }
+
+@media (max-width: 500px) {
+  .swiper {
+    margin: 100px auto 20px;
+  }
+}

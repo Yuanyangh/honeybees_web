@@ -25,11 +25,14 @@
     <link rel="stylesheet" href="assets/css/navbtn.css">
     <link rel="stylesheet" href="assets/css/marquee.css">
     <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
 
     <script src="assets/scripts/navbtn.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
     <script src="assets/scripts/lottie-dark.js"></script>
     <script src="assets/scripts/hive.js"></script>
+    <script src="assets/scripts/modal.js"></script>
 </head>
 <style>
     #carousel {
@@ -428,6 +431,10 @@
             <audio id="myAudio" src="./HB_assest/good-night-160166.mp3"></audio>     
         </div>
     </div>
+    <button id="openModalBtn" class="mobile-nav-btn">
+        <img src="./assets/img/Menu.png" alt="menu"/>
+        <span>Menu</span>
+    </button>
     <navbar class="about-nav">
         <div class="container">
             <div class="row">
@@ -462,11 +469,16 @@
         <div class="container">
             <div class="hero-hed-sec">
                 <div class="lottie-hive-content" id="lottie-hive"></div>
-                <h1 class="hero-hed-sec-text-caption">All right. Well, take care of yourself, Han. I guess that's what
-                    you're best at, ain't it?</h1>
-                <p class="text-caption2">Obi-Wan is here. The Force is with him.</p>
-                <img class="hero-hed-sec-img" src="./image/Group 175.png" alt="" style="">
-                <img class="hero-hed-sec-gif" src="./assests/bee-logo2.gif">
+                <img src="./assets/img/hive.png" alt="hive" class="hive-img"/>
+                <div class="about-hero-text">
+                    <h1 class="hero-hed-sec-text-caption">All right. Well, take care of yourself, Han. I guess that's what
+                        you're best at, ain't it?</h1>
+                    <p class="text-caption2">Obi-Wan is here. The Force is with him.</p>
+                </div>
+                <div class="about-hero-bee">
+                    <img class="hero-hed-sec-img" src="./image/Group 175.png" alt="" style="">
+                    <img class="hero-hed-sec-gif" src="./assests/bee-logo2.gif">
+                </div>
             </div>
             <div class="sendo-section">
                 <h2>
@@ -566,31 +578,33 @@
             </div>
             <div class="history-sec">
                 <h1>History/Journey</h1>
-                <!-- <div class="his-img"><img src="./image/Group 212.png" alt=""></div> -->
-                <div class="box-wrap">
-                    <div class="his-text-box">
-                        <h2>2017</h1>
-                            <p>I call it luck. Obi-Wan is here. The Force is with him. I call it luck. I don't know what
-                                you're talking about. I am a member of the Imperial Senate on a diplomatic mission to
-                                Alderaan</p>
-                    </div>
-                    <div class="his-text-box">
-                        <h2>2018</h1>
-                            <p>I call it luck. Obi-Wan is here. The Force is with him. I call it luck. I don't know what
-                                you're talking about. I am a member of the Imperial Senate on a diplomatic mission to
-                                Alderaan</p>
-                    </div>
-                    <div class="his-text-box">
-                        <h2>2019</h1>
-                            <p>I call it luck. Obi-Wan is here. The Force is with him. I call it luck. I don't know what
-                                you're talking about. I am a member of the Imperial Senate on a diplomatic mission to
-                                Alderaan</p>
-                    </div>
-                    <div class="his-text-box">
-                        <h2>2020</h1>
-                            <p>I call it luck. Obi-Wan is here. The Force is with him. I call it luck. I don't know what
-                                you're talking about. I am a member of the Imperial Senate on a diplomatic mission to
-                                Alderaan</p>
+                <div class="about-history-sec">
+                    <div class="his-img"><img src="./image/Group 212.png" alt=""></div>
+                    <div class="box-wrap">
+                        <div class="his-text-box">
+                            <h2>2017</h1>
+                                <p>I call it luck. Obi-Wan is here. The Force is with him. I call it luck. I don't know what
+                                    you're talking about. I am a member of the Imperial Senate on a diplomatic mission to
+                                    Alderaan</p>
+                        </div>
+                        <div class="his-text-box">
+                            <h2>2018</h1>
+                                <p>I call it luck. Obi-Wan is here. The Force is with him. I call it luck. I don't know what
+                                    you're talking about. I am a member of the Imperial Senate on a diplomatic mission to
+                                    Alderaan</p>
+                        </div>
+                        <div class="his-text-box">
+                            <h2>2019</h1>
+                                <p>I call it luck. Obi-Wan is here. The Force is with him. I call it luck. I don't know what
+                                    you're talking about. I am a member of the Imperial Senate on a diplomatic mission to
+                                    Alderaan</p>
+                        </div>
+                        <div class="his-text-box">
+                            <h2>2020</h1>
+                                <p>I call it luck. Obi-Wan is here. The Force is with him. I call it luck. I don't know what
+                                    you're talking about. I am a member of the Imperial Senate on a diplomatic mission to
+                                    Alderaan</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -641,16 +655,10 @@
                     <div class="swiper-pagination"></div>
                 </div>
                 <div class="ing-text-wrap">
-                    <!-- <div class="right-img-honey">
-                        <img src="./image/Group 210.png" alt="">
-                    </div> -->
                     <div class="text-box-center">
                          <div class="honeyBeeTeam" id="honeyBeeTeam">
                         </div>
                     </div>
-                    <!-- <div class="lest-img">
-                        <img src="./image/Group 211.png" alt="">
-                    </div> -->
                 </div>
                 <div class="last-sec">
                     <h1>What’s does people say?</h1>
@@ -715,7 +723,7 @@
                             </div>
                             <div class="rectangle-parent3">
 
-                                <div class="whats-in-your">What’s in your mind?</div>
+                                <textarea id="message"class="whats-in-your" placeholder="What’s in your mind?"></textarea>
                                 <button class="send-wrapper">
                                     <div class="send">send</div>
                                 </button>
@@ -755,7 +763,38 @@
         </div>
         </div>
     </section>
-
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+        <div class="topbar">
+            <div class="honeybeeLogo">
+            <img src="./assests/Honeybees_logo (1).png" alt="">
+            </div>
+        </div>
+        <div class="nav-modal-link-content">
+            <li class="nav-modal-link">
+                <a href="index.html">HOME</a>
+            </li>
+            <li class="nav-modal-link">
+                <a class="text-nowrap" href="about.html">ABOUT US</a>
+            </li>
+            <li class="nav-modal-link">
+                <a href="career.html">CAREER</a>
+            </li>
+            <li class="nav-modal-link">
+                <a class="text-nowrap" href="knowyourself.html">KNOW YOURSELF</a>
+            </li>
+            <li class="nav-modal-link-last ">
+                <a class="text-nowrap" href="fearless.html">Be Fearless</a>
+            </li>
+        </div>
+        <div>
+            <button class="close-nav-modal">
+                <img src="./assets/img/Close_round.png" alt="close"/>
+                <span>Close</span>
+            </button>
+        </div>
+        </div>
+    </div>
 
 
     <script>

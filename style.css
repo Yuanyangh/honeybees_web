@@ -277,9 +277,6 @@
   right: -300px;
   top: -150px;
   z-index: 95;
-  /* margin-left: -200px; */
-  /* visibility: hidden; */
-  /* animation: scaleDownAndShow 1s ease-in-out 1s forwards; Apply the animation */
 }
 .contact-section-people-lottie {
   /* width: 900px; */
@@ -302,10 +299,6 @@
   top: 0;
 }
 
-.contact-section .col-7 {
-  align-self: center;
-  z-index: 1;
-}
 .contact-section h3 {
   align-self: center !important;
   font-family: "Agrandir-TextBold";
@@ -1060,32 +1053,6 @@ h6 {
 .honeybeeMusic {
   position: absolute;
   right: 20px;
-}
-
-.imag_text p {
-  margin-bottom: 0;
-  top: 18px;
-  left: 60px;
-  font-family: "AvenirNext" !important;
-  font-size: 18px;
-  text-transform: uppercase;
-  line-height: 19.8px;
-  font-weight: 900 !important;
-  line-height: 20px;
-  letter-spacing: -0.02em;
-  text-align: left;
-  width: 45%;
-  position: absolute;
-}
-
-.text_area p {
-  color: #fffbf5;
-  font-family: "AvenirNext" !important;
-  font-size: 18px;
-  font-weight: 900 !important;
-  line-height: 20px;
-  letter-spacing: -0.02em;
-  text-align: left;
 }
 
 /* contact */

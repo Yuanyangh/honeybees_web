@@ -1,6 +1,6 @@
 @media (max-width: 1200px) {
   .rematch-quote {
-    padding: 200px 20px 0px;
+    padding: 200px 0px 0px;
     justify-content: space-between;
     gap: 150px;
   }
@@ -53,7 +53,7 @@
   button.send-wrapper {
     transform: translate(-75%, 25%);
     top: 125%;
-    right: 0%;
+    right: 5%;
   }
   .rematch-quote {
     max-width: 300px;
@@ -72,5 +72,32 @@
   }
   .sp-honeybees-is-an-container p {
     font-size: 10px;
+  }
+  .yourname,
+  .your-email,
+  .whats-in-your {
+    font-size: 14px;
+    height: 30px;
+  }
+  .whats-in-your {
+    padding: 4px 10px;
+  }
+
+  .yourtitle {
+    font-size: 14px;
+    height: 30px;
+  }
+
+  .your-email::placeholder,
+  .input-details-group::placeholder {
+    font-size: 14px;
+  }
+
+  button.send-wrapper {
+    height: 30px;
+    padding: 1px 25px;
+  }
+  button.send-wrapper .send {
+    font-size: 14px;
   }
 }

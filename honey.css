@@ -399,7 +399,7 @@ h2.drop-your-question::first-letter {
   background: white;
   width: 100%;
   margin-top: 10px;
-  padding: 5px 10px 5px 10px;
+  padding: 8px 10px 5px 10px;
   border-radius: 20px;
   text-align: left;
   /* position: relative; */
@@ -775,7 +775,7 @@ body {
 
 section.hero-sec {
   background: url(./images/bg.png);
-  background-size: contain;
+  background-size: cover;
 }
 
 section.hero-sec .col {
@@ -801,17 +801,6 @@ section.hero-sec .row {
 .center-img {
   display: flex;
   justify-content: center;
-}
-
-.hero-hed-sec {
-  padding: 300px 0px 50px;
-}
-
-.lottie-hive-content {
-  height: 100vh;
-  position: absolute;
-  width: 100%;
-  top: 0px;
 }
 
 .hero-hed-sec h1 {
@@ -1080,7 +1069,7 @@ li.btn {
   margin-left: -16px;
 }
 
-.teg-btn-right li:before {
+/* .teg-btn-right li:before {
   top: 20px;
   content: "";
   background: #fffbf5;
@@ -1089,7 +1078,7 @@ li.btn {
   width: 8px;
   border-radius: 50px;
   margin-left: -16px;
-}
+} */
 
 .teg-btn {
   position: relative;
@@ -1155,7 +1144,7 @@ li.btn {
 }
 
 .teg-btn-right ul li:before {
-  top: 16px;
+  top: calc(50% - 4px);
   content: "";
   background: #fffbf5;
   position: absolute;
@@ -1241,13 +1230,17 @@ p {
 }
 
 .his-img {
-  text-align: end;
+  text-align: start;
+  margin-left: 10%;
+}
+
+.his-img img {
+  width: 93%;
 }
 
 .box-wrap {
-  /* background-size: contain; */
-  background-image: url("./image/Group 212.png");
-  background-size: 95%;
+  /* background-image: url("./image/Group 212.png"); */
+  /* background-size: 95%; */
   background-repeat: no-repeat;
   background-position: 27px 0px;
   padding-top: -33px;
@@ -1260,7 +1253,7 @@ p {
 }
 
 .his-text-box {
-  padding: 10px 30px;
+  padding: 10px 30px 0px 0px;
 }
 
 .his-text-box h2 {
@@ -1413,7 +1406,7 @@ li.btn:hover {
 
 .sendo-section {
   text-align: center;
-  padding-top: 200px;
+  padding-top: 300px;
 }
 
 .sendo-section h2 {

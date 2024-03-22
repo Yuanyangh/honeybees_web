@@ -16,10 +16,13 @@
     <link rel="stylesheet" href="assets/css/navbtn.css">
     <link rel="stylesheet" href="assets/css/marquee.css">
     <link rel="stylesheet" href="assets/css/career.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 
     <script src="assets/scripts/navbtn.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
     <script src="assets/scripts/lottie-light.js"></script>
+    <script src="assets/scripts/modal.js"></script>
 
 </head>
 
@@ -37,6 +40,10 @@
         <audio id="myAudio" src="./HB_assest/good-night-160166.mp3" loop autoplay></audio>
         </div>
     </div>
+    <button id="openModalBtn" class="mobile-nav-btn">
+        <img src="./assets/img/Menu.png" alt="menu"/>
+        <span>Menu</span>
+    </button>
       <navbar>
         <div class="container">
             <div class="row">
@@ -146,10 +153,10 @@
     </div>
     <div class="image-section">
         <div class="row" style="align-self: center;">
-            <div class="col-5 text-right">
+            <div class="col-5 text-right career-dedicate-img">
                 <img src="asssets/Rectangle 71.png" alt="">
             </div>
-            <div class="col-4">
+            <div class="col-4 career-dedicate-text">
                 <h3>
                     Dedicated mentorship
                 </h3>
@@ -162,11 +169,11 @@
                 </p>
             </div>
         </div>
-        <div class="row" style="align-self: center;flex-direction: row-reverse;padding: 100px 0;">
-            <div class="col-5 text-left">
+        <div class="row right-section">
+            <div class="col-5 text-left career-dedicate-img">
                 <img src="asssets/Rectangle 70.png" alt="">
             </div>
-            <div class="col-4 text-right">
+            <div class="col-4 text-right career-dedicate-text">
                 <h3>
                     Digital Tools Support
                 </h3>
@@ -180,10 +187,10 @@
             </div>
         </div>
         <div class="row" style="align-self: center;padding-bottom: 100px;">
-            <div class="col-5 text-right">
+            <div class="col-5 text-right career-dedicate-img">
                 <img src="asssets/Rectangle 69.png" alt="">
             </div>
-            <div class="col-4">
+            <div class="col-4 career-dedicate-text">
                 <h3>
                     Growth Culture
                 </h3>
@@ -353,7 +360,7 @@
                             </div>
                             <div class="rectangle-parent3">
     
-                                <div class="whats-in-your">What’s in your mind?</div>
+                                <textarea id="message"class="whats-in-your" placeholder="What’s in your mind?"></textarea>
                                 <button class="send-wrapper">
                                     <div class="send">send</div>
                                 </button>
@@ -393,6 +400,38 @@
         </div>
         </div>
     </section>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+        <div class="topbar">
+            <div class="honeybeeLogo">
+            <img src="./assests/Honeybees_logo (1).png" alt="">
+            </div>
+        </div>
+        <div class="nav-modal-link-content">
+            <li class="nav-modal-link">
+                <a href="index.html">HOME</a>
+            </li>
+            <li class="nav-modal-link">
+                <a class="text-nowrap" href="about.html">ABOUT US</a>
+            </li>
+            <li class="nav-modal-link">
+                <a href="career.html">CAREER</a>
+            </li>
+            <li class="nav-modal-link">
+                <a class="text-nowrap" href="knowyourself.html">KNOW YOURSELF</a>
+            </li>
+            <li class="nav-modal-link-last ">
+                <a class="text-nowrap" href="fearless.html">Be Fearless</a>
+            </li>
+        </div>
+        <div>
+            <button class="close-nav-modal">
+                <img src="./assets/img/Close_round.png" alt="close"/>
+                <span>Close</span>
+            </button>
+        </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
