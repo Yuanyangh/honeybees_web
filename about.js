@@ -12,8 +12,8 @@ $(document).ready(function () {
           items: 1,
           nav: true,
         },
-        500: {
-          items: 3,
+        600: {
+          items: 2,
           nav: true,
         },
       },
