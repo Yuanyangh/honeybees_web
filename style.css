@@ -541,10 +541,6 @@ footer h3 {
   /* padding: 10px; */
   animation: floatInAndColorChange-career 1s ease-in-out 2.5s forwards; /* Delay animation */
 }
-.career-banner-text p {
-  font-family: "AvenirNextlight" !important;
-  font-size: 18px;
-}
 .textstroke {
   -webkit-text-fill-color: #ffffff00; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
@@ -565,6 +561,7 @@ footer h3 {
   font-family: "AvenirNextlight" !important;
   font-size: 18px;
   color: #29446d;
+  font-weight: 600;
 }
 .career-banner-text.misc {
   /* background: url('asssets/Line\ 2.png');

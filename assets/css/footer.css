@@ -80,16 +80,23 @@
     height: 30px;
   }
   .whats-in-your {
-    padding: 4px 10px;
+    padding: 4px 20px;
+    overflow: hidden;
+    height: auto;
   }
 
   .yourtitle {
     font-size: 14px;
     height: 30px;
+    box-sizing: border-box;
   }
 
   .your-email::placeholder,
   .input-details-group::placeholder {
+    font-size: 14px;
+  }
+
+  .title_filed input::placeholder {
     font-size: 14px;
   }
 

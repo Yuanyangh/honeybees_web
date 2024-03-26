@@ -149,10 +149,6 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.mobile-lorem-dialog .block_content_container {
-  opacity: 1;
-}
-
 @media (max-width: 768px) {
   .mobile-nav-btn {
     display: flex;

@@ -481,7 +481,7 @@
                         <a class="text-nowrap" href="fearless.html">Be Fearless</a>
                     </li>
                 </div>
-                <a href="#" class="nav-ad"><img src="asssets/Group 149.png" alt=""></a>
+                <a href="#" class="nav-adv"><img src="asssets/Group 149.png" alt=""></a>
             </div>
         </div>
       </div>
@@ -684,7 +684,7 @@
           </div>
 
           <div class="block blockImage">
-            <div class="overlay">
+            <div class="overlay" onclick="toggleDialog('lorem_second')">
                 <div class="overlay_icon">
                     <div class="marquee_text">
                         <marquee>Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story</marquee>
@@ -703,7 +703,7 @@
           </div>
 
           <div class="block blockImage">
-            <div class="overlay">
+            <div class="overlay" onclick="toggleDialog('lorem_third')">
                 <div class="overlay_icon">
                     <div class="marquee_text">
                         <marquee>Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join  Join</marquee>
@@ -794,7 +794,8 @@
       </div>
       <div class="options">
         <div class="option active"
-            style="--optionBackground:url(./assests/freedom.png);">
+          onclick="toggleDialog('event_section_first')"
+          style="--optionBackground:url(./assests/freedom.png);">
             <div class="options-textbox1">
               <h3 class="options-textbox-h3">Freedom is Empowering</h3>
               <p class="options-textbox-p">I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What? I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What?</p>
@@ -805,6 +806,7 @@
             </div>
         </div>
         <div class="option"
+            onclick="toggleDialog('event_section_second')"
             style="--optionBackground:url(./assests/womenfull.png);">
             <div class="options-textbox2">
               <h3 class="options-textbox-h3">Women Talking</h3>
@@ -816,6 +818,7 @@
             </div>
         </div>
         <div class="option"
+            onclick="toggleDialog('event_section_third')"
             style="--optionBackground:url(./assests/artfull.png);">
             <div class="options-textbox3">
               <h3 class="options-textbox-h3">Crosstown Art</h3>
@@ -866,7 +869,7 @@
                             <input class="your-email" placeholder="Your Email..." type="text" />
                         </div>
                         <div class="rectangle-parent3">
-                            <textarea id="message"class="whats-in-your" placeholder="What’s in your mind?"></textarea>
+                            <textarea id="message"class="whats-in-your" placeholder="What’s in your mind?" rows="2"></textarea>
                             <button class="send-wrapper">
                                 <div class="send">send</div>
                             </button>
@@ -975,7 +978,11 @@
   </div>
 
 <div id="lorem_first" class="dialog">
-  <div class="block blockImage mobile-lorem-dialog">
+  <div class="block blockImage mobile-lorem-dialog mobile-lorem-first">
+    <div class="overlay">
+        <div class="overlay_icon">
+        </div>
+    </div>
     <div class="block_content_container ">
         <div class="block_content">
             <h3>A Perfect guide to understand yourself</h3>
@@ -985,7 +992,82 @@
     </div>
   </div>
 </div>
+<div id="lorem_second" class="dialog">
+  <div class="block blockImage mobile-lorem-dialog mobile-lorem-second">
+    <div class="overlay">
+        <div class="overlay_icon">
+        </div>
+    </div>
+    <div class="block_content_container">
+        <div class="block_content">
+            <h3>our story, Honeybees Story</h3>
+            <p>I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Yes! In your face, Gandhi! You guys go on without me! I'm going to go… look for more stuff to steal!</p>
+            <button class="button-74" role="button">Find Out More</button>
+        </div>
+    </div>
+  </div>
+</div>
+<div id="lorem_third" class="dialog">
+  <div class="block blockImage mobile-lorem-dialog mobile-lorem-third">
+    <div class="overlay">
+        <div class="overlay_icon">
+        </div>
+    </div>
+    <div class="block_content_container">
+        <div class="block_content">
+            <h3>Be part of the swarm</h3>
+            <p>I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Yes! In your face, Gandhi! You guys go on without me! I'm going to go… look for more stuff to steal!</p>
+            <button class="button-74" role="button">Find Out More</button>
+        </div>
+    </div>
+  </div>
+</div>
 
+
+<div id="event_section_first" class="dialog">
+  <div class="options mobile-event-dialog">
+    <div class="option active"
+        style="--optionBackground:url(./assests/freedom.png);">
+        <div class="options-textbox1">
+          <h3 class="options-textbox-h3">Freedom is Empowering</h3>
+          <p class="options-textbox-p">I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What? I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What?</p>
+          <div>
+            <button class="seemore">See More</button>
+          </div>
+          
+        </div>
+    </div>
+  </div>
+</div>
+<div id="event_section_second" class="dialog">
+  <div class="options mobile-event-dialog">
+    <div class="option"
+        style="--optionBackground:url(./assests/womenfull.png);">
+        <div class="options-textbox2">
+          <h3 class="options-textbox-h3">Women Talking</h3>
+          <p class="options-textbox-p">I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What? I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What?</p>
+          <div>
+            <button class="seemore">See More</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div id="event_section_third" class="dialog">
+  <div class="options mobile-event-dialog">
+    <div class="option"
+        style="--optionBackground:url(./assests/artfull.png);">
+        <div class="options-textbox3">
+          <h3 class="options-textbox-h3">Crosstown Art</h3>
+          <p class="options-textbox-p">I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What? I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What?</p>
+          <div>
+            <button class="seemore">See More</button>
+          </div>
+          
+        </div>
+    </div>
+  </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
