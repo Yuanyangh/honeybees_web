@@ -79,7 +79,7 @@ p.name {
 .timer p {
   max-width: 500px;
   color: white;
-  font-family: "AvenirNextlight";
+  font-family: "AvenirNext";
   font-size: 18px;
   font-weight: 600;
   line-height: 20px;
@@ -167,7 +167,7 @@ input#inputField::placeholder {
   /* Update the path based on your file structure and font format */
 }
 @font-face {
-  font-family: "AvenirNextlight"; /* Choose a name for your font */
+  font-family: "AvenirNext"; /* Choose a name for your font */
   src: url("font2/AvenirNextlightLTPro-Bold.otf") format("woff");
   /* Update the path based on your file structure and font format */
 }
@@ -216,7 +216,7 @@ main .container-fluid {
   margin: 0 auto;
 }
 .flex p {
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   width: 100%;
   font-size: 18px;
   line-height: 19.8px;
@@ -396,9 +396,9 @@ footer h3 {
   text-transform: uppercase;
 }
 .custom_container .name {
-  font-family: "AvenirNext" !important;
+  font-family: "AvenirNextBold" !important;
   font-size: 18px !important;
-  font-weight: 400 !important;
+  font-weight: 700 !important;
 }
 .exportfence {
   display: none;

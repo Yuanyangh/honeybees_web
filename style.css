@@ -14,12 +14,12 @@
 }
 
 @font-face {
-  font-family: "AvenirNext"; /* Choose a name for your font */
+  font-family: "AvenirNextBold"; /* Choose a name for your font */
   src: url("asssets/font2/AvenirNextLTPro-Bold.otf") format("woff");
   /* Update the path based on your file structure and font format */
 }
 @font-face {
-  font-family: "AvenirNextlight"; /* Choose a name for your font */
+  font-family: "AvenirNext"; /* Choose a name for your font */
   src: url("asssets/font2/AvenirNextLTPro-Regular.otf") format("woff");
   /* Update the path based on your file structure and font format */
 }
@@ -63,7 +63,7 @@
   margin: 0 auto;
 }
 .flex p {
-  font-family: "AvenirNext" !important;
+  font-family: "AvenirNextBold" !important;
   width: 100%;
   font-size: 18px;
   line-height: 19.8px;
@@ -137,7 +137,7 @@
 }
 .formsection p {
   width: 600px;
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 18px;
   font-weight: 600;
 }
@@ -203,7 +203,7 @@
   text-transform: uppercase;
 }
 .section-orange p {
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 18px;
 }
 .slider {
@@ -309,7 +309,7 @@
   color: #fff;
 }
 .contact-section p {
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 18px;
   color: #fff;
 }
@@ -328,7 +328,7 @@
   text-align: center;
 }
 .contact-banner-text p {
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 18px;
   color: #fff;
 }
@@ -416,16 +416,16 @@ footer h3 {
 }
 .name {
   width: 80%;
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 12px;
 }
 .message {
   width: 84%;
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
 }
 .email {
   width: 100%;
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 12px;
 }
 .socialicondiv {
@@ -438,7 +438,7 @@ footer h3 {
   margin: 0 7px;
 }
 .fontfooterend {
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 12px;
   line-height: 13.2px;
   font-weight: 100 !important;
@@ -561,7 +561,7 @@ footer h3 {
   text-align: center;
 }
 .career-banner-text p {
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 18px;
   color: #29446d;
   font-weight: 600;
@@ -623,7 +623,7 @@ footer h3 {
   color: #29446d;
 }
 .image-section p {
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 18px;
   font-weight: 600;
   color: #29446d;
@@ -655,7 +655,7 @@ input[type="radio"] {
   align-items: baseline;
 }
 .radioint label {
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 18px;
   margin: 5px;
 }
@@ -1017,7 +1017,7 @@ h6 {
   margin: 0;
 }
 .options-textbox-p {
-  font-family: "AvenirNextlight";
+  font-family: "AvenirNext";
   /* font-weight: 800; */
   font-size: 18px;
   color: white;

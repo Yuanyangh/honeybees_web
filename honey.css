@@ -502,7 +502,7 @@ marquee,
 }
 
 .custo-main p {
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 18px;
 }
 
@@ -646,7 +646,7 @@ section.blue_bg {
 .main_content p {
   color: white;
   margin-bottom: 20px;
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 18px;
 }
 
@@ -825,7 +825,7 @@ section.hero-sec .row {
 }
 
 .hero-hed-sec p {
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 18px;
   color: #fffbf5;
   text-align: center;
@@ -1042,7 +1042,7 @@ li.btn {
   color: #fffbf5;
   font-size: 18px;
   line-height: 20px;
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
 }
 
 .teg-btn ul {
@@ -1057,7 +1057,7 @@ li.btn {
   position: relative;
   font-size: 14px;
   line-height: 16.8px;
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   padding: 7px 25px;
   background: #eeaf30;
   margin: 5px 10px;
@@ -1130,7 +1130,7 @@ li.btn {
   color: #fffbf5;
   font-size: 18px;
   line-height: 20px;
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
 }
 
 .teg-btn-right ul {
@@ -1149,7 +1149,7 @@ li.btn {
   list-style-type: none;
   color: #fffbf5;
   font-size: 14px;
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
 }
 
 .teg-btn-right ul li:before {
@@ -1295,7 +1295,7 @@ p {
 
 .testimnial-sec p {
   color: #fffbf5;
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
 }
 
 .testimnial-bg-after {
@@ -1428,7 +1428,7 @@ li.btn:hover {
 }
 
 .sendo-section p {
-  font-family: "AvenirNextlight";
+  font-family: "AvenirNext";
   font-size: 18px;
   line-height: 19.8px;
   color: #fff;
@@ -1451,7 +1451,7 @@ li.btn:hover {
   color: #29446d !important;
   height: 40px;
   /* line-height: 28px; */
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   text-transform: capitalize;
   padding-left: 20px;
   overflow: hidden;
@@ -1736,7 +1736,7 @@ li.btn:hover {
 
 .his-text-box p {
   margin: 0;
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
 }
 
 .last-sec {
@@ -1757,15 +1757,15 @@ li.btn:hover {
 }
 
 .honeyBeeTeamReview h4 {
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
 }
 
 .honeyBeeTeamReview p {
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
 }
 
 .testimonial_slide blockquote {
-  font-family: "AvenirNextlight";
+  font-family: "AvenirNext";
   color: #1558bc;
 }
 

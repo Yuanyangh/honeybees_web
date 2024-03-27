@@ -41,7 +41,7 @@
   position: relative;
 }
 .testimonial-quote-text {
-  font-family: "AvenirNextlight";
+  font-family: "AvenirNext";
   color: #29446d;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -75,7 +75,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 8px;
   color: white;
 }
@@ -83,7 +83,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: "AvenirNextlight" !important;
+  font-family: "AvenirNext" !important;
   font-size: 8px;
   color: white;
 }
