@@ -779,6 +779,10 @@ body {
 }
 
 section.hero-sec {
+  background-color: #4f95ff;
+}
+
+section.hero-sec .container {
   background: url(./images/bg.png);
   background-size: cover;
 }
@@ -1450,6 +1454,7 @@ li.btn:hover {
   font-family: "AvenirNextlight" !important;
   text-transform: capitalize;
   padding-left: 20px;
+  overflow: hidden;
 }
 
 .blocks_section {

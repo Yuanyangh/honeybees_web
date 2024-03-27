@@ -137,14 +137,15 @@ input#inputField::placeholder {
     margin-right: 20px;
   }
   .fearless_text_row_img img {
-    width: 60%;
-    height: 100px;
+    width: 150px;
+    height: 110px;
   }
   .fearless_text_row_img p {
     font-size: 14px;
-    right: 20px;
+    right: 13px;
+    top: 13px;
     left: auto;
-    width: 45%;
+    width: 115px;
   }
   .text_box.container.custom_container {
     padding-top: 0px;

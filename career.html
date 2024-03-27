@@ -28,11 +28,11 @@
 
 <body>
     <div class="topbar">
-        <div class="honeybeeLogo">
+        <a href="/" class="honeybeeLogo">
         <img src="./assests/Honeybees_logo (1).png" alt="">
-        </div>
+        </a>
         <div class="honeybeeMusic">
-        <div class="music-icon" onclick="toggleSound()">
+        <div class="music-icon playing" onclick="toggleSound()">
             <div class="lottie-sound" id="lottie-sound"></div>
             <!-- <img class="playing-music" src="assests/music_dark.svg" alt="Music"> -->
             <img class="mute-music" src="assests/music_dark_mute.svg" alt="Mute Music">
@@ -86,9 +86,11 @@
                         <p class="w-100">
                             Actually no.. We are recruiting, vigorously!
                         </p>
-                        <button style="border:0px;background-color: #ffffff00;margin-top:60px;" class="w-100">
-                            <img src="asssets/Group 187.png" alt="" style="background-color: #ffffff00;">
-                        </button>
+                        <div class="w-100">
+                            <button style="border:0px;background-color: #ffffff00;margin-top:60px;" class="">
+                                <img src="asssets/Group 187.png" alt="" style="background-color: #ffffff00;">
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="row career-banner-text">
@@ -315,7 +317,7 @@
                                             whether within or outside Singapore, for the purposes of recruitment and
                                             related general administration.</label>
                                     </div>
-                                    <div class="d-flex align-items-center mt-3">
+                                    <div class="d-flex align-items-center">
                                         <input style="margin: 0px; " type="radio" id="r1" name="rr">
                                         <label style="margin-left: 12px; font-weight: 600;" for="r1">Yes</label>
                                     </div>

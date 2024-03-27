@@ -29,6 +29,12 @@
 }
 
 @media (max-width: 500px) {
+  .contact-section-people-lottie {
+    display: none;
+  }
+  .contact-section-people-lottie2 {
+    position: relative;
+  }
   .contact-section .col-7 {
     text-align: center;
     align-self: flex-end;
@@ -42,9 +48,9 @@
     font-size: 14px;
   }
   .contact-section-people {
-    transform: scale(2);
+    transform: scale(1.7);
     top: 150px;
-    right: 0px;
+    right: -30px;
   }
 
   .contact-banner-text {

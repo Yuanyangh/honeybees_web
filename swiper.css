@@ -27,5 +27,6 @@
 @media (max-width: 500px) {
   .swiper {
     margin: 100px auto 20px;
+    height: 250px;
   }
 }

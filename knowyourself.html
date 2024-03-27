@@ -30,11 +30,11 @@
 
   <body style="background-color: #fff4d5">
     <div class="topbar">
-      <div class="honeybeeLogo">
+      <a href="index.html" class="honeybeeLogo">
         <img src="assests/Honeybees_logo.svg" alt="HoneybeeLogo" />
-      </div>
+      </a>
       <div class="honeybeeMusic">
-        <div class="music-icon" onclick="toggleSound()">
+        <div class="music-icon playing" onclick="toggleSound()">
           <div class="lottie-sound" id="lottie-sound"></div>
           <!-- <img
             class="playing-music"
@@ -51,6 +51,7 @@
           id="myAudio"
           src="./HB_assest/good-night-160166.mp3"
           loop
+          autoplay
         ></audio>
       </div>
     </div>

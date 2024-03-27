@@ -50,6 +50,17 @@
 }
 
 @media (max-width: 500px) {
+  .career-bg2 {
+    background: url("./asssets/careerbees1.png"),
+      url("./asssets/careerbees2.png"), url("./asssets/careerbees3.png"),
+      url("./asssets/careerbees4.png"), url("./asssets/careerbees5.png");
+    /* height: max-content; */
+    background-repeat: no-repeat;
+    visibility: hidden;
+    animation: careerAni 2s ease-in-out 0.5s forwards;
+    background-size: 200% !important;
+    background-position: center top !important;
+  }
   .career-banner-text h3 {
     font-size: 30px;
     line-height: 1;
@@ -61,6 +72,21 @@
   .career-banner-text.misc:before {
     right: -150px;
     bottom: -150px;
+    transform: scale(0.7);
+  }
+  .career-banner-text button {
+    margin-top: 30px !important;
+  }
+  .career-dedicate-text {
+    max-width: 300px;
+    padding: 0px;
+    margin: auto;
+  }
+  .career-banner-text img {
+    transform: scale(0.7);
+  }
+  .image-section {
+    background-position: center;
   }
   .image-section h3 {
     font-size: 20px;
@@ -68,10 +94,11 @@
   }
   .image-section p {
     font-size: 14px;
+    line-height: 1;
   }
 
   .career-dedicate-img img {
-    max-width: 300px;
+    max-width: 235px;
   }
 
   .career-plans-marquee {

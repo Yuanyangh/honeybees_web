@@ -331,30 +331,25 @@
     }
 
     .text-caption {
-        /* position: absolute; */
         visibility: hidden;
-        /* top: 50%; */
-        /* left: 50%; */
-        /* transform: translate(-50%, -50%); */
-         /* Initial font color */
-        -webkit-text-stroke: 2px #29446D;
-        color: transparent;
-        /* padding: 10px; */
-        animation: floatInAndColorChange 1s ease-in-out 2s forwards; /* Delay animation */
-        animation-fill-mode: forwards; /* Keep the final state after animation ends */
-        /* white-space: nowrap; */
+        /* -webkit-text-stroke: 2px #29446D;
+        -moz-text-stroke: 2px #29446D; */
+        /* color: transparent; */
+        animation: floatInAndColorChange 1s ease-in-out 2s forwards; 
+        animation-fill-mode: forwards;
+        color: white; 
+        -webkit-text-stroke: 0.1px #29446d;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 
+          0 0 0 #29446d,
+          0 0 0 #29446d,
+          0 0 0 #29446d,
+          0 0 0 #29446d;
     }
 
     .text-caption2 {
-        /* position: absolute; */
         visibility: hidden;
-        /* top: 50%; */
-        /* left: 50%; */
-        /* transform: translate(-50%, -50%); */
-         /* Initial font color */
-        /* -webkit-text-stroke: 2px #29446D; */
         color: transparent;
-        /* padding: 10px; */
         animation: floatInAndColorChange2 0.5s ease-in-out 2s forwards; /* Delay animation */
         animation-fill-mode: forwards; /* Keep the final state after animation ends */
         /* white-space: nowrap; */
@@ -444,11 +439,11 @@
 <body>
 
   <div class="topbar">
-    <div class="honeybeeLogo">
+    <a href="index.html" class="honeybeeLogo">
       <img src="./assests/Honeybees_logo (1).png" alt="">
-    </div>
+    </a>
     <div class="honeybeeMusic">
-      <div class="music-icon" onclick="toggleSound()">
+      <div class="music-icon playing" onclick="toggleSound()">
         <div class="lottie-sound" id="lottie-sound"></div>
         <!-- <img class="playing-music" src="assests/music_dark.svg" alt="Music"> -->
         <img class="mute-music" src="assests/music_dark_mute.svg" alt="Mute Music">
@@ -977,7 +972,7 @@
     </div>
   </div>
 
-<div id="lorem_first" class="dialog">
+<!-- <div id="lorem_first" class="dialog">
   <div class="block blockImage mobile-lorem-dialog mobile-lorem-first">
     <div class="overlay">
         <div class="overlay_icon">
@@ -1021,7 +1016,7 @@
         </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <script type="text/javascript">
   _linkedin_partner_id = "6008404";
@@ -1043,7 +1038,7 @@
   <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=6008404&fmt=gif" />
   </noscript>
 
-<div id="event_section_first" class="dialog">
+<!-- <div id="event_section_first" class="dialog">
   <div class="options mobile-event-dialog">
     <div class="option active"
         style="--optionBackground:url(./assests/freedom.png);">
@@ -1086,7 +1081,7 @@
         </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">

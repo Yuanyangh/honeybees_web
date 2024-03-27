@@ -385,34 +385,33 @@
     }
 
     .hero-hed-sec-text-caption {
-        /* position: absolute; */
         visibility: hidden;
-        /* top: 50%; */
-        /* left: 50%; */
-        /* transform: translate(-50%, -50%); */
-        /* Initial font color */
-        -webkit-text-stroke: 2px #ffffff;
-        color: transparent;
-        /* padding: 10px; */
+        /* -webkit-text-stroke: 2px #ffffff;
+        color: transparent; */
         animation: floatInAndColorChangeHeroSec 1.5s ease-in-out 2s forwards;
-        /* Delay animation */
         animation-fill-mode: forwards;
-        /* Keep the final state after animation ends */
-        /* white-space: nowrap; */
+        color: white; 
+        -webkit-text-stroke: 0.1px #fff;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 
+          0 0 0 #fff,
+          0 0 0 #fff,
+          0 0 0 #fff,
+          0 0 0 #fff;
     }
 </style>
 
 
 <body>
     <div class="topbar">
-        <div class="honeybeeLogo"><img src="assests/Honeybees_logo.svg" alt="HoneybeeLogo"></div>
+        <a href="index.html" class="honeybeeLogo"><img src="assests/Honeybees_logo.svg" alt="HoneybeeLogo"></a>
         <div class="honeybeeMusic">
-            <div class="music-icon" onclick="toggleSound()">
+            <div class="music-icon playing" onclick="toggleSound()">
                 <div class="lottie-sound" id="lottie-sound"></div>
                 <!-- <img class="playing-music" src="assests/music_light.svg" alt="Music"> -->
                 <img class="mute-music" src="assests/music_light_mute.svg" alt="Mute Music">
             </div>
-            <audio id="myAudio" src="./HB_assest/good-night-160166.mp3"></audio>     
+            <audio id="myAudio" src="./HB_assest/good-night-160166.mp3" loop autoplay></audio>     
         </div>
     </div>
     <button id="openModalBtn" class="mobile-nav-btn">

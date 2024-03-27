@@ -8,7 +8,7 @@
 
 @media (max-width: 768px) {
   h2.drop-your-question {
-    margin: 20px;
+    margin: 20px 0px;
   }
   .rematch-quote {
     text-align: left;

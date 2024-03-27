@@ -37,7 +37,7 @@
   /* left: 50%; */
   /* transform: translate(-50%, -50%); */
   /* Initial font color */
-  -webkit-text-stroke: 2px #ffffff;
+  -webkit-text-stroke: 0.1px #ffffff;
   color: transparent;
   /* padding: 10px; */
   animation: floatInAndColorChange 1s ease-in-out 2s forwards; /* Delay animation */

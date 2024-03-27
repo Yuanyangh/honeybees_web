@@ -13,10 +13,11 @@
 }
 
 .lottie-hive-content {
-  height: 100%;
+  height: 100vh;
   position: absolute;
   width: 100%;
   top: 0px;
+  mix-blend-mode: color-burn;
 }
 
 .hero-hed-sec .hive-img {
@@ -24,6 +25,7 @@
   width: 100%;
   height: 100%;
   display: none;
+  mix-blend-mode: color-burn;
 }
 
 .about-hero-bee {
@@ -161,12 +163,18 @@
 }
 
 @media (max-width: 600px) {
+  .testimonial-quote-text {
+    font-size: 12px;
+    top: 45%;
+    width: 80%;
+    left: 50%;
+  }
   .testimonial-quote-image-small {
     display: block !important;
     height: 170px;
   }
   .gtco-testimonials-container {
-    max-width: 300px;
+    max-width: 250px;
     margin: 0 auto;
   }
 
@@ -176,21 +184,32 @@
   .owl-carousel.owl-drag .owl-item.active {
     transform: scale(1) !important;
   }
+  .testimonial-item-logo {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 500px) {
   .hero-hed-sec h1 {
     font-size: 30px;
-    line-height: normal;
+    line-height: 1;
   }
   .hero-hed-sec p {
     font-size: 14px;
   }
   .about-hero-text {
-    padding: 200px 20px 100px;
+    padding: 200px 0px 100px;
+    max-width: 300px;
+    margin: auto;
+  }
+  .hero-hed-sec-gif {
+    width: 50px;
+    margin-left: -135px;
   }
   .hero-hed-sec-img {
     margin-top: -50px;
+    width: 80%;
+    margin-left: 20px;
   }
   .sendo-section h2 {
     font-size: 30px;
@@ -221,9 +240,15 @@
   .text-box-right p {
     font-size: 14px;
   }
+  .teg-btn-right ul {
+    justify-content: start;
+    flex-flow: wrap;
+  }
   .teg-btn-right ul li {
     font-size: 10px;
     padding: 2px 25px;
+    min-width: fit-content;
+    position: relative;
   }
   .text-box-right {
     text-align: start;
