@@ -190,5 +190,6 @@ input#inputField::placeholder {
   }
   .fearless_main {
     padding-bottom: 200px;
+    background: url("../../images/Group235_Mobile.png");
   }
 }

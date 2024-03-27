@@ -9,6 +9,13 @@
   padding: 100px 0;
 }
 
+.number-style {
+  color: transparent;
+  -webkit-text-stroke: 3px #29446d;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none !important;
+}
+
 @media (max-width: 1200px) {
   .career-banner-text h3 {
     font-size: 45px;
@@ -151,5 +158,9 @@
     border: 2px solid #eeaf30;
     padding: 2px 0px;
     font-size: 12px;
+  }
+
+  .number-style {
+    -webkit-text-stroke: 2px #29446d;
   }
 }
