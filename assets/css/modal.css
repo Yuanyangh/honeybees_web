@@ -46,11 +46,9 @@
   display: none;
   cursor: pointer;
 }
-
 .mobile-nav-btn:focus {
   outline: none;
 }
-
 .mobile-nav-btn span {
   text-transform: uppercase;
   font-size: 14px;
@@ -78,17 +76,24 @@
   display: none;
   cursor: pointer;
 }
-
 .close-nav-modal:focus {
   outline: none;
 }
-
 .close-nav-modal span {
   text-transform: uppercase;
   font-size: 14px;
   color: #29446d;
   font-family: "Agrandir-TextBold";
   margin-top: 5px;
+}
+
+.mobile-modal-upcoming {
+  text-align: right;
+  max-width: 300px;
+  margin: auto;
+}
+.mobile-modal-upcoming img {
+  width: 140px;
 }
 
 .modal {

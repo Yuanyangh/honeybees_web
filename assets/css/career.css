@@ -57,6 +57,9 @@
 }
 
 @media (max-width: 500px) {
+  .career-bg1 {
+    background-size: 200%;
+  }
   .career-bg2 {
     background: url("./asssets/careerbees1.png"),
       url("./asssets/careerbees2.png"), url("./asssets/careerbees3.png"),

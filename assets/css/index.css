@@ -603,9 +603,9 @@ section.event_section {
   .mobile-lorem-third.block .overlay {
     background: #eeaf30;
   }
-  .block:hover.block:hover .overlay {
+  /* .block:hover .overlay {
     opacity: 1;
-  }
+  } */
   .block:hover.block {
     width: 90%;
     height: 300px;
