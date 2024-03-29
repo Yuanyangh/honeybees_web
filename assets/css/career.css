@@ -61,9 +61,9 @@
     background-size: 200%;
   }
   .career-bg2 {
-    background: url("./asssets/careerbees1.png"),
-      url("./asssets/careerbees2.png"), url("./asssets/careerbees3.png"),
-      url("./asssets/careerbees4.png"), url("./asssets/careerbees5.png");
+    background: url("../../asssets/careerbees1.png"),
+      url("../../asssets/careerbees2.png"), url("../../asssets/careerbees3.png"),
+      url("../../asssets/careerbees4.png"), url("../../asssets/careerbees5.png");
     /* height: max-content; */
     background-repeat: no-repeat;
     visibility: hidden;
