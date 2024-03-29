@@ -101,6 +101,12 @@
 .testimonial-quote-image-small {
   display: none !important;
 }
+.history-sec .full-text {
+  display: block;
+}
+.history-sec .mobile-text {
+  display: none;
+}
 
 @media (max-width: 1200px) {
   .hero-hed-sec h1 {
@@ -261,10 +267,14 @@
   }
   .history-sec h1 {
     font-size: 30px;
-    overflow-wrap: break-word;
-    width: 215px;
     margin: auto;
   }
+  .history-sec .full-text {
+    display: none;
+  }  
+  .history-sec .mobile-text {
+    display: block;
+  }  
 
   .box-wrap {
     width: fit-content;
