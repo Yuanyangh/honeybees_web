@@ -101,7 +101,9 @@
   }
   100% {
     color: transparent;
+    text-stroke: 2px #ffffff;
     -webkit-text-stroke: 2px #ffffff;
+    -moz-text-stroke: 2px #ffffff;
   }
 }
 
