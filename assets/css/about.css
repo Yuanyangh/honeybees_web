@@ -20,14 +20,6 @@
   mix-blend-mode: color-burn;
 }
 
-.hero-hed-sec .hive-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: none;
-  mix-blend-mode: color-burn;
-}
-
 .about-hero-bee {
   position: absolute;
 }
@@ -127,11 +119,8 @@
   .hero-hed-sec {
     padding: 0px;
   }
-  .hero-hed-sec .hive-img {
-    display: block;
-  }
   .lottie-hive-content {
-    display: none;
+    transform: scale(2);
   }
 
   .about-hero-text {
@@ -153,6 +142,9 @@
 }
 
 @media (max-width: 800px) {
+  .lottie-hive-content {
+    transform: scale(2.2);
+  }
   .testimonial-quote-image-small {
     display: block !important;
     height: 150px;
@@ -169,6 +161,9 @@
 }
 
 @media (max-width: 600px) {
+  .lottie-hive-content {
+    transform: scale(2.4);
+  }
   .testimonial-quote-text {
     font-size: 12px;
     top: 45%;
@@ -196,6 +191,9 @@
 }
 
 @media (max-width: 500px) {
+  .lottie-hive-content {
+    transform: scale(2.8);
+  }
   .hero-hed-sec h1 {
     font-size: 30px;
     line-height: 1;
