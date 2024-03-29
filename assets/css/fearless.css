@@ -18,11 +18,17 @@
   position: absolute;
 }
 
+.fearless_input_label {
+  position: relative;
+}
+
 input#inputField:focus-visible {
   outline: none;
 }
 input#inputField {
+  height: 45px;
   outline: none;
+  box-shadow: -7px 7px 0 0 #3061ab;
   border: 3px solid #29446d;
 }
 input#inputField::placeholder {
@@ -156,8 +162,8 @@ input#inputField::placeholder {
   }
   .fearless_bottom_text p {
     font-size: 14px;
-    left: 45px;
-    top: 10px;
+    left: 35px;
+    top: 7px;
   }
   .fearless_bottom_text img {
     width: 100%;
@@ -168,7 +174,7 @@ input#inputField::placeholder {
   }
   input#inputField {
     width: 100%;
-    box-shadow: -8px 8px 0 0 #3061ab;
+    box-shadow: -5px 5px 0 0 #3061ab;
     border: 3px solid #29446d;
   }
 
@@ -179,7 +185,7 @@ input#inputField::placeholder {
     padding: 2px 0px;
     font-size: 12px;
     margin: 0 auto;
-    box-shadow: -8px 8px 0 0 #3061ab;
+    box-shadow: -5px 5px 0 0 #3061ab;
     border-radius: 25px;
     font-family: "Agrandir-TextBold";
     text-transform: uppercase;

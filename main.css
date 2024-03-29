@@ -96,7 +96,7 @@ p.name {
 }
 .fearless_bottom_text p {
   left: 65px;
-  width: 75%;
+  width: 80%;
   font-family: Avenir Next;
   font-size: 18px;
   font-weight: 600;
@@ -142,7 +142,8 @@ input#inputField {
   width: 460px;
 }
 button.fearless_btn {
-  bottom: 14px;
+  height: 39px;
+  bottom: 3px;
   font-family: Agrandir;
   font-size: 18px;
   font-weight: 800;
@@ -153,9 +154,9 @@ button.fearless_btn {
   color: white;
   background: #eeaf30;
   border-radius: 20px;
-  padding: 12px 20px;
+  padding: 5px 20px;
   /* top: 1px; */
-  right: 8%;
+  right: 3px;
   position: absolute;
 }
 input#inputField::placeholder {
