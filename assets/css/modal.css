@@ -88,6 +88,9 @@
 }
 
 .mobile-modal-upcoming {
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
   text-align: right;
   max-width: 300px;
   margin: auto;
