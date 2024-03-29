@@ -1,16 +1,35 @@
+var isOpen = false;
 $(document).ready(function () {
   var modal = document.getElementById("myModal");
-  $("#openModalBtn").click(function () {
-    modal.style.display = "block";
-    modal.querySelector(".modal-content").style.animationName = "slideUp";
+  $('#toggleModalBtn').click(function() {
+    isOpen = !isOpen;
+    if ( isOpen ) {
+      $(".menu").addClass("opened");
+      $('#toggleModalText').text('Close');
+      modal.style.display = "block";
+      modal.querySelector(".modal-content").style.animationName = "slideUp";      
+    } else {
+      if ($(".menu").hasClass("opened")) {
+        $(".menu").removeClass("opened");
+        $('#toggleModalText').text('Menu');
+      }
+      modal.querySelector(".modal-content").style.animationName = "slideDown";
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 500);
+    }
   });
-  $(".close-nav-modal").click(function () {
-    // modal.style.display = "none";
-    modal.querySelector(".modal-content").style.animationName = "slideDown";
-    setTimeout(() => {
-      modal.style.display = "none";
-    }, 500);
-  });
+  // $("#openModalBtn").click(function () {
+  //   modal.style.display = "block";
+  //   modal.querySelector(".modal-content").style.animationName = "slideUp";
+  // });
+  // $(".close-nav-modal").click(function () {
+  //   // modal.style.display = "none";
+  //   modal.querySelector(".modal-content").style.animationName = "slideDown";
+  //   setTimeout(() => {
+  //     modal.style.display = "none";
+  //   }, 500);
+  // });
 });
 
 window.onclick = function (event) {
