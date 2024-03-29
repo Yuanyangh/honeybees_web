@@ -5,13 +5,11 @@ $(document).ready(function () {
     isOpen = !isOpen;
     if ( isOpen ) {
       $(".menu").addClass("opened");
-      $('#toggleModalText').text('Close');
       modal.style.display = "block";
       modal.querySelector(".modal-content").style.animationName = "slideUp";      
     } else {
       if ($(".menu").hasClass("opened")) {
         $(".menu").removeClass("opened");
-        $('#toggleModalText').text('Menu');
       }
       modal.querySelector(".modal-content").style.animationName = "slideDown";
       setTimeout(() => {
