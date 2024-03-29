@@ -6,7 +6,7 @@ $(document).ready(function () {
       margin: 200,
       responsiveClass: true,
       nav: false,
-      dots: false,
+      dots: true,
       responsive: {
         0: {
           items: 1,
