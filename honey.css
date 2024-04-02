@@ -1776,18 +1776,18 @@ li.btn:hover {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  .lottie-sound {
-    display: none;
-  }
 }
 
-.music-icon.playing {
-  .lottie-sound {
-    display: block;
-  }
-  .mute-music {
-    display: none;
-  }
+.music-icon .lottie-sound {
+  display: none;
+}
+
+.music-icon.playing .lottie-sound {
+  display: block;
+}
+
+.music-icon.playing .mute-music {
+  display: none;
 }
 
 .lottie-sound {
