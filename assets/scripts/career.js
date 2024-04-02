@@ -1,11 +1,12 @@
 $(document).ready(async function () {
   var animation = lottie.loadAnimation({
-    container: document.getElementById("lottie-hive"), // the dom element
+    container: document.getElementById("lottie_career"), // the dom element
     renderer: "svg",
     loop: false,
     autoplay: false,
-    path: "./HB_assest/AboutUs.json", // the path to the animation json
+    path: "./HB_assest/career.json", // the path to the animation json
   });
 
   animation.play();
 });
+  
