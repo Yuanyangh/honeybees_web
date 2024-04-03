@@ -100,6 +100,26 @@
   display: none;
 }
 
+.his-mobile-img {
+  position: relative;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.his-mobile-line-img {
+  display: none;
+  position: absolute;
+  width: 23px;
+  top: 0px;
+  left: 0px;
+}
+
+.his-text {
+  padding-top: 8px;
+}
+
 @media (max-width: 1200px) {
   .hero-hed-sec h1 {
     font-size: 45px;
@@ -139,6 +159,32 @@
   .history-sec h1 {
     font-size: 45px;
   }
+
+  .his-img {
+    display: none;
+  }
+
+  .his-mobile-line-img {
+    display: block;
+  }
+
+  .box-wrap {
+    display: flex !important;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: none;
+    padding-top: 0px;
+  }
+
+  .his-text-box {
+    padding: 0px 0px 50px 0px;
+  }
+
+  .his-text-box img {
+    display: block;
+  }
+
 }
 
 @media (max-width: 800px) {
@@ -273,13 +319,6 @@
   .history-sec .mobile-text {
     display: block;
   }  
-
-  .box-wrap {
-    width: fit-content;
-    grid-template-columns: 60% 60% 60% 60%;
-    background-image: none;
-    padding-top: 0px;
-  }
   .his-text-box h2 {
     font-size: 14px;
     font-family: "Agrandir-TextBold";
@@ -287,10 +326,15 @@
   .his-text-box p {
     font-size: 14px;
   }
+  .his-mobile-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+  }
 
   .about-history-sec {
     overflow-x: auto;
-    margin-top: 50px;
+    margin-top: 10px;
     padding: 10px 0px;
   }
   .his-img img {

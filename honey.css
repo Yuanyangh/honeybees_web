@@ -1248,12 +1248,7 @@ p {
 }
 
 .box-wrap {
-  /* background-image: url("./image/Group 212.png"); */
-  /* background-size: 95%; */
-  background-repeat: no-repeat;
-  background-position: 27px 0px;
-  padding-top: -33px;
-  /* position: absolute; */
+  position: relative;
   padding-top: 65px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
@@ -1262,7 +1257,12 @@ p {
 }
 
 .his-text-box {
+  display: flex;
   padding: 10px 30px 0px 0px;
+}
+
+.his-text-box img {
+  display: none;
 }
 
 .his-text-box h2 {
