@@ -390,13 +390,39 @@
             visibility:visible;
         }
     }
-    @keyframes amiStrokText {
+
+    @keyframes amiStrokYellowText {
         0% {
             color: #29446d;
         }
         100% {
             color: #eeaf30;
             -webkit-text-fill-color: #eeaf30 !important;
+            /* -webkit-text-stroke: 2px #ffffff; */
+            text-shadow: 
+              -2px -2px 0 #ffffff,  
+              2px -2px 0 #ffffff,
+              -2px  2px 0 #ffffff, 
+              2px  2px 0 #ffffff,
+              -2px  0px 0 #ffffff,
+              2px  0px 0 #ffffff,
+              0px -2px 0 #ffffff,
+              0px  2px 0 #ffffff;
+
+        }
+    }
+
+    .animate_strok_yellow_text {
+      animation: amiStrokYellowText 1s ease-in-out forwards;
+    }
+
+    @keyframes amiStrokText {
+        0% {
+            color: white;
+        }
+        100% {
+            color: #29446d;
+            -webkit-text-fill-color: #29446d !important;
             /* -webkit-text-stroke: 2px #ffffff; */
             text-shadow: 
               -2px -2px 0 #ffffff,  
@@ -436,10 +462,16 @@
   
   // Function to run on scroll
   function runOnScroll() {
-    const elements = document.querySelectorAll('.strok_text');
+    const elements = document.querySelectorAll('.strok_yellow_text');
     for (let i = 0; i < elements.length; i++) {
       if (isInViewport(elements[i])) {
-        elements[i].classList.add('animate_strok_text');
+        elements[i].classList.add('animate_strok_yellow_text');
+      }
+    }
+    const elements2 = document.querySelectorAll('.strok_text');
+    for (let i = 0; i < elements2.length; i++) {
+      if (isInViewport(elements2[i])) {
+        elements2[i].classList.add('animate_strok_text');
       }
     }
   }
@@ -521,7 +553,7 @@
           <br>
           <br>
 
-          <span class="strok_text">..fearlessly</span>
+          <span class="strok_yellow_text">..fearlessly</span>
           </h1>  
 
           <!-- <h1 class="text-caption" style="text-align:center">YOUR FEARLESS LIFE AWAITS</h1> -->
