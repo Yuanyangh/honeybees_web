@@ -782,10 +782,10 @@ section.hero-sec {
   background-color: #4f95ff;
 }
 
-section.hero-sec .container {
-  background: url(./images/bg.png);
+/* section.hero-sec .container {
+  background: url(./assets/img/AboutUs_BGcolour.png);
   background-size: cover;
-}
+} */
 
 section.hero-sec .col {
   width: 33%;
@@ -1340,7 +1340,7 @@ p {
   width: 100%;
   padding: 0;
   margin: 0;
-  margin-top: 150px;
+  /* margin-top: 150px; */
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 100px;
