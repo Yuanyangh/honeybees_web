@@ -414,6 +414,7 @@ h2.drop-your-question::first-letter {
 }
 
 button.send-wrapper {
+  background-color: white;
   border-radius: 20px;
   padding: 5px 25px;
   border: solid #eeaf30 3px;
