@@ -1060,7 +1060,7 @@ h6 {
 /* contact */
 
 .text-nowrap {
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .input-phone-container {
