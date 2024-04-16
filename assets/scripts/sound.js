@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  // var audio = document.getElementById("myAudio");
+  // audio.play();
+  // toggleSound();
+   $('#myAudio').trigger('click');
+  
   $(".music-icon").click(function () {
     if ($(".music-icon").hasClass("playing")) {
       $(".music-icon").removeClass("playing");
@@ -9,9 +14,10 @@ $(document).ready(function () {
 });
 
 function toggleSound() {
+
   var audio = document.getElementById("myAudio");
   if (audio.paused) {
-    audio.volume = 0.8;
+    audio.volume = 0.5;
     audio.play();
   } else {
     audio.pause();
