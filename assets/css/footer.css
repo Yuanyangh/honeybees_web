@@ -1,3 +1,6 @@
+.yourtitle {
+  padding-right: 30px;
+}
 @media (max-width: 1200px) {
   .rematch-quote {
     padding: 200px 0px 0px;

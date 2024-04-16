@@ -1,3 +1,16 @@
+.lottie-career-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.lottie-career {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  top: 0px;
+}
+
 .career-plans-marquee {
   position: absolute;
   top: -50px;
@@ -30,6 +43,10 @@
 }
 
 @media (max-width: 900px) {
+  .lottie-career {
+    transform: scale(2.5);
+    top: 14%;
+  }
   .image-section .row {
     flex-direction: column;
     max-width: 500px;

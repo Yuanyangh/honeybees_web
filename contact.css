@@ -95,18 +95,48 @@
   }
 }
 
-@keyframes amiStrokText {
+@keyframes amiStrokText_1 {
   0% {
     color: white;
   }
   100% {
-    color: transparent;
-    text-stroke: 2px #ffffff;
-    -webkit-text-stroke: 2px #ffffff;
-    -moz-text-stroke: 2px #ffffff;
+    color: #D86067;
+    /* -webkit-text-stroke: 2px #ffffff; */
+    text-shadow: 
+        -2px -2px 0 #ffffff,  
+         2px -2px 0 #ffffff,
+        -2px  2px 0 #ffffff, 
+         2px  2px 0 #ffffff,
+        -2px  0px 0 #ffffff,
+         2px  0px 0 #ffffff,
+         0px -2px 0 #ffffff,
+         0px  2px 0 #ffffff;
   }
 }
 
-.animate_strok_text {
-  animation: amiStrokText 1s ease-in-out forwards;
+@keyframes amiStrokText_2 {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #B15966;
+    /* -webkit-text-stroke: 2px #ffffff; */
+    text-shadow: 
+        -2px -2px 0 #ffffff,  
+         2px -2px 0 #ffffff,
+        -2px  2px 0 #ffffff, 
+         2px  2px 0 #ffffff,
+        -2px  0px 0 #ffffff,
+         2px  0px 0 #ffffff,
+         0px -2px 0 #ffffff,
+         0px  2px 0 #ffffff;
+  }
+}
+
+.animate_strok_text.text-happiness {
+  animation: amiStrokText_1 1s ease-in-out forwards;
+}
+
+.animate_strok_text.text-struggle {
+  animation: amiStrokText_2 1s ease-in-out forwards;
 }

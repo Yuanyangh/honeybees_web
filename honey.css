@@ -312,6 +312,7 @@ img.icon-chevron-bottom {
 }
 
 .title_filed input {
+  box-sizing: border-box;
   border: solid 3px #eeaf30;
   width: 178px;
 }
@@ -414,6 +415,7 @@ h2.drop-your-question::first-letter {
 }
 
 button.send-wrapper {
+  background-color: white;
   border-radius: 20px;
   padding: 5px 25px;
   border: solid #eeaf30 3px;
@@ -782,10 +784,10 @@ section.hero-sec {
   background-color: #4f95ff;
 }
 
-section.hero-sec .container {
-  background: url(./images/bg.png);
+/* section.hero-sec .container {
+  background: url(./assets/img/AboutUs_BGcolour.png);
   background-size: cover;
-}
+} */
 
 section.hero-sec .col {
   width: 33%;
@@ -1248,12 +1250,7 @@ p {
 }
 
 .box-wrap {
-  /* background-image: url("./image/Group 212.png"); */
-  /* background-size: 95%; */
-  background-repeat: no-repeat;
-  background-position: 27px 0px;
-  padding-top: -33px;
-  /* position: absolute; */
+  position: relative;
   padding-top: 65px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
@@ -1262,7 +1259,12 @@ p {
 }
 
 .his-text-box {
+  display: flex;
   padding: 10px 30px 0px 0px;
+}
+
+.his-text-box img {
+  display: none;
 }
 
 .his-text-box h2 {
@@ -1340,7 +1342,7 @@ p {
   width: 100%;
   padding: 0;
   margin: 0;
-  margin-top: 150px;
+  /* margin-top: 150px; */
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 100px;
@@ -1776,18 +1778,18 @@ li.btn:hover {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  .lottie-sound {
-    display: none;
-  }
 }
 
-.music-icon.playing {
-  .lottie-sound {
-    display: block;
-  }
-  .mute-music {
-    display: none;
-  }
+.music-icon .lottie-sound {
+  display: none;
+}
+
+.music-icon.playing .lottie-sound {
+  display: block;
+}
+
+.music-icon.playing .mute-music {
+  display: none;
 }
 
 .lottie-sound {
