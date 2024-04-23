@@ -3,7 +3,7 @@
 }
 @media (max-width: 1200px) {
   .rematch-quote {
-    padding: 100px 0px 0px;
+    padding: 200px 0px 0px;
     justify-content: space-between;
     gap: 150px;
   }
