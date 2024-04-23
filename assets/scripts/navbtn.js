@@ -18,7 +18,7 @@ function changeButtonColor(route) {
     buttonId = "aboutButton";
   } else if (route === "career.html") {
     buttonId = "careerButton";
-  } else if (route === "knowyourself.html") {
+  } else if (route === "discovery.html") {
     buttonId = "knowButton";
   } else if (route === "fearless.html") {
     buttonId = "fearlessButton";
