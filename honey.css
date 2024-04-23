@@ -388,7 +388,7 @@ h2.drop-your-question {
   margin-bottom: 10px;
 }
 
-h2.drop-your-question::first-letter {
+h2.drop-your-question {
   text-transform: uppercase;
 }
 
@@ -424,7 +424,7 @@ button.send-wrapper {
 }
 
 .rematch-quote {
-  padding-top: 201px;
+  padding-top: 100px;
   display: flex;
   text-align: left;
   gap: 236px;

@@ -750,7 +750,7 @@ h2.drop-your-question {
 }
 
 h2.drop-your-question::first-letter {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .i-think-we {
