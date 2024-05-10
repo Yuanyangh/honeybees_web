@@ -297,7 +297,6 @@
       position: fixed;
     }
 
-
     @keyframes floatInAndColorChange {
         0% {
             opacity: 0;
@@ -335,8 +334,8 @@
         /* -webkit-text-stroke: 2px #29446D;
         -moz-text-stroke: 2px #29446D; */
         /* color: transparent; */
-        animation: floatInAndColorChange 1s ease-in-out 2s forwards; 
-        animation-fill-mode: forwards;
+        /* animation: floatInAndColorChange 1s ease-in-out 2s forwards; */
+        /* animation-fill-mode: forwards; */
         color: #29446d; 
         -webkit-text-stroke: 0.1px #29446d;
         /* -webkit-text-fill-color: transparent; */
@@ -448,6 +447,9 @@
     <script src="assets/scripts/lottie-light.js"></script>
     <script src="assets/scripts/navbtn.js"></script>
     <script src="assets/scripts/modal.js"></script>
+    <script src="assets/scripts/mouse-animation.js"></script>
+    <script src="assets/scripts/overlayer.js"></script>
+    <script src="assets/scripts/action.js"></script>
 <script>
   // Function to check if the element is in the viewport
   function isInViewport(element) {
@@ -529,9 +531,20 @@
         </div>
       </div>
   </navbar>
-
-  <section class="scale-background" >
-    <!-- <canvas id="canvas3d"></canvas> -->
+  <section class="scale-background levelup-container" id="levelup-container">
+    <div class="levelup-content">   
+      <h1 class="levelup-title">
+          Level Up Life's Game<br>
+      </h1>
+      <div class="scroll-down-content">
+        <img src="assets/img/scroll_down.png" width="26" height="55"/>
+        <div class="levelup-mouse-desc">
+          scroll down
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="scale-background" id="unleash-container">
     <div class="banner-container">
       <div class="banner-bee-top">
         <img src="./assets/img/Home_Bee_A.png" alt="beeA"/>
@@ -547,20 +560,13 @@
       </div>
       <div class="main_head_content">   
         <h1 class="text-caption">
-          Level Up Life's Game<br>
-          
-        
-         
-          <br>
-          <br>
-
-          <span class="strok_text"> UNLEASH YOUR #FEARLESS </span>
-          </h1>  
-
+          <span class="unleash-title-styled"> UNLEASH YOUR </span>
+          <span>#FEARLESS </span>
+        </h1>  
           <!-- <h1 class="text-caption" style="text-align:center">YOUR FEARLESS LIFE AWAITS</h1> -->
         <!-- <h1 class="text-caption">
         WHERE A  <BR></BR>  TRULY<BR></BR>  <span class="strok_text">FEARLESS</span> LIFE <BR></BR>AWAITS. 
-       
+        
         </h1> -->
         <!-- -->
 
@@ -593,7 +599,7 @@
       </div>
     </div>
   </section>
-  <section class="blue_bg" style="background-image: url(./assests/bluebg.png);">
+  <section class="blue_bg" style="background-image: url(./assests/bluebg.png);" id="happen-container">
     <div class="index-happen-marquee">
       <div class="index-marquee-content rotate yellow">
         <div class="marquee">
@@ -646,14 +652,34 @@
       </div>
     </div>
     <div class="index-happen-content">
-      <h1> <span class="strok_text">COURAGE</span> IS NOT AN ABSENCE OF FEAR, BUT THE <span class="strok_text">TRIUMPH</span> OVER IT. 
+      <h1> 
+        <span class="strok_text">COURAGE</span> IS NOT AN ABSENCE OF FEAR, BUT THE <span class="strok_text">TRIUMPH</span> OVER IT. 
        </h1>
       <p>- Gandhi Said It, Not Us. -</p>
-      <div class="row">
-        <button class="sign_up">Agree?</button> &nbsp;&nbsp;
-        <button class="sign_up" style="width:150px">Disagree?</button>
+      <div class="row agree-btn-group">
+        <button class="sign_up btn_agree" id="agree-button">Agree?</button>
+        <button class="sign_up btn_disagree" style="width:150px" id="disagree-button">Disagree?</button>
       </div>
-     
+      <div class="progress-bar-detail" id="progress-bar-detail">
+        <div class="progress-bar-item">
+          <div class="happen-content-text">76% of people found their courage</div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-courage" id="progressbar-courage">
+              <div class="happen-content-boldtext">76%</div>
+            </div>
+            <div class="happen-content-text progress-bar-votes">1520 votes</div>
+          </div>
+        </div>
+        <div class="progress-bar-item">
+          <div class="happen-content-text">24% of people are still struggling</div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-struggling" id="progressbar-struggling">
+              <div class="happen-content-boldtext">24%</div>
+            </div>
+            <div class="happen-content-text progress-bar-votes">480 votes</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -731,9 +757,9 @@
 
               <div class="block_content_container">
                   <div class="block_content">
-                      <h3>Your individuality Matters</h3>
+                      <h3>Your individuality Matters The Most</h3>
                       <p>Embark on a quirky quest to uncover more of your unique charm! A quick quiz whirl where every answer unveils a slice of your special buzz. Ready to see what makes you, you?</p>
-                      <button class="button-74" role="button">Bzz!</button>
+                      <button class="button-74 adventure-btn" role="button">BBUZZ..</button>
                   </div>
               </div>
           </div>
@@ -752,7 +778,7 @@
                 <div class="block_content">
                     <h3>The Honeybees Story</h3>
                     <p>Explore the tale of The Honeybees turning bold ideas into fearless adventures. From our very first buzz to our thriving hive , all stitched together with a dash of fearlessness. </p>
-                    <button class="button-74" role="button">Bzz Bzz!</button>
+                    <button class="button-74 adventure-btn" role="button">BUZ.. BZZ..</button>
                 </div>
             </div>
           </div>
@@ -771,23 +797,20 @@
                 <div class="block_content">
                     <h3>Making a Buzz in the Business</h3>
                     <p>Make your mark in the business with The Honeybees! We're looking for dreamers, doers, and daring thinkers to join our hive. Buzz into a world of fearless innovation and thrive</p>
-                    <button class="button-74" role="button">Bzz Bzz Bzz!</button>
+                    <button class="button-74 adventure-btn" role="button">BZ.BZZZ..</button>
                 </div>
             </div>
         </div>
         
       </div>
-  </div>
-  <div class="block_text_container">
-    <div class="block_text">
-      <h1>Hold on, it gets even wilder from here!</h1>
-      <!-- <p> B . Y . O . B</p> -->
     </div>
-    <div class="block_text_before"></div>
-  </div>
-    
+    <div class="block_text_container">
+      <div class="block_text animatable">
+        <h1>Hold on, it gets even wilder from here!</h1>
+      </div>
+      <div class="block_text_before"></div>
+    </div>
   </section>
-
   <section class="event_section">
     <div class="index-event-marquee">
       <div class="index-marquee-content rotate yellow">
@@ -843,61 +866,14 @@
         </div>
       </div>
     </div>
-    <div class="rectangle-logo">
-      <div class="footer-group custo-main">
-        <h1 class="upcoming-events">Events in the last 6 months</h1>
-      </div>
-      <div class="options">
-        <div class="option"
-            onclick="toggleDialog('event_section_second')"
-            style="--optionBackground:url(./assests/womenfull.png);">
-            <div class="options-textbox2">
-              <h3 class="options-textbox-h3">Merry Beemas!</h3>
-              <p class="options-textbox-p">Our biggest event for the year! Merry Beemas! Come down, chill and enjoy a night of fun filled, celebration to end the year off with the best bunch and celebrities in town! We promise it's gonna be buzz-rific! </p>
-              <div>
-                <button class="seemore">See More</button>
-              </div>
-              
-            </div>
-        </div>
-        <div class="option"
-          onclick="toggleDialog('event_section_first')"
-          style="--optionBackground:url(./assests/freedom.png);">
-            <div class="options-textbox1">
-              <h3 class="options-textbox-h3">Freedom is Empowering </h3>
-              <p class="options-textbox-p">Do you ever feel that you are meant much more than being just someone behind a computer screen? We do. & That's why we are here to tell you the secrets of unlocking your potential and empowering your life with freedom. </p>
-              <div>
-                <button class="seemore">See More</button>
-              </div>
-              
-            </div>
-        </div>
-        
-        <!-- <div class="option"
-            onclick="toggleDialog('event_section_third')"
-            style="--optionBackground:url(./assests/artfull.png);">
-            <div class="options-textbox3">
-              <h3 class="options-textbox-h3">Crosstown Art</h3>
-              <p class="options-textbox-p">I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What? I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What?</p>
-              <div>
-                <button class="seemore">See More</button>
-              </div>
-              
-            </div>
-        </div> -->
-      </div>
-    </div>
-    <br>
-
     <div class="rectangle-logo mt-5">
       <div class="footer-group custo-main">
         <h1 class="upcoming-events">Upcoming Events</h1>
       </div>
       <div class="options">
-        
-        <div class="option"
+        <div class="option active"
           onclick="toggleDialog('event_section_first')"
-          style="--optionBackground:url(./assests/freedom.png);">
+          style="--optionBackground:url(./assets/img/freedom.png);">
             <div class="options-textbox1">
               <h3 class="options-textbox-h3">Freedom is Empowering </h3>
               <p class="options-textbox-p">Do you ever feel that you are meant much more than being just someone behind a computer screen? We do. & That's why we are here to tell you the secrets of unlocking your potential and empowering your life with freedom. </p>
@@ -907,10 +883,21 @@
               
             </div>
         </div>
-        
+        <div class="option"
+          onclick="toggleDialog('event_section_first')"
+          style="--optionBackground:url(./assets/img/freedom_1.png);">
+            <div class="options-textbox1">
+              <h3 class="options-textbox-h3">Merry Beemas!</h3>
+              <p class="options-textbox-p">Our biggest event for the year! Merry Beemas! Come down, chill and enjoy a night of fun filled, celebration to end the year off with the best bunch and celebrities in town! We promise it's gonna be buzz-rific!</p>
+              <div>
+                <button class="seemore">See More</button>
+              </div>
+              
+            </div>
+        </div>
         <div class="option"
             onclick="toggleDialog('event_section_third')"
-            style="--optionBackground:url(./assests/9897903.jpg);">
+            style="--optionBackground:url(./assets/img/9897903.jpg);">
             <div class="options-textbox3">
               <h3 class="options-textbox-h3">New Year 2024</h3>
               <p class="options-textbox-p">It's the annual new year celebration with The Honeybees. Start the year strong with our 100 man lou hei and end it with the delicious lotus soup prepared specially by monks for the tibetan tribe.</p>
@@ -922,8 +909,51 @@
         </div>
       </div>
     </div>
-    <div class="honey_bee_section">
-      <div class="content_container custo-main">
+    <div class="last-events-container">
+      <div class="footer-group custo-main">
+        <h1 class="upcoming-events">Events in the last 6 months</h1>
+      </div>
+      <div class="last-events-content">
+        <div class="last-events-item">
+          <img src="assets/img/freedom.png" alt="freedom"/>
+          <h3 class="last-events-item-title">
+            Freedom is Empowering
+          </h3>
+          <p class="last-events-item-desc">
+            Do you ever feel that you are meant much more than being just someone behind a computer screen? We do. & That's why we are here to tell you the secrets of unlocking your potential and empowering your life with freedom.
+          </p>
+        </div>
+        <div class="last-events-item">
+          <img src="assets/img/freedom_4.png" alt="freedom_4"/>
+          <h3 class="last-events-item-title">
+            New Year 2024
+          </h3>
+          <p class="last-events-item-desc">
+            It's the annual new year celebration with The Honeybees. Start the year strong with our 100 man lou hei and end it with the delicious lotus soup prepared specially by monks for the tibetan tribe.
+          </p>
+        </div>
+        <div class="last-events-item">
+          <img src="assets/img/freedom_2.png" alt="freedom_2"/>
+          <h3 class="last-events-item-title">
+            The Grestest Show
+          </h3>
+          <p class="last-events-item-desc">
+            Do you ever feel that you are meant much more than being just someone behind a computer screen? We do. & That's why we are here to tell you the secrets of unlocking your potential and empowering your life with freedom.
+          </p>
+        </div>
+        <div class="last-events-item">
+          <img src="assets/img/freedom_3.png" alt="freedom_3"/>
+          <h3 class="last-events-item-title">
+            Journey to the west
+          </h3>
+          <p class="last-events-item-desc">
+            It's the annual new year celebration with The Honeybees. Start the year strong with our 100 man lou hei and end it with the delicious lotus soup prepared specially by monks for the tibetan tribe.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="honey_bee_section" id="still-here">
+      <div class="content_container custo-main animatable">
         <h1 class="honey_bee_section_heading">
           Still here? 
         </h1>
@@ -937,56 +967,48 @@
     <div class="mask-group-parent-wrapper">
       <div class="footer-wrapper">
         <div class="footer">
-                <div class="footer-inner">
-                    <form class="drop-your-question-and-email-o-parent">
-                        <h2 class="drop-your-question">
-                          Buzz Us
-                        </h2>
-                        <br>  
-                        <br>
-                        <div class="input-details-group-parent">
-                            <div class="title_filed">
-                                <input class="input-details-group yourtitle" type="text" placeholder="Your Title" />
-                                <img class="icon-chevron-bottom" alt="" src="./assests/Vector.png" />
-                            </div>
-
-                            <div class="name_field">
-                                <input class="input-details-group yourname" type="text" placeholder="Your Name..." />
-                            </div>
-
-                        </div>
-
-                        <div class="group-div">
-                            <div class="frame-child5"></div>
-                            <input class="your-email" placeholder="Your Email..." type="text" />
-                        </div>
-                        <div class="rectangle-parent3">
-                            <textarea id="message"class="whats-in-your" placeholder="What’s in your mind?" rows="2"></textarea>
-                            <button class="send-wrapper">
-                                <div class="send">send</div>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                
-            </div>
-
-            
-        </div>
-        <div class="rematch-quote">
-          <div class="authorized-representation-a-i">
-              <h2 class="i-think-we">
-                #NOSTINGSATTACHED
+          <div class="footer-inner">
+            <form class="drop-your-question-and-email-o-parent">
+              <h2 class="drop-your-question" id="demo">
               </h2>
-          </div>
-          <div class="social-media-icons">
-              <img class="icon-linkedin" loading="eager" alt="" src="./assests/sameediconlinkedin.png" />
+              <br>  
+              <br>
+              <div class="input-details-group-parent">
+                <div class="title_filed">
+                    <input class="input-details-group yourtitle" type="text" placeholder="Your Title" />
+                    <img class="icon-chevron-bottom" alt="" src="./assests/Vector.png" />
+                </div>
 
-              <img class="icon-instagram" loading="eager" alt="" src="./assests/sameediconinstagram.png" />
-            
-              <img class="icon-facebook-squared" loading="eager" alt=""
-                  src="./assests/sameed-iconfacebooksquared.png" />
+                <div class="name_field">
+                    <input class="input-details-group yourname" type="text" placeholder="Your Name..." />
+                </div>
+              </div>
+              <div class="group-div">
+                  <div class="frame-child5"></div>
+                  <input class="your-email" placeholder="Your Email..." type="text" />
+              </div>
+              <div class="rectangle-parent3">
+                <textarea id="message"class="whats-in-your" placeholder="What’s in your mind?" rows="2"></textarea>
+                <button class="send-wrapper">
+                  <div class="send">send</div>
+                </button>
+              </div>
+            </form>
           </div>
+        </div>
+      </div>
+      <div class="rematch-quote">
+        <div class="authorized-representation-a-i">
+          <h2 class="i-think-we">
+            #NOSTINGSATTACHED
+          </h2>
+        </div>
+        <div class="social-media-icons">
+          <img class="icon-linkedin" loading="eager" alt="" src="./assests/sameediconlinkedin.png" />
+          <img class="icon-instagram" loading="eager" alt="" src="./assests/sameediconinstagram.png" />
+          <img class="icon-facebook-squared" loading="eager" alt=""
+              src="./assests/sameed-iconfacebooksquared.png" />
+        </div>
       </div>
       <div class="authorized-representative-msg">
           <div class="sp-honeybees-is-an-container">
@@ -1043,166 +1065,66 @@
         </div>
       </div>
       <div class="nav-modal-link-content">
-          <li class="nav-modal-link">
-              <a href="index.html">HOME</a>
-          </li>
-          <li class="nav-modal-link">
-              <a class="text-nowrap" href="about.html">ABOUT US</a>
-          </li>
-          <li class="nav-modal-link">
-              <a href="career.html">CAREER</a>
-          </li>
-          <li class="nav-modal-link">
-              <a class="text-nowrap" href="discovery.html">DISCOVERY</a>
-          </li>
-          <!-- <li class="nav-modal-link-last ">
-              <a class="text-nowrap" href="fearless.html">Be Fearless</a>
-          </li> -->
+        <li class="nav-modal-link">
+            <a href="index.html">HOME</a>
+        </li>
+        <li class="nav-modal-link">
+            <a class="text-nowrap" href="about.html">ABOUT US</a>
+        </li>
+        <li class="nav-modal-link">
+            <a href="career.html">CAREER</a>
+        </li>
+        <li class="nav-modal-link">
+            <a class="text-nowrap" href="discovery.html">DISCOVERY</a>
+        </li>
+        <!-- <li class="nav-modal-link-last ">
+            <a class="text-nowrap" href="fearless.html">Be Fearless</a>
+        </li> -->
       </div>
       <div>
-          <!-- <button class="close-nav-modal">
-            <img src="./assets/img/Close_round.png" alt="close"/>
-            <span>Close</span>
-          </button> -->
-          <div class="mobile-modal-upcoming">
-            <img src="asssets/Group 149.png" alt="">
-          </div>
+        <div class="mobile-modal-upcoming">
+          <img src="asssets/Group 149.png" alt="">
+        </div>
       </div>
     </div>
   </div>
 
-<!-- <div id="lorem_first" class="dialog">
-  <div class="block blockImage mobile-lorem-dialog mobile-lorem-first">
-    <div class="overlay">
-        <div class="overlay_icon">
-        </div>
-    </div>
-    <div class="block_content_container ">
-        <div class="block_content">
-            <h3>A Perfect guide to understand yourself</h3>
-            <p>I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Yes! In your face, Gandhi! You guys go on without me! I'm going to go… look for more stuff to steal!</p>
-            <button class="button-74" role="button">Find Out More</button>
-        </div>
-    </div>
-  </div>
-</div>
-<div id="lorem_second" class="dialog">
-  <div class="block blockImage mobile-lorem-dialog mobile-lorem-second">
-    <div class="overlay">
-        <div class="overlay_icon">
-        </div>
-    </div>
-    <div class="block_content_container">
-        <div class="block_content">
-            <h3>our story, Honeybees Story</h3>
-            <p>I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Yes! In your face, Gandhi! You guys go on without me! I'm going to go… look for more stuff to steal!</p>
-            <button class="button-74" role="button">Find Out More</button>
-        </div>
-    </div>
-  </div>
-</div>
-<div id="lorem_third" class="dialog">
-  <div class="block blockImage mobile-lorem-dialog mobile-lorem-third">
-    <div class="overlay">
-        <div class="overlay_icon">
-        </div>
-    </div>
-    <div class="block_content_container">
-        <div class="block_content">
-            <h3>Be part of the swarm</h3>
-            <p>I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Yes! In your face, Gandhi! You guys go on without me! I'm going to go… look for more stuff to steal!</p>
-            <button class="button-74" role="button">Find Out More</button>
-        </div>
-    </div>
-  </div>
-</div> -->
-
-<script type="text/javascript">
-  _linkedin_partner_id = "6008404";
-  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-  </script><script type="text/javascript">
-  (function(l) {
-  if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
-  window.lintrk.q=[]}
-  var s = document.getElementsByTagName("script")[0];
-  var b = document.createElement("script");
-  b.type = "text/javascript";b.async = true;
-  b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-  s.parentNode.insertBefore(b, s);})(window.lintrk);
-  console.log(s);
-  console.log(b);
+  <script type="text/javascript">
+    _linkedin_partner_id = "6008404";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script><script type="text/javascript">
+    (function(l) {
+    if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+    window.lintrk.q=[]}
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);})(window.lintrk);
   </script>
   <noscript>
-  <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=6008404&fmt=gif" />
+    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=6008404&fmt=gif" />
   </noscript>
-
-<!-- <div id="event_section_first" class="dialog">
-  <div class="options mobile-event-dialog">
-    <div class="option active"
-        style="--optionBackground:url(./assests/freedom.png);">
-        <div class="options-textbox1">
-          <h3 class="options-textbox-h3">Freedom is Empowering</h3>
-          <p class="options-textbox-p">I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What? I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What?</p>
-          <div>
-            <button class="seemore">See More</button>
-          </div>
-          
-        </div>
-    </div>
-  </div>
-</div>
-<div id="event_section_second" class="dialog">
-  <div class="options mobile-event-dialog">
-    <div class="option"
-        style="--optionBackground:url(./assests/womenfull.png);">
-        <div class="options-textbox2">
-          <h3 class="options-textbox-h3">Women Talking</h3>
-          <p class="options-textbox-p">I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What? I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What?</p>
-          <div>
-            <button class="seemore">See More</button>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-<div id="event_section_third" class="dialog">
-  <div class="options mobile-event-dialog">
-    <div class="option"
-        style="--optionBackground:url(./assests/artfull.png);">
-        <div class="options-textbox3">
-          <h3 class="options-textbox-h3">Crosstown Art</h3>
-          <p class="options-textbox-p">I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What? I think I know exactly what you mean. No. Well yeah, you know we have two of them. Yeah, well history is gonna change. What?</p>
-          <div>
-            <button class="seemore">See More</button>
-          </div>
-          
-        </div>
-    </div>
-  </div>
-</div> -->
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-
-    <script src="slick/slick.min.js"></script>
-    <script src="assets/scripts/sound.js"></script>
-
-    <script>
-      $(document).ready(function () {
-          $(".option").click(function(){
-              $(".option").removeClass("active");
-              $(this).addClass("active");
-          });
-      })
-    </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="slick/slick.min.js"></script>
+  <script src="assets/scripts/sound.js"></script>
+  <script>
+    $(document).ready(function () {
+        $(".option").click(function(){
+            $(".option").removeClass("active");
+            $(this).addClass("active");
+        });
+    })
+  </script>
 
 </body>
 

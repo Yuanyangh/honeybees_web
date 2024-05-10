@@ -7,6 +7,17 @@
   }
 }
 
+@keyframes fadeUp {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
 @keyframes scaleDown {
   from {
     transform: scale(1.4); /* Start from a slightly larger scale */
@@ -16,12 +27,83 @@
   }
 }
 
-/* Apply the background image/GIF and animation to your element */
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatInAndColorChange3 {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+    color: transparent;
+    visibility: visible;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+
+    color: transparent;
+    visibility: hidden;
+    outline: #29446d;
+    -webkit-text-stroke: 3px #29446d;
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up-animation {
+  animation: fadeUp 1s ease-in-out forwards !important;
+}
+
+.overlayer_fixed {
+  position: fixed;
+  top: -100px;
+  width: 100%;
+}
+
+.fixed-section {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+}
 
 .scale-background {
   width: 100%;
   height: fit-content;
-  /* height: 100vh; */
+  /* min-height: 100vh; */
   /* background-image: url('./assests/bann.png'); */
   background: linear-gradient(
       rgba(255, 255, 255, 0.2),
@@ -50,6 +132,66 @@
   transform-style: inherit;
 }
 
+.levelup-container {
+  /* position: fixed; */
+  z-index: 100;
+  height: 100vh;
+  cursor: pointer;
+}
+
+.levelup-content {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  max-width: 560px;
+}
+
+.levelup-title {
+  animation: floatInAndColorChange3 2s ease-in-out 2s forwards;
+  font-size: 55px;
+  color: #29446d;
+  line-height: 60px;
+  font-family: "Agrandir-TextBold";
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+  /* -webkit-text-stroke: 0.1px #29446d;
+  text-shadow: 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d; */
+  opacity: 0;
+}
+
+.scroll-down-content {
+  text-align: center;
+  margin-top: 200px;
+  visibility: hidden;
+  animation: floatInAndColorChange 1s ease-in-out 2s forwards;
+  animation-fill-mode: forwards;
+}
+
+.levelup-mouse-desc {
+  font-size: 30px;
+  color: #29446d;
+  line-height: 60px;
+  font-family: "Agrandir";
+  text-transform: none;
+  text-align: center;
+}
+
+.unleash-title-styled {
+  font-size: 55px;
+  line-height: 55px;
+  outline: #29446d;
+  text-transform: uppercase;
+  color: transparent;
+  letter-spacing: 4px;
+  font-family: "Agrandir-TextBold";
+  margin-top: 10px;
+  -webkit-text-stroke: 3px #29446d;
+  text-shadow: none;
+}
+
 .banner-container {
   position: relative;
   z-index: 1;
@@ -57,13 +199,33 @@
   height: 100%;
 }
 
+.animatedbanner .text-caption {
+  visibility: hidden;
+  animation: floatInAndColorChange 1s ease-in-out 2s forwards;
+  animation-fill-mode: forwards;
+  text-shadow: 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d;
+}
+
+.animatedbanner .banner-bee-top {
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.animatedbanner .banner-bee-mid {
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.animatedbanner .banner-bee-bottom {
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+
 .banner-bee-top {
   position: absolute;
   top: -5%;
   left: 5%;
   opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 2s;
 }
 
 .bee-gif-A {
@@ -78,8 +240,6 @@
   left: 0%;
   width: 90%;
   opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 2s;
 }
 
 .bee-gif-line {
@@ -97,8 +257,6 @@
   bottom: 15%;
   left: 0%;
   opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 2s;
 }
 
 .bee-gif-C {
@@ -140,7 +298,7 @@
 
 .main_head_content {
   margin: auto;
-  max-width: 900px;
+  max-width: 590px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -219,7 +377,6 @@
   color: #29446d;
   background: white;
   padding: 4px 0px;
-  border: 4px solid #eeaf30;
   border-radius: 30px;
   box-shadow: -5px 5px 2px 0px rgba(187, 170, 204, 1);
   -webkit-box-shadow: -5px 5px #3061ab;
@@ -228,6 +385,93 @@
   font-family: "Agrandir-TextBold";
   width: 110px;
   height: 40px;
+}
+
+.index-happen-content .sign_up.btn_agree {
+  box-shadow: -5px 5px 2px 0px #5eae0e;
+  -webkit-box-shadow: -5px 5px #5eae0e;
+  -moz-box-shadow: -5px 5px 2px 0px #5eae0e;
+  border: 4px solid #9fc40d;
+  cursor: pointer;
+}
+
+.index-happen-content .sign_up.btn_disagree {
+  box-shadow: -5px 5px 2px 0px #e94c4c;
+  -webkit-box-shadow: -5px 5px #e94c4c;
+  -moz-box-shadow: -5px 5px 2px 0px #e94c4c;
+  border: 4px solid #ee7430;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+.agree-btn-group {
+  min-height: 220px;
+}
+
+.progress-bar-detail {
+  display: none;
+  cursor: pointer;
+  min-height: 220px;
+}
+
+.progress-bar-item {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.progress-bar-container {
+  width: 400px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50px;
+  position: relative;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.progress-bar-courage {
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #9fc40d;
+  border-radius: 50px;
+  transition: width 1s ease-in-out;
+  box-shadow: -5px 5px 2px 0px #3aa921;
+  -webkit-box-shadow: -5px 5px #3aa921;
+  -moz-box-shadow: -5px 5px 2px 0px #3aa921;
+}
+
+.progress-bar-struggling {
+  width: 20%;
+  height: 100%;
+  background-color: #ee7430;
+  border-radius: 50px;
+  transition: width 1s ease-in-out;
+  box-shadow: -5px 5px 2px 0px #fc7f3c;
+  -webkit-box-shadow: -5px 5px #fc7f3c;
+  -moz-box-shadow: -5px 5px 2px 0px #fc7f3c;
+}
+
+.progress-bar-votes {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.happen-content-text {
+  color: white;
+  font-family: "AvenirNext" !important;
+  font-size: 18px;
+}
+
+.happen-content-boldtext {
+  color: white;
+  font-family: "AvenirNext" !important;
+  font-size: 26px;
+  font-weight: 700;
+  margin-left: 10px;
 }
 
 .index-loren-heading {
@@ -264,6 +508,82 @@ section.event_section {
   position: relative;
   background-image: url(../img/bg-footer-up.png);
   background-size: cover;
+}
+
+.adventure-btn:hover {
+  animation: tilt-shaking 0.5s 2;
+}
+
+.animated.block_text h1 {
+  animation-name: fadeInUp;
+}
+
+.animated.content_container h1 {
+  animation-name: fadeInUp;
+}
+
+.animated.content_container p {
+  animation-name: fadeInUp;
+}
+
+.animatable h1 {
+  visibility: hidden;
+  animation-play-state: paused;
+}
+
+.animated h1 {
+  visibility: visible;
+  animation-fill-mode: both;
+  animation-duration: 1.5s;
+  animation-play-state: running;
+}
+
+.animatable p {
+  visibility: hidden;
+  animation-play-state: paused;
+}
+
+.animated p {
+  visibility: visible;
+  animation-fill-mode: both;
+  animation-duration: 1.5s;
+  animation-play-state: running;
+}
+
+.last-events-container {
+  margin-top: 300px;
+}
+
+.last-events-content {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  padding: 0px 100px;
+  gap: 20px;
+}
+
+.last-events-item {
+  width: 45%;
+  margin-bottom: 20px;
+}
+
+.last-events-item img {
+  width: 100%;
+}
+
+.last-events-item-title {
+  font-family: "Agrandir-TextBold";
+  font-weight: 800;
+  font-size: 30px;
+  color: white;
+  margin: 10px 0px;
+}
+
+.last-events-item-desc {
+  font-family: "AvenirNext";
+  font-size: 18px;
+  color: white;
+  margin: 0;
 }
 
 @media (max-width: 1600px) {
