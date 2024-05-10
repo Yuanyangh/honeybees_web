@@ -23,8 +23,8 @@ $(document).ready(function() {
     const progressBarStruggling = document.getElementById(
       "progressbar-struggling"
     );
-    progressBarCourage.style.width = '20%';
-    progressBarStruggling.style.width = '20%';
+    progressBarCourage.style.width = "20%";
+    progressBarStruggling.style.width = "20%";
     agreeBtnGroup.style.display = "block";
     progressDetail.style.display = "none";
   });
@@ -96,7 +96,7 @@ function animateProgressBarStruggling(targetWidth, duration) {
 }
 
 var i = 0;
-var txt = "BUZZZZZZZZZZZZZZZ US";
+var txt = window.innerWidth < 768 ? "BUZZZZZZZ US" : "BUZZZZZZZZZZZZZZZ US";
 var speed = 100;
 
 function typeWriter() {

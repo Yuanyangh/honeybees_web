@@ -1,6 +1,7 @@
 $(document).ready(function() {
   const levelup = document.getElementById("levelup-container");
   const unleash = document.getElementById("unleash-container");
+  const happen = document.getElementById("happen-container");
   const bannerContainer = document.querySelector(".banner-container");
   var levelupoffset = $("#levelup-container").offset().top;
 
@@ -24,8 +25,11 @@ $(document).ready(function() {
     let scrollY = document.documentElement.scrollTop;
     var yOffsetunleash =
       unleash.getBoundingClientRect().top + window.pageYOffset;
-    console.log({ scrollY });
-    if (scrollY > 30 && scrollY < yOffsetunleash && scrollY - oldScrollY > 0) {
+    if (
+      scrollY > 30 &&
+      scrollY < yOffsetunleash + 30 &&
+      scrollY - oldScrollY > 0
+    ) {
       unleash.scrollIntoView({ behavior: "instant", block: "start" });
       bannerContainer.classList.add("animatedbanner");
     } else if (scrollY < yOffsetunleash - 30 && scrollY - oldScrollY < 0) {

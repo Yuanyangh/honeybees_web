@@ -63,11 +63,11 @@
 @keyframes floatInAndColorChange3 {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: scale(1.2) translateY(-50px);
     color: transparent;
     visibility: visible;
   }
-  50% {
+  20% {
     opacity: 1;
     transform: translateY(0);
 
@@ -76,10 +76,17 @@
     outline: #29446d;
     -webkit-text-stroke: 3px #29446d;
     text-shadow: none;
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1.2);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: scale(1) translateY(0);
   }
 }
 
@@ -166,7 +173,7 @@
   text-align: center;
   margin-top: 200px;
   visibility: hidden;
-  animation: floatInAndColorChange 1s ease-in-out 2s forwards;
+  animation: floatInAndColorChange 0.8s ease-in-out 2s forwards;
   animation-fill-mode: forwards;
 }
 
@@ -616,6 +623,10 @@ section.event_section {
     font-size: 45px;
     line-height: normal;
   }
+  .unleash-title-styled {
+    font-size: 45px;
+    line-height: normal;
+  }
   .index-happen-content h1 {
     font-size: 45px;
   }
@@ -681,9 +692,26 @@ section.event_section {
   .scale-background {
     height: fit-content;
   }
+  .levelup-container {
+    height: 100vh;
+  }
+  .levelup-content {
+    max-width: 300px;
+  }
+  .levelup-title {
+    font-size: 30px;
+    line-height: 1;
+  }
+  .levelup-mouse-desc {
+    font-size: 18px;
+  }
   .main_head_content {
     max-width: 300px;
     padding: 200px 0px 150px;
+  }
+  .unleash-title-styled {
+    font-size: 30px;
+    line-height: 1;
   }
   .main_head_content h1 {
     font-size: 30px;
@@ -714,6 +742,16 @@ section.event_section {
   }
   .index-happen-content p {
     font-size: 14px;
+  }
+  .progress-bar-container {
+    width: 300px;
+    height: 30px;
+  }
+  .happen-content-text {
+    font-size: 14px;
+  }
+  .happen-content-boldtext {
+    font-size: 20px;
   }
   .loren_sectiom {
     padding: 150px 0px;
@@ -815,9 +853,26 @@ section.event_section {
   }
 
   .content_container:before {
-    bottom: -120%;
+    bottom: -210px;
     right: -40%;
     transform: rotate(345deg) scale(0.7);
+  }
+
+  .last-events-content {
+    padding: 0px 20px;
+  }
+
+  .last-events-item {
+    width: 100%;
+  }
+  .last-events-item-title {
+    font-size: 20px;
+    line-height: 1;
+  }
+  .last-events-item-desc {
+    font-size: 14px;
+    line-height: 1;
+    margin: 10px 0px;
   }
 
   /* .mobile-lorem-first .block_content_container,
