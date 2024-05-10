@@ -817,7 +817,7 @@ section.hero-sec .row {
 .hero-hed-sec h1 {
   font-size: 55px;
   color: #fffbf5;
-  max-width: 800px;
+  max-width: 820px;
   line-height: 55px;
   width: 100%;
   margin: auto;
@@ -1198,6 +1198,7 @@ li.btn {
   flex-direction: column;
   row-gap: 8px;
   justify-content: center;
+  align-items: baseline;
 }
 
 .text-box,
@@ -1206,6 +1207,7 @@ li.btn {
 
 .corporate-sec .text-box h1 {
   margin: 0;
+  font-size: 30px;
 }
 
 .text-box,
@@ -1219,6 +1221,7 @@ p {
   flex-direction: column;
   justify-content: center;
   row-gap: 8px;
+  align-items: end;
 }
 
 .corporate-sec .teg-btn ul li {
@@ -1258,14 +1261,9 @@ p {
   margin-left: 10%;
 }
 
-.his-text-box {
-  display: flex;
-  padding: 10px 30px 0px 0px;
-}
-
-.his-text-box img {
+/* .his-text-box img {
   display: none;
-}
+} */
 
 .his-text-box h2 {
   color: #fffbf5;
@@ -1324,7 +1322,7 @@ p {
 
 .ing-text-wrap {
   max-width: 1200px;
-  margin: 30px auto 0;
+  margin: 20px auto 0;
   display: grid;
   /* grid-template-columns: 28% 48% 18%; */
   gap: 40px;
@@ -1354,13 +1352,18 @@ p {
   font-size: 50px;
 }
 
+.honeybees-sec .honeybees-title {
+  font-size: 55px;
+  margin-top: 50px;
+}
+
 .honeybees-sec h1 {
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
   color: #fffbf5;
-  font-family: GrandHeavy, Arial, sans-serif;
+  font-family: "Agrandir-TextBold";
   text-transform: uppercase;
-  margin: 150px 0px 0px;
+  margin: 0px;
 }
 
 .text-box-center h2 {
@@ -1418,6 +1421,8 @@ li.btn:hover {
 .sendo-section {
   text-align: center;
   padding-top: 200px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .sendo-section h2 {

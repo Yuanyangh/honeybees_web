@@ -57,9 +57,7 @@ $(document).ready(function() {
 
 function animateProgressBarCourage(targetWidth, duration) {
   const progressBarCourage = document.getElementById("progressbar-courage");
-  console.log(progressBarCourage.style.width);
   const initialWidthCourage = parseInt(progressBarCourage.style.width) || 0;
-  console.log(initialWidthCourage);
   const stepCourage =
     (targetWidth - initialWidthCourage) / (duration / 1000 * 60);
   let currentWidthCourage = initialWidthCourage;
@@ -77,7 +75,6 @@ function animateProgressBarStruggling(targetWidth, duration) {
   const progressBarStruggling = document.getElementById(
     "progressbar-struggling"
   );
-  console.log(progressBarStruggling.style.width);
   const initialWidthStruggling =
     parseInt(progressBarStruggling.style.width) || 0;
   const stepStruggling =

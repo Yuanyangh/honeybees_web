@@ -402,21 +402,6 @@
         }
     }
 
-    .hero-hed-sec-text-caption {
-        visibility: hidden;
-        /* -webkit-text-stroke: 2px #ffffff;
-        color: transparent; */
-        animation: floatInAndColorChangeHeroSec 1.5s ease-in-out 2s forwards;
-        animation-fill-mode: forwards;
-        color: white; 
-        -webkit-text-stroke: 0.1px #fff;
-        -webkit-text-fill-color: transparent;
-        text-shadow: 
-          0 0 0 #fff,
-          0 0 0 #fff,
-          0 0 0 #fff,
-          0 0 0 #fff;
-    }
 </style>
 
 
@@ -524,15 +509,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="history-sec">
+                <div class="history-sec" id="history-sec">
                     <h1 class="full-text">Flight Path</h1>
                     <h1 class="mobile-text">Flight/<br/>Path</h1>
                     <div class="about-history-sec">
-                        <div class="his-img">
-                            <img src="./image/Group 212.png" alt="">
-                        </div>
                         <div class="box-wrap">
-                            <img class="his-mobile-line-img" src="./assets/img/journey_mobile_line.png" alt="">
+                            <div class="his-line-img line-mask">
+                                <img class="" src="./assets/img/history_line.png" alt="line" id="his-line">
+                            </div>
+                            <div class="his-mobile-line-img line-mask">
+                                <img class="" src="./assets/img/journey_mobile_line.png" alt="">
+                            </div>
                             <div class="his-text-box">
                                 <img class="his-mobile-img" src="./assets/img/journey_circle.png" alt="">
                                 <div class="his-text">
@@ -568,9 +555,16 @@
     
                 <div class="testimnial-bg-after">
                     <div class="testimnial-sec">
-                       
-                        <h1>Do good things <br> enjoy the journey <br>finish with heart</h1>
-                        <img src="./image/Mask group.png" alt="">
+                        <h1>
+                            Do 
+                            <span class="strok_text">
+                                good
+                            </span> things <br> enjoy the journey <br>finish with 
+                            <span class="strok_text">
+                                heart
+                            </span>
+                        </h1>
+                        <img src="assets/img/TeamMembers/Hoo_Yuan_Shyuan.jpg" alt="photo">
                         <p> Hoo Yuan Shyuan , Chief Buzz Officer <br> Father | Son | Honeybee <br></p>
                     </div>
                 </div>    
@@ -605,18 +599,18 @@
                         </div>
                     </div>
                 </div>
-                <h1>The Honeybees</h1>
+                <h1 class="honeybees-title">The Honeybees</h1>
                 <!-- Swiper -->
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper" id="swiper-wrapper">
                     </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="ing-text-wrap">
-                    <div class="text-box-center">
-                         <div class="honeyBeeTeam" id="honeyBeeTeam">
+                    <div class="ing-text-wrap">
+                        <div class="text-box-center">
+                             <div class="honeyBeeTeam" id="honeyBeeTeam">
+                            </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
                 
 
@@ -630,7 +624,7 @@
                 </div>
                 <div class="corporate-sec">
                     <div class="img-box">
-                        <img src="./image/Rectangle 69.png" alt="">
+                        <img src="assets/img/travel/crystal ball.png" alt="crystal">
                     </div>
                     <div class="text-box">
                         <h1>Risk Management</h1>
@@ -664,7 +658,7 @@
                             </div>
                         </div>
                         <div class="img-box">
-                            <img src="./image/Rectangle 69 (1).png" alt="">
+                            <img src="assets/img/travel/map.png" alt="map">
                         </div>
                     </div>
                 </div>
@@ -672,7 +666,7 @@
     
                 <div class="corporate-sec">
                     <div class="img-box">
-                        <img src="./image/Rectangle 69 (2).png" alt="">
+                        <img src="assets/img/travel/tools.png" alt="tools">
                     </div>
                     <div class="text-box">
                         <h1>Corporate solution</h1>
@@ -685,7 +679,7 @@
                     </div>
                 </div>
 
-                <div class="last-sec">
+                <!-- <div class="last-sec">
                     <h1>From the bees' mouth</h1>
                 </div>
                 <div class="gtco-testimonials-container">
@@ -744,21 +738,19 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             
         </div>
     </section>
 
     <section class="frame-section about_footer">
-        <div class="mask-group-parent-wrapper">
+        <div class="mask-group-parent-wrapper" id="footer">
             <div class="footer-wrapper">
                 <div class="footer">
                     <div class="footer-inner">
                         <form class="drop-your-question-and-email-o-parent">
-                            <h2 class="drop-your-question">
-                                Buzz Us
-                            </h2>
+                            <h2 class="drop-your-question" id="demo"></h2>
                             <br>  
                             <br>
                             <div class="input-details-group-parent">
@@ -788,8 +780,6 @@
                     </div>
 
                 </div>
-
-
             </div>
             <div class="rematch-quote">
                 <div class="authorized-representation-a-i">
@@ -865,6 +855,46 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
     <script src="about.js"></script>
     <script src="assets/scripts/sound.js"></script>
+    <script src="assets/scripts/buzzaction.js"></script>
+
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function runOnScroll() {
+            const historysec = document.getElementById("history-sec");
+            if (isInViewport(historysec)){
+                // historysec.classList.add('animated-history-sec');
+                var hisTextBoxes = document.querySelectorAll(".his-text-box");
+                hisTextBoxes.forEach(function(box, index) {
+                    setTimeout(function() {
+                    box.classList.add("show");
+                    }, index * 500); // Adjust the delay between each element
+                });
+
+                var hislineMasks = document.querySelectorAll(".line-mask");
+                hislineMasks.forEach(function(line, index) {
+                  line.classList.add("show");
+                });
+
+            }
+
+            const elements2 = document.querySelectorAll('.strok_text');
+            for (let i = 0; i < elements2.length; i++) {
+                if (isInViewport(elements2[i])) {
+                    elements2[i].classList.add('animate_strok_text');
+                }
+            }
+        }
+      window.addEventListener('scroll', runOnScroll);
+    </script>
 </body>
 
 </html>
