@@ -1,6 +1,47 @@
+@keyframes floatInAndColorChange-discovery {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+    color: transparent;
+    visibility: visible;
+    text-shadow: none;
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+
+    color: transparent;
+    visibility: hidden;
+    outline: #fff;
+    -webkit-text-stroke: 3px #fff;
+    
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-text-stroke: 3px #fff;
+    transform: translateY(0);
+  }
+}
+
 .contact-section .col-7 {
   z-index: 100;
   align-self: center;
+}
+
+.coming-soon {
+  font-size: 55px;
+  line-height: 60px;
+  font-family: "Agrandir-TextBold";
+  text-transform: uppercase;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 101;
+  opacity: 0;
+  animation: floatInAndColorChange-discovery 2s ease-in-out 2.5s forwards; /* Delay animation */
 }
 
 @media (max-width: 1200px) {
