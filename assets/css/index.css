@@ -177,15 +177,6 @@
   animation-fill-mode: forwards;
 }
 
-.levelup-mouse-desc {
-  font-size: 30px;
-  color: #29446d;
-  line-height: 60px;
-  font-family: "Agrandir";
-  text-transform: none;
-  text-align: center;
-}
-
 .unleash-title-styled {
   font-size: 55px;
   line-height: 55px;
@@ -701,9 +692,6 @@ section.event_section {
   .levelup-title {
     font-size: 30px;
     line-height: 1;
-  }
-  .levelup-mouse-desc {
-    font-size: 18px;
   }
   .main_head_content {
     max-width: 300px;

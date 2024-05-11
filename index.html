@@ -297,38 +297,6 @@
       position: fixed;
     }
 
-    @keyframes floatInAndColorChange {
-        0% {
-            opacity: 0;
-            transform: translateY(-50px); /* Start above the final position */
-            color: transparent;
-            visibility:visible;
-        }
-        50% {
-            opacity: 1;
-            transform: translateY(0);
-            color: transparent;
-        }
-        100% {
-          color: #29446D; /* End with the same color as the border */
-            visibility:visible;
-        }
-    }
-    @keyframes floatInAndColorChange2 {
-        0% {
-            opacity: 0;
-            transform: translateY(-50px); /* Start above the final position */
-            visibility:visible;
-        }
-        50% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        100% {
-            visibility:visible;
-        }
-    }
-
     .text-caption {
         visibility: hidden;
         /* -webkit-text-stroke: 2px #29446D;
@@ -538,7 +506,7 @@
       </h1>
       <div class="scroll-down-content">
         <img src="assets/img/scroll_down.png" width="26" height="55"/>
-        <div class="levelup-mouse-desc">
+        <div class="scroll-down-text">
           scroll down
         </div>
       </div>

@@ -24,6 +24,73 @@
   /* Update the path based on your file structure and font format */
 }
 
+@keyframes scaleDown {
+  from {
+    transform: scale(1.4);
+    /* Start from a slightly larger scale */
+  }
+
+  to {
+    transform: scale(1);
+    /* Scale down to the original size */
+  }
+}
+
+@keyframes scaleDownBackground {
+  from {
+    background-size: 120%;
+  }
+
+  to {
+    background-size: 100%;
+  }
+}
+
+@keyframes floatInAndColorChange {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px); /* Start above the final position */
+      color: transparent;
+      visibility:visible;
+  }
+  50% {
+      opacity: 1;
+      transform: translateY(0);
+      color: transparent;
+  }
+  100% {
+      color: #29446D; /* End with the same color as the border */
+      visibility:visible;
+  }
+}
+@keyframes floatInAndColorChange2 {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px); /* Start above the final position */
+      visibility:visible;
+  }
+  50% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  100% {
+      visibility:visible;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(
+      60px
+    );
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .home {
   background: url("asssets/flowerBG1.png"); /* Adjust the path accordingly */
   background-size: cover;
@@ -452,15 +519,14 @@ footer h3 {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  padding-bottom: 100px;
 }
 .career-bg1 {
   background: url("./asssets/career_bg1.png");
   /* height: max-content; */
-  background-size: contain;
+  background-size: 120%;
   background-position: top;
   background-repeat: no-repeat;
-  animation: scaleDown 1s ease-in-out forwards;
+  animation: scaleDownBackground 0.5s ease-in-out 1s forwards;
 }
 @keyframes careerAni {
   0% {
@@ -521,12 +587,82 @@ footer h3 {
 @keyframes floatInAndColorChange-career {
   0% {
     opacity: 0;
+    transform: translateY(-50px);
     color: transparent;
     visibility: visible;
+    text-shadow: none;
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+
+    color: transparent;
+    visibility: hidden;
+    outline: #29446d;
+    -webkit-text-stroke: 3px #29446d;
+    
+    text-shadow: none;
+  }
+  99% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
   100% {
-    color: #29446d; /* End with the same color as the border */
+    visibility: hidden;
+  }
+}
+@keyframes floatIn-2-career {
+  0% {
+    display: block;
+    opacity: 0;
+    transform: translateY(-50px);
     visibility: visible;
+    text-shadow: none;
+  }
+  20% {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+
+    outline: #29446d;
+    -webkit-text-stroke: 3px #29446d;
+    
+    text-shadow: none;
+  }
+  99% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes floatIn-3-career {
+  0% {
+    display: block;
+    opacity: 0;
+    transform: translateY(-50px);
+    visibility: visible;
+    text-shadow: none;
+  }
+  20% {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+
+    outline: #29446d;
+    -webkit-text-stroke: 3px #29446d;
+    
+    text-shadow: none;
+  }
+  99% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    visibility: visible;
+    display: block;
   }
 }
 .career-banner-text h3 {
@@ -536,30 +672,35 @@ footer h3 {
   line-height: 47px;
   max-width: 800px;
   margin: 0 auto;
-  padding-top: 294px;
-  /* -webkit-text-stroke: 2px #29446d; */
+  -webkit-text-stroke: 3px #29446d;
   /* color: transparent; */
-  animation: floatInAndColorChange-career 1s ease-in-out 2.5s forwards; /* Delay animation */
-  -webkit-text-stroke: 0.1px #29446d;
+  /* -webkit-text-stroke: 0.1px #29446d; */
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d;
+  align-self: center !important;
+  text-align: center;
 }
+
+.career-banner-text .text-1 {
+  animation: floatInAndColorChange-career 2s ease-in-out 2.5s forwards; /* Delay animation */
+}
+.career-banner-text .text-2 {
+  position: absolute;
+  visibility: hidden;
+  animation: floatIn-2-career 2s ease-in-out 4.5s forwards; /* Delay animation */
+}
+.career-banner-text .text-3 {
+  position: absolute;
+  visibility: hidden;
+  animation: floatIn-3-career 2s ease-in-out 6.5s forwards; /* Delay animation */
+}
+
 .textstroke {
   -webkit-text-fill-color: #ffffff00; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   color: #29446d;
 }
 
-.career-banner-text h3 {
-  align-self: center !important;
-  font-family: "Agrandir-TextBold";
-  text-transform: uppercase;
-  font-size: 55px;
-  line-height: 47px;
-  width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
 .career-banner-text p {
   font-family: "AvenirNext" !important;
   font-size: 18px;
@@ -570,7 +711,6 @@ footer h3 {
   /* background: url('asssets/Line\ 2.png');
     background-position: 100% 98%;
     background-repeat: no-repeat; */
-  padding-bottom: 170px;
   position: relative;
 }
 
@@ -578,16 +718,17 @@ footer h3 {
   content: "";
   background-image: url(./assests/career_line.png), url(./assests/bee-logo.gif);
   background-position: 68px 167px, 10px 110px;
-  max-width: 450px;
-  max-height: 422px;
-  width: 100%;
-  height: 100%;
+  width: 450px;
+  height: 422px;
   background-size: contain, 80px 80px;
   position: absolute;
-  right: 0;
-  bottom: -100px;
+  right: -25vw;
+  bottom: -50vh;
   background-repeat: no-repeat;
   z-index: 17;
+  opacity: 0;
+  animation: fadeUp 1s ease-in-out forwards; /* Apply the fade up animation */
+  animation-delay: 8s;
 }
 .slider1 {
   -webkit-transform: rotate(1.5deg);
@@ -1119,4 +1260,19 @@ h6 {
 
 .z-10 {
   z-index: 10;
+}
+
+.scroll-down-text {
+  font-size: 30px;
+  color: #29446d;
+  line-height: 60px;
+  font-family: "Agrandir";
+  text-transform: none;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .scroll-down-text {
+    font-size: 18px;
+  }
 }
