@@ -74,6 +74,79 @@
   text-shadow: none !important;
 }
 
+.career-item {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dedicat-mentor {
+  background-image: url("../img/mentor.png");
+}
+
+.digital-ecosys {
+  background-image: url("../img/digital.png");
+}
+
+.process-excel {
+  background-image: url("../img/process.png");
+}
+
+.career-item-text {
+  max-width: 600px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .career-item-text {
+    margin: 0 20px;
+  }
+}
+
+.career-item-text h3 {
+  font-size: 24px;
+  font-family: "Agrandir-TextBold";
+  text-transform: uppercase;
+  color: white;
+}
+
+.career-item-text p {
+  font-size: 18px;
+  font-family: "AvenirNext";
+  color: white;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.process-excel .career-item-text h3 {
+  color: #29446d;
+}
+
+.process-excel .career-item-text p {
+  color: #29446d;
+}
+
+.career-other-input {
+  margin-left: 10px !important;
+  box-shadow: none !important;
+  font-size: 18px !important;
+  margin-bottom: 0px !important;
+  padding: 3px 10px !important;
+}
+
+@media (max-width: 767px) {
+  .career-other-input {
+    font-size: 12px !important;
+    margin-bottom: 0px !important;
+    padding: 3px 10px !important;
+  }
+}
+
 @media (max-width: 1200px) {
   .career-banner-text h3 {
     font-size: 45px;
@@ -184,6 +257,7 @@
     font-size: 30px;
     line-height: 1;
     max-width: 300px;
+    overflow-wrap: break-word;
   }
 
   .formsection .career-form-content {
