@@ -19,28 +19,24 @@ $(document).ready(async function() {
     var dedicat_mentor = document.getElementById("dedicat_mentor");
     var digital_ecosys = document.getElementById("digital_ecosys");
     var process_excel = document.getElementById("process_excel");
-
     if (scrollPosition > initialOffset) {
       dedicat_mentor.classList.add("overlayer_fixed");
-      digital_ecosys.style.marginTop = `${initialOffset -
+      digital_ecosys.style.marginTop = `${dedicat_mentor.offsetHeight -
         (scrollPosition - initialOffset)}px`;
-    } else {
+    } else if (scrollPosition) {
       dedicat_mentor.classList.remove("overlayer_fixed");
     }
     if (scrollPosition > (initialOffset2 + initialOffset) / 2) {
       digital_ecosys.classList.add("overlayer_fixed");
-      process_excel.style.marginTop = `${initialOffset -
-        (scrollPosition - initialOffset)}px`;
-
-      dedicat_mentor.classList.remove("overlayer_fixed");
+      process_excel.style.marginTop = `${digital_ecosys.offsetHeight -
+        (scrollPosition - initialOffset2) }px`;
       digital_ecosys.style.marginTop = "0px";
     } else if (scrollPosition) {
       digital_ecosys.classList.remove("overlayer_fixed");
-    }
-    if (scrollPosition > initialOffset3) {
-      process_excel.classList.add("overlayer_fixed");
-    } else if (scrollPosition) {
-      process_excel.classList.remove("overlayer_fixed");
+    } 
+    if ( scrollPosition > (initialOffset3 + initialOffset2 + initialOffset) / 3) {
+      dedicat_mentor.style.marginTop = "0px";
+      digital_ecosys.style.marginTop = "0px";
     }
   };
 });

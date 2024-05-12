@@ -1,8 +1,6 @@
 $(document).ready(function() {
   const agreeBtnGroup = document.querySelector(".agree-btn-group");
   const progressDetail = document.querySelector(".progress-bar-detail");
-  var stillhereoffset = $("#still-here").offset().top;
-  var hasTypewriterStarted = false;
 
   $("#agree-button").click(function() {
     agreeBtnGroup.style.display = "none";
@@ -44,15 +42,6 @@ $(document).ready(function() {
   };
   $(window).on("scroll", doAnimations);
   $(window).trigger("scroll");
-
-  window.onscroll = function() {
-    var scrollPosition =
-      document.documentElement.scrollTop || document.body.scrollTop;
-    if (!hasTypewriterStarted && scrollPosition > stillhereoffset) {
-      typeWriter();
-      hasTypewriterStarted = true;
-    }
-  };
 });
 
 function animateProgressBarCourage(targetWidth, duration) {
@@ -90,18 +79,4 @@ function animateProgressBarStruggling(targetWidth, duration) {
       clearInterval(animationInterval);
     }
   }, 10);
-}
-
-var i = 0;
-var txt = window.innerWidth < 768 ? "BUZZZZZZZ US" : "BUZZZZZZZZZZZZZZZ US";
-var speed = 100;
-
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i += 1;
-    setTimeout(typeWriter, speed);
-  } else {
-    document.getElementById("demo").innerHTML = "BUZZ US";
-  }
 }

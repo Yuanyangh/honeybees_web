@@ -38,26 +38,4 @@ $(document).ready(function() {
     }
     oldScrollY = scrollY;
   });
-
-  // $("#levelup-container").bind("mousewheel", function(e) {
-  //   console.log(e.originalEvent.wheelDelta);
-  //   if (e.originalEvent.wheelDelta < -119) {
-  //     levelup.classList.add("fade-up-animation");
-  //     setTimeout(function() {
-  //       window.scrollTo(0, 0);
-  //       levelup.style.display = "none";
-  //     }, 1000);
-  //     setTimeout(function() {
-  //       bannerContainer.style.display = "block";
-  //     }, 100);
-  //   }
-  // });
-
-  // $("#unleash-container").bind("mousewheel", function(e) {
-  //   if (e.originalEvent.wheelDelta >= 120 && window.scrollY == 0) {
-  //     levelup.classList.remove("fade-up-animation");
-  //     levelup.style.display = "block";
-  //     bannerContainer.style.display = "none";
-  //   }
-  // });
 });

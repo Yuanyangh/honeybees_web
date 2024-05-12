@@ -1,27 +1,35 @@
 $(document).ready(function() {
   var initialOffset = $("#happen-container").offset().top;
-  var overlayer = document.getElementById("happen-container");
+  var initialOffset2 = $("#holdon-content").offset().top;
 
   $(window).on("scroll", function() {
-    // var scrollPosition =
-    //   document.documentElement.scrollTop || document.body.scrollTop;
-    // console.log("======", initialOffset, scrollPosition, $(window).height());
-    // if (scrollPosition > initialOffset) {
-    //   overlayer.classList.add("overlayer_fixed");
-    //     window.scrollTo(0, 0);
-    // }
-    // var fixedSection = $(".blue_bg");
-    // var scrollPos = $(window).scrollTop();
-    // if (scrollPos >= initialOffset) {
-    //   fixedSection.addClass("fixed-section");
-    // } else {
-    //   fixedSection.removeClass("fixed-section");
-    // }
-  });
+    var scrollPosition =
+      document.documentElement.scrollTop || document.body.scrollTop;
+    var happenContainer = document.getElementById("happen-container");
+    var loremSection = document.getElementById("lorem-section");
+    var eventSection = document.getElementById("event-section");
+    var holdonContent = document.getElementById("holdon-content");
 
-  //   $("#happen-container").bind("mousewheel", function(e) {
-  //     if (e.originalEvent.wheelDelta >= 0 && window.scrollY == 0) {
-  //       overlayer.classList.remove("overlayer_fixed");
-  //     }
-  //   });
+    if (scrollPosition > initialOffset + 100) {
+      happenContainer.classList.add("overlayer_happen_fixed");
+      loremSection.style.marginTop = `${initialOffset +
+        100 -
+        (scrollPosition - initialOffset)}px`;
+    } else {
+      happenContainer.classList.remove("overlayer_happen_fixed");
+    }
+
+    if (scrollPosition > initialOffset2 - holdonContent.offsetHeight) {
+      loremSection.classList.add("overlayer_holdon_fixed");
+      eventSection.style.marginTop = `${initialOffset2 -
+        scrollPosition +
+        holdonContent.offsetHeight +
+        $(window).height()}px`;
+
+      // happenContainer.classList.remove("overlayer_happen_fixed");
+      loremSection.style.marginTop = "0px";
+    } else {
+      loremSection.classList.remove("overlayer_holdon_fixed");
+    }
+  });
 });

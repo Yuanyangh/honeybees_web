@@ -47,16 +47,25 @@
 
 @keyframes fadeInUp {
   0% {
-    opacity: 1;
-    transform: translateY(20px);
-  }
-  20% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: scale(0.9);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    right: -100px;
+    bottom: -250px;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+    bottom: -230px;
   }
 }
 
@@ -94,17 +103,22 @@
   animation: fadeUp 1s ease-in-out forwards !important;
 }
 
-.overlayer_fixed {
-  position: fixed;
-  top: -100px;
-  width: 100%;
-}
-
 .fixed-section {
   position: fixed;
   top: -100px;
   left: 0;
   width: 100%;
+}
+
+.overlayer_happen_fixed {
+  position: fixed !important;
+  top: -100px;
+}
+
+.overlayer_holdon_fixed {
+  bottom: 0;
+  width: 100%;
+  position: fixed !important;
 }
 
 .scale-background {
@@ -268,10 +282,12 @@
 
 .index-happen-marquee {
   margin-top: -100px;
+  position: absolute;
 }
 
 .index-happen-marquee .index-marquee-content.yellow {
   z-index: 1;
+  top: 40px;
 }
 
 .index-loren-marquee {
@@ -323,7 +339,7 @@
 .loren_sectiom {
   position: relative;
   background-color: #0d469d;
-  padding: 300px 0px 100px;
+  padding: 100px 0px 100px;
 }
 
 .loren_sectiom::before {
@@ -496,11 +512,11 @@
 }
 
 .blocks_container .blocks {
-  margin-bottom: 301px;
+  margin-bottom: 100px;
 }
 
 section.event_section {
-  padding: 400px 0px;
+  padding: 200px 0px 400px;
   margin-top: 0px;
   position: relative;
   background-image: url(../img/bg-footer-up.png);
@@ -511,8 +527,32 @@ section.event_section {
   animation: tilt-shaking 0.5s 2;
 }
 
+.animated.block_text::before {
+  animation: fadeInUp 2s ease-in-out 0s forwards;
+}
+
+.animated.block_text::after {
+  animation: fadeInUp 2s ease-in-out 0s forwards;
+}
+
 .animated.block_text h1 {
-  animation-name: fadeInUp;
+  animation: fadeInUp 2s ease-in-out 0s forwards;
+}
+
+.animated.block_text p {
+  animation: fadeInUp 2s ease-in-out 0s forwards;
+}
+
+.block_text p {
+  color: white;
+  font-size: 18px;
+  padding-bottom: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.animated.content_container::before {
+  animation: fadeInLeft 2s ease-in-out 1s forwards;
 }
 
 .animated.content_container h1 {
