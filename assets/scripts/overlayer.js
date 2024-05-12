@@ -10,10 +10,9 @@ $(document).ready(function() {
     var eventSection = document.getElementById("event-section");
     var holdonContent = document.getElementById("holdon-content");
 
-    if (scrollPosition > initialOffset + 100) {
+    if (scrollPosition > initialOffset) {
       happenContainer.classList.add("overlayer_happen_fixed");
-      loremSection.style.marginTop = `${initialOffset +
-        100 -
+      loremSection.style.marginTop = `${initialOffset -
         (scrollPosition - initialOffset)}px`;
     } else {
       happenContainer.classList.remove("overlayer_happen_fixed");

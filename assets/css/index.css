@@ -7,6 +7,18 @@
   }
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1; /* Start with full transparency */
+  }
+  50% {
+    opacity: 0.5; /* Mid-point: semi-transparent */
+  }
+  100% {
+    opacity: 0; /* End point: fully opaque */
+  }
+}
+
 @keyframes fadeUp {
   0% {
     transform: scale(1);
@@ -112,7 +124,7 @@
 
 .overlayer_happen_fixed {
   position: fixed !important;
-  top: -100px;
+  top: 0px;
 }
 
 .overlayer_holdon_fixed {
@@ -121,9 +133,21 @@
   position: fixed !important;
 }
 
+.top-scale-1 {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.scale-container {
+  position: relative;
+  height: 200vh;
+}
+
 .scale-background {
+  position: fixed;
+  top: 0px;
+  height: 100vh;
   width: 100%;
-  height: fit-content;
+  /* height: fit-content; */
   /* min-height: 100vh; */
   /* background-image: url('./assests/bann.png'); */
   background: linear-gradient(
@@ -136,7 +160,6 @@
   animation: scaleDown 1s ease-in-out forwards;
   transform-style: preserve-3d;
   overflow: hidden;
-  position: relative;
 }
 .scale-background:before {
   content: "";
@@ -155,7 +178,6 @@
 
 .levelup-container {
   /* position: fixed; */
-  z-index: 100;
   height: 100vh;
   cursor: pointer;
 }
@@ -167,6 +189,22 @@
   justify-content: center;
   height: 100%;
   max-width: 560px;
+}
+
+.fadeOut {
+  animation: fadeOut 0.2s ease-in-out forwards;
+}
+.fadeIn {
+  animation: fadeIn 0.2s ease-in-out forwards;
+}
+
+.levelup-title-animation {
+  animation: floatInAndColorChange3 2s ease-in-out 2s forwards;
+}
+
+.scroll-down-content-animation {
+  animation: floatInAndColorChange 0.8s ease-in-out 2s forwards;
+  animation-fill-mode: forwards;
 }
 
 .levelup-title {
@@ -188,6 +226,15 @@
   visibility: hidden;
   animation: floatInAndColorChange 0.8s ease-in-out 2s forwards;
   animation-fill-mode: forwards;
+}
+
+.levelup-mouse-desc {
+  font-size: 30px;
+  color: #29446d;
+  line-height: 60px;
+  font-family: "Agrandir";
+  text-transform: none;
+  text-align: center;
 }
 
 .unleash-title-styled {
@@ -228,6 +275,11 @@
 }
 
 .animatedbanner .banner-bee-bottom {
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.animatedbanner .index-banner-marquee {
   animation: fadeIn 1s ease forwards;
   animation-delay: 1s;
 }
@@ -277,7 +329,11 @@
 }
 
 .index-banner-marquee {
-  margin-bottom: 200px;
+  /* margin-bottom: 200px; */
+  position: absolute;
+  bottom: 10%;
+  z-index: -1;
+  opacity: 0;
 }
 
 .index-happen-marquee {
@@ -706,22 +762,22 @@ section.event_section {
 }
 
 @media (max-width: 900px) {
-  .scale-background {
+  /* .scale-background {
     height: fit-content;
-  }
+  } */
   .main_head_content {
     padding: 200px 20px 150px;
   }
-  .index-banner-marquee {
+  /* .index-banner-marquee {
     margin-bottom: 200px;
     margin-top: 0px;
-  }
+  } */
 }
 
 @media (max-width: 500px) {
-  .scale-background {
+  /* .scale-background {
     height: fit-content;
-  }
+  } */
   .levelup-container {
     height: 100vh;
   }
@@ -755,10 +811,10 @@ section.event_section {
     transform: scale(0.6) translateX(-80%);
     bottom: 3%;
   }
-  .index-banner-marquee {
+  /* .index-banner-marquee {
     margin-bottom: 200px;
     margin-top: 0px;
-  }
+  } */
   .index-happen-content {
     padding: 150px 10px;
     width: 100%;

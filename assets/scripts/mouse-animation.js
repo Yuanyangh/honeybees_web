@@ -1,41 +1,52 @@
 $(document).ready(function() {
   const levelup = document.getElementById("levelup-container");
   const unleash = document.getElementById("unleash-container");
-  const happen = document.getElementById("happen-container");
+  // const happen = document.getElementById("happen-container");
   const bannerContainer = document.querySelector(".banner-container");
-  var levelupoffset = $("#levelup-container").offset().top;
+  // var levelupoffset = $("#levelup-container").offset().top;
 
-  $("#levelup-container").bind("DOMMouseScroll", function(e) {
-    if (e.originalEvent.wheelDelta < 0) {
-      levelup.style.display = "none";
-      bannerContainer.style.display = "block";
-    }
-  });
+  // $("#levelup-container").bind("DOMMouseScroll", function(e) {
+  //   if (e.originalEvent.wheelDelta < 0) {
+  //     levelup.style.display = "none";
+  //     bannerContainer.style.display = "block";
+  //   }
+  // });
 
-  $("#unleash-container").bind("DOMMouseScroll", function(e) {
-    if (e.originalEvent.wheelDelta >= 0) {
-      levelup.style.display = "block";
-      bannerContainer.style.display = "none";
-    }
-  });
+  // $("#unleash-container").bind("DOMMouseScroll", function(e) {
+  //   if (e.originalEvent.wheelDelta >= 0) {
+  //     levelup.style.display = "block";
+  //     bannerContainer.style.display = "none";
+  //   }
+  // });
 
-  var oldScrollY = document.documentElement.scrollTop;
+  $(window).scroll(function () {
+    // calculate the percentage of the window scroll.
+    var scroll = $(window).scrollTop(),
+      height = $(window).height();
+      console.log(scroll + " " + height);
 
-  $(window).on("scroll", function() {
-    let scrollY = document.documentElement.scrollTop;
-    var yOffsetunleash =
-      unleash.getBoundingClientRect().top + window.pageYOffset;
-    if (
-      scrollY > 30 &&
-      scrollY < yOffsetunleash + 30 &&
-      scrollY - oldScrollY > 0
-    ) {
-      unleash.scrollIntoView({ behavior: "instant", block: "start" });
-      bannerContainer.classList.add("animatedbanner");
-    } else if (scrollY < yOffsetunleash - 30 && scrollY - oldScrollY < 0) {
+    // change the opacity of the div according to the scroll percentage.
+    if(scroll / height < 0.5) {
+      // $('.top-scale-1').addClass('levelup-title-animation');        
+      // $('.top-scale-1').addClass('scroll-down-content-animation');        
+      $('.top-scale-1').addClass('fadeIn');
+      $('.top-scale-1').removeClass('fadeOut');
+      $('.top-scale-2').addClass('fadeOut');
+      $('.top-scale-2').removeClass('fadeIn');
       bannerContainer.classList.remove("animatedbanner");
-      levelup.scrollIntoView({ behavior: "instant", block: "start" });
     }
-    oldScrollY = scrollY;
+    else {                
+      $('.top-scale-1').addClass('fadeOut');
+      $('.top-scale-1').removeClass('fadeIn');        
+      $('.top-scale-2').addClass('fadeIn');
+      $('.top-scale-2').removeClass('fadeOut');
+      bannerContainer.classList.add("animatedbanner");
+      
+      // $('.top-scale-1').removeClass('levelup-title-animation');        
+      // $('.top-scale-2').removeClass('scroll-down-content-animation');
+    }
+    // $('.top-scale-1').css('opacity', (1 - scroll / height * 2));
+    // $('.top-scale-2').css('opacity', scroll / height * 2);
   });
+
 });
