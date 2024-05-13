@@ -60,7 +60,26 @@
   }
 }
 
+@keyframes grayMask {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.gray-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  animation: grayMask 0.5s ease-in-out 2.5s forwards;
+}
+
 .section-wrapper {
+  animation: backgroundColorChange 2s ease-in-out 2s forwards;
   position: relative;
   background: linear-gradient(180deg, #2976ed 0%, #2a456e 100%);
   padding-bottom: 150px;
@@ -79,7 +98,7 @@
 }
 
 .about-history-marquee {
-  margin: 150px 0;
+  margin: 50px 0 150px;
 }
 
 .about-Honeybees-marquee {
@@ -88,7 +107,10 @@
 }
 
 .hero-hed-sec {
-  padding: 300px 0px 50px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
 }
 
@@ -102,6 +124,7 @@
 
 .about-hero-bee {
   position: absolute;
+  bottom: 10%;
 }
 
 .gtco-testimonials-container {
@@ -235,7 +258,7 @@
 }
 
 .hero-hed-sec-text-caption {
-  animation: floatInAndColorChange3 2s ease-in-out 2s forwards;
+  animation: floatInAndColorChange3 2s ease-in-out 3s forwards;
   font-size: 55px;
   color: white;
   line-height: 60px;
@@ -243,11 +266,9 @@
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 4px;
-  /* -webkit-text-stroke: 0.1px #29446d;
-  text-shadow: 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d; */
-  /* -webkit-text-stroke: 0.1px #fff;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 0 #fff, 0 0 0 #fff, 0 0 0 #fff, 0 0 0 #fff; */
+  outline: #29446d;
+  -webkit-text-stroke: 3px #fff;
+  text-shadow: none;
   opacity: 0;
 }
 

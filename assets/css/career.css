@@ -54,7 +54,7 @@
 .career-Honeybees-marquee {
   position: relative;
   z-index: 1;
-  margin-top: -50px;
+  /* margin-top: -50px; */
 }
 
 .career-plans-marquee {
@@ -102,6 +102,11 @@
 .career-item-text {
   max-width: 600px;
   text-align: center;
+}
+
+.lottie-scroll-down-content {
+  height: 50px;
+  margin: auto;
 }
 
 @media (max-width: 767px) {

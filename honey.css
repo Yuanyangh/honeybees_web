@@ -729,10 +729,6 @@ body {
   background-color: #efb127; */
 }
 
-section.hero-sec {
-  background-color: #4f95ff;
-}
-
 /* section.hero-sec .container {
   background: url(./assets/img/AboutUs_BGcolour.png);
   background-size: cover;
@@ -764,10 +760,10 @@ section.hero-sec .row {
 }
 
 .hero-hed-sec h1 {
-  font-size: 55px;
+  font-size: 80px;
   color: #fffbf5;
-  max-width: 820px;
-  line-height: 55px;
+  max-width: 1200px;
+  line-height: 80px;
   width: 100%;
   margin: auto;
   font-family: "Agrandir-GrandHeavy";
@@ -1148,6 +1144,7 @@ li.btn {
   row-gap: 8px;
   justify-content: center;
   align-items: baseline;
+  max-width: 550px;
 }
 
 .text-box,
