@@ -58,4 +58,33 @@ $(document).ready(async function() {
       digital_ecosys.style.marginTop = "0px";
     }
   };
+
+  $(window).scroll(function() {
+    // calculate the percentage of the window scroll.
+    var scroll = $(window).scrollTop(),
+      height = $(window).height();
+
+    if (scroll / height < 0.5) {
+      $(".top-scale-1").addClass("fadeIn");
+      $(".top-scale-1").removeClass("fadeOut");
+      $(".top-scale-2").addClass("fadeOut");
+      $(".top-scale-2").removeClass("fadeIn");
+      $(".top-scale-3").addClass("fadeOut");
+      $(".top-scale-3").removeClass("fadeIn");
+    } else if (scroll / height < 1) {
+      $(".top-scale-1").addClass("fadeOut");
+      $(".top-scale-1").removeClass("fadeIn");
+      $(".top-scale-2").addClass("fadeIn");
+      $(".top-scale-2").removeClass("fadeOut");
+      $(".top-scale-3").addClass("fadeOut");
+      $(".top-scale-3").removeClass("fadeIn");
+    } else {
+      $(".top-scale-1").addClass("fadeOut");
+      $(".top-scale-1").removeClass("fadeIn");
+      $(".top-scale-2").addClass("fadeOut");
+      $(".top-scale-2").removeClass("fadeIn");
+      $(".top-scale-3").addClass("fadeIn");
+      $(".top-scale-3").removeClass("fadeOut");
+    }
+  });
 });

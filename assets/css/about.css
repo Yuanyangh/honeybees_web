@@ -330,10 +330,6 @@
     transform: scale(2);
   }
 
-  .about-hero-text {
-    padding: 200px 20px;
-  }
-
   .corporate-sec {
     flex-direction: column;
     max-width: 500px;
@@ -444,7 +440,6 @@
     font-size: 14px;
   }
   .about-hero-text {
-    padding: 200px 0px 100px;
     max-width: 300px;
     margin: auto;
   }
@@ -551,7 +546,7 @@
     font-size: 14px;
   }
   .testimnial-bg-after:after {
-    top: 40%;
+    top: 50%;
     left: 40%;
   }
 

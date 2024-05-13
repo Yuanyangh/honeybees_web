@@ -36,16 +36,6 @@
   }
 }
 
-@keyframes scaleDownBackground {
-  from {
-    background-size: 120%;
-  }
-
-  to {
-    background-size: 100%;
-  }
-}
-
 @keyframes floatInAndColorChange {
   0% {
     opacity: 0;
@@ -492,20 +482,7 @@ footer h3 {
   margin-left: auto;
   margin-right: auto;
 }
-.career {
-  background-color: #eeaf30;
-  height: max-content;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-}
-.career-bg1 {
-  background: url("./asssets/career_bg1.png"); /* height: max-content; */
-  background-size: 120%;
-  background-position: top;
-  background-repeat: no-repeat;
-  animation: scaleDownBackground 0.5s ease-in-out 1s forwards;
-}
+
 @keyframes careerAni {
   0% {
     background: url("./asssets/careerbees1.png");
@@ -549,121 +526,7 @@ footer h3 {
   visibility: hidden;
   animation: careerAni 2s ease-in-out 0.5s forwards;
 }
-@keyframes careerBannerTextAni {
-  0% {
-    visibility: visible;
-  }
-  100% {
-    visibility: visible;
-  }
-}
-.career-banner-text {
-  visibility: hidden;
-  animation: careerBannerTextAni 0s ease-in-out 2.5s forwards;
-}
-@keyframes floatInAndColorChange-career {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-    color: transparent;
-    visibility: visible;
-    text-shadow: none;
-  }
-  20% {
-    opacity: 1;
-    transform: translateY(0);
-    color: transparent;
-    visibility: hidden;
-    outline: #29446d;
-    -webkit-text-stroke: 3px #29446d;
-    text-shadow: none;
-  }
-  99% {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  100% {
-    visibility: hidden;
-  }
-}
-@keyframes floatIn-2-career {
-  0% {
-    display: block;
-    opacity: 0;
-    transform: translateY(-50px);
-    visibility: visible;
-    text-shadow: none;
-  }
-  20% {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-    outline: #29446d;
-    -webkit-text-stroke: 3px #29446d;
-    text-shadow: none;
-  }
-  99% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    display: none;
-  }
-}
-@keyframes floatIn-3-career {
-  0% {
-    display: block;
-    opacity: 0;
-    transform: translateY(-50px);
-    visibility: visible;
-    text-shadow: none;
-  }
-  20% {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-    outline: #29446d;
-    -webkit-text-stroke: 3px #29446d;
-    text-shadow: none;
-  }
-  99% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    visibility: visible;
-    display: block;
-  }
-}
-.career-banner-text h3 {
-  font-family: "Agrandir-GrandHeavy";
-  text-transform: uppercase;
-  font-size: 80px;
-  line-height: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-  -webkit-text-stroke: 3px #29446d;
-  /* color: transparent; */
-  /* -webkit-text-stroke: 0.1px #29446d; */
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d;
-  align-self: center !important;
-  text-align: center;
-}
-.career-banner-text .text-1 {
-  animation: floatInAndColorChange-career 2s ease-in-out 2.5s forwards; /* Delay animation */
-}
-.career-banner-text .text-2 {
-  position: absolute;
-  visibility: hidden;
-  animation: floatIn-2-career 2s ease-in-out 4.5s forwards; /* Delay animation */
-}
-.career-banner-text .text-3 {
-  position: absolute;
-  visibility: hidden;
-  animation: floatIn-3-career 2s ease-in-out 6.5s forwards; /* Delay animation */
-}
+
 .textstroke {
   -webkit-text-fill-color: #ffffff00; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
@@ -675,28 +538,7 @@ footer h3 {
   color: #29446d;
   font-weight: 600;
 }
-.career-banner-text.misc {
-  /* background: url('asssets/Line\ 2.png');
-    background-position: 100% 98%;
-    background-repeat: no-repeat; */
-  position: relative;
-}
-.career-banner-text.misc:before {
-  content: "";
-  background-image: url(./assests/career_line.png), url(./assests/bee-logo.gif);
-  background-position: 68px 167px, 10px 110px;
-  width: 450px;
-  height: 422px;
-  background-size: contain, 80px 80px;
-  position: absolute;
-  right: -25vw;
-  bottom: -50vh;
-  background-repeat: no-repeat;
-  z-index: 17;
-  opacity: 0;
-  animation: fadeUp 1s ease-in-out forwards; /* Apply the fade up animation */
-  animation-delay: 8s;
-}
+
 .slider1 {
   -webkit-transform: rotate(1.5deg);
   -moz-transform: rotate(1.5deg);

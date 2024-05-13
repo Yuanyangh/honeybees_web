@@ -8,14 +8,191 @@
   }
 }
 
-@keyframes hide {
+@keyframes fadeIn {
   from {
+    opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+    opacity: 1; /* End with opacity 1 */
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; /* Start with full transparency */
+  }
+  50% {
+    opacity: 0.5; /* Mid-point: semi-transparent */
+  }
+  100% {
+    opacity: 0; /* End point: fully opaque */
+  }
+}
+@keyframes floatInAndColorChange-career {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+    color: transparent;
+    visibility: visible;
+    text-shadow: none;
+  }
+  20% {
     opacity: 1;
+    transform: translateY(0);
+    color: transparent;
+    visibility: hidden;
+    outline: #29446d;
+    -webkit-text-stroke: 3px #29446d;
+    text-shadow: none;
+  }
+  99% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes floatIn-2-career {
+  0% {
+    display: block;
+    opacity: 0;
+    transform: translateY(-50px);
+    visibility: visible;
+  }
+  20% {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes floatIn-3-career {
+  0% {
+    display: block;
+    opacity: 0;
+    transform: translateY(-50px);
+    visibility: visible;
+  }
+  20% {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleDownBackground {
+  from {
+    background-size: 120%;
   }
 
   to {
-    opacity: 0;
+    background-size: 100%;
   }
+}
+
+/* .fadeOut {
+  animation: fadeOut 0.2s ease-in-out forwards;
+}
+.fadeIn {
+  animation: fadeIn 0.2s ease-in-out forwards;
+} */
+
+.career {
+  background-color: #eeaf30;
+  height: max-content;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.career-fixed-container {
+  position: relative;
+  height: 300vh;
+}
+
+.career-fixed-container-item {
+  position: fixed;
+  top: 0;
+  cursor: pointer;
+  height: 100vh;
+  width: 100%;
+}
+
+.career-first-section {
+  background: url(../img/career_bg1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: hard-light;
+  background-position: top;
+  animation: scaleDownBackground 0.5s ease-in-out 2.5s forwards;
+  background-size: 120%;
+}
+
+.career-banner-text .text-1 {
+  animation: floatInAndColorChange-career 2s ease-in-out 2.5s forwards;
+}
+
+.career-banner-text.fadeIn .text-2 {
+  animation: floatIn-2-career 2s ease-in-out forwards;
+}
+
+.career-banner-text.fadeIn .text-3 {
+  animation: floatIn-3-career 2s ease-in-out forwards;
+}
+
+.career-banner-text.fadeOut {
+  animation: fadeOut 0.2s ease-in-out forwards;
+}
+
+.career-banner-text.fadeOut {
+  animation: fadeOut 0.2s ease-in-out forwards;
+}
+
+.career-banner-text.fadeOut {
+  animation: fadeOut 0.2s ease-in-out forwards;
+}
+
+.career-banner-text.fadeIn.top-scale-3:before {
+  content: "";
+  background-image: url(../img/career_line.png), url(../img/bee-logo.gif);
+  background-position: 68px 167px, 10px 110px;
+  width: 450px;
+  height: 422px;
+  background-size: contain, 80px 80px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  z-index: 17;
+  opacity: 0;
+  animation: fadeUp 1s ease-in-out forwards; /* Apply the fade up animation */
+  animation-delay: 1s;
+}
+
+.career-banner-text h3 {
+  font-family: "Agrandir-GrandHeavy";
+  text-transform: uppercase;
+  font-size: 55px;
+  line-height: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  -webkit-text-stroke: 3px #29446d;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d;
+  align-self: center !important;
+  text-align: center;
+  opacity: 0;
 }
 
 .lottie-career-wrapper {
@@ -45,10 +222,18 @@
   text-align: center;
   visibility: hidden;
   animation: floatInAndColorChange 0.8s ease-in-out 2.9s forwards;
+  position: absolute;
+  bottom: 10%;
 }
 
-.hide-scroll-down {
-  animation: hide 0.8s ease-in-out 8s forwards;
+.scale-background {
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  /* opacity: 0; */
 }
 
 .career-Honeybees-marquee {
@@ -109,12 +294,6 @@
   margin: auto;
 }
 
-@media (max-width: 767px) {
-  .career-item-text {
-    margin: 0 20px;
-  }
-}
-
 .career-item-text h3 {
   font-size: 24px;
   font-family: "Agrandir-GrandHeavy";
@@ -144,14 +323,6 @@
   font-size: 18px !important;
   margin-bottom: 0px !important;
   padding: 3px 10px !important;
-}
-
-@media (max-width: 767px) {
-  .career-other-input {
-    font-size: 12px !important;
-    margin-bottom: 0px !important;
-    padding: 3px 10px !important;
-  }
 }
 
 @media (max-width: 1200px) {
@@ -195,6 +366,22 @@
   }
   .formsection .form .col-12 {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .career-item-text {
+    margin: 0 20px;
+  }
+  .career-other-input {
+    font-size: 12px !important;
+    margin-bottom: 0px !important;
+    padding: 3px 10px !important;
+  }
+  .career-banner-text.fadeIn.top-scale-3:before {
+    right: -50%;
+    transform: scale(0.6) !important;
+    bottom: 10%;
   }
 }
 
