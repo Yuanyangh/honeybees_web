@@ -71,20 +71,20 @@
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    right: -100px;
-    bottom: -250px;
+    right: -3%;
+    bottom: -120px;
   }
   100% {
     opacity: 1;
-    right: 0;
-    bottom: -230px;
+    right: -2%;
+    bottom: -100px;
   }
 }
 
 @keyframes floatInAndColorChange3 {
   0% {
     opacity: 0;
-    transform: scale(1.2) translateY(-50px);
+    transform: translateY(-50px);
     color: transparent;
     visibility: visible;
   }
@@ -97,17 +97,34 @@
     outline: #29446d;
     -webkit-text-stroke: 3px #29446d;
     text-shadow: none;
-    transform: scale(1.2);
-  }
-  60% {
-    transform: scale(1.2);
-  }
-  75% {
-    transform: scale(1.2);
   }
   100% {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatInAndColorChange4 {
+  0% {
+    opacity: 0;
+    color: transparent;
+    visibility: visible;
+    outline: #29446d;
+    -webkit-text-stroke: 3px #29446d;
+    text-shadow: none;
+  }
+  50% {
+    opacity: 1;
+    color: transparent;
+    visibility: visible;
+    outline: #29446d;
+    -webkit-text-stroke: 3px #29446d;
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    outline: #29446d;
+    -webkit-text-stroke: 3px #29446d;
   }
 }
 
@@ -176,6 +193,10 @@
   transform-style: inherit;
 }
 
+.levelup-container.z100 {
+  z-index: 100;
+}
+
 .levelup-container {
   /* position: fixed; */
   height: 100vh;
@@ -188,7 +209,7 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  max-width: 560px;
+  max-width: 800px;
 }
 
 .fadeOut {
@@ -209,13 +230,13 @@
 
 .levelup-title {
   animation: floatInAndColorChange3 2s ease-in-out 2s forwards;
-  font-size: 55px;
+  font-size: 80px;
   color: #29446d;
-  line-height: 60px;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 4px;
+  line-height: 1;
   /* -webkit-text-stroke: 0.1px #29446d;
   text-shadow: 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d; */
   opacity: 0;
@@ -226,6 +247,13 @@
   visibility: hidden;
   animation: floatInAndColorChange 0.8s ease-in-out 2s forwards;
   animation-fill-mode: forwards;
+  position: absolute;
+  bottom: 10%;
+}
+
+.lottie-scroll-down-content {
+  height: 50px;
+  margin: auto;
 }
 
 .levelup-mouse-desc {
@@ -244,10 +272,21 @@
   text-transform: uppercase;
   color: transparent;
   letter-spacing: 4px;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   margin-top: 10px;
   -webkit-text-stroke: 3px #29446d;
   text-shadow: none;
+}
+
+.animated-unleash-title-styled {
+  font-size: 55px;
+  line-height: 55px;
+  text-transform: uppercase;
+  color: #29446d;
+  letter-spacing: 4px;
+  font-family: "GrandHeavy";
+  margin-top: 10px;
+  opacity: 0;
 }
 
 .banner-container {
@@ -282,6 +321,10 @@
 .animatedbanner .index-banner-marquee {
   animation: fadeIn 1s ease forwards;
   animation-delay: 1s;
+}
+
+.animatedbanner .animated-unleash-title-styled {
+  animation: floatInAndColorChange4 2s ease 2s forwards;
 }
 
 .banner-bee-top {
@@ -372,7 +415,7 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding: 300px 0px 200px;
+  padding: 300px 0px 300px;
 }
 
 .main_head_content h1 {
@@ -380,7 +423,7 @@
   font-size: 55px;
   color: #29446d;
   line-height: 60px;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   text-transform: uppercase;
   text-align: center;
 }
@@ -416,7 +459,7 @@
   font-size: 55px;
   text-transform: uppercase;
   line-height: 60px;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   text-transform: uppercase;
 }
 
@@ -451,7 +494,7 @@
   -webkit-box-shadow: -5px 5px #3061ab;
   -moz-box-shadow: -5px 5px 2px 0px rgba(187, 170, 204, 1);
   margin-top: 13px;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   width: 110px;
   height: 40px;
 }
@@ -587,10 +630,6 @@ section.event_section {
   animation: fadeInUp 2s ease-in-out 0s forwards;
 }
 
-.animated.block_text::after {
-  animation: fadeInUp 2s ease-in-out 0s forwards;
-}
-
 .animated.block_text h1 {
   animation: fadeInUp 2s ease-in-out 0s forwards;
 }
@@ -656,6 +695,7 @@ section.event_section {
 }
 
 .last-events-item {
+  max-width: 500px;
   width: 45%;
   margin-bottom: 20px;
 }
@@ -665,7 +705,7 @@ section.event_section {
 }
 
 .last-events-item-title {
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   font-weight: 800;
   font-size: 30px;
   color: white;
@@ -677,6 +717,94 @@ section.event_section {
   font-size: 18px;
   color: white;
   margin: 0;
+}
+
+.block_text_bee_left {
+  position: absolute;
+  top: 35%;
+  left: -8%;
+  opacity: 0;
+}
+
+.block_text_bee_left_logo img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 20%;
+}
+
+.animated .block_text_bee_left {
+  animation: fadeInUp 2s ease-in-out 0s forwards;
+}
+
+.block_text_bee_right {
+  position: absolute;
+  right: -15%;
+  top: 25%;
+}
+
+.block_text_bee_right_logo img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 40%;
+  left: -20%;
+  transform: scaleX(-1) rotate(-34deg);
+}
+
+.animated .block_text_bee_right {
+  animation: fadeInUp 2s ease-in-out 0s forwards;
+}
+
+.content_container_bee_right {
+  position: absolute;
+  bottom: -100px;
+  right: -2%;
+  opacity: 0;
+}
+
+.animated .content_container_bee_right {
+  animation: fadeInLeft 2s ease-in-out 1s forwards;
+}
+
+.content_container_bee_right_logo img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 40%;
+  left: -5%;
+}
+
+.content_container_quote {
+  width: 200px;
+  height: 102px;
+  position: absolute;
+  top: -30px;
+  cursor: pointer;
+}
+
+.content_container_quote img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-3deg);
+  z-index: -1;
+}
+
+.content_container_quote_text {
+  display: block;
+  font-size: 18px;
+  color: #29446d;
+  font-family: "AvenirNextBold";
+  margin: 20px 22px;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.vibanim {
+  animation: tilt-shaking 0.5s 2;
 }
 
 @media (max-width: 1600px) {
@@ -705,6 +833,12 @@ section.event_section {
 }
 
 @media (max-width: 1200px) {
+  .block_text_bee_left {
+    top: 0%;
+  }
+  .block_text_bee_right {
+    top: 50%;
+  }
   .main_head_content h1 {
     font-size: 45px;
     line-height: normal;

@@ -502,13 +502,13 @@
   <div class="position-relative">
     <div class="scale-container">
       <section class="top-scale-1 scale-background levelup-container" id="levelup-container">
-        <div class="levelup-content position-relative d-flex flex-column justify-content-around align-items-center"> 
-          <div></div>  
-          <h1 class="levelup-title levelup-title-animation">
-              Level Up Life's Game<br>
+        <div class="levelup-content position-relative d-flex flex-column align-items-center"> 
+          <h1 class="levelup-title levelup-title-animation" id="levelup-title">
+              Level up life’s game
           </h1>
           <div class="scroll-down-content scroll-down-content-animation">
-            <img src="assets/img/scroll_down.png" width="26" height="55"/>
+            <div class="lottie-scroll-down-content" id="lottie-scroll-down"></div>
+            <!-- <img src="assets/img/scroll_down.png" width="26" height="55"/> -->
             <div class="levelup-mouse-desc">
               scroll down
             </div>
@@ -532,7 +532,7 @@
           <div class="main_head_content">   
             <h1 class="text-caption">
               <span class="unleash-title-styled"> UNLEASH YOUR </span>
-              <span>#FEARLESS </span>
+              <span class="animated-unleash-title-styled">#FEARLESS </span>
             </h1>  
               <!-- <h1 class="text-caption" style="text-align:center">YOUR FEARLESS LIFE AWAITS</h1> -->
             <!-- <h1 class="text-caption">
@@ -726,8 +726,24 @@
         </div>
         <div class="block_text_container" id="holdon-content">
           <div class="block_text animatable">
+            <div class="block_text_bee_left">
+              <span>
+                <img src="assets/img/left-bee.png" alt="bee"/>
+              </span>
+              <span class="block_text_bee_left_logo">
+                <img src="assets/img/bee-logo2.gif" alt="bee"/>
+              </span>
+            </div>
             <h1>Hold on, it gets even wilder from here!</h1>
             <p>Wilder, but in a positive sense. Let's explore the exciting experiences waiting for us here.</p>
+            <div class="block_text_bee_right">
+              <span class="block_text_bee_right_logo">
+                <img src="assets/img/bee-logo2.gif" alt="bee"/>
+              </span>
+              <span>
+                <img src="assets/img/bee_mesage.png" alt="bee"/>
+              </span>
+            </div>
           </div>
           <div class="block_text_before"></div>
         </div>
@@ -853,6 +869,8 @@
                 It's the annual new year celebration with The Honeybees. Start the year strong with our 100 man lou hei and end it with the delicious lotus soup prepared specially by monks for the tibetan tribe.
               </p>
             </div>
+          </div>
+          <div class="last-events-content">
             <div class="last-events-item">
               <img src="assets/img/freedom_2.png" alt="freedom_2"/>
               <h3 class="last-events-item-title">
@@ -881,6 +899,20 @@
             <p>
               We want to thank you for visiting our website, so drop us a message below! Don't worry, unless you are allergic to good vibes and energies 
             </p>
+            <div class="content_container_bee_right">
+              <span class="content_container_quote" id="content_container_quote">
+                <img src="assets/img/quote.png" alt="quote"/>
+                <span class="content_container_quote_text" id="content_container_quote_text">
+                  I'm a big fan of happy vibes!
+                </span>
+              </span>
+              <span>
+                <img src="assets/img/bee_content_line.png" alt="bee"/>
+              </span>
+              <span class="content_container_bee_right_logo">
+                <img src="assets/img/bee-logo.gif" alt="bee"/>
+              </span>
+            </div>
           </div>
         </div>
       </section>

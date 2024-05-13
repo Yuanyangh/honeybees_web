@@ -42,6 +42,34 @@ $(document).ready(function() {
   };
   $(window).on("scroll", doAnimations);
   $(window).trigger("scroll");
+
+  var lottieAnimation = lottie.loadAnimation({
+    container: document.getElementById("lottie-scroll-down"), // the dom element
+    renderer: "svg",
+    loop: true,
+    autoplay: false,
+    path: "./assets/lotties/scrolldown.json" // the path to the animation json
+  });
+
+  lottieAnimation.play();
+
+  var contentQuote = true;
+
+  $("#content_container_quote").click(function() {
+    if (contentQuote) {
+      document.getElementById("content_container_quote_text").innerHTML =
+        "haha! wow, you got me!";
+      $("#content_container_quote").addClass("vibanim");
+    } else {
+      document.getElementById("content_container_quote_text").innerHTML =
+        "I'm a big fan of happy vibes!";
+      $("#content_container_quote").addClass("vibanim");
+    }
+    contentQuote = !contentQuote;
+    setTimeout(function() {
+      $("#content_container_quote").removeClass("vibanim");
+    }, 500);
+  });
 });
 
 function animateProgressBarCourage(targetWidth, duration) {

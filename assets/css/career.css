@@ -15,9 +15,8 @@
 
   to {
     opacity: 0;
-  }  
+  }
 }
-
 
 .lottie-career-wrapper {
   position: relative;
@@ -113,7 +112,7 @@
 
 .career-item-text h3 {
   font-size: 24px;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   text-transform: uppercase;
   color: white;
 }

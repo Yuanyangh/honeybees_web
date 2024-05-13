@@ -139,7 +139,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   font-size: 12px;
   color: white;
 }
@@ -239,7 +239,7 @@
   font-size: 55px;
   color: white;
   line-height: 60px;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 4px;
@@ -272,7 +272,7 @@
 
 .honeyBeeTeamReview h2 {
   font-size: 30px;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   margin: 20px 0px 10px;
 }
 
@@ -499,7 +499,7 @@
   }
   .his-text-box h2 {
     font-size: 14px;
-    font-family: "Agrandir-TextBold";
+    font-family: "Agrandir-GrandHeavy";
   }
   .his-text-box p {
     font-size: 14px;

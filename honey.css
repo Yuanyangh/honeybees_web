@@ -254,34 +254,11 @@ button.seemore {
   -webkit-box-shadow: -9px 10px #3061ab;
   -moz-box-shadow: -9px 10px 2px 0px rgba(187, 170, 204, 1);
   margin-top: 13px;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   height: 40px;
   margin: 0 auto;
   /* justify-content: center; */
   display: flex;
-}
-
-.content_container:before {
-  content: "";
-  background-image: url(./assests/bee_mesage.png), url(./assests/bee-logo.gif);
-  background-position: 0 0, -9px 96px;
-  /* background: forestgreen; */
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  right: initial;
-  bottom: -160px;
-  background-repeat: no-repeat;
-  right: 0;
-  background-size: 450px 230px, 120px 120px;
-  max-width: 450px;
-  max-height: 230px;
-  width: 100%;
-  height: 230px;
-  position: absolute;
-  right: 0;
-  background-repeat: no-repeat;
-  opacity: 0;
 }
 
 /* form */
@@ -500,7 +477,7 @@ input::placeholder {
 
 marquee,
 .custo-main h1 {
-  font-family: "Agrandir-TextBold" !important;
+  font-family: "Agrandir-GrandHeavy" !important;
   text-transform: uppercase;
 }
 
@@ -559,7 +536,7 @@ marquee,
   color: white;
   font-size: 55px;
   line-height: 90%;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -572,39 +549,6 @@ marquee,
 .block_text_container {
   padding-top: 200px;
   position: relative;
-}
-
-.block_text:before {
-  content: "";
-  background-image: url(./assests/bee_mesage.png), url(./assests/bee-logo.gif);
-  background-position: 0 0, 10px 110px;
-  max-width: 450px;
-  max-height: 222px;
-  width: 100%;
-  height: 100%;
-  background-size: contain, 80px 80px;
-  position: absolute;
-  right: 0;
-  /* left: 100%; */
-  bottom: 100px;
-  background-repeat: no-repeat;
-  opacity: 0;
-}
-
-.block_text:after {
-  content: "";
-  background-image: url(./assests/left-bee.png), url(./assests/bee-logo2.gif);
-  background-position: 13px 22px, 194px 13px;
-  /* background: forestgreen; */
-  width: 67%;
-  height: 100%;
-  position: absolute;
-  bottom: -4px;
-  background-repeat: no-repeat;
-  /* right: 70%; */
-  background-size: 250px 150px, 80px 80px;
-  left: 0;
-  opacity: 0;
 }
 
 @media (max-width: 1600px) {
@@ -639,7 +583,7 @@ section.blue_bg {
   text-transform: uppercase;
   padding-top: 100px;
   line-height: 60px;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   text-transform: uppercase;
 }
 
@@ -826,7 +770,7 @@ section.hero-sec .row {
   line-height: 55px;
   width: 100%;
   margin: auto;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   text-transform: uppercase;
   text-align: center;
 }
@@ -1041,7 +985,7 @@ li.btn {
   font-size: 30px;
   line-height: 27px;
   text-transform: uppercase;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   margin: 0;
 }
 
@@ -1243,7 +1187,7 @@ p {
   font-size: 55px;
   line-height: 49.8px;
   text-transform: uppercase;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   margin-top: 0;
   margin-bottom: 80px;
 }
@@ -1295,7 +1239,7 @@ p {
   font-size: 55px;
   line-height: 49.8px;
   text-transform: uppercase;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
 }
 
 .testimnial-sec p {
@@ -1366,7 +1310,7 @@ p {
   font-size: 30px;
   text-align: center;
   color: #fffbf5;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   text-transform: uppercase;
   margin: 0px;
 }
@@ -1431,7 +1375,7 @@ li.btn:hover {
 }
 
 .sendo-section h2 {
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   font-size: 55px;
   color: #fff;
   text-transform: uppercase;
@@ -1451,7 +1395,7 @@ li.btn:hover {
   font-size: 18px;
   color: #29446d !important;
   line-height: 24px;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   text-transform: capitalize;
 }
 
@@ -1535,7 +1479,7 @@ li.btn:hover {
 }
 
 .block:hover .overlay {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .block .overlay .overlay_icon {
@@ -1555,6 +1499,10 @@ li.btn:hover {
   inset: 0;
   margin: auto;
   padding: 0;
+}
+
+.block:hover .overlay .overlay_icon {
+  display: none;
 }
 
 .block .overlay .overlay_icon:hover {
@@ -1585,7 +1533,7 @@ li.btn:hover {
   text-stroke: 2px #ffffff;
   -webkit-text-stroke: 2px #ffffff;
   letter-spacing: 0px;
-  font-family: "Agrandir-TextBold" !important;
+  font-family: "Agrandir-GrandHeavy" !important;
   width: 100%;
   margin: 0;
 }

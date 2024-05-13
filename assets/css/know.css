@@ -14,7 +14,7 @@
     visibility: hidden;
     outline: #fff;
     -webkit-text-stroke: 3px #fff;
-    
+
     text-shadow: none;
   }
   100% {
@@ -33,7 +33,7 @@
 .coming-soon {
   font-size: 55px;
   line-height: 60px;
-  font-family: "Agrandir-TextBold";
+  font-family: "Agrandir-GrandHeavy";
   text-transform: uppercase;
   color: white;
   display: flex;
