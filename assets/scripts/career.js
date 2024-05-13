@@ -26,15 +26,24 @@ $(document).ready(async function() {
     } else if (scrollPosition) {
       dedicat_mentor.classList.remove("overlayer_fixed");
     }
-    if (scrollPosition > (initialOffset2 + initialOffset) / 2) {
+    if (
+      scrollPosition >
+      (initialOffset3 + initialOffset2 + initialOffset) / 3
+    ) {
+      dedicat_mentor.style.marginTop = "0px";
+      digital_ecosys.style.marginTop = "0px";
+    } else if (scrollPosition > (initialOffset2 + initialOffset) / 2) {
       digital_ecosys.classList.add("overlayer_fixed");
       process_excel.style.marginTop = `${digital_ecosys.offsetHeight -
-        (scrollPosition - initialOffset2) }px`;
+        (scrollPosition - initialOffset2)}px`;
       digital_ecosys.style.marginTop = "0px";
     } else if (scrollPosition) {
       digital_ecosys.classList.remove("overlayer_fixed");
-    } 
-    if ( scrollPosition > (initialOffset3 + initialOffset2 + initialOffset) / 3) {
+    }
+    if (
+      scrollPosition >
+      (initialOffset3 + initialOffset2 + initialOffset) / 3
+    ) {
       dedicat_mentor.style.marginTop = "0px";
       digital_ecosys.style.marginTop = "0px";
     }
