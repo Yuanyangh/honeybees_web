@@ -267,7 +267,7 @@
 
 .unleash-title-styled {
   font-size: 80px;
-  line-height: 55px;
+  line-height: 1;
   outline: #29446d;
   text-transform: uppercase;
   color: transparent;
@@ -280,7 +280,7 @@
 
 .animated-unleash-title-styled {
   font-size: 80px;
-  line-height: 55px;
+  line-height: 1;
   text-transform: uppercase;
   color: #29446d;
   letter-spacing: 4px;

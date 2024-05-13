@@ -1593,7 +1593,8 @@ li.btn:hover {
 
 .block_content h3 {
   font-size: 30px;
-  font-family: GrandHeavy, Arial, sans-serif;
+  font-family: "AvenirNext";
+  font-weight: 600;
   text-transform: uppercase;
   line-height: 90%;
   margin-bottom: 24px;
