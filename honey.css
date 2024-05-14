@@ -1118,11 +1118,11 @@ li.btn {
   content: "";
   background-image: url("./images/Group 208.png"),
     url("./assests/bee-logo2.gif");
-  background-position: 0px 0, 117px 0px;
-  background-size: contain, 45px 45px;
+  background-position: 0px 15px, 115px -5px;
+  background-size: contain, 80px 80px;
   position: absolute;
-  height: 100px;
-  width: 170px;
+  height: 150px;
+  width: 190px;
   background-repeat: no-repeat;
   top: 50%;
 }
@@ -1153,6 +1153,10 @@ li.btn {
 
 .corporate-sec .text-box h1 {
   margin: 0;
+  font-size: 30px;
+}
+
+.wealth-bg-after .text-box-right h1 {
   font-size: 30px;
 }
 

@@ -312,7 +312,7 @@
     font-size: 45px;
   }
   .sendo-section h2 {
-    font-size: 45px;
+    font-size: 35px;
   }
   .testimnial-sec h1 {
     font-size: 45px;
@@ -561,6 +561,10 @@
   }
 
   .corporate-sec .text-box h1 {
+    font-size: 20px;
+  }
+
+  .wealth-bg-after .text-box-right h1 {
     font-size: 20px;
   }
 
