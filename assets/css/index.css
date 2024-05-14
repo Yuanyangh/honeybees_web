@@ -619,6 +619,7 @@
   overflow: hidden;
   width: fit-content;
   height: 100%;
+  mix-blend-mode: multiply;
 }
 
 section.event_section {
