@@ -1147,6 +1147,10 @@ li.btn {
   max-width: 550px;
 }
 
+.wealth-bg-after .text-box-right {
+  max-width: 550px;
+}
+
 .text-box,
 .text-box-right h1 {
 }
