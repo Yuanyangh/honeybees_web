@@ -617,7 +617,7 @@
   position: absolute;
   padding-bottom: 0 !important;
   overflow: hidden;
-  width: 100%;
+  width: fit-content;
   height: 100%;
 }
 
