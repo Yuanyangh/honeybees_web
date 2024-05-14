@@ -1553,6 +1553,7 @@ li.btn:hover {
 }
 
 .block:hover .block_content_container {
+  overflow: hidden;
   opacity: 1;
   /* transition: all ease-in-out 0.6s; */
   border: 12px solid white;
@@ -1603,7 +1604,7 @@ li.btn:hover {
 }
 
 .block_content p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "AvenirNext";
   font-size: 18px;
   line-height: 20px;
   margin: 0;

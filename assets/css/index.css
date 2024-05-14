@@ -256,15 +256,6 @@
   margin: auto;
 }
 
-.levelup-mouse-desc {
-  font-size: 30px;
-  color: #29446d;
-  line-height: 60px;
-  font-family: "Agrandir";
-  text-transform: none;
-  text-align: center;
-}
-
 .unleash-title-styled {
   font-size: 80px;
   line-height: 1;
@@ -612,6 +603,22 @@
 
 .blocks_container .blocks {
   margin-bottom: 100px;
+}
+
+.honeybee-story-dark-bg {
+  position: absolute;
+  background-color: black;
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+}
+
+.honeybee-story-bg {
+  position: absolute;
+  padding-bottom: 0 !important;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 section.event_section {

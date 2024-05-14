@@ -1029,16 +1029,17 @@ h6 {
   width: fit-content !important;
 }
 .scroll-down-text {
-  font-size: 30px;
+  font-size: 18px;
   color: #29446d;
-  line-height: 60px;
-  font-family: "Agrandir";
+  line-height: 1;
+  font-family: 'AvenirNext';
+  font-weight: 600;
   text-transform: none;
   text-align: center;
 }
 @media (max-width: 500px) {
   .scroll-down-text {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 .overlayer_fixed {
