@@ -19,6 +19,16 @@ $(document).ready(async function() {
 
   mouseLottieAnimation.play();
 
+  var mouseLottieAnimation2 = lottie.loadAnimation({
+    container: document.getElementById("lottie-scroll-down2"), // the dom element
+    renderer: "svg",
+    loop: true,
+    autoplay: false,
+    path: "./assets/lotties/scrolldown.json" // the path to the animation json
+  });
+
+  mouseLottieAnimation.play();
+
   var initialOffset = $("#dedicat_mentor").offset().top;
   var initialOffset2 = $("#digital_ecosys").offset().top;
   var initialOffset3 = $("#process_excel").offset().top;

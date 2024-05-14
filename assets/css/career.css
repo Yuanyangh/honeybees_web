@@ -166,10 +166,10 @@
 .career-banner-text.fadeIn.top-scale-3:before {
   content: "";
   background-image: url(../img/career_line.png), url(../img/bee-logo.gif);
-  background-position: 68px 167px, 10px 110px;
+  background-position: 68px 167px, -10px 75px;
   width: 450px;
   height: 422px;
-  background-size: contain, 80px 80px;
+  background-size: contain, 110px 110px;
   position: absolute;
   right: 0;
   bottom: 0;
