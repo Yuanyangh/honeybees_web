@@ -27,6 +27,6 @@ function typeWriter() {
     i += 1;
     setTimeout(typeWriter, speed);
   } else {
-    document.getElementById("demo").innerHTML = "BUZZ US";
+    document.getElementById("demo").innerHTML = txt;
   }
 }
