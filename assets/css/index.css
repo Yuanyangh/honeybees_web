@@ -709,6 +709,7 @@ section.event_section {
   border: 3px solid #FFFBF5;
   border-radius: 55px;
   overflow: hidden;
+  text-decoration: none !important;
 }
 
 .last-events-item-text-wrapper {

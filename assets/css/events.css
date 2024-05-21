@@ -1,0 +1,54 @@
+.events.bees-on-the-sea {
+    background-color: #285455;
+}
+
+.events-inner {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.bg-bees-on-the-sea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/events/bg_sea.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    animation: scaleDown 1s ease-in-out forwards;
+}
+
+.mask-bg-bees-on-the-sea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #28545533 10%, #28545533 20%, #285455FF 80%, #285455FF 100%);
+}
+
+.caption-div {
+    margin-top: 232px;
+    max-width: 800px;
+}
+
+.events-title {
+    font-family: "Agrandir-GrandHeavy";
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #FFFBF5;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.events-desc {
+    font-family: 'AvenirNext';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    color: #FFFBF5;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
