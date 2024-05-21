@@ -706,6 +706,13 @@ section.event_section {
   max-width: 500px;
   width: 45%;
   margin-bottom: 20px;
+  border: 3px solid #FFFBF5;
+  border-radius: 55px;
+  overflow: hidden;
+}
+
+.last-events-item-text-wrapper {
+  padding: 0px 20px 20px 20px;
 }
 
 .last-events-item img {
@@ -716,14 +723,12 @@ section.event_section {
   font-family: "Agrandir-GrandHeavy";
   font-weight: 800;
   font-size: 30px;
-  color: white;
-  margin: 10px 0px;
+  margin: 10px 0px 0px 0px;
 }
 
 .last-events-item-desc {
   font-family: "AvenirNext";
   font-size: 18px;
-  color: white;
   margin: 0;
 }
 
