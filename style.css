@@ -1049,3 +1049,30 @@ h6 {
 .empty-div {
   height: 1px;
 }
+
+.bg-285455 {
+  background-color: #285455;
+}
+.bg-A53347 {
+  background-color: #A53347;
+}
+.bg-676744 {
+  background-color: #676744;
+}
+.bg-99B173 {
+  background-color: #99B173;
+}
+.bg-E8DCAC {
+  background-color: #E8DCAC;
+}
+.bg-014BDC {
+  background-color: #014BDC;
+}
+
+.text-honeybee-white {
+  color: #FFFBF5;
+}
+.text-honeybee-black {
+  color: #29446D;
+}
+
