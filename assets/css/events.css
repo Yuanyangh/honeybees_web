@@ -9,7 +9,7 @@
 }
 
 .bg-bees-on-the-sea {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background-image: url("../img/events/bg_sea.png");
@@ -20,7 +20,7 @@
 }
 
 .mask-bg-bees-on-the-sea {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, #28545533 10%, #28545533 20%, #285455FF 80%, #285455FF 100%);
@@ -73,6 +73,15 @@
     .events-desc {
         font-size: 14px;
     }
+}
+
+.event-item {
+    opacity: 0;
+}
+
+.event-item.fade-in-up {
+    animation: fadeInUp 1s ease-in-out forwards;
+    /* animation-delay: 1s; */
 }
 
 .events-img-wrapper {
