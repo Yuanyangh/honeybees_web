@@ -1088,3 +1088,16 @@ h6 {
   color: #29446D;
 }
 
+.mx-10px {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .w-lg-50 {
+    width: 50% !important;
+  }
+  .text-lg-end {
+    text-align: end !important;
+  }
+}
