@@ -87,6 +87,7 @@
 .events-img-wrapper {
     width: fit-content;
     height: fit-content;
+    max-width: 90vw;
     margin: 10px;
     border: 3px solid #FFFBF5;
     border-radius: 55px;
@@ -134,4 +135,9 @@
     animation: fadeInUp 1s ease-in-out forwards;
     animation-delay: 1s;
     opacity: 0;
+}
+@media screen and (max-width: 991px) {
+    .we-make-deal-wrapper,.bees-rewards-wrapper,.who-is-carrying-the-honey-wrapper,.to-the-next-bigger-yatch-wrapper {
+        max-width: 100%;
+    }
 }
