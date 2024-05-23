@@ -630,6 +630,9 @@ section.event_section {
   background-size: cover;
 }
 
+.adventure-btn {
+  text-decoration: none !important
+}
 .adventure-btn:hover {
   animation: tilt-shaking 0.5s 2;
 }
