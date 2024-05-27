@@ -173,6 +173,14 @@
     }
 }
 
+.event-section-wrapper {
+    max-width: 850px;
+    margin-top: 100px;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
 /* MERRY BEEMAS 2024 page */
 
 .bg-merry-beemas-2024 {
@@ -193,12 +201,26 @@
     background: linear-gradient(180deg, #8E2D2D33 10%, #8E2D2D33 20%, #D45C79FF 80%, #D45C79FF 100%);
 }
 
-.event-section-wrapper {
-    max-width: 850px;
-    margin-top: 100px;
-    animation: fadeInUp 1s ease-in-out forwards;
-    animation-delay: 1s;
-    opacity: 0;
+/**************************/
+
+/* Bees go Brrrrrr page */
+
+.bg-bees-go-brrrrrr {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/events/bg_go_brrrrrr.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    animation: scaleDown 1s ease-in-out forwards;
+}
+
+.mask-bg-bees-go-brrrrrr {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #67674433 10%, #67674433 20%, #676744FF 80%, #676744FF 100%);
 }
 
 /**************************/
