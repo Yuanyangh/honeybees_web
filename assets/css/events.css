@@ -258,3 +258,29 @@
 }
 
 /**************************/
+
+/* Bees Awards page */
+.events.bees-awards {
+    background-color: #014BDC;
+}
+
+.bg-bees-awards {
+    opacity: 0.6;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/events/bg_bees_awards.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    animation: scaleDown 1s ease-in-out forwards;
+}
+
+.mask-bg-bees-awards {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #014BDC33 10%, #014BDC33 20%, #014BDCFF 80%, #014BDCFF 100%);
+}
+
+/**************************/
