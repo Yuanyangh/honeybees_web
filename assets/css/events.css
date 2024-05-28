@@ -232,6 +232,9 @@
     background-repeat: no-repeat;
     animation: scaleDown 1s ease-in-out forwards;
 }
+.mobile-view .bg-bees-go-brrrrrr {
+    background-image: url("../img/events/bees_go_brrrrrr/mobile/mobile_bg_go_brrrrrr.png");
+}
 
 .mask-bg-bees-go-brrrrrr {
     position: fixed;
