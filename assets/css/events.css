@@ -8,24 +8,6 @@
     padding-bottom: 100px;
 }
 
-.bg-bees-on-the-sea {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-image: url("../img/events/bg_sea.png");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    animation: scaleDown 1s ease-in-out forwards;
-}
-
-.mask-bg-bees-on-the-sea {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #28545533 10%, #28545533 20%, #285455FF 80%, #285455FF 100%);
-}
-
 .caption-div {
     margin-top: 232px;
     margin-bottom: 100px;
@@ -115,6 +97,39 @@
     height: 50px;
 }
 
+.event-section-wrapper {
+    max-width: 850px;
+    margin-top: 10px;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+@media screen and (max-width: 991px) {
+    .event-section-wrapper {
+        max-width: 100%;
+    }
+}
+
+/* Bees On The Sea page */
+.bg-bees-on-the-sea {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/events/bg_sea.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    animation: scaleDown 1s ease-in-out forwards;
+}
+
+.mask-bg-bees-on-the-sea {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #28545533 10%, #28545533 20%, #285455FF 80%, #285455FF 100%);
+}
+
 .balloon-comment-wrapper {
     position: absolute;
     z-index: 2;
@@ -141,50 +156,7 @@
     transform: rotate(4deg);
 }
 
-.we-make-deal-wrapper {
-    max-width: 850px;
-    margin-top: 100px;
-    animation: fadeInUp 1s ease-in-out forwards;
-    animation-delay: 1s;
-    opacity: 0;
-}
-
-.bees-rewards-wrapper {
-    max-width: 850px;
-    margin-top: 100px;
-    animation: fadeInUp 1s ease-in-out forwards;
-    animation-delay: 1s;
-    opacity: 0;
-}
-
-.who-is-carrying-the-honey-wrapper {
-    max-width: 850px;
-    margin-top: 100px;
-    animation: fadeInUp 1s ease-in-out forwards;
-    animation-delay: 1s;
-    opacity: 0;
-}
-
-.to-the-next-bigger-yatch-wrapper {
-    max-width: 850px;
-    margin-top: 100px;
-    animation: fadeInUp 1s ease-in-out forwards;
-    animation-delay: 1s;
-    opacity: 0;
-}
-@media screen and (max-width: 991px) {
-    .we-make-deal-wrapper,.bees-rewards-wrapper,.who-is-carrying-the-honey-wrapper,.to-the-next-bigger-yatch-wrapper {
-        max-width: 100%;
-    }
-}
-
-.event-section-wrapper {
-    max-width: 850px;
-    margin-top: 10px;
-    animation: fadeInUp 1s ease-in-out forwards;
-    animation-delay: 1s;
-    opacity: 0;
-}
+/**************************/
 
 /* MERRY BEEMAS 2024 page */
 
@@ -208,7 +180,7 @@
 
 /**************************/
 
-/* Bees go Brrrrrr page */
+/* Bees Go Brrrrrr page */
 .events.bees-go-brrrrrr {
     background-color: #676744;
 }
