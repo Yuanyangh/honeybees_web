@@ -261,6 +261,9 @@
     background-repeat: no-repeat;
     animation: scaleDown 1s ease-in-out forwards;
 }
+.mobile-view .bg-bees-care {
+    background-image: url("../img/events/bees_care/mobile/mobile_bg_bees_care.png");
+}
 
 .mask-bg-bees-care {
     position: fixed;
