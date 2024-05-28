@@ -290,6 +290,9 @@
     background-repeat: no-repeat;
     animation: scaleDown 1s ease-in-out forwards;
 }
+.mobile-view .bg-bees-awards {
+    background-image: url("../img/events/bees_awards/mobile/mobile_bg_bees_awards.png");
+}
 
 .mask-bg-bees-awards {
     position: fixed;
