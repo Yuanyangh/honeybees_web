@@ -1,7 +1,3 @@
-.events.bees-on-the-sea {
-    background-color: #285455;
-}
-
 .events-inner {
     width: 100%;
     min-height: 100vh;
@@ -15,6 +11,12 @@
     opacity: 0;
     animation: fadeInUp 1s ease-in-out forwards;
     animation-delay: 1s;
+}
+@media screen and (max-width: 991px) {
+    .caption-div {
+        margin-top: 33vh;
+        margin-bottom: 20vh;
+    }
 }
 
 .honey-dark-text {
@@ -80,6 +82,11 @@
     border-radius: 55px;
     overflow: hidden;
 }
+@media screen and (max-width: 767px) {
+    .events-img-wrapper {
+        border-radius: 30px;
+    }
+}
 
 .events-img-wrapper img {
     width: 100%;
@@ -112,6 +119,10 @@
 }
 
 /* Bees On The Sea page */
+.events.bees-on-the-sea {
+    background-color: #285455;
+}
+
 .bg-bees-on-the-sea {
     position: fixed;
     width: 100%;
@@ -121,6 +132,9 @@
     background-position: top;
     background-repeat: no-repeat;
     animation: scaleDown 1s ease-in-out forwards;
+}
+.mobile-view .bg-bees-on-the-sea {
+    background-image: url("../img/events/bees_on_the_sea/mobile/mobile_bg_sea.png");
 }
 
 .mask-bg-bees-on-the-sea {
@@ -138,6 +152,20 @@
     top: -100%;
     right: -90%;
 }
+@media screen and (max-width: 767px) {
+    .balloon-comment-wrapper {
+        width: 126px;
+        height: 63px;
+        top: -100%;
+        right: -25%;
+    }
+}
+@media screen and (max-width: 375px) {
+    .balloon-comment-wrapper {
+        top: -100%;
+        right: -20%;
+    }
+}
 
 .balloon-img {
     position: absolute;
@@ -154,6 +182,11 @@
     font-size: 18px;
     line-height: 1;
     transform: rotate(4deg);
+}
+@media screen and (max-width: 767px) {
+    .balloon-text {
+        margin-top: -15px;
+    }
 }
 
 /**************************/
