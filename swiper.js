@@ -5,7 +5,15 @@ $(document).ready(async function() {
       image: "assets/img/TeamMembers/Diana_Low.jpg",
       role: ["Senior Personal Wealth Manager"],
       qualification: ["5x MDRT Qualifier"],
-      description: `Being a financial services consultant, I see myself being tasked with a big responsibility to educate and guide my clients through big financial decisions to achieve their goals in life. Through my work, the most rewarding and fulfilling experiences is being able to develop relationships with people from different walks of life and making significant impacts on their lives.\n\nSince I began working with Honeybees, I have learned that success comes from a combination of hard work and team work. As the saying goes, If you want to go fast, go alone. If you want to go far, go together.\n\nUnder Yuan Shyuan’s guidance, not only have I gained valuable skillset, I have also developed the right mindset to strive In this business. He has gone above and beyond to help me with my personal growth and development. I believe the right mindset drives the right habit which drives the right outcome.`
+      description: `Before joining Honeybees, I worked as a sales associate at Ninja Van, where the routine felt uninspiring. Joining Honeybees transformed my perspective; it's not just a job but a community that upholds values like gratitude, humility, teamwork, discipline, commitment to growth, and open communication. These principles have helped me grow personally and professionally. <br> <br>
+
+      Initially, I assumed Honeybees would be just another workplace, but I quickly realized it's a nurturing environment that encourages personal and professional growth. The support and camaraderie here have been incredible, pushing me to constantly strive for excellence. <br> <br>
+      
+      A particularly memorable moment was during my first year when I achieved the MDRT target. The support from my mentor and the cheers from my team during the awards night were unforgettable. Joining Honeybees has been the most life-changing decision for me, teaching me the importance of empathy and human connection in our work. <br> <br>
+      
+      Last year, I helped a client in her 60s understand the importance of hospitalization coverage, which proved crucial when she was diagnosed with cancer shortly after. This experience underscored the impact of our work on clients' lives. <br> <br>
+      
+      Honeybees has shown remarkable resilience and dedication over the years. We've grown from strength to strength, overcoming challenges to secure our own office space and develop a robust system. I'm proud of our journey and excited about our future as we continue to expand and thrive. <br> <br>`
     },
     {
       name: "Ian Lin",
