@@ -115,7 +115,8 @@
 }
 
 .lottie-hive-content {
-  height: 100vh;
+  transform: translateY(-10vh);
+  height: 120vh;
   position: absolute;
   width: 100%;
   top: 0px;
@@ -267,7 +268,7 @@
   text-align: center;
   letter-spacing: 4px;
   outline: #29446d;
-  -webkit-text-stroke: 3px #fff;
+  /* -webkit-text-stroke: 3px #fff; */
   text-shadow: none;
   opacity: 0;
 }
