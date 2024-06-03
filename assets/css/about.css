@@ -258,6 +258,20 @@
   padding-top: 80px;
 }
 
+.his-text h2 {
+  font-size: 30px;
+}
+
+.his-text h5 {
+  margin: 5px 0px 0px 0px;
+  font-family: "Agrandir-GrandHeavy";
+  font-size: 18px;
+}
+
+.his-text ul {
+  margin: 5px 0px;
+}
+
 .hero-hed-sec-text-caption {
   animation: floatInAndColorChange3 2s ease-in-out 3s forwards;
   font-size: 55px;
