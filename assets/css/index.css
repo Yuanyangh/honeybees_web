@@ -638,15 +638,15 @@ section.event_section {
 }
 
 .animated.block_text::before {
-  animation: fadeInUp 2s ease-in-out 0s forwards;
+  animation: fadeInUp 0.5s ease-in-out 0s forwards;
 }
 
 .animated.block_text h1 {
-  animation: fadeInUp 2s ease-in-out 0s forwards;
+  animation: fadeInUp 0.5s ease-in-out 0s forwards;
 }
 
 .animated.block_text p {
-  animation: fadeInUp 2s ease-in-out 0s forwards;
+  animation: fadeInUp 0.5s ease-in-out 0s forwards;
 }
 
 .block_text p {
@@ -658,7 +658,7 @@ section.event_section {
 }
 
 .animated.content_container::before {
-  animation: fadeInLeft 2s ease-in-out 1s forwards;
+  animation: fadeInLeft 0.5s ease-in-out 1s forwards;
 }
 
 .animated.content_container h1 {
@@ -677,7 +677,7 @@ section.event_section {
 .animated h1 {
   visibility: visible;
   animation-fill-mode: both;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-play-state: running;
 }
 
@@ -689,7 +689,7 @@ section.event_section {
 .animated p {
   visibility: visible;
   animation-fill-mode: both;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-play-state: running;
 }
 
@@ -732,7 +732,9 @@ section.event_section {
 
 .last-events-item-desc {
   font-family: "AvenirNext";
+  font-weight: 600;
   font-size: 18px;
+  line-height: 1.2;
   margin: 0;
 }
 
@@ -751,13 +753,14 @@ section.event_section {
 }
 
 .animated .block_text_bee_left {
-  animation: fadeInUp 2s ease-in-out 0s forwards;
+  animation: fadeInUp 0.5s ease-in-out 0s forwards;
 }
 
 .block_text_bee_right {
   position: absolute;
   right: -2%;
   top: 25%;
+  opacity: 0;
 }
 
 .block_text_bee_right_logo img {
@@ -770,7 +773,7 @@ section.event_section {
 }
 
 .animated .block_text_bee_right {
-  animation: fadeInUp 2s ease-in-out 0s forwards;
+  animation: fadeInUp 0.5s ease-in-out 0s forwards;
 }
 
 .content_container_bee_right {
@@ -781,7 +784,7 @@ section.event_section {
 }
 
 .animated .content_container_bee_right {
-  animation: fadeInLeft 2s ease-in-out 1s forwards;
+  animation: fadeInLeft 0.5s ease-in-out 1s forwards;
 }
 
 .content_container_bee_right_logo img {
