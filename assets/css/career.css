@@ -187,7 +187,7 @@
   line-height: 1;
   max-width: 1200px;
   margin: 0 auto;
-  -webkit-text-stroke: 3px #29446d;
+  /* -webkit-text-stroke: 3px #29446d; */
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d;
   align-self: center !important;
@@ -223,7 +223,7 @@
   visibility: hidden;
   animation: floatInAndColorChange 0.8s ease-in-out 2.9s forwards;
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
 }
 
 .scale-background {
