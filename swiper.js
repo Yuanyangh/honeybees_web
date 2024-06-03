@@ -20,28 +20,70 @@ $(document).ready(async function() {
       image: "assets/img/TeamMembers/Ian_Lin.png",
       role: ["Personal Wealth Manager"],
       qualification: ["2x COT Qualifier", "4x MDRT Qualifier"],
-      description: `As a financial services consultant, I am given the responsibility of taking care of my client's financial well-being. With my clients, I take on the role of an educator, a friend and an expert, and I walk with them throughout the entire life journey. I help them identify gaps in protection and accumulation goals, craft for them customised strategies, explain to them how the solutions work and be there for them through thick and thin.\n\nI am glad to be part of my team, Honeybees. It is an amazing and fun team with a shared learning system and peer support system to aid in our personal development. My boss, Yuan Shyuan, has been a great leader and mentor. I have never met anyone who is more serious about my career and personal development than he is. I am always tremendously inspired by his vision, drive, intelligence, diligence and mindset, and am always enlightened by his unique and profound perspectives that upon deep internalisation, allow me to propel my personal growth further. Honeybees is where I want to be for the entirety of my career.`
+      description: `
+      
+      I'm Fangxiong Lin, a graduate from NUS in Chemical Engineering. Before joining Honeybees, I briefly worked with another insurer and considered a career as a civil servant. Joining Honeybees has redefined my professional outlook, emphasizing the importance of reaching my full potential, excelling in my field, and making a positive impact on lives. Honeybees stands out as a unique family-like organization that thrives on mutual support, continuous improvement, and excellence.  <br> <br>
+
+      Initially, I viewed Honeybees as just another young insurance agency. Over the past eight years, my perception has evolved; I now see us as an all-star team driven by motivation, courage, and authenticity. A particularly touching memory is how our leader fearlessly guided us through the uncertainty of transitions and the COVID-19 pandemic, ensuring our safety and adapting to new norms.  <br> <br>
+      
+      Professionally, I've had the privilege to assist clients who were previously turned away due to complex medical histories. Successfully securing insurance coverage for them and discussing future financial planning has been profoundly rewarding. Personally, the COVID-19 crisis taught me resilience and adaptability, shaping me into a stronger, more capable professional.  <br> <br>
+      
+      At Honeybees, our collective fearlessness during challenging times has kept us focused and united, allowing us to continue delivering exceptional service to our clients. This spirit of solidarity and proactive adaptation has been crucial in navigating through adversity and emerging stronger.
+      
+      
+      
+      `
     },
     {
       name: "Wang Yaxiang",
       image: "assets/img/TeamMembers/Wang_Yaxiang.png",
-      role: ["Senior Premier Consultant", "Senior Personal Wealth Manager"],
+      role: ["Senior Personal Wealth Manager"],
       qualification: ["1x COT Qualifier", "4x MDRT Qualifier"],
-      description: `In my career, I have met many people and I'm truly honoured to be in service to many of them. I'm grateful that they have entrusted their financial goals with me and I'm deeply obligated to walk the journey with them together until the goals fulfilled.\n\nI believe that every small steps that we take today makes a huge difference in the future, and the only difference between past and future is now.\n\nIn Honeybees, we uphold the industry service standard and level of commitment to serve and help anyone and everyone who deserves a memorable financial planning journey.`
+      description: `
+      Before joining Honeybees, I worked in the finance department of a listed company, where my daily routine primarily involved desk-bound tasks. Joining Honeybees has been a transformative experience for me, symbolizing responsibility, commitment, and growth. Initially, I was introduced to the organization by Yuan Shyuan, whose insights and perspectives deeply impressed me. This encounter reassured me that I was making the right choice, a belief that has only been reinforced as I've seen our team consistently achieve and surpass goals.
+      <br><br>
+      One of my most memorable moments at Honeybees was when I received the Top Financial Consultant award, supported enthusiastically by my team members. Their cheers and encouragement during the award ceremony are unforgettable. In my role, I've had the privilege of supporting clients through challenging times, such as handling emergency calls from family members when a loved one is hospitalized. Knowing that our plans provide them with security and peace during crises is profoundly fulfilling.
+      <br><br>
+      A particularly impactful experience in my career was handling my first death claim. This experience underscored the gravity of our responsibilities and the profound impact we can have on our clients' lives. It was a poignant reminder of the value and significance of our work.
+      <br><br>
+      Another defining moment was assisting a client who was concerned about his retirement plans. After a thorough financial review and several discussions, we developed a plan that assured him a stable income for retirement, which brought him immense relief and gratitude.
+      <br><br>
+      At Honeybees, under the guidance of mentors like Yuan Shyuan, we are equipped with innovative ideas and methods that allow us to serve our clients confidently and fearlessly. This environment not only fosters our professional growth but also empowers us to make a significant difference in our clients' lives.      
+      
+      
+      `
     },
     {
       name: "Kylie Ng",
       image: "assets/img/TeamMembers/Kylie_Ng.png",
       role: ["Financial Services Consultant"],
       qualification: ["2x MDRT Qualifier"],
-      description: `I have never thought that I would be working in the financial industry but I am really blessed to be in this career which have really changed my life.\n\nThis job gave me the unique opportunities to speak to people of different age group and industries which I would never have the chance to. At the start, it felt scary speaking to people older than me, but over the past few years, my perspectives and knowledge has expanded so much that talking to these people feels like I’m talking to my friends.\n\nWith a flexible working schedule, it is great for me to schedule meetings with clients that work best for me, and to manage my personal matters easier.`
+      description: `
+      Before joining Honeybees, I was a second-year undergraduate at SMU, balancing my studies with part-time roles in the F&B industry and tutoring. Joining Honeybees has been transformative for me, embodying core values such as teamwork, open communication, and humility. I started with no preconceptions about the insurance and financial services industry, which allowed me to approach my role with an open mind and focus on adding value to my clients.
+      <br><br>
+      A cherished memory from my time here was during my graduation in 2019. Despite my part-time status and being away for an exchange program, my teammates surprised me by attending my graduation, showing immense support and camaraderie. Another memorable experience was helping a client during a housewarming event, which underscored the genuine relationships we build with our clients beyond professional obligations.
+      <br><br>
+      My personal growth over the past seven years at Honeybees has been marked by increasing maturity and insight, recognized by peers and clients alike. A significant moment in my career was assisting a close friend with financial planning, which had a profound impact on his life, highlighting the value of thoughtful financial strategies.
+      <br><br>
+      Lastly, our team's decision to transition to a new company during the COVID-19 pandemic in 2020 was a fearless move that led to new opportunities and continued success, reinforcing our resilience and adaptability. Honeybees is more than just a workplace for me; it's a place where personal and professional growth are deeply intertwined with teamwork and client relationships.      
+      
+      `
     },
     {
       name: "Kenneth Chng",
       image: "assets/img/TeamMembers/Kenneth_Chng.png",
       role: ["Personal Wealth Manager"],
       qualification: ["3x MDRT Qualifier"],
-      description: `When it comes to the insurance industry, most people have very negative things to talk about it. Because of the stigma for this industry, it makes people feel insecure to find out and understand about financial planning. \n\nHoneybees is a place where we take huge pride in what we do because we believe in our purpose. To empower those around us to make the right financial decision but at the same time not forgetting how to “做人”.\n\nOur six core values of Honeybees being “Gratitude”, “Humility”, “Teamwork”, “Open Communication”, “Discipline” and “Commitment to Growth” encompasses important aspects of being a better version of ourselves everyday which is core to ANY career.  This is what makes me feel extremely confident and assure of my future. Being part of a team determined to set a new standard, making everyone around us have a positive view of our profession.`
+      description: `
+
+      Before joining Honeybees, I was a fresh graduate interning at a bank. Being part of Honeybees means striving to be a better version of myself and inspiring others to excel despite challenges. Initially, I believed Honeybees was a place that nurtured potential and encouraged learning—a belief that has only strengthened over time. A memorable experience for me has been attending the awards nights, where I felt proud seeing my peers recognized for their achievements. 
+      <br><br>
+      A pivotal moment in my personal growth occurred when I decided to challenge a respected client's assumptions, despite the risk of disagreement. This experience taught me the importance of standing by my convictions. 
+      <br><br>
+      Honeybees itself embodies fearlessness, demonstrated when we transitioned to AIA, a move that involved many of us starting anew but ultimately led to clearer and stronger paths in our careers. This bold step has been instrumental in our continuous growth and success.      
+      
+      
+      `
     },
     {
       name: "Pamela Ng",
@@ -55,22 +97,52 @@ $(document).ready(async function() {
       image: "assets/img/TeamMembers/Jacqueline_Tan.png",
       role: ["Personal Wealth Manager"],
       qualification: ["2x MDRT Qualifier"],
-      description: `I used to be a Human Resources (HR) practitioner for 6 years before I decided on a mid-career switch to join AIA Honeybees in late 2021. I started off without any prior finance or sales background and was once skeptical about this industry like many others. Thankfully I decided to keep an open mind on the opportunity as it was a life-changing profession for me after I met my mentor, Ryan Yeo, who was my poly classmate. I was very inspired by how he grew tremendously in both his personal and career development. I knew that in financial advisory, the people I can value add to is everyone rather than just constraining within a company as a HR. \n\n
-            The culture and environment makes a lot of difference for an individual to grow and learn, a place where their people are being valued as asset of the company. With the strong support, guidance and coaching from the team, I was able to achieve my 1st MDRT accolade within 4 months after joining the industry. \n\nI have benefited so much from this profession and I believe you will too. Remember this, “You’re always one decision away from a total different life”.`
+      description: `
+      My name is Jacqueline Tan, and before joining Honeybees, I spent eight years in the hospitality and healthcare sectors, focusing on Human Resources. My transition to financial advisory was inspired by a reunion with a college friend, Ryan, who is now my mentor and manager at Honeybees. He helped me see my untapped potential, leading me to join this vibrant community in September 2021. Today, I am proud to be an Associate Director, contributing to our mission of protecting lives, preserving wealth, and piloting dreams.
+      <br><br>
+      Being part of Honeybees means being part of a second family where everyone plays a crucial role. We work together towards common goals, fostering a culture of harmony, teamwork, and dedication. Initially, I underestimated the significance of our name, but I've come to realize it embodies humility and a collective commitment to success.
+      <br><br>
+      One of my most touching experiences was during an incentive trip to Iceland, where the care and support we extended to each other truly highlighted our family-like bond. Professionally, a memorable moment was helping a client correct a critical oversight in their insurance policy, which reinforced the importance and impact of my role.
+      <br><br>
+      A particularly cherished professional achievement involved assisting a client under financial stress to regain control of her finances. This experience not only transformed her life but also deeply influenced my approach to financial consulting, emphasizing the power of personalized and empathetic guidance.
+      <br><br>
+      At Honeybees, our fearless approach to tackling complex financial challenges head-on has strengthened our client relationships and enhanced our reputation as trusted advisors. We embrace calculated risks to help our clients achieve a fearless life, underscoring our commitment to their success and well-being.      
+      `
     },
     {
       name: "Goh Li Ying",
       image: "assets/img/TeamMembers/Goh_Li_Ying.png",
       role: ["Financial Services Consultant"],
       qualification: ["2x MDRT Qualifier"],
-      description: `“Listen with an open mind, and respond with a sincere heart.” This is how I serve my clients — all on relationship building, not sales. It is because of the fundamentals that I’ve learnt in Honeybees, that enable me to financially educate my clients wholeheartedly and journey together with them through every milestones in life. \n\nHere in Honeybees, I was guided to achieve exponential growth and broaden my perspectives so I can share more with the world.\n\nI am extremely grateful to my mentors here for showing me the ropes since day 1 and guiding me on how I can grow a long-term and sustainable business so i can be here for my clients in the long long run. \n\nIn Honeybees, we work hard outside but we always remember to come home. that I know no matter what I face outside, I can always come home. I’m so proud to be a part of the Honeybees .`
+      description: `
+      Hi, I'm Li Ying, a 26-year-old financial advisor with Honeybees, and I've been in the industry for four years. Before joining Honeybees, I graduated with a Bachelor’s Degree in Commerce from the University of New South Wales. Joining Honeybees felt like joining a family where everyone supports each other through thick and thin, helping each other grow and succeed.
+
+      <br><br>
+      Initially, I wasn't familiar with Honeybees, but now I see how fortunate I am to be part of an organization where everything is set up for us to excel. One of my most touching memories at Honeybees was witnessing the incredible team spirit during our events, truly making this place feel like home.
+      <br><br>
+      Professionally, a significant moment was when I helped a client build financial discipline, which has been a rewarding experience. Personally, the guidance from my mentors, Boss YS and Boss GJ, has helped me mature and consider different perspectives before making decisions.
+      <br><br>
+      A life-changing moment in my career was when I assisted my aunt with her retirement and critical illness planning. Despite her initial skepticism about insurance, the coverage we arranged came to her aid when she was diagnosed with cancer, allowing her to focus on recovery without financial worry. This experience not only transformed her view on insurance but also reinforced my belief in the positive impact of our work.
+      <br><br>
+      At Honeybees, our fearless approach each December showcases our potential and growth, leading our clients towards a fearless life. This ethos not only drives us forward but also ensures beneficial outcomes for our clients and our team.
+      `
     },
     {
       name: "Lim Yu Heng",
       image: "assets/img/TeamMembers/Lim_Yu_Heng.png",
       role: ["Personal Wealth Manager"],
       qualification: ["2x MDRT Qualifier"],
-      description: `Being an engineer by trade previously, switching industries was not a simple decision to make, joining an unfamiliar field with no technical background. However, ever since joining honeybees, with constant guidance from the mentors and structured training, transition was smooth and simple. \n\nAt honeybees, everyone is eager to grow as a person while striving for our individual goals and purposes. Being in a conducive environment which adopts the “open communication” core value, everyone is willing to share ideas and experiences, it enhances our personal development. \n\nHoneybees is more than just another agency, we are a family. Relationships built here goes beyond work. Growing together into better versions of ourselves. `
+      description: `
+
+      Before joining Honeybees, I was a Sales Engineer with a degree in Mechanical Engineering from NTU, enjoying a comfortable lifestyle. Joining Honeybees has been transformative for me, embodying a culture of empowerment and growth, not just for myself but also for those around me. Initially skeptical about the insurance industry, my perspective changed as I learned more and saw firsthand how insurance genuinely helps people.
+      <br><br>
+      A memorable experience with the team was our trip to Amsterdam and Slovenia, which brought us closer and created lasting bonds. Professionally, a significant moment was when I helped a client during a tough financial period, advising him on ways to improve his income, which he successfully did by becoming self-employed. This not only helped him but also enhanced my understanding of the impact we can have on our clients' lives.
+      <br><br>
+      A personal turning point was a meeting with Boss Yuan Shyuan during the COVID period, which shifted my focus from just sales to personal development and growth. This mindset change has also positively influenced others around me, including a close friend who has adopted a similar approach to self-improvement.
+      <br><br>
+      Lastly, our fearless approach during the launch of APA 2.0 led to significant outreach and personal success, exemplifying how bold strategies can lead to beneficial outcomes. Honeybees has truly been a pivotal part of my growth and success.      
+      
+      `
     }
   ];
 
