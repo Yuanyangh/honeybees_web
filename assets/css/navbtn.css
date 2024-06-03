@@ -129,10 +129,13 @@ navbar.fearless-nav a:hover {
 
 navbar .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 40px 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.nav-adv {
+  display: none;
 }
 
 @media (max-width: 1200px) {

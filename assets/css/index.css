@@ -168,8 +168,8 @@
   /* min-height: 100vh; */
   /* background-image: url('./assests/bann.png'); */
   background: linear-gradient(
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.2)
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
     ),
     url("../img/bann1.png");
   background-size: cover;
@@ -289,33 +289,33 @@
 
 .animatedbanner .text-caption {
   visibility: hidden;
-  animation: floatInAndColorChange 1s ease-in-out 2s forwards;
+  animation: floatInAndColorChange 1s ease-in-out 1s forwards;
   animation-fill-mode: forwards;
   text-shadow: 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d, 0 0 0 #29446d;
 }
 
 .animatedbanner .banner-bee-top {
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 1s;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.5s;
 }
 
 .animatedbanner .banner-bee-mid {
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 1s;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.5s;
 }
 
 .animatedbanner .banner-bee-bottom {
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 1s;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.5s;
 }
 
 .animatedbanner .index-banner-marquee {
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 1s;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.5s;
 }
 
 .animatedbanner .animated-unleash-title-styled {
-  animation: floatInAndColorChange4 2s ease 2s forwards;
+  animation: floatInAndColorChange4 1s ease 1s forwards;
 }
 
 .banner-bee-top {
@@ -401,7 +401,7 @@
 
 .main_head_content {
   margin: auto;
-  max-width: 590px;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -834,7 +834,7 @@ section.event_section {
   }
   .banner-bee-bottom {
     transform: scale(0.8) translateX(-15%);
-    bottom: 3%;
+    bottom: 15%;
   }
 }
 
