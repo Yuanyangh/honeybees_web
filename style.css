@@ -23,6 +23,16 @@
   src: url("asssets/font2/AvenirNextLTPro-Regular.otf") format("woff");
   /* Update the path based on your file structure and font format */
 }
+@font-face {
+  font-family: "AvenirNext-Heavy"; /* Choose a name for your font */
+  src: url("font2/AvenirNext-Heavy-09.ttf");
+  /* Update the path based on your file structure and font format */
+}
+@font-face {
+  font-family: "AvenirNext-HeavyItalic"; /* Choose a name for your font */
+  src: url("font2/AvenirNext-HeavyItalic-10.ttf");
+  /* Update the path based on your file structure and font format */
+}
 
 @keyframes scaleDown {
   from {
