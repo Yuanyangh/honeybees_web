@@ -100,6 +100,16 @@
   }
 }
 
+@keyframes scaleDownBackgroundMobile {
+  from {
+    background-size: 350% 120%;
+  }
+
+  to {
+    background-size: 300% 100%;
+  }
+}
+
 /* .fadeOut {
   animation: fadeOut 0.2s ease-in-out forwards;
 }
@@ -132,11 +142,17 @@
 .career-first-section {
   background: url(../img/career_bg1.png);
   background-repeat: no-repeat;
-  background-size: cover;
   mix-blend-mode: hard-light;
   background-position: top;
   animation: scaleDownBackground 0.5s ease-in-out 2.5s forwards;
   background-size: 120%;
+}
+
+@media (max-width: 767px) {
+  .career-first-section {
+    animation: scaleDownBackgroundMobile 0.5s ease-in-out 2.5s forwards;
+    background-size: 350% 120%;
+  }
 }
 
 .career-banner-text .text-1 {
@@ -342,7 +358,7 @@
 @media (max-width: 900px) {
   .lottie-career {
     transform: scale(2.5);
-    top: 14%;
+    top: 31%;
   }
   .image-section .row {
     flex-direction: column;
@@ -382,7 +398,7 @@
   .career-banner-text.fadeIn.top-scale-3:before {
     right: -50%;
     transform: scale(0.6) !important;
-    bottom: 10%;
+    bottom: 0%;
   }
 }
 

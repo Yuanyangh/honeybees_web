@@ -231,7 +231,7 @@
   font-size: 20px;
 }
 .formsection input {
-  box-shadow: -8px 8px 0 0 #3061ab;
+  box-shadow: -4px 4px 0 0 #3061ab;
   border: 2px solid #29446d;
   padding: 8px 0;
   border-radius: 25px;
@@ -248,7 +248,7 @@
 }
 .formsection button {
   border: 5px solid #eeaf30;
-  box-shadow: -8px 8px 0 0 #3061ab;
+  box-shadow: -4px 4px 0 0 #3061ab;
   border-radius: 25px;
   padding: 7px 30px;
   font-family: "Agrandir-GrandHeavy";
@@ -1061,7 +1061,7 @@ h6 {
 }
 @media (max-width: 500px) {
   .scroll-down-text {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 .overlayer_fixed {
