@@ -58,11 +58,11 @@ $(document).ready(function() {
   $("#content_container_quote").click(function() {
     if (contentQuote) {
       document.getElementById("content_container_quote_text").innerHTML =
-        "haha! wow, you got me!";
+        "haha! wow,<br/>you got me!";
       $("#content_container_quote").addClass("vibanim");
     } else {
       document.getElementById("content_container_quote_text").innerHTML =
-        "I'm a big fan of happy vibes!";
+        "I'm a big fan of<br/>happy vibes!";
       $("#content_container_quote").addClass("vibanim");
     }
     contentQuote = !contentQuote;
