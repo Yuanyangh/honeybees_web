@@ -1305,6 +1305,7 @@ p {
   /* margin-top: 150px; */
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding-top: 100px;
   padding-bottom: 150px;
   position: relative;
