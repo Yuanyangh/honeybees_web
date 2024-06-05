@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Honeybees | About Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css'>
     <link rel="stylesheet" href="slick/slick-theme.css">
@@ -427,7 +428,7 @@
         </div>
     </button>
     <navbar class="about-nav">
-        <div class="container">
+        <div class="">
             <div class="row">
     
                 <div class="col-12">
@@ -457,7 +458,7 @@
           </div>
       </navbar>
     <section class="hero-sec">
-        <div class="container">
+        <div class="">
             <div class="section-wrapper">
                 <div class="section-wrapper-bg">
                 </div>
@@ -471,7 +472,13 @@
                         </h1>
                     </div>
                     <div class="about-hero-bee mt-3">
-                        <img class="hero-hed-sec-img" src="./image/Group 175.png" alt="">
+                        <div class="hero-hed-sec-img">
+                            <img class="d-none d-md-block" src="assets/img/aboutus_quote.png" alt="quote"/>
+                            <img class="d-block d-md-none" src="assets/img/mobile_aboutus_quote.png" alt="quote"/>
+                            <span class="hero-hed-sec-text">
+                              This is my story
+                            </span>
+                        </div>            
                         <img class="hero-hed-sec-gif" src="./assests/bee-logo2.gif">
                     </div>
                 </div>
@@ -882,6 +889,9 @@
         });
     </script>
 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
     <script src="slick/slick.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
     <script src="about.js"></script>

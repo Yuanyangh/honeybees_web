@@ -805,6 +805,43 @@ section.hero-sec .row {
   margin-top: -100px;
   animation: scaleUp 0.5s ease-in-out 5s forwards;
   visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 228px;
+  height: 119px;
+  transform: rotate(3deg);
+}
+
+@media (max-width: 767px) {
+  .hero-hed-sec-img {
+    width: 175px;
+    height: 80px;  
+    margin-left: 10px;
+    transform: rotate(-5deg);
+  }
+}
+
+.hero-hed-sec-img img {
+  position: absolute;
+}
+
+.hero-hed-sec-text {
+  z-index: 2;
+  transform: rotate(-5deg);
+  display: block;
+  font-size: 18px;
+  color: #29446d;
+  font-family: "AvenirNext-Heavy";
+  margin-top: -24px;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .hero-hed-sec-text {
+    font-size: 14px;
+  }
 }
 
 @keyframes aboutGifFly {
@@ -820,7 +857,7 @@ section.hero-sec .row {
 }
 
 .hero-hed-sec-gif {
-  margin-left: -200px;
+  margin-left: 30px;
   width: 120px;
   animation: aboutGifFly 1s ease-in-out 3s forwards;
 
@@ -1393,7 +1430,7 @@ li.btn:hover {
   font-size: 55px;
   color: #fff;
   text-transform: uppercase;
-  line-height: 49.5px;
+  line-height: 1;
   margin: 0%;
 }
 
