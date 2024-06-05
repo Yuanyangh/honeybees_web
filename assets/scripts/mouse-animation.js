@@ -35,6 +35,7 @@ $(document).ready(function() {
       unleash.style.height = "100vh";
       // unleash.style.paddingBottom = "20vh";
       scale.style.height = "fit-content";
+      $(".top-scale-1").removeClass("z100");
     } else {
       $(".top-scale-1").addClass("fadeOut");
       $(".top-scale-1").removeClass("fadeIn");
