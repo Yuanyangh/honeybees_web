@@ -81,6 +81,32 @@
   }
 }
 
+@keyframes fadeInLeftiPad {
+  0% {
+    opacity: 0;
+    right: -3%;
+    bottom: -270px;
+  }
+  100% {
+    opacity: 1;
+    right: -2%;
+    bottom: -250px;
+  }
+}
+
+@keyframes fadeInLeftMobile {
+  0% {
+    opacity: 0;
+    right: -43%;
+    bottom: -270px;
+  }
+  100% {
+    opacity: 1;
+    right: -40%;
+    bottom: -250px;
+  }
+}
+
 @keyframes floatInAndColorChange3 {
   0% {
     opacity: 0;
@@ -658,10 +684,6 @@ section.event_section {
   margin: auto;
 }
 
-.animated.content_container::before {
-  animation: fadeInLeft 0.5s ease-in-out 1s forwards;
-}
-
 .animated.content_container h1 {
   animation-name: fadeInUp;
 }
@@ -696,6 +718,12 @@ section.event_section {
 
 .last-events-container {
   margin-top: 300px;
+}
+
+@media (max-width: 767px) {
+  .last-events-container {
+    margin-top: 0px;
+  }
 }
 
 .last-events-content {
@@ -788,6 +816,18 @@ section.event_section {
   animation: fadeInLeft 0.5s ease-in-out 1s forwards;
 }
 
+@media (max-width: 991px) {
+  .animated .content_container_bee_right {
+    animation: fadeInLeftiPad 0.5s ease-in-out 1s forwards;
+  }
+}
+
+@media (max-width: 767px) {
+  .animated .content_container_bee_right {
+    animation: fadeInLeftMobile 0.5s ease-in-out 1s forwards;
+  }
+}
+
 .content_container_bee_right_logo img {
   width: 80px;
   height: 80px;
@@ -805,6 +845,12 @@ section.event_section {
   transform: rotate(3deg);
 }
 
+@media (max-width: 767px) {
+  .content_container_quote {
+    left: -20px;
+  }
+}
+
 .content_container_quote img {
   display: block;
   position: absolute;
@@ -818,11 +864,17 @@ section.event_section {
   display: block;
   font-size: 18px;
   color: #29446d;
-  font-family: "AvenirNextBold";
+  font-family: "AvenirNext-Heavy";
   margin: 20px 22px;
   line-height: 1;
   text-align: left;
   text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .content_container_quote_text {
+    font-size: 14px;
+  }
 }
 
 .vibanim {
@@ -1237,8 +1289,8 @@ section.event_section {
     opacity: 1;
   } */
   .block:hover.block {
-    width: 90%;
-    height: 300px;
+    /* width: 90%; */
+    height: 215px;
   }
   .block:hover .block_content {
     max-width: 90%;
