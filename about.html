@@ -514,14 +514,14 @@
                                 <img class="" src="./assets/img/history_line.png" alt="line" id="his-line">
                             </div>
                             <div class="his-mobile-line-img line-mask">
-                                <img class="" src="./assets/img/journey_mobile_line.png" alt="">
+                                <img class="" src="./assets/img/mobile_history_line.png" alt="">
                             </div>
                             <div class="his-text-box">
                                 <img class="his-mobile-img" src="./assets/img/journey_circle.png" alt="">
                                 <div class="his-text">
                                     <h2>2020</h2>
-                                    <h5 style="color:white" > The Honeybees: Joined AIA Singapore </h5>
-                                    <ul style="color:white">
+                                    <h5 style="color:#FFFBF5" > The Honeybees: Joined AIA Singapore </h5>
+                                    <ul style="color:#FFFBF5">
                                         <li>📚 Creation of The Honeybees Knowledge Repository </li>
                                         <li>📈 Achieved Top Productivity within AIA in 5 months </li>
                                         <li>📈 Achieved MDRT (Top 10%) Agencies and Districts  </li>
@@ -533,8 +533,8 @@
                                 <img class="his-mobile-img" src="./assets/img/journey_circle.png" alt="">
                                 <div class="his-text">
                                     <h2>2021</h2>
-                                    <h5 style="color:white" >The Honeybees: Foundation Building </h5>
-                                    <ul style="color:white">
+                                    <h5 style="color:#FFFBF5" >The Honeybees: Foundation Building </h5>
+                                    <ul style="color:#FFFBF5">
                                         <li> 📖 Developed a comprehensive training guide to equip all agents </li>
                                         <li> 📈 Achieved 140% Growth in Production </li>
                                         <li> 📈 Achieved 120% Growth in MDRT Producers - <br> 
@@ -547,8 +547,8 @@
                                 <img class="his-mobile-img" src="./assets/img/journey_circle.png" alt="">
                                 <div class="his-text">
                                     <h2>2022</h2>
-                                    <h5 style="color:white" >The Honeybees: Going strong </h5>
-                                    <ul style="color:white">
+                                    <h5 style="color:#FFFBF5" >The Honeybees: Going strong </h5>
+                                    <ul style="color:#FFFBF5">
                                         <li>📊 Adopted a data-centric management approach </li>
                                         <li>🏆 Top New Financial Services Associate Director Award</li>
                                         <li>🏆 Top 5 Financial Services Manager Award</li>
@@ -563,8 +563,8 @@
                                 <img class="his-mobile-img" src="./assets/img/journey_circle.png" alt="">
                                 <div class="his-text">
                                     <h2>2023</h2>
-                                    <h5 style="color:white" >The Honeybees: Buzzing Forth! </h5>
-                                    <ul style="color:white">
+                                    <h5 style="color:#FFFBF5" >The Honeybees: Buzzing Forth! </h5>
+                                    <ul style="color:#FFFBF5">
                                         <li> 🌈 AIAFA Harmonisation  </li>
                                         <li> 🏆 Became the Top 5 Districts </li>
                                         <li> 🏆 Top 5 Directors Award</li>
@@ -889,19 +889,18 @@
     <script src="assets/scripts/buzzaction.js"></script>
 
     <script>
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
+        $.fn.isInViewport = function() {
+            var elementTop = $(this).offset().top;
+            var elementBottom = elementTop + $(this).outerHeight();
+
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
+
+            return elementBottom > viewportTop && elementTop < viewportBottom;
+        };
 
         function runOnScroll() {
-            const historysec = document.getElementById("history-sec");
-            if (isInViewport(historysec)){
+            if ($('#history-sec').isInViewport()){
                 // historysec.classList.add('animated-history-sec');
                 var hisTextBoxes = document.querySelectorAll(".his-text-box");
                 hisTextBoxes.forEach(function(box, index) {

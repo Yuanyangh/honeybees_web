@@ -56,7 +56,7 @@
     height: 0%; /* Initial height, fully hidden */
   }
   100% {
-    height: calc(75% + 15px); /* Full height, fully revealed */
+    height: calc(100%); /* Full height, fully revealed */
   }
 }
 
@@ -242,10 +242,10 @@
 .his-mobile-line-img {
   display: none;
   position: absolute;
-  width: 23px;
+  width: 59px;
   height: 0%;
-  top: 0px;
-  left: 0px;
+  top: 14px;
+  left: -41px;
   overflow: hidden;
 }
 
@@ -270,6 +270,8 @@
 
 .his-text ul {
   margin: 5px 0px;
+  padding-left: 30px;
+  font-size: 14px;
 }
 
 .hero-hed-sec-text-caption {
@@ -372,6 +374,7 @@
 
   .his-mobile-line-img {
     display: block;
+    left: -27px;
   }
 
   .box-wrap {
@@ -384,7 +387,7 @@
   }
 
   .his-text-box {
-    padding: 0px 0px 50px 0px;
+    padding: 0px 0px 30px 0px;
     flex-direction: row;
   }
 
@@ -529,16 +532,23 @@
     display: block;
   }
   .his-text-box h2 {
-    font-size: 14px;
+    font-size: 20px;
     font-family: "Agrandir-GrandHeavy";
   }
-  .his-text-box p {
+  .his-text-box h5 {
     font-size: 14px;
+  }
+  .his-text-box ul {
+    padding-left: 20px;
+    font-size: 12px;
   }
   .his-mobile-img {
     width: 30px;
     height: 30px;
     margin-right: 15px;
+  }
+  .his-mobile-line-img {
+    left: -41px;
   }
 
   .about-history-sec {
