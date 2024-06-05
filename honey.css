@@ -346,7 +346,7 @@ section.frame-section {
 }
 
 .mask-group-parent-wrapper {
-  background-image: url("./assests/Honeybees_logo.png");
+  background-image: url("./assests/footer_Honeybees_logo.png");
   background-size: 1247px 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -354,6 +354,14 @@ section.frame-section {
   width: 100%;
   max-width: 1247px;
   height: 100%;
+}
+
+@media (max-width: 767px) {
+  .mask-group-parent-wrapper {
+    background-image: url("./assests/footer_mobile_Honeybees_logo.png");
+    background-size: 100% 90%;
+    background-position: end;
+  }
 }
 
 h2.drop-your-question {
