@@ -831,18 +831,18 @@ section.event_section {
 }
 
 .animated .content_container_bee_right {
-  animation: fadeInLeft 0.5s ease-in-out 1s forwards;
+  animation: fadeInLeft 0.5s ease-in-out 0s forwards;
 }
 
 @media (max-width: 991px) {
   .animated .content_container_bee_right {
-    animation: fadeInLeftiPad 0.5s ease-in-out 1s forwards;
+    animation: fadeInLeftiPad 0.5s ease-in-out 0s forwards;
   }
 }
 
 @media (max-width: 767px) {
   .animated .content_container_bee_right {
-    animation: fadeInLeftMobile 0.5s ease-in-out 1s forwards;
+    animation: fadeInLeftMobile 0.5s ease-in-out 0s forwards;
   }
 }
 
@@ -1191,7 +1191,8 @@ section.event_section {
   }
 
   .honey_bee_section .content_container {
-    margin-top: 0px;
+    margin-top: 300px;
+    margin-bottom: 100px;
     width: 100%;
   }
   .honey_bee_section .content_container p {
@@ -1210,7 +1211,7 @@ section.event_section {
   }
 
   .last-events-item {
-    width: 100%;
+    width: 300px;
   }
   .last-events-item-title {
     font-size: 20px;
