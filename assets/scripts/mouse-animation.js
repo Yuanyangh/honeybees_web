@@ -11,7 +11,7 @@ $(document).ready(function() {
 
     var levelupTitleFontsize = 80;
     if (window.innerWidth < 768) {
-      levelupTitleFontsize = 30 - scroll / height * 15;
+      levelupTitleFontsize = 40 - scroll / height * 12;
     } else {
       levelupTitleFontsize = 80 - scroll / height * 25;
     }
