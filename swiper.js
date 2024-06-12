@@ -260,7 +260,8 @@ $(document).ready(async function() {
       modifier: 1,
       slideShadows: true
     },
-    autoplay: { delay: 97500, disableOnInteraction: false },
+    autoHeight: (window.innerWidth < 992) ? true : false,
+    autoplay: { delay: 60000, disableOnInteraction: false },  // 60000 milisecond
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
