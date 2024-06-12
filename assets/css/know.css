@@ -20,7 +20,7 @@
   100% {
     opacity: 1;
     visibility: visible;
-    -webkit-text-stroke: 3px #fff;
+    /* -webkit-text-stroke: 3px #fff; */
     transform: translateY(0);
   }
 }
@@ -70,6 +70,11 @@
 }
 
 @media (max-width: 500px) {
+  .coming-soon {
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
   .contact-section-people-lottie {
     display: none;
   }
