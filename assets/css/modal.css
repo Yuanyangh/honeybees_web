@@ -185,7 +185,7 @@
   margin-top: 150px;
 }
 
-.nav-modal-link a {
+a.nav-modal-link {
   font-size: 18px;
   color: #29446d;
   font-family: "Agrandir-GrandHeavy";

@@ -31,15 +31,16 @@ navbar .col-12 {
 navbar .col-12 div {
   display: flex;
   width: 100%;
+  max-width: 720px;
   background-color: #ffffff4d;
   justify-content: space-between;
   margin: auto;
   border-radius: 25px;
-  margin-right: 50px;
   gap: 20px;
   backdrop-filter: blur(2px);
 }
-navbar li {
+navbar a {
+  min-width: 150px;
   align-self: center;
   padding: 12px 20px;
   font-family: "Agrandir-GrandHeavy";
@@ -51,63 +52,61 @@ navbar li {
   text-decoration: none;
   text-align: center;
 }
-navbar li:hover {
+navbar a:hover {
   background-color: #fff;
   border-radius: 25px;
 }
 
-navbar.about-nav li:hover {
+navbar.about-nav a:hover {
   background-color: #3061ab;
   border-radius: 25px;
 }
 
-navbar.know-nav li:hover {
+navbar.know-nav a:hover {
   background-color: #ee7430;
   border-radius: 25px;
 }
 
-navbar.fearless-nav li:hover {
+navbar.fearless-nav a:hover {
   background-color: #ff6464;
   border-radius: 25px;
 }
 
-li:last-child {
+.nav-modal-link-content a:last-child, navbar a:last-child {
   background-color: #ff6464 !important;
   border-radius: 25px;
-}
-li:last-child a,
-li:last-child a:hover {
   color: white;
 }
-navbar li img {
+
+navbar a img {
   width: 150px;
 }
 navbar a,
 navbar a:hover {
   text-decoration: none;
   color: #29446d;
-  margin-bottom: 28px;
 }
 
 navbar.about-nav a,
 navbar.about-nav a:hover {
   text-decoration: none;
   color: white;
-  margin-bottom: 28px;
 }
 
 navbar.know-nav a,
 navbar.know-nav a:hover {
   text-decoration: none;
   color: white;
-  margin-bottom: 28px;
 }
 
 navbar.fearless-nav a,
 navbar.fearless-nav a:hover {
   text-decoration: none;
   color: white;
-  margin-bottom: 28px;
+}
+
+navbar a:last-child:hover {
+  color: white;
 }
 
 .home-btn.nav-active {
