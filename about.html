@@ -514,7 +514,7 @@
                 </div>
                 <div class="history-sec" id="history-sec">
                     <h1 class="full-text">Flight Path</h1>
-                    <h1 class="mobile-text">Flight/<br/>Path</h1>
+                    <h1 class="mobile-text">Flight Path</h1>
                     <div class="about-history-sec">
                         <div class="box-wrap">
                             <div class="his-line-img line-mask">
@@ -926,11 +926,8 @@
 
             }
 
-            const elements2 = document.querySelectorAll('.strok_text');
-            for (let i = 0; i < elements2.length; i++) {
-                if (isInViewport(elements2[i])) {
-                    elements2[i].classList.add('animate_strok_text');
-                }
+            if ( $('.strok_text').isInViewport() ) {
+                $('.strok_text').addClass('animate_strok_text');
             }
         }
       window.addEventListener('scroll', runOnScroll);
