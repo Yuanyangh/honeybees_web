@@ -763,7 +763,7 @@ section.event_section {
 }
 
 .last-events-item-text-wrapper {
-  padding: 0px 20px 20px 20px;
+  padding: 0px 15px 20px 15px;
 }
 
 .last-events-item img {
@@ -1211,7 +1211,7 @@ section.event_section {
   }
 
   .last-events-item {
-    width: 300px;
+    width: 320px;
   }
   .last-events-item-title {
     font-size: 20px;
