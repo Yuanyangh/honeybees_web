@@ -757,9 +757,15 @@ section.event_section {
   width: 45%;
   margin-bottom: 20px;
   border: 3px solid #FFFBF5;
-  border-radius: 55px;
+  border-radius: 50px;
   overflow: hidden;
   text-decoration: none !important;
+}
+
+@media (max-width: 767px) {
+  .last-events-item {
+    border-radius: 40px;
+  }
 }
 
 .last-events-item-text-wrapper {
@@ -768,6 +774,13 @@ section.event_section {
 
 .last-events-item img {
   width: 100%;
+  border-radius: 47px;
+}
+
+@media (max-width: 767px) {
+  .last-events-item img {
+    border-radius: 37px;
+  }
 }
 
 .last-events-item-title {
