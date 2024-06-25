@@ -122,7 +122,7 @@
 
 /* Bees On The Sea page */
 .events.bees-on-the-sea {
-    background-color: #285455;
+    background-color: #F4BF52;
 }
 
 .bg-bees-on-the-sea {
@@ -143,7 +143,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #28545533 10%, #28545533 20%, #285455FF 80%, #285455FF 100%);
+    background: linear-gradient(180deg, #F4BF5233 10%, #F4BF5233 20%, #F4BF52FF 80%, #F4BF52FF 100%);
 }
 
 .balloon-comment-wrapper {
@@ -218,14 +218,14 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #A5334733 10%, #A5334733 20%, #A53347FF 80%, #A53347FF 100%);
+    background: linear-gradient(180deg, #D1585233 10%, #D1585233 20%, #D15852FF 80%, #D15852FF 100%);
 }
 
 /**************************/
 
 /* Bees Go Brrrrrr page */
 .events.bees-go-brrrrrr {
-    background-color: #676744;
+    background-color: #D47B41;
 }
 
 .bg-bees-go-brrrrrr {
@@ -246,14 +246,14 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #67674433 10%, #67674433 20%, #676744FF 80%, #676744FF 100%);
+    background: linear-gradient(180deg, #D47B4133 10%, #D47B4133 20%, #D47B41FF 80%, #D47B41FF 100%);
 }
 
 /**************************/
 
 /* Bees Care page */
 .events.bees-care {
-    background-color: #E8DCAC;
+    background-color: #2F436A;
 }
 
 .bg-bees-care {
@@ -275,14 +275,14 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #E8DCAC33 10%, #E8DCAC33 20%, #E8DCACFF 80%, #E8DCACFF 100%);
+    background: linear-gradient(180deg, #2F436A33 10%, #2F436A33 20%, #2F436AFF 80%, #2F436AFF 100%);
 }
 
 /**************************/
 
 /* Bees Awards page */
 .events.bees-awards {
-    background-color: #014BDC;
+    background-color: #3B6CC7;
 }
 
 .bg-bees-awards {
@@ -304,7 +304,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #014BDC33 10%, #014BDC33 20%, #014BDCFF 80%, #014BDCFF 100%);
+    background: linear-gradient(180deg, #3B6CC733 10%, #3B6CC733 20%, #3B6CC7FF 80%, #3B6CC7FF 100%);
 }
 
 /**************************/
