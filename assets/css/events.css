@@ -176,6 +176,7 @@
 /**************************/
 
 /* HAPPY BEECATION page */
+
 .bees-go-brrrrrr {
     background: linear-gradient(180deg, #D47B4133 10%, #D47B4133 20%, #D47B41FF 80%, #D47B41FF 100%), url("../img/events/bees_go_brrrrrr/bg_go_brrrrrr.png");
     background-size: cover !important;
@@ -192,31 +193,20 @@
 
 /**************************/
 
-/* Bees Care page */
-.events.bees-care {
-    background-color: #2F436A;
+/* VOLUNBEEING MATTERS page */
+
+.bees-care {
+    background: linear-gradient(180deg, #2F436A33 10%, #2F436A33 20%, #2F436AFF 80%, #2F436AFF 100%), url("../img/events/bees_care/bg_bees_care.png");
+    background-size: cover !important;
+    background-position: top !important;
+    background-repeat: no-repeat !important;
+    animation: scaleDown 1s ease-in-out forwards !important;
 }
 
-.bg-bees-care {
-    opacity: 0.6;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-image: url("../img/events/bees_care/bg_bees_care.png");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    animation: scaleDown 1s ease-in-out forwards;
-}
-.mobile-view .bg-bees-care {
-    background-image: url("../img/events/bees_care/mobile/mobile_bg_bees_care.png");
-}
-
-.mask-bg-bees-care {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #2F436A33 10%, #2F436A33 20%, #2F436AFF 80%, #2F436AFF 100%);
+@media (max-width: 992px) {
+    .bees-care {
+        background: linear-gradient(180deg, #2F436A33 10%, #2F436A33 20%, #2F436AFF 50%, #2F436AFF 100%), url("../img/events/bees_care/mobile/mobile_bg_bees_care.png");
+    }
 }
 
 /**************************/
