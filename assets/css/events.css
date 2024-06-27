@@ -121,84 +121,6 @@
     }
 }
 
-/* Bees On The Sea page */
-.events.bees-on-the-sea {
-    background-color: #F4BF52;
-}
-
-.bg-bees-on-the-sea {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-image: url("../img/events/bees_on_the_sea/bg_sea.png");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    animation: scaleDown 1s ease-in-out forwards;
-}
-.mobile-view .bg-bees-on-the-sea {
-    background-image: url("../img/events/bees_on_the_sea/mobile/mobile_bg_sea.png");
-}
-
-.mask-bg-bees-on-the-sea {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #F4BF5233 10%, #F4BF5233 20%, #F4BF52FF 80%, #F4BF52FF 100%);
-}
-
-.balloon-comment-wrapper {
-    display: none;
-    position: absolute;
-    z-index: 2;
-    width: 155px;
-    height: 72px;
-    top: -135%;
-    left: 40px;
-}
-@media screen and (max-width: 767px) {
-    .balloon-comment-wrapper {
-        width: 126px;
-        height: 63px;
-        top: -130%;
-        left: -15px;
-    }
-}
-@media screen and (max-width: 375px) {
-    .balloon-comment-wrapper {
-        top: -130%;
-        left: -15px;
-    }
-}
-.events-avatar-wrapper:hover .balloon-comment-wrapper {
-    display: block;
-}
-
-.balloon-img {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.balloon-text {
-    text-align: center;
-    margin-top: -12px;
-    position: relative;
-    z-index: 3;
-    font-family: 'AvenirNext-Heavy';
-    font-size: 18px;
-    line-height: 1;
-    transform: rotate(4deg);
-}
-@media screen and (max-width: 767px) {
-    .balloon-text {
-        font-size: 14px;
-        margin-top: -15px;
-    }
-}
-
-/**************************/
-
 /* MERRY BEEMAS page */
 
 .merry-beemas-2024 {
@@ -230,6 +152,24 @@
 @media (max-width: 992px) {
     .bees-awards {
         background: linear-gradient(180deg, #3B6CC733 10%, #3B6CC733 20%, #3B6CC7FF 50%, #3B6CC7FF 100%), url("../img/events/bees_awards/mobile/mobile_bg_bees_awards.png");
+    }
+}
+
+/**************************/
+
+/* SENSE OF BEELONGING page */
+
+.bees-on-the-sea {
+    background: linear-gradient(180deg, #F4BF5233 10%, #F4BF5233 20%, #F4BF52FF 80%, #F4BF52FF 100%), url("../img/events/bees_on_the_sea/bg_sea.png");
+    background-size: cover !important;
+    background-position: top !important;
+    background-repeat: no-repeat !important;
+    animation: scaleDown 1s ease-in-out forwards !important;
+}
+
+@media (max-width: 992px) {
+    .bees-on-the-sea {
+        background: linear-gradient(180deg, #F4BF5233 10%, #F4BF5233 20%, #F4BF52FF 50%, #F4BF52FF 100%), url("../img/events/bees_on_the_sea/mobile/mobile_bg_sea.png");
     }
 }
 
@@ -300,6 +240,7 @@
 }
 
 .swiper-wrapper {
+    align-items: center;
     padding-bottom: 70px;
 }
 
@@ -310,6 +251,7 @@
 }
 
 .swiper-slide {
+    background-color: transparent !important;
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -320,8 +262,10 @@
 
 .swiper-slide img {
     display: block;
-    width: 100%;
-    height: 100%;
+    max-width: 800px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
     object-fit: cover;
 }
 

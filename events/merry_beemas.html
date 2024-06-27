@@ -105,50 +105,50 @@
           <div class="position-relative d-flex flex-column justify-content-center align-items-center">
             <div class="swiper eventSwiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (1).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (1).jpg" alt="">
                 </div>
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (2).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (2).jpg" alt="">
                 </div>
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (3).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (3).jpg" alt="">
                 </div>
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (4).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (4).jpg" alt="">
                 </div>
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (5).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (5).jpg" alt="">
                 </div>
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (6).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (6).jpg" alt="">
                 </div>
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (7).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (7).jpg" alt="">
                 </div>
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (8).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (8).jpg" alt="">
                 </div>
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (9).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (9).jpg" alt="">
                 </div>
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (10).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (10).jpg" alt="">
                 </div>
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (11).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (11).jpg" alt="">
                 </div>
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (12).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (12).jpg" alt="">
                 </div>
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (13).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (13).jpg" alt="">
                 </div>
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (14).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (14).jpg" alt="">
                 </div>
-                <div class="swiper-slide events-img-wrapper event-item">
-                  <img src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (15).jpg" alt="">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/merry_beemas/merry_beemas (15).jpg" alt="">
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -315,7 +315,8 @@
             modifier: 1,
             slideShadows: true
           },
-          autoHeight: (window.innerWidth < 992) ? true : false,
+          // autoHeight: (window.innerWidth < 992) ? true : false,
+          autoHeight: false,
           autoplay: { delay: 10000, disableOnInteraction: false },  // 10000 milisecond
           pagination: {
             el: ".swiper-pagination",
