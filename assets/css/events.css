@@ -217,6 +217,24 @@
 
 /**************************/
 
+/* BEEWARDS NIGHT page */
+
+.bees-awards {
+    background: linear-gradient(180deg, #3B6CC733 10%, #3B6CC733 20%, #3B6CC7FF 80%, #3B6CC7FF 100%), url("../img/events/bees_awards/bg_bees_awards.png");
+    background-size: cover !important;
+    background-position: top !important;
+    background-repeat: no-repeat !important;
+    animation: scaleDown 1s ease-in-out forwards !important;
+}
+
+@media (max-width: 992px) {
+    .bees-awards {
+        background: linear-gradient(180deg, #3B6CC733 10%, #3B6CC733 20%, #3B6CC7FF 50%, #3B6CC7FF 100%), url("../img/events/bees_awards/mobile/mobile_bg_bees_awards.png");
+    }
+}
+
+/**************************/
+
 /* Bees Go Brrrrrr page */
 .events.bees-go-brrrrrr {
     background-color: #D47B41;
@@ -273,36 +291,6 @@
 }
 
 /**************************/
-
-/* Bees Awards page */
-.events.bees-awards {
-    background-color: #3B6CC7;
-}
-
-.bg-bees-awards {
-    opacity: 0.6;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-image: url("../img/events/bees_awards/bg_bees_awards.png");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    animation: scaleDown 1s ease-in-out forwards;
-}
-.mobile-view .bg-bees-awards {
-    background-image: url("../img/events/bees_awards/mobile/mobile_bg_bees_awards.png");
-}
-
-.mask-bg-bees-awards {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #3B6CC733 10%, #3B6CC733 20%, #3B6CC7FF 80%, #3B6CC7FF 100%);
-}
-
-/**************************/
-
 
 /* Style for Swiper */
 .swiper {
