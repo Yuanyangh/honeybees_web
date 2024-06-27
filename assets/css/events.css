@@ -51,6 +51,10 @@
     }
 }
 
+.events-desc-wrapper {
+    max-width: 800px;
+}
+
 .events-desc {
     font-family: 'AvenirNext';
     font-weight: 600;
@@ -76,8 +80,6 @@
 .events-img-wrapper {
     width: fit-content;
     height: fit-content;
-    max-width: 90vw;
-    margin: 10px;
     border: 3px solid #FFFBF5;
     border-radius: 55px;
     overflow: hidden;
@@ -85,7 +87,6 @@
 @media screen and (max-width: 767px) {
     .events-img-wrapper {
         border-radius: 35px;
-        margin: 5px;
     }
 }
 
@@ -308,3 +309,83 @@
 }
 
 /**************************/
+
+
+/* Style for Swiper */
+.swiper {
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper {
+    padding-bottom: 70px;
+}
+
+@media (max-width: 991px) {
+    .swiper-wrapper {
+        padding-bottom: 40px;
+    }
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide-prev {
+    visibility: hidden;
+}
+
+.swiper-slide-next {
+    visibility: hidden;
+}
+
+.swiper-pagination-bullet {
+    opacity: 0.5 !important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+}
+
+.pagination-image {
+    width: 40px;
+    height: 40px;
+    background: none;
+    margin: 0px 5px !important;
+  }
+  
+.pagination-image img {
+    width: 40px;
+    height: 40px;
+    background-size: 150%;
+    background-position: center;
+    border-radius: 15px;
+    border: 3px solid #fff;
+}
+
+@media (max-width: 991px) {
+    .pagination-image {
+        background-color: white;
+        width: 10px;
+        height: 10px;
+        margin: 0px 3px !important;
+    }
+    .pagination-image img {
+        width: 10px;
+        height: 10px;
+    }    
+}
+/********************/
