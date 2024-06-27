@@ -199,27 +199,20 @@
 
 /**************************/
 
-/* MERRY BEEMAS 2024 page */
+/* MERRY BEEMAS page */
 
-.bg-merry-beemas-2024 {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-image: url("../img/events/merry_beemas_2024/bg_beemas.png");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    animation: scaleDown 1s ease-in-out forwards;
-}
-.mobile-view .bg-merry-beemas-2024 {
-    background-image: url("../img/events/merry_beemas_2024/mobile/mobile_bg_beemas.png");
+.merry-beemas-2024 {
+    background: linear-gradient(180deg, #D1585233 10%, #D1585233 20%, #D15852FF 80%, #D15852FF 100%), url("../img/events/merry_beemas_2024/bg_beemas.png");
+    background-size: cover !important;
+    background-position: top !important;
+    background-repeat: no-repeat !important;
+    animation: scaleDown 1s ease-in-out forwards !important;
 }
 
-.mask-bg-merry-beemas-2024 {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #D1585233 10%, #D1585233 20%, #D15852FF 80%, #D15852FF 100%);
+@media (max-width: 992px) {
+    .merry-beemas-2024 {
+        background: linear-gradient(180deg, #D1585233 10%, #D1585233 20%, #D15852FF 50%, #D15852FF 100%), url("../img/events/merry_beemas_2024/mobile/mobile_bg_beemas.png");
+    }
 }
 
 /**************************/
