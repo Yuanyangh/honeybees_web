@@ -7,7 +7,6 @@
 .caption-div {
     margin-top: 232px;
     margin-bottom: 100px;
-    max-width: 1000px;
     opacity: 0;
     animation: fadeInUp 1s ease-in-out forwards;
     animation-delay: 1s;
