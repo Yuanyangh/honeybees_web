@@ -11,12 +11,12 @@ $(document).ready(function() {
 
     var levelupTitleFontsize = 80;
     if (window.innerWidth < 768) {
-      levelupTitleFontsize = 40 - scroll / height * 12;
+      levelupTitleFontsize = 40 - scroll / height * 15;
     } else {
-      levelupTitleFontsize = 80 - scroll / height * 25;
+      levelupTitleFontsize = 80 - scroll / height * 30;
     }
 
-    if (scroll / height < 0.4) {
+    if (scroll / height < 0.25) {
       $(".top-scale-1").addClass("fadeIn");
       $(".top-scale-1").addClass("z100");
       $(".top-scale-1").removeClass("fadeOut");
