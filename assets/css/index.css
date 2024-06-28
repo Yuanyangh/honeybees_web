@@ -769,7 +769,7 @@ section.event_section {
 }
 
 .last-events-item-text-wrapper {
-  padding: 0px 15px 20px 15px;
+  padding: 0px 9px 20px 9px;
 }
 
 .last-events-item img {
@@ -793,6 +793,7 @@ section.event_section {
 }
 
 .last-events-item-desc {
+  padding: 0px 10px;
   font-family: "AvenirNext";
   font-weight: 600;
   font-size: 18px;
@@ -1442,5 +1443,25 @@ section.event_section {
     box-shadow: -5px 5px 2px 0px rgba(187, 170, 204, 1);
     -webkit-box-shadow: -5px 5px #3061ab;
     -moz-box-shadow: -5px 5px 2px 0px rgba(187, 170, 204, 1);
+  }
+}
+
+.last-events-title {
+  padding: 0px 48px;
+}
+
+.upcoming-events-desc {
+  text-align: center;
+  color: white;
+  font-size: 20px !important;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 90px !important;
+}
+
+@media (max-width: 767px) {
+  .upcoming-events-desc {
+    font-size: 14px !important;
+    margin-bottom: 50px !important;
   }
 }
