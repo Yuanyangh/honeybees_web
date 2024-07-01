@@ -788,11 +788,12 @@ section.event_section {
   font-weight: 800;
   letter-spacing: -1.5px;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   margin: 10px 0px 0px 0px;
 }
 
 .last-events-item-desc {
+  text-align: center;
   padding: 0px 15px;
   font-family: "AvenirNext";
   font-weight: 600;
