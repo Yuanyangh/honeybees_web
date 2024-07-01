@@ -1433,6 +1433,15 @@ li.btn:hover {
   margin: 0%;
 }
 
+.sendo-section h4 {
+  font-family: "Agrandir-GrandHeavy";
+  font-size: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 20px;
+}
+
 .sendo-section p {
   font-family: "AvenirNext";
   font-size: 18px;
