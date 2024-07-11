@@ -1132,3 +1132,58 @@ h6 {
     text-align: end !important;
   }
 }
+
+.music-icon-description {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 83px;
+  position: absolute;
+  top: 0px;
+  right: 35px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .music-icon-description {
+    width: 200px;
+    height: 64px;  
+    right: 35px;
+  }
+}
+
+.music-icon-description img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.music-icon-description-quote-text {
+  display: block;
+  font-size: 18px;
+  color: #29446d;
+  font-family: "AvenirNext-Heavy";
+  margin-top: -3px;
+  margin-right: 20px;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .music-icon-description-quote-text {
+    font-size: 14px;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.honeybeeMusic:hover .music-icon-description{
+  display: flex !important;
+}

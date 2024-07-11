@@ -22,6 +22,7 @@ $(document).ready(function() {
       $(".top-scale-1").removeClass("fadeOut");
       $(".top-scale-2").addClass("fadeOut");
       $(".top-scale-2").removeClass("fadeIn");
+      $('#music_icon_description').removeClass('hidden');
       bannerContainer.classList.remove("animatedbanner");
       levelupTitle.style.fontSize = `${levelupTitleFontsize}px`;
 
@@ -48,6 +49,10 @@ $(document).ready(function() {
       unleash.style.marginTop = "0px";
       // unleash.style.paddingBottom = "20vh";
       scale.style.height = "200vh";
+
+      setTimeout(function () {
+        $('#music_icon_description').addClass('hidden');
+      }, 3000);
     }
   });
 });
