@@ -393,8 +393,8 @@
   }
 
   .testimnial-bg-after:after {
-    top: 40%;
-    left: 40%;
+    top: 70%;
+    right: -100px;
   }
 }
 
@@ -576,7 +576,7 @@
     font-size: 14px;
   }
   .testimnial-bg-after:after {
-    top: 50%;
+    top: 70%;
     left: 40%;
   }
 
@@ -615,5 +615,64 @@
   .honeyBeeTeamReview p {
     font-size: 12px;
     line-height: 1.1;
+  }
+}
+
+.animate_scale_up {
+  animation: scaleUp 0.5s ease-in-out 0s forwards;
+}
+
+.founder-message-bubble {
+  position: absolute;
+  top: 35%;
+  right: 250px;
+  margin-left: 0px;
+  margin-top: 0px;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 228px;
+  height: 119px;
+  transform: rotate(3deg);
+}
+
+@media (max-width: 900px) {
+  .founder-message-bubble {
+    top: 85%;
+    right: 150px;  
+    width: 175px;
+    height: 80px;  
+    margin-left: 0px;
+    transform: rotate(-5deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .founder-message-bubble {
+    top: 90%;
+    left: 38%;
+  }
+}
+
+.founder-message-bubble img {
+  position: absolute;
+}
+
+.founder-message-bubble-text {
+  z-index: 2;
+  transform: rotate(-5deg);
+  display: block;
+  font-size: 18px;
+  color: #29446d;
+  font-family: "AvenirNext-Heavy";
+  margin-top: -24px;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .founder-message-bubble-text {
+    font-size: 14px;
   }
 }

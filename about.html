@@ -608,6 +608,13 @@
                         <img src="assets/img/TeamMembers/Hoo_Yuan_Shyuan.png" alt="photo">
                         <p> Hoo Yuan Shyuan , Founder <br> Father | Son | Honeybee <br></p>
                     </div>
+                    <div class="founder-message-bubble">
+                        <img class="d-none d-md-block" src="assets/img/aboutus_quote.png" alt="quote"/>
+                        <img class="d-block d-md-none" src="assets/img/mobile_aboutus_quote.png" alt="quote"/>
+                        <span class="founder-message-bubble-text">
+                            And my journey<br/>doesn’t stop here
+                        </span>
+                    </div>
                 </div>    
             </div>
 
@@ -643,7 +650,7 @@
                 <h1 class="honeybees-title">BEES IN THE SPOTLIGHT</h1>
 
                 <div class="text-box mt-1" style="text-align:center">
-                    <p>We have bees from all walks of life! Let them tell you their #Fearless story.</p>
+                    <p class="mx-2">We have bees from all walks of life! Let them tell you their #Fearless story.</p>
                     </div>
                
                 <!-- Swiper -->
@@ -939,6 +946,10 @@
 
             if ( $('.strok_text').isInViewport() ) {
                 $('.strok_text').addClass('animate_strok_text');
+            }
+
+            if ( $('.founder-message-bubble').isInViewport() ) {
+                $('.founder-message-bubble').addClass('animate_scale_up');
             }
         }
       window.addEventListener('scroll', runOnScroll);
