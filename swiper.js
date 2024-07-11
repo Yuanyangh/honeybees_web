@@ -183,16 +183,7 @@ Honeybees has truly been a pivotal part of my growth and success. Our holistic a
     const divItem = document.createElement("div");
     divItem.classList.add("swiper-slide-item");
     div.appendChild(divItem);
-    const divImage = document.createElement("div");
-    divImage.classList.add("swiper-slide-img");
-    const htmlImg = `
-            <img src="${member.image}">
-        `;
-    divImage.innerHTML = htmlImg;
-    divItem.appendChild(divImage);
 
-    const divDesc = document.createElement("div");
-    divDesc.classList.add("honeyBeeTeamReview");
     let quali_str = "",
       role_str = "";
     member.qualification.forEach((qual) => {
@@ -201,16 +192,33 @@ Honeybees has truly been a pivotal part of my growth and success. Our holistic a
     member.role.forEach((r) => {
       role_str += `<h4>${r}</h4>`;
     });
-    const htmlDesc = `
+
+    const divProfile = document.createElement("div");
+    divProfile.classList.add("honeyBeeTeamReview");
+
+    const divImage = document.createElement("div");
+    divImage.classList.add("swiper-slide-img");
+    const htmlImg = `
+            <img src="${member.image}">
             <h2>${member.name}</h2>
             ${role_str}
-            <p>${member.description}</p>
             <div class="teg-btn">
                 <ul>
                     ${quali_str}
                 </ul>
             </div>
         `;
+    divImage.innerHTML = htmlImg;
+    divProfile.appendChild(divImage);
+
+    divItem.appendChild(divProfile);
+
+
+    const divDesc = document.createElement("div");
+    divDesc.classList.add("honeyBeeTeamReview");
+    const htmlDesc = `
+            <p>${member.description}</p>
+    `;
     divDesc.innerHTML = htmlDesc;
     divItem.appendChild(divDesc);
 
