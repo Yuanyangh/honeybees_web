@@ -786,9 +786,9 @@ section.event_section {
 .last-events-item-title {
   font-family: "Agrandir-GrandHeavy";
   font-weight: 800;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.5px;
   text-align: center;
-  font-size: 25px;
+  font-size: 24px;
   margin: 10px 0px 0px 0px;
 }
 
@@ -1456,7 +1456,7 @@ section.event_section {
   color: white;
   font-size: 20px !important;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.2;
   margin-bottom: 90px !important;
 }
 
