@@ -11,6 +11,9 @@ function showItems(el) {
 
 $(document).ready(function(){
   showItems('.event-item');
+  setTimeout(function () {
+    $('#music_icon_description').addClass('hidden');
+  }, 3000);
 });
 
 // if the image in the window of browser when scrolling the page, show that image
