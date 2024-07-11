@@ -30,4 +30,8 @@ $(document).ready(function () {
     $(event.target).find(".owl-item.center").css("transform", "scale(1.4)");
   }
   carousels();
+  setTimeout(function () {
+    $('#music_icon_description').addClass('hidden');
+  }, 3000);
+
 });

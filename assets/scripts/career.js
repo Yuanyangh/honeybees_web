@@ -93,4 +93,8 @@ $(document).ready(async function() {
       digital_ecosys.style.marginTop = "0px";
     }
   });
+
+  setTimeout(function () {
+    $('#music_icon_description').addClass('hidden');
+  }, 3000);
 });

@@ -31,15 +31,21 @@
 <body>
     <div class="topbar">
         <a href="/" class="honeybeeLogo">
-        <img src="./assests/Honeybees_logo (1).png" alt="">
+            <img src="./assests/Honeybees_logo (1).png" alt="">
         </a>
         <div class="honeybeeMusic">
-        <div class="music-icon" onclick="toggleSound()">
-            <div class="lottie-sound" id="lottie-sound"></div>
-            <!-- <img class="playing-music" src="assests/music_dark.svg" alt="Music"> -->
-            <img class="mute-music" src="assests/music_dark_mute.svg" alt="Mute Music">
-        </div>
-        <audio id="myAudio" src="./HB_assest/good-night-160166.mp3" loop></audio>
+            <div class="music-icon" onclick="toggleSound()">
+                <div class="lottie-sound" id="lottie-sound"></div>
+                <!-- <img class="playing-music" src="assests/music_dark.svg" alt="Music"> -->
+                <img class="mute-music" src="assests/music_dark_mute.svg" alt="Mute Music">
+            </div>
+            <div class="music-icon-description" id="music_icon_description">
+                <img class="d-block" src="assets/img/music_icon_quote.png" alt="quote"/>
+                <span class="music-icon-description-quote-text">
+                  Switch the music<br/>on or off here
+                </span>
+            </div>
+            <audio id="myAudio" src="./HB_assest/good-night-160166.mp3" loop></audio>
         </div>
     </div>
     <button id="toggleModalBtn" class="mobile-nav-btn">
