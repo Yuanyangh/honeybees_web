@@ -68,6 +68,8 @@ $(document).ready(async function() {
       dedicat_mentor.classList.add("overlayer_fixed");
       digital_ecosys.style.marginTop = `${dedicat_mentor.offsetHeight -
         (scroll - initialOffset)}px`;
+      $(".dedicat-mentor ").css('background-position-y', `${-(scroll - $('.image-section').offset().top)/2}px`);
+      $(".dedicat-mentor .career-item-text-wrapper").css('margin-top', `${-(scroll - $('.image-section').offset().top)/3}px`);
     } else if (scroll) {
       dedicat_mentor.classList.remove("overlayer_fixed");
     }
@@ -82,6 +84,8 @@ $(document).ready(async function() {
       process_excel.style.marginTop = `${digital_ecosys.offsetHeight -
         (scroll - initialOffset2)}px`;
       digital_ecosys.style.marginTop = "0px";
+      $(".digital-ecosys ").css('background-position-y', `${-(scroll - $('.image-section').offset().top)/2}px`);
+      $(".digital-ecosys .career-item-text-wrapper").css('margin-top', `${-(scroll - $('.image-section').offset().top)/3}px`);
     } else if (scroll) {
       digital_ecosys.classList.remove("overlayer_fixed");
     }
