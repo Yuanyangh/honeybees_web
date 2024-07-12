@@ -300,6 +300,24 @@
   background-image: url("../img/process.png");
 }
 
+.career-item-text-wrapper {
+  padding: 85px 150px;
+  border-radius: 35px;
+  backdrop-filter: blur(2px);
+}
+
+#dedicat_mentor .career-item-text-wrapper {
+  background-color: #EE74301A;
+}
+
+#digital_ecosys .career-item-text-wrapper {
+  background-color: #3061AB1A;
+}
+
+#process_excel .career-item-text-wrapper {
+  background-color: #EEAF301A;
+}
+
 .career-item-text {
   max-width: 600px;
   text-align: center;
@@ -319,19 +337,12 @@
 }
 
 .career-item-text p {
+  letter-spacing: -0.5px;
   font-size: 18px;
   font-family: "AvenirNext";
   color: white;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1;
-}
-
-.process-excel .career-item-text h3 {
-  color: #29446d;
-}
-
-.process-excel .career-item-text p {
-  color: #29446d;
 }
 
 .career-other-input {
