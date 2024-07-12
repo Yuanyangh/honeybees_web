@@ -30,6 +30,44 @@ $(document).ready(function () {
     $(event.target).find(".owl-item.center").css("transform", "scale(1.4)");
   }
   carousels();
+
+  $(window).scroll(function() {
+    // calculate the percentage of the window scroll.
+    var scroll = $(window).scrollTop();
+    var initialOffset = $("#aboutus_fixed_container").offset().top;
+    var height = $(window).height();
+
+    if (scroll > initialOffset && scroll <= (initialOffset + height/2)) {
+      $("#aboutus_fixed_container").addClass("remove-background");
+      $(".aboutus-fixed-container-item").addClass("overlayer_fixed");
+      $(".top-scale-1").addClass("fadeIn");
+      $(".top-scale-1").removeClass("fadeOut");
+      $(".top-scale-2").addClass("fadeOut");
+      $(".top-scale-2").removeClass("fadeIn");
+    } else if (scroll > (initialOffset + height/2) && scroll <= (initialOffset + 1 * height)) {
+      $("#aboutus_fixed_container").addClass("remove-background");
+      $(".aboutus-fixed-container-item").addClass("overlayer_fixed");
+      $(".top-scale-1").addClass("fadeOut");
+      $(".top-scale-1").removeClass("fadeIn");
+      $(".top-scale-2").addClass("fadeIn");
+      $(".top-scale-2").removeClass("fadeOut");
+    } else if (scroll > (initialOffset + 1 * height)) {
+      $("#aboutus_fixed_container").removeClass("remove-background");
+      $(".aboutus-fixed-container-item").removeClass("overlayer_fixed");
+      $(".top-scale-1").addClass("fadeOut");
+      $(".top-scale-1").removeClass("fadeIn");
+      $(".top-scale-2").addClass("fadeOut");
+      $(".top-scale-2").removeClass("fadeIn");
+    } else {
+      $("#aboutus_fixed_container").removeClass("remove-background");
+      $(".aboutus-fixed-container-item").removeClass("overlayer_fixed");
+      $(".top-scale-1").addClass("fadeOut");
+      $(".top-scale-1").removeClass("fadeIn");
+      $(".top-scale-2").addClass("fadeOut");
+      $(".top-scale-2").removeClass("fadeIn");
+    }
+  });
+
   setTimeout(function () {
     $('#music_icon_description').addClass('hidden');
   }, 3000);

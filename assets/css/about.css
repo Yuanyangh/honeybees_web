@@ -69,6 +69,24 @@
   }
 }
 
+@keyframes floatIn-aboutus {
+  0% {
+    display: block;
+    opacity: 0;
+    transform: translateY(-50px);
+    visibility: visible;
+  }
+  20% {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .gray-mask {
   position: absolute;
   width: 100%;
@@ -675,4 +693,96 @@
   .founder-message-bubble-text {
     font-size: 14px;
   }
+}
+
+.aboutus-fixed-container {
+  position: relative;
+  height: 200vh;
+  background: linear-gradient(180deg, #FFE8BA00 10%, #FFE8BACD 50%);
+}
+
+.remove-background {
+  background: none;
+}
+
+.aboutus-fixed-container-item {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #FFE8BA00 20%, #FFE8BACD 100%);
+}
+
+.fadeIn .text-1 {
+  animation: floatIn-aboutus 2s ease-in-out forwards;
+}
+
+.fadeIn .text-2 {
+  animation: floatIn-aboutus 2s ease-in-out forwards;
+}
+
+.fadeOut {
+  animation: fadeOut 0.2s ease-in-out forwards;
+}
+
+.aboutus-banner-text h3 {
+  font-family: "Agrandir-GrandHeavy";
+  font-size: 55px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0%;
+  opacity: 0;
+}
+
+@media (max-width: 900px) {
+  .aboutus-banner-text h3 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 500px) {
+  .aboutus-banner-text h3 {
+    font-size: 20px;
+  }
+}
+
+.journey-wrapper {
+  margin: auto;
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.journey-text-background {
+  height: 100vh;
+  width: 100%;
+  padding: 0px 20px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+.risk-management-wrapper, .wealth-management-wrapper, .corporate-solution-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+}
+
+.risk-management-wrapper .text-box, .wealth-management-wrapper .text-box, .corporate-solution-wrapper .text-box {
+  text-align: center;
+}
+
+.risk-management-wrapper {
+  background: linear-gradient(180deg, #FFE8BACD 0%, #926DC1FF 100%);
+}
+
+.wealth-management-wrapper {
+  background: linear-gradient(180deg, #FFE8BACD 0%, #2AA499FF 100%);
+}
+
+.corporate-solution-wrapper {
+  background: linear-gradient(180deg, #FFE8BACD 0%, #A56326FF 100%);
 }

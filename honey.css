@@ -1177,8 +1177,10 @@ li.btn {
 
 .corporate-sec {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 900px;
-  margin: 70px auto;
+  margin: 0px auto;
   gap: 30px;
 }
 
@@ -1187,7 +1189,7 @@ li.btn {
   flex-direction: column;
   row-gap: 8px;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   max-width: 550px;
 }
 
@@ -1343,7 +1345,7 @@ p {
   background-size: cover;
   background-position: center;
   padding-top: 100px;
-  padding-bottom: 150px;
+  padding-bottom: 30px;
   position: relative;
 }
 
