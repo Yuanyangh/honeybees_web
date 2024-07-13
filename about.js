@@ -70,6 +70,16 @@ $(document).ready(function () {
       $(".top-scale-2").addClass("fadeOut");
       $(".top-scale-2").removeClass("fadeIn");
     }
+
+    if ( scroll > $("#managements_wrapper").offset().top-50 && scroll <= $("#managements_wrapper").offset().top + 2.5 * height) {
+      $('.managements-banner-bee').addClass('fadeIn');
+    } else if ( scroll > $("#managements_wrapper").offset().top + 2.5 * height) {
+      console.log("sssssss");
+      $('.managements-banner-bee').removeClass('fadeIn');
+    } else {
+      $('.managements-banner-bee').removeClass('fadeIn');
+    }
+
   });
 
   setTimeout(function () {

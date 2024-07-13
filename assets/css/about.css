@@ -786,3 +786,31 @@
 .corporate-solution-wrapper {
   background: linear-gradient(180deg, #FFE8BACD 0%, #A56326FF 100%);
 }
+
+.managements-banner-bee {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 40%;
+  opacity: 0;
+}
+
+.managements-banner-bee.fadeIn {
+  animation: floatIn-aboutus 2s ease-in-out forwards;
+}
+
+.managements-bee-gif {
+  position: absolute;
+  top: 95%;
+  right: -45%;
+  width: 130px;
+}
+
+@media (max-width: 767px) {
+  .managements-banner-bee {
+    display: none;
+  }
+  .managements-bee-gif {
+    display: none;
+  }
+}
