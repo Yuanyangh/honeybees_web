@@ -61,40 +61,18 @@ $(document).ready(async function() {
       $(".top-scale-3").removeClass("fadeOut");
     }
 
-    var dedicat_mentor = document.getElementById("dedicat_mentor");
-    var digital_ecosys = document.getElementById("digital_ecosys");
-    var process_excel = document.getElementById("process_excel");
-    if (scroll > initialOffset) {
-      dedicat_mentor.classList.add("overlayer_fixed");
-      digital_ecosys.style.marginTop = `${dedicat_mentor.offsetHeight -
-        (scroll - initialOffset)}px`;
-      $(".dedicat-mentor ").css('background-position-y', `${-(scroll - $('.image-section').offset().top)/2}px`);
-      $(".dedicat-mentor .career-item-text-wrapper").css('margin-top', `${-(scroll - $('.image-section').offset().top)/3}px`);
-    } else if (scroll) {
-      dedicat_mentor.classList.remove("overlayer_fixed");
-    }
-    if (
-      scroll >
-      (initialOffset3 + initialOffset2 + initialOffset) / 3
-    ) {
-      dedicat_mentor.style.marginTop = "0px";
-      digital_ecosys.style.marginTop = "0px";
-    } else if (scroll > (initialOffset2 + initialOffset) / 2) {
-      digital_ecosys.classList.add("overlayer_fixed");
-      process_excel.style.marginTop = `${digital_ecosys.offsetHeight -
-        (scroll - initialOffset2)}px`;
-      digital_ecosys.style.marginTop = "0px";
-      $(".digital-ecosys ").css('background-position-y', `${-(scroll - $('.image-section').offset().top)/2}px`);
-      $(".digital-ecosys .career-item-text-wrapper").css('margin-top', `${-(scroll - $('.image-section').offset().top)/3}px`);
-    } else if (scroll) {
-      digital_ecosys.classList.remove("overlayer_fixed");
-    }
-    if (
-      scroll >
-      (initialOffset3 + initialOffset2 + initialOffset) / 3
-    ) {
-      dedicat_mentor.style.marginTop = "0px";
-      digital_ecosys.style.marginTop = "0px";
+    if (scroll > initialOffset && scroll <= initialOffset2) {
+      $(".dedicat-mentor").css('background-position-y', `${-(scroll - $('.image-section').offset().top)*0.5}px`);
+      $(".digital-ecosys").css('background-position-y', `0px`);
+      $(".process-excel").css('background-position-y', `0px`);
+    } else if (scroll > initialOffset2 && scroll <= initialOffset3) {
+      $(".dedicat-mentor").css('background-position-y', `0px`);
+      $(".digital-ecosys").css('background-position-y', `${-(scroll - height - $('.image-section').offset().top)*0.5}px`);
+      $(".process-excel").css('background-position-y', `0px`);
+    } else if (scroll > initialOffset3) {
+      $(".dedicat-mentor").css('background-position-y', `0px`);
+      $(".digital-ecosys").css('background-position-y', `0px`);
+      $(".process-excel").css('background-position-y', `${-(scroll - 2*height - $('.image-section').offset().top)*0.5}px`);
     }
   });
 
