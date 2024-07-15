@@ -775,6 +775,12 @@
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .risk-management-wrapper .text-box, .wealth-management-wrapper .text-box, .corporate-solution-wrapper .text-box {
+    text-align: left;
+  }
+}
+
 .risk-management-wrapper {
   background: linear-gradient(180deg, #FFE8BACD 0%, #926DC1FF 100%);
 }

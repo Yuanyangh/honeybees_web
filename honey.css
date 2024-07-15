@@ -1182,6 +1182,12 @@ li.btn {
   max-width: 900px;
   margin: 0px auto;
   gap: 30px;
+  opacity: 0;
+}
+
+.corporate-sec.fade-in-up {
+  animation: fadeInUp 1s ease-in-out forwards;
+  /* animation-delay: 1s; */
 }
 
 .corporate-sec .text-box {
