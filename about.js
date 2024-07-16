@@ -52,20 +52,22 @@ $(document).ready(function () {
     if (scroll > initialOffset && scroll <= (initialOffset + 0.9 * height)) {
       $("#aboutus_fixed_container").addClass("remove-background");
       $("#aboutus_fixed_container").css("margin-bottom", `0px`);
-      $(".aboutus-fixed-container-item").addClass("overlayer_fixed");
+      $(".aboutus-fixed-container-item.top-scale-1").addClass("overlayer_fixed");
+      $(".aboutus-fixed-container-item.top-scale-2").addClass("overlayer_fixed");
       $(".top-scale-1").addClass("fadeIn");
       $(".top-scale-1").removeClass("fadeOut");
       $(".top-scale-2").addClass("fadeOut");
       $(".top-scale-2").removeClass("fadeIn");
-    } else if (scroll > (initialOffset + 0.9 * height) && scroll <= (initialOffset + 1.8 * height)) {
+    } else if (scroll > (initialOffset + 0.9 * height) && scroll <= (initialOffset + 2 * height)) {
       $("#aboutus_fixed_container").addClass("remove-background");
-      $("#aboutus_fixed_container").css("margin-bottom", `${scroll - initialOffset - height}px`);
-      $(".aboutus-fixed-container-item").addClass("overlayer_fixed");
+      // $("#aboutus_fixed_container").css("margin-bottom", `${scroll - initialOffset - height}px`);
+      $(".aboutus-fixed-container-item.top-scale-1").removeClass("overlayer_fixed");
+      $(".aboutus-fixed-container-item.top-scale-2").removeClass("overlayer_fixed");
       $(".top-scale-1").addClass("fadeOut");
       $(".top-scale-1").removeClass("fadeIn");
       $(".top-scale-2").addClass("fadeIn");
       $(".top-scale-2").removeClass("fadeOut");
-    } else if (scroll > (initialOffset + 1.8 * height)) {
+    } else if (scroll > (initialOffset + 2 * height)) {
       $("#aboutus_fixed_container").removeClass("remove-background");
       $("#aboutus_fixed_container").css("margin-bottom", `0px`);
       $(".aboutus-fixed-container-item").removeClass("overlayer_fixed");
