@@ -4,6 +4,7 @@ $(document).ready(function() {
   const scale = document.getElementById("scale-container");
   const bannerContainer = document.querySelector(".banner-container");
 
+  let lastScrollTop = 0;
   $(window).scroll(function() {
     // calculate the percentage of the window scroll.
     var scroll = $(window).scrollTop(),
@@ -38,6 +39,10 @@ $(document).ready(function() {
       scale.style.height = "fit-content";
       $(".top-scale-1").removeClass("z100");
     } else {
+      let st = $(this).scrollTop();
+      let scrollAmount = (st - lastScrollTop) / 3; // Adjusting scroll amount to 1/3
+      $(this).scrollTop(lastScrollTop + scrollAmount); // Set the new scroll position
+      lastScrollTop = $(this).scrollTop();
       $(".top-scale-1").addClass("fadeOut");
       $(".top-scale-1").removeClass("fadeIn");
       $(".top-scale-1").removeClass("z100");
