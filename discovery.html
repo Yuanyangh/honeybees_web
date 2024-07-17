@@ -126,7 +126,7 @@
         </div>
         <div class="contact-overlay"></div>
       </div>
-      <div class="questions-container">
+      <form class="questions-container">
         <div class="questions-title">
           <h3>Lorem ipsum sit dor amet res</h3>
         </div>
@@ -352,6 +352,29 @@
             </div>
           </div>
         </ol>
+        <div class="mt-4 mx-auto">
+          <button type="button" style="cursor: pointer" onclick="onSubmit()">Submit</button>
+        </div>
+      </form>
+      <div class="waiting-wrapper" id="waiting_wrapper">
+        <div class="container">
+          <div class="row contact-section">
+            <div class="col-12 coming-soon">
+              yay! we are preparing your results...<br/>sit back and relax
+            </div>
+            <div class="contact-section-people">
+              <div
+                class="contact-section-people-lottie"
+                id="lottie-animation3"
+              ></div>
+              <div
+                class="contact-section-people-lottie2"
+                id="lottie-animation4"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-overlay"></div>
       </div>
       <!-- <div class="row contact-banner-text">
         <h3>You're all clear, kid. Let's blow this thing and go home!</h3>
@@ -562,5 +585,15 @@
     ></script>
     <script src="assets/scripts/sound.js"></script>
     <script src="assets/scripts/buzzaction.js"></script>
+    <script>
+        function onSubmit() {
+          $("#waiting_wrapper").css('display', 'block');
+          const target = document.getElementById('waiting_wrapper');
+          window.scrollTo({
+            top: target.offsetTop,
+            behavior: 'smooth'
+          });
+        }
+    </script>
   </body>
 </html>
