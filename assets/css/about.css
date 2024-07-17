@@ -806,7 +806,7 @@
 }
 
 .managements-banner-bee.fadeIn {
-  animation: floatIn-aboutus 2s ease-in-out forwards;
+  animation: floatIn-aboutus 1s ease-in-out forwards;
 }
 
 .managements-bee-gif {
@@ -823,4 +823,13 @@
   .managements-bee-gif {
     display: none;
   }
+}
+
+.managements-show {
+  opacity: 0;
+}
+
+.managements-show.fade-in-up {
+  animation: fadeInUp 0.5s ease-in-out 0.5s forwards;
+  /* animation-delay: 1s; */
 }
