@@ -94,9 +94,9 @@ $(document).ready(function () {
       $(".top-scale-2").removeClass("fadeIn");
     }
 
-    if ( scroll > $("#managements_wrapper").offset().top - 0.8*height && scroll <= $("#managements_wrapper").offset().top + 2.5 * height) {
+    if ( scroll > $("#managements_wrapper").offset().top - 0.8*height && scroll <= $("#managements_wrapper").offset().top + 2 * height) {
       $('.managements-banner-bee').addClass('fadeIn');
-    } else if ( scroll > $("#managements_wrapper").offset().top + 2.5 * height) {
+    } else if ( scroll > $("#managements_wrapper").offset().top + 2 * height) {
       $('.managements-banner-bee').removeClass('fadeIn');
     } else {
       $('.managements-banner-bee').removeClass('fadeIn');
