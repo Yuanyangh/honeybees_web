@@ -679,8 +679,18 @@ section.event_section {
   /* background-image: url(../img/bg-footer-up.png); */
   background-image: url(../img/bg-wavy.jpg);
   background-color: #4F95FF;
-  background-blend-mode: overlay;
+  background-blend-mode: soft-light;
   background-size: cover;
+}
+
+section.event_section::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF33;
+  top: 0;
+  left: 0;
 }
 
 .adventure-btn {
@@ -744,6 +754,7 @@ section.event_section {
 
 .last-events-container {
   margin-top: 300px;
+  position: relative;
 }
 
 @media (max-width: 767px) {
