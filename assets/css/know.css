@@ -93,11 +93,11 @@
 }
 
 .questions-radio-wrapper input {
-  border-color: #FFFBF5AA;
+  border-color: #FFFBF5FF;
   margin: 0;
 }
 .questions-radio-wrapper input[type="radio"] + label {
-  color: #FFFBF5AA;
+  color: #FFFBF5FF;
 }
 
 .questions-radio-wrapper input[type="radio"]:checked {
@@ -105,6 +105,14 @@
 }
 .questions-radio-wrapper input[type="radio"]:checked + label {
   color: #FFFBF5FF;
+}
+
+.questions-radio-wrapper.inactive label {
+  color: #FFFBF5AA !important;
+}
+
+.questions-radio-wrapper.inactive input {
+  border-color: #FFFBF5AA !important;
 }
 
 .questions-radio-wrapper input[type="radio"]:checked::before {
