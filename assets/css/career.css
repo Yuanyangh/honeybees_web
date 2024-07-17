@@ -304,7 +304,7 @@
 .career-item-text-wrapper {
   padding: 85px 150px;
   border-radius: 35px;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(10px);
 }
 
 #dedicat_mentor .career-item-text-wrapper {
