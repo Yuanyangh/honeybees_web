@@ -671,7 +671,10 @@ section.event_section {
   padding: 200px 0px 400px;
   margin-top: 0px;
   position: relative;
-  background-image: url(../img/bg-footer-up.png);
+  /* background-image: url(../img/bg-footer-up.png); */
+  background-image: url(../img/bg-wavy.jpg);
+  background-color: #4F95FF;
+  background-blend-mode: overlay;
   background-size: cover;
 }
 
