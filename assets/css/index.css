@@ -32,7 +32,7 @@
 
 @keyframes scaleDown {
   from {
-    transform: scale(1.4); /* Start from a slightly larger scale */
+    transform: scale(1.2); /* Start from a slightly larger scale */
   }
   to {
     transform: scale(1); /* Scale down to the original size */
@@ -200,11 +200,12 @@
 
 .scale-container {
   position: relative;
-  height: 200vh;
+  height: 100vh;
 }
 
 .scale-background {
-  position: fixed;
+  /* position: fixed; */
+  transform: scale(1.2);
   top: 0px;
   height: 100vh;
   width: 100%;
@@ -218,7 +219,7 @@
     url("../img/bann1.png");
   background-size: cover;
   background-position: center;
-  animation: scaleDown 1s ease-in-out forwards;
+  animation: scaleDown 1s ease-in-out 2s forwards;
   transform-style: preserve-3d;
   overflow: hidden;
 }
@@ -237,12 +238,16 @@
   transform-style: inherit;
 }
 
+.scale-background.top-scale-2 {
+  transform: scale(1);
+}
+
 .levelup-container.z100 {
   z-index: 100;
 }
 
 .levelup-container {
-  /* position: fixed; */
+  position: absolute;
   height: 100vh;
   cursor: pointer;
 }
@@ -273,7 +278,7 @@
 }
 
 .levelup-title {
-  animation: floatInAndColorChange3 2s ease-in-out 2s forwards;
+  animation: floatInAndColorChange3 2s ease-in-out 0s forwards;
   font-size: 80px;
   color: #29446d;
   font-family: "Agrandir-GrandHeavy";

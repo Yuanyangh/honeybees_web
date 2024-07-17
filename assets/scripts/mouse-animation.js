@@ -4,6 +4,7 @@ $(document).ready(function() {
   const scale = document.getElementById("scale-container");
   const bannerContainer = document.querySelector(".banner-container");
 
+  /*
   let lastScrollTop = 0;
   $(window).scroll(function() {
     // calculate the percentage of the window scroll.
@@ -60,4 +61,41 @@ $(document).ready(function() {
       }, 3000);
     }
   });
+  */
+
+  $('#music_icon_description').removeClass('hidden');
+  $(".top-scale-1").addClass("z100");
+  bannerContainer.classList.remove("animatedbanner");
+
+  setTimeout(function () {
+    const initialFontSize = window.innerWidth < 768 ? 40: 80;
+    const finalFontSize = window.innerWidth < 768 ? 35: 70;
+    const duration = 1000;
+    const interval = 10;
+    const step = (initialFontSize - finalFontSize) / (duration / interval);
+  
+    let currentFontSize = initialFontSize;
+    const intervalId = setInterval(function() {
+      currentFontSize -= step;
+      if (currentFontSize <= finalFontSize) {
+        currentFontSize = finalFontSize;
+        clearInterval(intervalId);
+      }
+      levelupTitle.style.fontSize = `${currentFontSize}px`;
+    }, interval);
+  }, 2000);
+
+  setTimeout(function() {
+    $(".top-scale-1").addClass("fadeOut");
+    $(".top-scale-1").removeClass("fadeIn");
+    $(".top-scale-1").removeClass("z100");
+    $(".top-scale-2").addClass("fadeIn");
+    $(".top-scale-2").removeClass("fadeOut");
+    bannerContainer.classList.add("animatedbanner");
+  }, 3000)
+
+  setTimeout(function () {
+    $('#music_icon_description').addClass('hidden');
+  }, 6000);
+
 });
