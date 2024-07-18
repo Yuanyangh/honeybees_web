@@ -119,13 +119,13 @@
   content: "";
   background-image: url("../img/bee-logo.gif");
   background-position: 0px 0px;
-  background-size: 65px 65px;
+  background-size: 100px 100px;
   position: absolute;
-  height: 65px;
-  width: 65px;
+  height: 100px;
+  width: 100px;
   background-repeat: no-repeat;
   top: 100%;
-  right: 37%;
+  right: 25%;
 }
 
 .ten-more-message-bubble-text {
