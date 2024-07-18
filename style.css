@@ -1187,3 +1187,15 @@ h6 {
 .honeybeeMusic:hover .music-icon-description{
   display: flex !important;
 }
+
+.mt-10 {
+  margin-top: 40px;
+}
+
+.mt-16 {
+  margin-top: 64px;
+}
+
+.mt-24 {
+  margin-top: 96px;
+}
