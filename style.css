@@ -1180,11 +1180,11 @@ h6 {
 }
 
 .hidden {
-  opacity: 0 !important;
-  animation: fadeOut 0.2s ease forwards;
+  display: none !important;
 }
 
 .honeybeeMusic .music-icon:hover + .music-icon-description {
+  display: flex !important;
   opacity: 1 !important;
   animation: fadeInUp 0.2s ease forwards;
 }
