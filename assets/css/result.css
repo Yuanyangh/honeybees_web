@@ -1,0 +1,228 @@
+body {
+  background-image: linear-gradient(180deg, #EB942DFF 0%, #EE7430FF 100%), url(../img/bg-result.png);
+  background-color: #EEAF30;
+  background-blend-mode: soft-light;
+  background-size: cover;
+}
+
+.show-item {
+  opacity: 0;
+}
+.show-item.fade-in-up {
+  animation: fadeInUp 0.5s ease-in-out 0s forwards;
+}
+.show-item.fade-in-up.img-bg {
+  animation: fadeInUp 0.5s ease-in-out 0s forwards;
+}
+.show-item.fade-in-up.img-emblem {
+  animation: fadeInUp 0.5s ease-in-out 0.5s forwards;
+}
+.img-element .show-item.fade-in-up {
+  animation: fadeInUp 0.5s ease-in-out 1s forwards;
+}
+
+
+.result-container {
+  max-width: 820px;
+  min-height: 300vh;
+  margin: 0 auto;
+  color: #FFFBF5;
+  position: relative;
+}
+
+.title {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 55px;
+  line-height: 60px;
+  font-family: "Agrandir-GrandHeavy";
+  text-transform: uppercase;
+  color: #FFFBF5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 101;
+}
+
+@media screen and (max-width: 767px) {
+  .title h1 {
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+}
+
+.main-image-wrapper {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-image-container {
+  position: relative;
+  width: 334px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-image-container .img-bg {
+  max-width: 284px;
+}
+.main-image-container .img-emblem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 334px;
+}
+.main-image-container .img-element {
+  position: absolute;
+  bottom: -25px;
+}
+.main-image-container .img-element img {
+  max-width: 180px;
+}
+.main-image-container .img-element.left {
+  left: -10%;
+}
+.main-image-container .img-element.right {
+  transform: scaleX(-1);
+  right: -10%;
+}
+
+@media screen and (max-width: 767px) {
+  .main-image-container {
+    width: 267px;
+  }
+  .main-image-container .img-bg {
+    max-width: 227px;
+  }
+  .main-image-container .img-emblem {
+    max-width: 267px;
+  }
+  .main-image-container .img-element {
+    bottom: -20px;
+  }
+  .main-image-container .img-element img {
+    max-width: 144px;
+  }  
+}
+
+.description-wrapper {
+  margin-top: 100px;
+}
+
+.sub-title {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.sub-title h2 {
+  font-family: "Agrandir-GrandHeavy";
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 36px;
+  color: #FFFBF5;
+}
+
+@media screen and (max-width: 767px) {
+  .sub-title h2 {
+    font-size: 25px;
+    line-height: 1;
+  }
+}
+
+.shape-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.user-wrapper {
+  width: 120px;
+  height: 127px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-wrapper img {
+  position: absolute;
+}
+
+.user-type {
+  z-index: 1;
+  font-size: 18px;
+}
+
+.user-percentage {
+  z-index: 1;
+  font-family: "Agrandir-GrandHeavy";
+  font-size: 30px;
+}
+
+.property-container {
+  padding: 0px 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.property-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+.property-container li {
+  position: relative;
+  font-size: 14px;
+  line-height: 16.8px;
+  font-family: "AvenirNext" !important;
+  padding: 7px 15px 7px 25px;
+  margin: 5px 10px;
+  border-radius: 10px;
+  list-style-type: none;
+  color: #fffbf5;
+  min-width: max-content;
+}
+
+.property-container li:before {
+  top: calc(50% - 4px);
+  content: "";
+  background: #fffbf5;
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  border-radius: 50px;
+  margin-left: -16px;
+}
+
+.property-container li.property-healer {
+  background: #FF6464;
+}
+
+.property-container li.property-explorer {
+  background: #FFCD52;
+}
+
+.description-container {
+  max-width: 600px;
+  margin: 50px auto 0px;
+  text-align: center;
+  font-family: "AvenirNext" !important;
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.description-container p {
+  margin: 30px 0px;
+}
