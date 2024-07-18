@@ -86,6 +86,6 @@ $(document).ready(async function() {
   });
 
   setTimeout(function () {
-    $('#music_icon_description').addClass('hidden');
+    $('#music_icon_description').addClass('fadeOut-scale');
   }, 3000);
 });

@@ -12,7 +12,7 @@ function showItems(el) {
 $(document).ready(function(){
   showItems('.event-item');
   setTimeout(function () {
-    $('#music_icon_description').addClass('hidden');
+    $('#music_icon_description').addClass('fadeOut-scale');
   }, 3000);
 });
 

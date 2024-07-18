@@ -100,6 +100,17 @@
   }
 }
 
+@keyframes fadeOutScale {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
 .home {
   background: url("asssets/flowerBG1.png"); /* Adjust the path accordingly */
   background-size: cover;
@@ -1199,4 +1210,8 @@ h6 {
 
 .mt-24 {
   margin-top: 96px;
+}
+
+.fadeOut-scale {
+  animation: fadeOutScale 0.2s ease-in-out forwards;
 }

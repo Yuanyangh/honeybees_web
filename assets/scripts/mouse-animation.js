@@ -63,7 +63,7 @@ $(document).ready(function() {
   });
   */
 
-  $('#music_icon_description').removeClass('hidden');
+  $('#music_icon_description').removeClass('fadeOut-scale');
   $(".top-scale-1").addClass("z100");
   bannerContainer.classList.remove("animatedbanner");
 
@@ -95,7 +95,7 @@ $(document).ready(function() {
   }, 3000)
 
   setTimeout(function () {
-    $('#music_icon_description').addClass('hidden');
+    $('#music_icon_description').addClass('fadeOut-scale');
   }, 6000);
 
 });
