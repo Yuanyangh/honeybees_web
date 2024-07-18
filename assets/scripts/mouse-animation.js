@@ -86,7 +86,6 @@ $(document).ready(function() {
   }, 2000);
 
   setTimeout(function() {
-    $(".top-scale-1").addClass("fadeOut");
     $(".top-scale-1").removeClass("fadeIn");
     $(".top-scale-1").removeClass("z100");
     $(".top-scale-2").addClass("fadeIn");
