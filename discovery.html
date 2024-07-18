@@ -142,6 +142,9 @@
             </div>
           </div>
         </div>
+        <div class="start-btn-wrapper hidden mt-4 mx-auto">
+          <button type="button" style="cursor: pointer" onclick="onStart()">Start</button>
+        </div>
         <ol class="questions-details-wrapper hidden">
           <div class="questions-detail" type="number">
             <li for="" class="pr-4">When thinking about your financial decisions, do you:</li>
@@ -608,8 +611,18 @@
           setTimeout(() => {
             window.location.assign('./result.html');
           }, 3000);
-
         }
+        function onStart() {
+          const questions = document.querySelectorAll('.questions-details-wrapper');
+          questions.forEach(question => {
+            question.classList.remove('hidden');
+          });
+          const submitBtn = document.querySelectorAll('.submit-btn-wrapper');
+          submitBtn.forEach(btn => {
+            btn.classList.remove('hidden');
+          });
+        }
+
     </script>
   </body>
 </html>

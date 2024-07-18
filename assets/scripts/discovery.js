@@ -17,13 +17,14 @@ $(document).ready(async function() {
   const nameInput = $('#name');
   const emailInput = $('#email');
   const questions = $('.questions-details-wrapper');
+  const startBtn = $('.start-btn-wrapper');
   const submitBtn = $('.submit-btn-wrapper');
 
   function checkInputs() {
     if (nameInput.val().trim() !== '' && emailInput.val().trim() !== '') {
-      questions.removeClass('hidden');
-      submitBtn.removeClass('hidden');
+      startBtn.removeClass('hidden');
     } else {
+      startBtn.addClass('hidden');
       questions.addClass('hidden');
       submitBtn.addClass('hidden');
     }
