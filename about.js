@@ -41,9 +41,19 @@ $(document).ready(function () {
         }
     });
   }  
+  function showItemsForManagement(el) {
+    var windowHeight = $(window).height();
+    $(el).each(function(){
+        var thisPos = $(this).offset().top;
+        var topOfWindow = $(window).scrollTop();
+        if (topOfWindow + windowHeight - 50 > thisPos ) {
+            $(this).addClass("fade-in-up");
+        }
+    });
+  }  
 
   $(window).scroll(function() {
-    showItems('.managements-show');
+    showItemsForManagement('.managements-show');
     // calculate the percentage of the window scroll.
     var scroll = $(window).scrollTop();
     var initialOffset = $("#aboutus_fixed_container").offset().top;
