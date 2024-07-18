@@ -677,7 +677,7 @@ section.event_section {
   margin-top: 0px;
   position: relative;
   /* background-image: url(../img/bg-footer-up.png); */
-  background-image: url(../img/bg-wavy.jpg);
+  background-image: linear-gradient(180deg, #2876EC 0%, #2876EC 100%), url(../img/bg-wavy.jpg);
   background-color: #4F95FF;
   background-blend-mode: soft-light;
   background-size: cover;
