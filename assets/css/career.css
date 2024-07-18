@@ -284,7 +284,7 @@
   align-items: center;
   justify-content: center;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center;
   background-repeat: no-repeat;
 }

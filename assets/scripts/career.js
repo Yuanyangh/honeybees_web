@@ -62,7 +62,7 @@ $(document).ready(async function() {
     }
 
     if (scroll > initialOffset && scroll <= initialOffset2) {
-      $(".dedicat-mentor").css('background-position-y', `${-(scroll - $('.image-section').offset().top)*0.5}px`);
+      // $(".dedicat-mentor").css('background-position-y', `${-(scroll - $('.image-section').offset().top)*0.5}px`);
       $(".dedicat-mentor .career-item-text-wrapper").css("margin-bottom", `${-(scroll - initialOffset)*0.5}px`);
       $(".digital-ecosys").css('background-position-y', `0px`);
       $(".digital-ecosys .career-item-text-wrapper").css("margin-bottom", `0px`);
@@ -71,7 +71,7 @@ $(document).ready(async function() {
     } else if (scroll > initialOffset2 && scroll <= initialOffset3) {
       $(".dedicat-mentor").css('background-position-y', `0px`);
       $(".dedicat-mentor .career-item-text-wrapper").css("margin-bottom", `0px`);
-      $(".digital-ecosys").css('background-position-y', `${-(scroll - height - $('.image-section').offset().top)*0.5}px`);
+      // $(".digital-ecosys").css('background-position-y', `${-(scroll - height - $('.image-section').offset().top)*0.5}px`);
       $(".digital-ecosys .career-item-text-wrapper").css("margin-bottom", `${-(scroll - initialOffset2)*0.5}px`);
       $(".process-excel").css('background-position-y', `0px`);
       $(".process-excel .career-item-text-wrapper").css("margin-bottom", `0px`);
@@ -80,7 +80,7 @@ $(document).ready(async function() {
       $(".dedicat-mentor .career-item-text-wrapper").css("margin-bottom", `0px`);
       $(".digital-ecosys").css('background-position-y', `0px`);
       $(".digital-ecosys .career-item-text-wrapper").css("margin-bottom", `0px`);
-      $(".process-excel").css('background-position-y', `${-(scroll - 2*height - $('.image-section').offset().top)*0.5}px`);
+      // $(".process-excel").css('background-position-y', `${-(scroll - 2*height - $('.image-section').offset().top)*0.5}px`);
       $(".process-excel .career-item-text-wrapper").css("margin-bottom", `${-(scroll - initialOffset3)*0.5}px`);
     }
   });
