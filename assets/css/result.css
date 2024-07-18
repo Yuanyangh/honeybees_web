@@ -1,24 +1,35 @@
 body {
   background-image: linear-gradient(180deg, #EB942DFF 0%, #EE7430FF 100%), url(../img/bg-result.png);
-  background-color: #EEAF30;
+  background-color: #EE7430;
   background-blend-mode: soft-light;
   background-size: cover;
+}
+
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Start above the final position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .show-item {
   opacity: 0;
 }
-.show-item.fade-in-up {
-  animation: fadeInUp 0.5s ease-in-out 0s forwards;
+.show-item.float-in {
+  animation: floatIn 0.5s ease-in-out 0s forwards;
 }
-.show-item.fade-in-up.img-bg {
-  animation: fadeInUp 0.5s ease-in-out 0s forwards;
+.show-item.float-in.img-bg {
+  animation: floatIn 0.5s ease-in-out 0s forwards;
 }
-.show-item.fade-in-up.img-emblem {
-  animation: fadeInUp 0.5s ease-in-out 0.5s forwards;
+.show-item.float-in.img-emblem {
+  animation: floatIn 0.5s ease-in-out 0.5s forwards;
 }
-.img-element .show-item.fade-in-up {
-  animation: fadeInUp 0.5s ease-in-out 1s forwards;
+.img-element .show-item.float-in {
+  animation: floatIn 0.5s ease-in-out 1s forwards;
 }
 
 
