@@ -87,6 +87,10 @@
   }
 }
 
+body {
+  background-color: #2976ed;
+}
+
 .gray-mask {
   position: absolute;
   width: 100%;
