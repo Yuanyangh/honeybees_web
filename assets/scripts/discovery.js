@@ -14,6 +14,24 @@ $(document).ready(async function() {
     });
   });
 
+  const nameInput = $('#name');
+  const emailInput = $('#email');
+  const questions = $('.questions-details-wrapper');
+  const submitBtn = $('.submit-btn-wrapper');
+
+  function checkInputs() {
+    if (nameInput.val().trim() !== '' && emailInput.val().trim() !== '') {
+      questions.removeClass('hidden');
+      submitBtn.removeClass('hidden');
+    } else {
+      questions.addClass('hidden');
+      submitBtn.addClass('hidden');
+    }
+  }
+
+  nameInput.on('input', checkInputs);
+  emailInput.on('input', checkInputs);
+
   setTimeout(function () {
     $('#music_icon_description').addClass('hidden');
   }, 3000);

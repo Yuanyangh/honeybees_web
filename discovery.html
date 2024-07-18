@@ -130,7 +130,19 @@
         <div class="questions-title">
           <h3>Lorem ipsum sit dor amet res</h3>
         </div>
-        <ol class="questions-details-wrapper">
+        <div class="user-info-container">
+          <div class="user-info">
+            <div>
+              <label for="">Name</label>
+              <input type="text" id="name"/>
+            </div>
+            <div>
+              <label for="">Email Address</label>
+              <input type="text" id="email"/>
+            </div>
+          </div>
+        </div>
+        <ol class="questions-details-wrapper hidden">
           <div class="questions-detail" type="number">
             <li for="" class="pr-4">When thinking about your financial decisions, do you:</li>
             <div class="d-flex questions-radio-wrapper">
@@ -352,7 +364,7 @@
             </div>
           </div>
         </ol>
-        <div class="mt-4 mx-auto">
+        <div class="submit-btn-wrapper hidden mt-4 mx-auto">
           <button type="button" style="cursor: pointer" onclick="onSubmit()">Submit</button>
         </div>
       </form>
