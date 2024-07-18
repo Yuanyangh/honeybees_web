@@ -1181,11 +1181,13 @@ h6 {
 }
 
 .hidden {
-  display: none !important;
+  opacity: 0 !important;
+  animation: fadeOut 0.2s ease forwards;
 }
 
 .honeybeeMusic:hover .music-icon-description{
-  display: flex !important;
+  opacity: 1 !important;
+  animation: fadeInUp 0.2s ease forwards;
 }
 
 .mt-10 {
