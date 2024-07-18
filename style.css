@@ -1143,7 +1143,6 @@ h6 {
   position: absolute;
   top: 0px;
   right: 35px;
-  cursor: pointer;
 }
 
 @media (max-width: 767px) {
@@ -1185,7 +1184,7 @@ h6 {
   animation: fadeOut 0.2s ease forwards;
 }
 
-.honeybeeMusic:hover .music-icon-description{
+.honeybeeMusic .music-icon:hover + .music-icon-description {
   opacity: 1 !important;
   animation: fadeInUp 0.2s ease forwards;
 }
