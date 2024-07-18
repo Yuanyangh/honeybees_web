@@ -1,7 +1,7 @@
 body {
   background-image: linear-gradient(180deg, #EB942DFF 0%, #EE7430FF 100%), url(../img/bg-result.png);
   background-color: #EE7430;
-  background-blend-mode: soft-light;
+  /* background-blend-mode: soft-light; */
   background-size: cover;
 }
 
