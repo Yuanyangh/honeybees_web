@@ -357,11 +357,11 @@ body {
   max-width: 94px;
 }
 .sub-image-container .img-element.left {
-  left: -15%;
+  left: -10%;
 }
 .sub-image-container .img-element.right {
   transform: scaleX(-1);
-  right: -15%;
+  right: -10%;
 }
 .sub-image-container .image-title {
   margin-top: 50px;
