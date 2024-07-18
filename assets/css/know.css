@@ -77,6 +77,11 @@
   color: #FFFBF5;
 }
 
+.start-btn-wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .questions-details-wrapper {
   display: flex;
   flex-direction: column;
@@ -190,7 +195,7 @@
 
 .user-info-container {
   width: 100%;
-  margin: 0 auto;
+  margin: 40px auto 0;
   padding: 0 20px;
   max-width: 600px;
 }
@@ -221,7 +226,7 @@
   border: 2px solid #29446d;
   padding: 8px 0;
   border-radius: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
