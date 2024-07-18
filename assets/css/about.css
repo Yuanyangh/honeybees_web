@@ -753,7 +753,7 @@
   left: 50%;
   bottom: 50vh;
   transform: translate(-50%, 50%);
-  /* background: linear-gradient(180deg, #FFE8BA00 20%, #FFE8BACD 100%) */
+  background: linear-gradient(180deg, #FFE8BA00 20%, #FFE8BACD 100%), linear-gradient(180deg, #efb12700 20%, #efb127FF 100%);
 }
 
 .journey-text-background {
