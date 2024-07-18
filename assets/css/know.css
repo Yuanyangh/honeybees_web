@@ -202,13 +202,8 @@
 
 .user-info {
   display: flex;
+  flex-direction: column;
   gap: 20px;
-}
-
-@media (max-width: 767px) {
-  .user-info {
-    flex-direction: column;
-  }
 }
 
 .user-info div {
