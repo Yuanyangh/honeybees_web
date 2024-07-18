@@ -90,11 +90,60 @@
 }
 
 .questions-detail {
+  position: relative;
   max-width: 600px;
   color: #FFFBF5;
   font-family: "Agrandir-GrandHeavy";
   font-size: 18px;
   margin: 40px 0px;
+}
+
+.ten-more-message-bubble {
+  position: absolute;
+  top: 35%;
+  right: -250px;
+  margin-left: 0px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 229px;
+  height: 99px;
+}
+
+.ten-more-message-bubble img {
+  position: absolute;
+}
+
+.ten-more-message-bubble:after {
+  content: "";
+  background-image: url("../img/bee-logo.gif");
+  background-position: 0px 0px;
+  background-size: 65px 65px;
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  background-repeat: no-repeat;
+  top: 100%;
+  right: 37%;
+}
+
+.ten-more-message-bubble-text {
+  z-index: 2;
+  transform: rotate(3deg);
+  display: block;
+  font-size: 18px;
+  color: #29446d;
+  font-family: "AvenirNext-Heavy";
+  margin-top: -24px;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .ten-more-message-bubble-text {
+    font-size: 14px;
+  }
 }
 
 .questions-radio-wrapper {
