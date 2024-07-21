@@ -702,8 +702,8 @@ body {
 .aboutus-fixed-container {
   position: relative;
   height: 300vh;
-  background: linear-gradient(180deg, #FFE8BA00 20%, #FFE8BACD  33.3%),
-              linear-gradient(180deg, #efb12700 6.67%, #efb127FF  33.3%);
+  /* background: linear-gradient(180deg, #FFE8BA00 20%, #FFE8BACD  33.3%),
+              linear-gradient(180deg, #efb12700 6.67%, #efb127FF  33.3%); */
 }
 
 .remove-background {
@@ -713,7 +713,7 @@ body {
 .aboutus-fixed-container-item {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(180deg, #FFE8BA00 20%, #FFE8BACD 100%);
+  /* background: linear-gradient(180deg, #FFE8BA00 20%, #FFE8BACD 100%); */
 }
 
 .fadeIn .text-1 {
@@ -758,7 +758,7 @@ body {
   left: 50%;
   bottom: 50vh;
   transform: translate(-50%, 50%);
-  background: linear-gradient(180deg, #FFE8BA00 60%, #FFE8BACD 100%), linear-gradient(180deg, #efb12700 20%, #efb127FF 100%);
+  background: linear-gradient(180deg, #7BD7FF00 0%, #7BD7FF99 100%), linear-gradient(180deg, #2976ed00 0%, #2976edff 100%);
 }
 
 .journey-text-background {
@@ -774,7 +774,7 @@ body {
 }
 
 #managements_wrapper {
-  background-color: #efb127;
+  background: linear-gradient(180deg, #7BD7FF99 0%, #926DC1 18%, #2AA499 50%, #E28937 80%);
 }
 
 .risk-management-wrapper, .wealth-management-wrapper, .corporate-solution-wrapper {
@@ -794,7 +794,7 @@ body {
   }
 }
 
-.risk-management-wrapper {
+/* .risk-management-wrapper {
   background: linear-gradient(180deg, #FFE8BACD 0%, #926DC1FF 100%);
 }
 
@@ -804,7 +804,7 @@ body {
 
 .corporate-solution-wrapper {
   background: linear-gradient(180deg, #FFE8BACD 0%, #A56326FF 100%);
-}
+} */
 
 .managements-banner-bee {
   z-index: 1;
