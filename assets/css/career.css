@@ -303,20 +303,31 @@
 
 .career-item-text-wrapper {
   padding: 85px 150px;
-  border-radius: 35px;
+  border-radius: 50px;
   backdrop-filter: blur(10px);
 }
 
+@media (max-width: 767px) {
+  .career-item-text-wrapper {
+    margin: 0px 20px;
+    padding: 30px 20px;
+    border-radius: 30px;
+  }
+}
+
 #dedicat_mentor .career-item-text-wrapper {
-  background-color: #EE74301A;
+  /* background-color: #EE74301A; */
+  background-color: #FFFBF51A;
 }
 
 #digital_ecosys .career-item-text-wrapper {
-  background-color: #3061AB1A;
+  /* background-color: #3061AB1A; */
+  background-color: #FFFBF51A;
 }
 
 #process_excel .career-item-text-wrapper {
-  background-color: #EEAF301A;
+  /* background-color: #EEAF301A; */
+  background-color: #FFFBF51A;
 }
 
 .career-item-text {
@@ -330,7 +341,7 @@
 }
 
 .career-item-text h3 {
-  font-size: 24px;
+  font-size: 30px;
   line-height: 1;
   font-family: "Agrandir-GrandHeavy";
   text-transform: uppercase;
@@ -399,9 +410,6 @@
 }
 
 @media (max-width: 767px) {
-  .career-item-text {
-    margin: 0 20px;
-  }
   .career-other-input {
     font-size: 12px !important;
     margin-bottom: 0px !important;
