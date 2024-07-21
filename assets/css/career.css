@@ -295,15 +295,66 @@
   background-image: url("../img/mentor.png");
 }
 
+.dedicat-mentor:before {
+  content: "";
+  background-image: url(../img/career_line_2.png);
+  background-position: 0px 50%;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
 .digital-ecosys {
   background-image: url("../img/digital.png");
 }
+
+.digital-ecosys:before {
+  content: "";
+  background-image: url(../img/career_line_3.png);
+  background-position: 0px 0px;
+  width: 756px;
+  height: 516px;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  bottom: 20vh;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.digital-ecosys:after {
+  content: "";
+  transform: scaleX(-1) rotate(45deg);
+  background-image: url(../img/Home_Bee_B.gif);
+  background-position: 0px 0px;
+  width: 110px;
+  height: 110px;
+  background-size: 110px 110px;
+  position: absolute;
+  right: 756px;
+  bottom: 10vh;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
 
 .process-excel {
   background-image: url("../img/process.png");
 }
 
+@media (max-width: 767px) {
+  .dedicat-mentor:before, .digital-ecosys:before, .digital-ecosys:after {
+    display: none;
+  }
+}
+
 .career-item-text-wrapper {
+  z-index: 1;
   padding: 85px 150px;
   border-radius: 50px;
   backdrop-filter: blur(10px);
