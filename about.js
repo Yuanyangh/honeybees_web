@@ -59,7 +59,7 @@ $(document).ready(function () {
     var initialOffset = $("#aboutus_fixed_container").offset().top;
     var height = $(window).height();
 
-    if (scroll > initialOffset && scroll <= (initialOffset + 0.8 * height)) {
+    if (scroll > initialOffset - 0.5 * height && scroll <= (initialOffset + 0.8 * height)) {
       $("#aboutus_fixed_container").addClass("remove-background");
       $("#aboutus_fixed_container").css("margin-bottom", `0px`);
       $(".aboutus-fixed-container-item.top-scale-1").addClass("overlayer_fixed");
