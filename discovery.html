@@ -119,7 +119,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="start-btn-wrapper hidden mx-auto">
+                <div class="start-btn-wrapper hide mx-auto">
                   <button type="button" style="cursor: pointer" onclick="onStart()">Let's find out!</button>
                 </div>
               </form>
@@ -257,17 +257,6 @@
     <script src="assets/scripts/sound.js"></script>
     <script src="assets/scripts/buzzaction.js"></script>
     <script>
-        function onSubmit() {
-          $("#waiting_wrapper").css('display', 'block');
-          const target = document.getElementById('waiting_wrapper');
-          window.scrollTo({
-            top: target.offsetTop,
-            behavior: 'smooth'
-          });
-          setTimeout(() => {
-            window.location.assign('./result.html');
-          }, 3000);
-        }
         function onStart() {
           window.location.assign('./discovery-questions.html');
         }

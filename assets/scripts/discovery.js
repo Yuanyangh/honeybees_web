@@ -25,15 +25,15 @@ $(document).ready(async function () {
 
   const nameInput = $("#name");
   const emailInput = $("#email");
-  const questions = $(".questions-details-wrapper");
   const startBtn = $(".start-btn-wrapper");
 
   function checkInputs() {
     if (nameInput.val().trim() !== "" && emailInput.val().trim() !== "") {
-      startBtn.removeClass("hidden");
+      startBtn.removeClass("hide");
+      startBtn.addClass("visible");
     } else {
-      startBtn.addClass("hidden");
-      questions.addClass("hidden");
+      startBtn.removeClass("visible");
+      startBtn.addClass("hide");
     }
   }
 
