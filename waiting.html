@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Honeybees | Result</title>
+  <title>The Honeybees | Waiting</title>
   <link rel="modulepreload" href="https://unpkg.com/@splinetool/runtime@1.0.18/build/runtime.js">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -24,7 +24,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
   <script src="assets/scripts/lottie-light.js"></script>
   <script src="assets/scripts/modal.js"></script>
-  <script src="assets/scripts/result.js"></script>
+  <script src="assets/scripts/waiting.js"></script>
 </head>
 
 <body>
@@ -84,153 +84,35 @@
   </navbar>
   <main class="contact">
     <div class="contact-inner">
-      <div class="result-container">
-        <div class="result-banner-container">
-          <div class="title show-item">
-            <h1>your finance <span>beesona</span> is...</h1>
-          </div>
-          <div class="main-image-wrapper">
-            <div class="main-image-container">
-              <img class="img-bg show-item" src="./assets/img/quiz/healer_bg.png" alt="healer_bg">
-              <img class="img-emblem show-item" src="./assets/img/quiz/healer_emblem.png" alt="healer_emblem">
-              <div class="img-element left">
-                <img class="show-item" src="./assets/img/quiz/healer_element.png" alt="healer_element">
-              </div>
-              <div class="img-element right">
-                <img class="show-item" src="./assets/img/quiz/explorer_element.png" alt="explorer_element">
-              </div>
+      <div class="waiting-wrapper" id="waiting_wrapper">
+        <div class="container">
+          <div class="row contact-section">
+            <div class="col-12 coming-soon">
+              Great! Now Sit Back And Relax
             </div>
-          </div>
-          <div class="sub-title show-item">
-            <h2>Healer - Explorer</h2>
-            <p>34% of people are also this type.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="result-container-bottom">
-      <div class="description-wrapper" id="description-wrapper">
-        <div class="shape-container show-item">
-          <div class="user-wrapper">
-            <img class="" src="./assets/img/quiz/shape_healer.png" alt="shape_healer">
-            <span class="user-type">Healer</span>
-            <span class="user-percentage" id="healer_counter">0%</span>
-          </div>
-          <div class="user-wrapper">
-            <img class="" src="./assets/img/quiz/shape_explorer.png" alt="shape_explorer">
-            <span class="user-type">Explorer</span>
-            <span class="user-percentage" id="explorer_counter">0%</span>
-          </div>
-          <div class="user-wrapper">
-            <img class="" src="./assets/img/quiz/shape_knight.png" alt="shape_knight">
-            <span class="user-type">Knight</span>
-            <span class="user-percentage" id="knight_counter">0%</span>
-          </div>
-          <div class="user-wrapper">
-            <img class="" src="./assets/img/quiz/shape_wizard.png" alt="shape_wizard">
-            <span class="user-type">Wizard</span>
-            <span class="user-percentage" id="wizard_counter">0%</span>
-          </div>
-        </div>
-        <div class="property-container show-item">
-          <ul>
-            <li class="property-healer">Relational</li>
-            <li class="property-healer">Authenticity</li>
-            <li class="property-explorer">Carefree</li>
-            <li class="property-explorer">Freedom</li>
-          </ul>
-        </div>
-        <div class="description-container px-3 show-item">
-          <p>You’re often labelled as impulsive and unrealistic, but you simply value fun, enjoy living in the moment and are motivated by otherworldly factors like purpose and dream.</p>
-          <p>Sincerity and genuineness are the way to your heart. What matters to you are authentic connections and the right vibes, and you won’t hesitate to make a purchase if the salesperson is someone you trust and have rapport with.</p>
-        </div>
-        <div class="h-chart-container show-item">
-          <div class="rail-wrapper">
-            <div class="rail">
-              <span class="rail-left-text">Risk-adverse</span>
-              <div class="progress" id="risk_container" style="height: 40px; border-radius: 20px;">
-                <div class="progress-bar" role="progressbar" id="risk_bar">
-                  <img src="./assets/img/Honeybees_icon.png" alt="icon" class="progress-icon" width="30" height="30" id="risk_icon">
-                </div>
-              </div>
-              <span class="rail-right-text">Risk-taker</span>
-            </div>
-          </div>
-          <div class="rail-wrapper">
-            <div class="rail">
-              <span class="rail-left-text">logical</span>
-              <div class="progress" id="logical_container" style="height: 40px; border-radius: 20px;">
-                <div class="progress-bar" role="progressbar" id="logical_bar">
-                  <img src="./assets/img/Honeybees_icon.png" alt="icon" class="progress-icon" width="30" height="30" id="logical_icon">
-                </div>
-              </div>
-              <span class="rail-right-text">intuitive</span>
-            </div>
-          </div>
-          <div class="rail-wrapper">
-            <div class="rail">
-              <span class="rail-left-text">business</span>
-              <div class="progress" id="business_container" style="height: 40px; border-radius: 20px;">
-                <div class="progress-bar" role="progressbar" id="business_bar">
-                  <img src="./assets/img/Honeybees_icon.png" alt="icon" class="progress-icon" width="30" height="30" id="business_icon">
-                </div>
-              </div>
-              <span class="rail-right-text">relational</span>
-            </div>
-          </div>
-          <div class="rail-wrapper">
-            <div class="rail">
-              <span class="rail-left-text">careful</span>
-              <div class="progress" id="careful_container" style="height: 40px; border-radius: 20px;">
-                <div class="progress-bar" role="progressbar" id="careful_bar">
-                  <img src="./assets/img/Honeybees_icon.png" alt="icon" class="progress-icon" width="30" height="30" id="careful_icon">
-                </div>
-              </div>
-              <span class="rail-right-text">impulsive</span>
+            <div class="contact-section-people">
+              <div
+                class="contact-section-people-lottie"
+                id="lottie-animation3"
+              ></div>
+              <div
+                class="contact-section-people-lottie2"
+                id="lottie-animation4"
+              ></div>
             </div>
           </div>
         </div>
-        <div class="sub-title px-3 show-item">
-          <h2 class="mt-24">Truth Bee Told</h2>
-          <span>While it’s fun to have your head in the clouds, it’s also important to have your feet on the ground. Being in the right financial state is key to having the freedom to pursue your dreams.</span>
-        </div>
-        <div class="image-wrapper sub-title show-item">
-          <h2 class="mt-24">You’ll Have a Buzz With…</h2>
-          <div class="image-container">
-            <div class="sub-image-container">
-              <img class="img-bg show-item" src="./assets/img/quiz/explorer_bg.png" alt="explorer_bg">
-              <img class="img-emblem show-item" src="./assets/img/quiz/explorer_emblem.png" alt="explorer_emblem">
-              <div class="img-element left">
-                <img class="show-item" src="./assets/img/quiz/explorer_element.png" alt="explorer_element">
-              </div>
-              <div class="img-element right">
-                <img class="show-item" src="./assets/img/quiz/explorer_element.png" alt="explorer_element">
-              </div>
-              <h3 class="image-title">explorer</h3>
-            </div>
-            <div class="sub-image-container">
-              <img class="img-bg show-item" src="./assets/img/quiz/healer_bg.png" alt="healer_bg">
-              <img class="img-emblem show-item" src="./assets/img/quiz/healer_emblem.png" alt="healer_emblem">
-              <div class="img-element left">
-                <img class="show-item" src="./assets/img/quiz/healer_element.png" alt="healer_element">
-              </div>
-              <div class="img-element right">
-                <img class="show-item" src="./assets/img/quiz/healer_element.png" alt="healer_element">
-              </div>
-              <h3 class="image-title">healer</h3>
-            </div>
+        <div class="waiting-wrapper-bee-container">
+          <div class="waiting-wrapper-container-quote">
+            <img class="d-md-block" src="assets/img/quote.png" alt="quote"/>
+            <span class="waiting-wrapper-container-quote-text">
+              Give Me Some Time To Prepare For You
+            </span>
           </div>
+          <img src="assets/img/line_3.png" alt="line" class="waiting-wrapper-bee-container-line">
+          <img src="assets/img/bee-logo3.gif" alt="bee" class="waiting-wrapper-bee-container-logo">
         </div>
-        <div class="sub-title px-3 show-item">
-          <h2 class="mt-24">You Can Hive It Your Way</h2>
-          <span>Let us match you to one of our bees to give you financial advice tailored to your specific spending style and needs.</span>
-        </div>
-        <div class="mt-16 px-3 result-send-wrapper show-item">
-          <input id="result_message" class="" placeholder="Let us take you under our wings"></input>
-          <button class="btn-result-send">
-            send
-          </button>
-        </div>
+        <div class="contact-overlay"></div>
       </div>
     </div>
   </main>

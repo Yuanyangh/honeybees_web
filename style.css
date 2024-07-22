@@ -316,7 +316,7 @@
 }
 .contact {
   /* background: url("./asssets/contact_bg1.png"); */
-  background: rgb(238 116 48);
+  background: #ee7430;
   /* height: 1200px; */
   background-size: contain;
   background-position: top;
@@ -1159,7 +1159,7 @@ h6 {
 @media (max-width: 767px) {
   .music-icon-description {
     width: 200px;
-    height: 64px;  
+    height: 64px;
     right: 35px;
   }
 }

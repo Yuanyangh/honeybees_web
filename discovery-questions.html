@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Honeybees | Quiz Questions</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.ico">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="honey.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="knowyourself.js"></script>
+    <link rel="stylesheet" href="assets/css/navbtn.css" />
+    <link rel="stylesheet" href="assets/css/marquee.css" />
+    <link rel="stylesheet" href="assets/css/know.css" />
+    <link rel="stylesheet" href="assets/css/modal.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+
+    <script src="assets/scripts/navbtn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+    <script src="assets/scripts/lottie-dark.js"></script>
+    <script src="assets/scripts/modal.js"></script>
+    <script src="assets/scripts/discovery.js"></script>
+  </head>
+
+  <body style="background-color: #fff4d5">
+    <div class="topbar">
+      <a href="index.html" class="honeybeeLogo">
+        <img src="assests/Honeybees_logo.svg" alt="HoneybeeLogo" />
+      </a>
+      <div class="honeybeeMusic">
+        <div class="music-icon" onclick="toggleSound()">
+          <div class="lottie-sound" id="lottie-sound"></div>
+          <!-- <img
+            class="playing-music"
+            src="assests/music_light.svg"
+            alt="Music"
+          /> -->
+          <img
+            class="mute-music"
+            src="assests/music_light_mute.svg"
+            alt="Mute Music"
+          />
+        </div>
+        <!-- <div class="music-icon-description" id="music_icon_description">
+          <img class="d-block" src="assets/img/music_icon_quote.png" alt="quote"/>
+          <span class="music-icon-description-quote-text">
+            vibee with us
+          </span>
+        </div> -->
+        <audio
+          id="myAudio"
+          src="./HB_assest/good-night-160166.mp3"
+          loop
+        ></audio>
+      </div>
+    </div>
+    <button id="toggleModalBtn" class="mobile-nav-btn">
+      <div class="menu">
+        <svg width="30px" viewBox="0 0 100 100">
+          <path class="line-honeybee-black line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+          <path class="line-honeybee-black line2" d="M 20,50 H 80" />
+          <path class="line-honeybee-black line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+      </div>
+    </button>
+    <navbar class="know-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div>
+              <a href="index.html" id="homeButton" class="home-btn">
+                  HOME
+              </a>
+              <a href="about.html" id="aboutButton" class="about-btn text-nowrap">
+                  ABOUT US
+              </a>
+              <a href="career.html" id="careerButton" class="career-btn">
+                  CAREER
+              </a>
+              <a href="discovery.html" id="knowButton" class="know-btn text-nowrap">
+                  DISCOVERY
+              </a>
+              <!-- <a href="fearless.html" id="fearlessButton" class="fearless-btn text-nowrap">
+                  Be Fearless
+              </a> -->
+            </div>
+              <!-- <a href="#" class="nav-adv"><img src="asssets/Group 149.png" alt=""></a> -->
+          </div>
+        </div>
+      </div>
+    </navbar>
+    <main class="contact">
+      <div class="contact-inner">
+        <div class="container">
+          <div class="row contact-section">
+            <div class="col-12 coming-soon">
+              <form class="questions-container" style="margin-top: 150px;">
+                <div class="questions-title">
+                  <h1>FIND YOUR <span>BEESONA</span></h1>
+                  <p>There are 16 types of beesona. Each beesona ...<br>Enter your name and email to discover your individual</p>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <img src="assets/img/Honeybees_icon.png" alt="icon" width="30" height="30"/>
+                  </div>
+                </div>
+                <ol class="questions-details-wrapper">
+                  <div class="questions-details-wrapper-item questions-hidden" id="questions-details-wrapper1">
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">When thinking about your financial decisions, do you:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="1_false" name="When thinking about your financial decisions, do you:">
+                        <label for="1_false">Enjoy engaging in discussions with friends or family</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="1_true" name="When thinking about your financial decisions, do you:">
+                        <label for="1_true">Prefer to mull things over privately</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">If you're considering a major purchase, you tend to:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="2_false" name="If you're considering a major purchase, you tend to:">
+                        <label for="2_false">Seek insights and advice from trusted friends, family or experts</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="2_true" name="If you're considering a major purchase, you tend to:">
+                        <label for="2_true">Research on your own and make the decision independently</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">Do you find yourself being more inclined to:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="3_false" name="Do you find yourself being more inclined to:">
+                        <label for="3_false">Get yourself fully engaged in the conversation</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="3_true" name="Do you find yourself being more inclined to:">
+                        <label for="3_true">Listen and observe what is being said</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">When rationalizing your thoughts, you usually:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="4_false" name="When rationalizing your thoughts, you usually:">
+                        <label for="4_false">Use others as a sounding board</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="4_true" name="When rationalizing your thoughts, you usually:">
+                        <label for="4_true">Think it over in your head</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">You find yourself most recharged when you:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="5_false" name="You find yourself most recharged when you:">
+                        <label for="5_false">Are able to relax with friends or family</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="5_true" name="You find yourself most recharged when you:">
+                        <label for="5_true">Are able to be in solitude</label>
+                      </div>
+                    </div>
+                    <div class="mt-4 mx-auto">
+                      <button type="button" style="cursor: pointer" onclick="onNext(2)">Next</button>
+                    </div>
+                  </div>
+                  <div class="questions-details-wrapper-item questions-hidden" id="questions-details-wrapper2">
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">Which one appeals to you more:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="6_false" name="Which one appeals to you more:">
+                        <label for="6_false">The physical, tangible things and people</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="6_true" name="Which one appeals to you more:">
+                        <label for="6_true">The abstract, intangible ideas and concepts</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">When it comes to a hobby, you prefer:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="7_false" name="When it comes to a hobby, you prefer:">
+                        <label for="7_false">Activities that are hands-on, like cooking or sports</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="7_true" name="When it comes to a hobby, you prefer:">
+                        <label for="7_true">Activities that are abstract, like writing or reading</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">Are you more interested in what is:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="8_false" name="Are you more interested in what is:">
+                        <label for="8_false">Actual</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="8_true" name="Are you more interested in what is:">
+                        <label for="8_true">Possible</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">When discussing your financial future:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="9_false" name="When discussing your financial future:">
+                        <label for="9_false">Focus on concrete numbers and targets (e.g. saving a specific amount)</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="9_true" name="When discussing your financial future:">
+                        <label for="9_true">Focus on concepts and/or dreams (e.g. The Idea of Financial Freedom)</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">Do you preferred to be communicated with:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="10_false" name="Do you preferred to be communicated with:">
+                        <label for="10_false">Specifics over General Concepts</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="10_true" name="Do you preferred to be communicated with:">
+                        <label for="10_true">General Concepts over Specifics</label>
+                      </div>
+                      <!-- <div class="ten-more-message-bubble">
+                        <img class="d-none d-md-block" src="assets/img/quiz/10_more_quote.png" alt="10 more to go"/>
+                        <span class="ten-more-message-bubble-text">
+                          10 more to go!
+                        </span>
+                      </div> -->
+                    </div>
+                    <div class="mt-4 mx-auto">
+                      <button type="button" style="cursor: pointer" onclick="onNext(3)">Next</button>
+                    </div>
+                  </div>
+                  <div class="questions-details-wrapper-item questions-hidden" id="questions-details-wrapper3">
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">When making financial decisions, you tend to consider:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="11_false" name="When making financial decisions, you tend to consider:">
+                        <label for="11_false">Objective facts and logical analysis</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="11_true" name="When making financial decisions, you tend to consider:">
+                        <label for="11_true">Your personal values and the potential impact on others</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">When evaluating the communication of others, you tend to:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="12_false" name="When evaluating the communication of others, you tend to:">
+                        <label for="12_false">Take an detached, 3rd party approach (as if you were not involved)</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="12_true" name="When evaluating the communication of others, you tend to:">
+                        <label for="12_true">Take a personal, 1st party approach (as if you were fully involved)</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">You're considering two jobs. One has a high salary but is impersonal, the other pays less but is deeply rewarding. You would:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="13_false" name="You're considering two jobs. One has a high salary but is impersonal, the other pays less but is deeply rewarding. You would:">
+                        <label for="13_false">Choose the high-salary job because it makes financial sense</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="13_true" name="You're considering two jobs. One has a high salary but is impersonal, the other pays less but is deeply rewarding. You would:">
+                        <label for="13_true">Choose the rewarding job because it aligns with your values</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">In financial negotiations, do you:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="14_false" name="In financial negotiations, do you:">
+                        <label for="14_false">Stick to your guns for what you believe is a fair price</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="14_true" name="In financial negotiations, do you:">
+                        <label for="14_true">Prioritize maintaining a good relationship over getting the best deal</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">In a financial emergency, do you:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="15_false" name="In a financial emergency, do you:">
+                        <label for="15_false">Stick to the numbers and make logical decisions</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="15_true" name="In a financial emergency, do you:">
+                        <label for="15_true">Prioritize the emotional well-being of everyone involved</label>
+                      </div>
+                    </div>
+                    <div class="mt-4 mx-auto">
+                      <button type="button" style="cursor: pointer" onclick="onNext(4)">Next</button>
+                    </div>
+                  </div>
+                  <div class="questions-details-wrapper-item questions-hidden" id="questions-details-wrapper4">
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">When creating a budget, do you:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="16_false" name="When creating a budget, do you:">
+                        <label for="16_false">Stick strictly to your planned amounts</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="16_true" name="When creating a budget, do you:">
+                        <label for="16_true">Allow for flexibility based on unexpected expenses</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">When investing, do you prefer to:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="17_false" name="When investing, do you prefer to:">
+                        <label for="17_false">Create a set plan and follow it consistently</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="17_true" name="When investing, do you prefer to:">
+                        <label for="17_true">Keep options open and adapt as markets change</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">When tracking your spending, you:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="18_false" name="When tracking your spending, you:">
+                        <label for="18_false">Keep records of each transaction</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="18_true" name="When tracking your spending, you:">
+                        <label for="18_true">Have a rough idea of where your money is going</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">Do you generally prefer to have:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="19_false" name="Do you generally prefer to have:">
+                        <label for="19_false">A set and predictable income stream</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="19_true" name="Do you generally prefer to have:">
+                        <label for="19_true">A setup for unexpected financial windfalls</label>
+                      </div>
+                    </div>
+                    <div class="questions-detail" type="number">
+                      <li for="" class="pr-4">Are you someone who:</li>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="20_false" name="Are you someone who:">
+                        <label for="20_false">Budgets intentionally and carefully</label>
+                      </div>
+                      <div class="d-flex questions-radio-wrapper">
+                        <input type="radio" id="20_true" name="Are you someone who:">
+                        <label for="20_true">Save, invest and spend according to what feels right</label>
+                      </div>
+                    </div>
+                    <div class="mt-4 mx-auto" id="submit-btn-wrapper">
+                      <button type="button" style="cursor: pointer" onclick="onSubmit()">Submit</button>
+                    </div>
+                  </div>
+                </ol>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="contact-overlay"></div>
+      </div>
+    </main>
+    <section class="frame-section about_footer">
+        <div class="mask-group-parent-wrapper" id="footer">
+            <div class="footer-wrapper">
+                <div class="footer">
+                    <div class="footer-inner">
+                        <form class="drop-your-question-and-email-o-parent">
+                            <h2 class="drop-your-question" id="demo"></h2>    
+                            <div class="input-details-group-parent">
+                                <div class="title_filed">
+                                    <input class="input-details-group yourtitle" type="text" placeholder="Your Title" />
+                                    <img class="icon-chevron-bottom" alt="" src="./assests/Vector.png" />
+                                </div>
+    
+                                <div class="name_field">
+                                    <input class="input-details-group yourname" type="text" placeholder="Your Name..." />
+                                </div>
+    
+                            </div>
+    
+                            <div class="group-div">
+                                <div class="frame-child5"></div>
+                                <input class="your-email" placeholder="Your Email..." type="text" />
+                            </div>
+                            <div class="rectangle-parent3">
+    
+                                <textarea id="message"class="whats-in-your" placeholder="What’s in your mind?" rows="2"></textarea>
+                                <button class="send-wrapper">
+                                    <div class="send">send</div>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+    
+                
+            </div>
+            <div class="rematch-quote">
+              <div class="authorized-representation-a-i">
+                  <h2 class="i-think-we">
+                    #NOSTINGSATTACHED
+                  </h2>
+              </div>
+              <div class="social-media-icons">
+                  <img class="icon-linkedin" loading="eager" alt="" src="./assests/sameediconlinkedin.png" />
+    
+                  <img class="icon-instagram" loading="eager" alt="" src="./assests/sameediconinstagram.png" />
+                
+                  <!-- <img class="icon-facebook-squared" loading="eager" alt=""
+                      src="./assests/sameed-iconfacebooksquared.png" /> -->
+              </div>
+          </div>
+          <div class="authorized-representative-msg">
+              <div class="sp-honeybees-is-an-container">
+                  <p class="sp-honeybees-is-an">
+                      SP-HONEYBEES is an authorised representative of AIA
+                      Singapore Private Limited (Reg. No. 201106386R)
+                  </p>
+                  <p class="by-sp-honeybees">© 2022 by SP-HONEYBEES</p>
+              </div>
+          </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="topbar">
+          <div class="honeybeeLogo">
+            <img src="./assests/Honeybees_logo (1).png" alt="" />
+          </div>
+        </div>
+        <div class="nav-modal-link-content">
+          <a href="index.html" class="nav-modal-link">
+            HOME
+          </a>
+          <a href="about.html" class="nav-modal-link text-nowrap">
+            ABOUT US
+          </a>
+          <a href="career.html" class="nav-modal-link">
+            CAREER
+          </a>
+          <a href="discovery.html" class="nav-modal-link text-nowrap">
+            DISCOVERY
+          </a>
+          <!-- <a href="fearless.html" class="nav-modal-link-last text-nowrap">
+            Be Fearless
+          </a> -->
+        </div>
+        <div>
+          <!-- <button class="close-nav-modal">
+            <img src="./assets/img/Close_round.png" alt="close" />
+            <span>Close</span>
+          </button> -->
+          <div class="mobile-modal-upcoming">
+            <img src="asssets/Group 149.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/scripts/sound.js"></script>
+    <script src="assets/scripts/buzzaction.js"></script>
+    <script>
+        function onSubmit() {
+          window.location.assign('./waiting.html');
+        }
+        function onNext(num) {
+          var progressBar = document.querySelector(".custom-progress .progress-bar");
+          progressBar.setAttribute("aria-valuenow", 30 * (num - 1) );
+          progressBar.style.width = `${30 * (num - 1)}%`;
+
+          const question = $(`#questions-details-wrapper${num - 1}`);
+          question.addClass("questions-hidden");
+          const question_next = $(`#questions-details-wrapper${num}`);
+          question_next.removeClass("questions-hidden");
+
+          if (num == 4) {
+            progressBar.setAttribute("aria-valuenow", 100 );
+            progressBar.style.width = "100%";
+          }
+        }
+    </script>
+  </body>
+</html>
