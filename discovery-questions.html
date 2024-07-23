@@ -498,6 +498,11 @@
           const question_next = $(`#questions-details-wrapper${num}`);
           question_next.removeClass("questions-hidden");
 
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+
           if (num == 4) {
             progressBar.setAttribute("aria-valuenow", 100 );
             progressBar.style.width = "100%";
