@@ -114,7 +114,7 @@
 
 @media (max-width: 767px) {
   .questions-container .questions-title {
-    padding: 4px;
+    padding: 20px 4px;
   }
   .questions-container .questions-title h1 {
     font-size: 30px;
@@ -162,6 +162,11 @@
   font-family: "Agrandir-GrandHeavy";
   font-size: 18px;
   margin: 40px 0px;
+}
+@media (max-width: 767px) {
+  .questions-detail {
+    font-size: 14px;
+  }
 }
 
 .ten-more-message-bubble {
@@ -215,6 +220,11 @@
 .questions-radio-wrapper {
   align-items: center;
 }
+@media (max-width: 767px) {
+  .questions-radio-wrapper {
+    padding: 5px 0px;
+  }
+}
 
 .questions-radio-wrapper input {
   border-color: #FFFBF5FF;
@@ -250,7 +260,7 @@
 }
 @media (max-width: 767px) {
   .questions-radio-wrapper label {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -493,8 +503,29 @@
   background: linear-gradient(90deg, #ffa500, #ff4500);
   border-radius: 20px;
   align-items: end;
+  min-width: 50px;
 }
 
 .custom-progress .progress-bar img {
   margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+  .custom-progress {
+    height: 30px;
+  }
+  .custom-progress .progress-bar {
+    min-width: 30px;
+  }
+  .custom-progress .progress-bar img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }  
+}
+
+@media (max-width: 767px) {
+  .custom-progress {
+    width: 80%;
+  }
 }
