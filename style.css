@@ -997,7 +997,34 @@ h6 {
 }
 .topbar .honeybeeLogo {
   cursor: pointer;
+  position: relative;
+  height: 29px;
 }
+.topbar .honeybeeLogo .big-logo {
+  width: 200px;
+  height: 29px;
+  opacity: 0;
+}
+.topbar .honeybeeLogo .small-logo {
+  width: 29px;
+  height: 29px;
+  margin-left: 23px;
+}
+.honeybeeLogo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease, width 0.5s ease, height 0.5s ease;
+}
+.honeybeeLogo:hover .small-logo {
+  opacity: 0;
+  z-index: -1;
+}
+.honeybeeLogo:hover .big-logo {
+  opacity: 1;
+  z-index: 1;
+}
+
 .honeybeeMusic {
   position: absolute;
   right: 20px;
