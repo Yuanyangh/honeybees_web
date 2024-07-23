@@ -93,6 +93,11 @@ $(document).ready(function() {
     bannerContainer.classList.add("animatedbanner");
   }, 3000)
 
+  document.body.classList.add('lock-scroll');
+  setTimeout(function () {
+    document.body.classList.remove('lock-scroll');
+  }, 3000);
+
   setTimeout(function () {
     $('#music_icon_description').addClass('fadeOut-scale');
   }, 6000);

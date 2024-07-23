@@ -1246,3 +1246,8 @@ h6 {
 .fadeOut-scale {
   animation: fadeOutScale 0.2s ease-in-out forwards;
 }
+
+body.lock-scroll {
+  height: 100vh;
+  overflow-y: hidden;
+}
