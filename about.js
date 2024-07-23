@@ -114,6 +114,33 @@ $(document).ready(function () {
 
   });
 
+  var animation_crystalball = lottie.loadAnimation({
+    container: document.getElementById("lottie_crystalball"), // the dom element
+    renderer: "svg",
+    loop: true,
+    autoplay: false,
+    path: "./assets/lotties/about/crystalball.json", // the path to the animation json
+  });
+  var animation_map = lottie.loadAnimation({
+    container: document.getElementById("lottie_map"), // the dom element
+    renderer: "svg",
+    loop: true,
+    autoplay: false,
+    path: "./assets/lotties/about/map.json", // the path to the animation json
+  });
+  var animation_tools = lottie.loadAnimation({
+    container: document.getElementById("lottie_tools"), // the dom element
+    renderer: "svg",
+    loop: true,
+    autoplay: false,
+    path: "./assets/lotties/about/tools.json", // the path to the animation json
+  });
+
+  animation_crystalball.play();
+  animation_map.play();
+  animation_tools.play();
+
+
   setTimeout(function () {
     $('#music_icon_description').addClass('fadeOut-scale');
   }, 3000);
