@@ -236,8 +236,7 @@ body {
 }
 .main-image-container .img-emblem {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -25px;
   max-width: 334px;
 }
 .main-image-container .img-element {
@@ -498,7 +497,7 @@ body {
 }
 .sub-image-container .img-emblem {
   position: absolute;
-  top: 0;
+  top: -20px;
   max-width: 185px;
 }
 .sub-image-container .img-element {

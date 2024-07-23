@@ -95,35 +95,35 @@ $(document).ready(function () {
     renderer: "svg",
     loop: true,
     autoplay: false,
-    path: "./assets/lotties/quiz/quiz_healer.json", // the path to the animation json
+    path: "./assets/lotties/quiz/quiz_healer_reduce.json", // the path to the animation json
   });
   var animation_quiz_explorer = lottie.loadAnimation({
     container: document.getElementById("lottie_quiz_explorer"), // the dom element
     renderer: "svg",
     loop: true,
     autoplay: false,
-    path: "./assets/lotties/quiz/quiz_explorer.json", // the path to the animation json
+    path: "./assets/lotties/quiz/quiz_explorer_reduce.json", // the path to the animation json
   });
   var animation_quiz_healer = lottie.loadAnimation({
     container: document.getElementById("lottie_quiz_healer"), // the dom element
     renderer: "svg",
     loop: true,
     autoplay: false,
-    path: "./assets/lotties/quiz/quiz_healer.json", // the path to the animation json
+    path: "./assets/lotties/quiz/quiz_healer_reduce.json", // the path to the animation json
   });
   var animation_quiz_knight = lottie.loadAnimation({
     container: document.getElementById("lottie_quiz_knight"), // the dom element
     renderer: "svg",
     loop: true,
     autoplay: false,
-    path: "./assets/lotties/quiz/quiz_knight.json", // the path to the animation json
+    path: "./assets/lotties/quiz/quiz_knight_reduce.json", // the path to the animation json
   });
   var animation_quiz_wizard = lottie.loadAnimation({
     container: document.getElementById("lottie_quiz_wizard"), // the dom element
     renderer: "svg",
     loop: true,
     autoplay: false,
-    path: "./assets/lotties/quiz/quiz_wizard.json", // the path to the animation json
+    path: "./assets/lotties/quiz/quiz_wizard_reduce.json", // the path to the animation json
   });
 
   animation_quiz_main.play();
