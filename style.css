@@ -1010,6 +1010,12 @@ h6 {
   height: 29px;
   margin-left: 23px;
 }
+@media (max-width: 767px) {
+  .topbar .honeybeeLogo .small-logo {
+    margin-left: 0px;
+  }
+}
+
 .honeybeeLogo img {
   position: absolute;
   top: 0;
@@ -1074,8 +1080,6 @@ h6 {
     height: 20px;
   }
   .honeybeeMusic {
-    width: 30px;
-    height: 30px;
     margin-top: 5px;
   }
 }

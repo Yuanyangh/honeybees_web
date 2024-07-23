@@ -1821,6 +1821,12 @@ li.btn:hover {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  margin-right: 23px;
+}
+@media (max-width: 767px) {
+  .music-icon {
+    margin-right: 0px;
+  }
 }
 
 .music-icon .lottie-sound {
