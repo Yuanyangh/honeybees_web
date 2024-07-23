@@ -31,12 +31,14 @@ $(document).ready(async function () {
     });
   });
 
-  const nameInput = $("#name");
+  const firstNameInput = $("#first_name");
+  const lastNameInput = $("#last_name");
+  const mobileInput = $("#mobile");
   const emailInput = $("#email");
   const startBtn = $(".start-btn-wrapper");
 
   function checkInputs() {
-    if (nameInput.val().trim() !== "" && emailInput.val().trim() !== "") {
+    if (firstNameInput.val().trim() !== "" && lastNameInput.val().trim() !== "" && mobileInput.val().trim() !== "" && emailInput.val().trim() !== "") {
       startBtn.removeClass("hide");
       startBtn.addClass("visible");
     } else {
@@ -45,7 +47,9 @@ $(document).ready(async function () {
     }
   }
 
-  nameInput.on("input", checkInputs);
+  firstNameInput.on("input", checkInputs);
+  lastNameInput.on("input", checkInputs);
+  mobileInput.on("input", checkInputs);
   emailInput.on("input", checkInputs);
 
   setTimeout(function () {
