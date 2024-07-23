@@ -322,7 +322,7 @@
   background-size: contain;
   position: absolute;
   right: 0;
-  bottom: 20vh;
+  bottom: 200px;
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -336,8 +336,8 @@
   height: 110px;
   background-size: 110px 110px;
   position: absolute;
-  right: 756px;
-  bottom: 10vh;
+  right: 734px;
+  bottom: 140px;
   background-repeat: no-repeat;
   z-index: 0;
 }
