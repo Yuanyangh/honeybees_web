@@ -29,15 +29,17 @@ $(document).ready(function () {
       progressIcon.style.transform = "scaleX(-1)";
     }
 
-    let progress = 0;
-    const interval = setInterval(() => {
-      if (progress >= Math.abs(value)) {
-        clearInterval(interval);
-      } else {
-        progress++;
-        progressBar.style.width = progress > 13 ? `${progress}%` : "13%";
-      }
-    }, 50);
+    progressBar.style.width = value > 13 ? `${value}%` : "13%";
+
+    // let progress = 0;
+    // const interval = setInterval(() => {
+    //   if (progress >= Math.abs(value)) {
+    //     clearInterval(interval);
+    //   } else {
+    //     progress++;
+    //     progressBar.style.width = progress > 13 ? `${progress}%` : "13%";
+    //   }
+    // }, 50);
   }
 
   function animateCounter(id, target, duration) {
@@ -60,9 +62,8 @@ $(document).ready(function () {
 
   let flag1 = false;
   let flag2 = false;
-  $(window).scroll(function () {
-    showItems(".show-item");
 
+  function animateCounterAndProgressBar () {
     var scroll = $(window).scrollTop();
     var height = $(window).height();
     var offset1 = $(".shape-container").offset().top;
@@ -81,6 +82,12 @@ $(document).ready(function () {
       animateProgressBar("business", 40, "#FF6464");
       animateProgressBar("careful", 25, "#926DC1");
     }
+  }
+
+  animateCounterAndProgressBar();
+  $(window).scroll(function () {
+    showItems(".show-item");
+    animateCounterAndProgressBar();
   });
 
   setTimeout(function () {

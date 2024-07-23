@@ -52,7 +52,7 @@ body {
 }
 .img-element .show-item.float-in {
   animation: floatIn 0.5s ease-in-out 1s forwards,
-    MoveUpAndDown 0.5s 1.5s infinite alternate;
+    MoveUpAndDown 1s 1.5s infinite alternate;
 }
 
 .result-container {
@@ -611,5 +611,7 @@ body {
   padding-right: 10px;
   position: absolute;
   left: 50%;
+  width: 13%;
+  transition: width 1s ease;
   /* transform: translateX(-50%); */
 }
