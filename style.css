@@ -1184,7 +1184,7 @@ h6 {
   height: 83px;
   position: absolute;
   top: 0px;
-  right: 35px;
+  right: calc(35px + 23px);
 }
 
 @media (max-width: 767px) {
