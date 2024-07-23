@@ -10,6 +10,14 @@ $(document).ready(async function () {
 
   document.querySelectorAll('input[type="radio"]').forEach((radio) => {
     radio.addEventListener("change", function () {
+      const question_details = document.querySelectorAll(`.questions-detail`);
+      if ( question_details[Number(this.id.split('_')[0])] ) {
+        window.scrollTo({
+          top: question_details[Number(this.id.split('_')[0])].offsetTop,
+          behavior: 'smooth'
+        });
+      }
+
       const name = this.name; // Get the name attribute of the selected radio button
       // Get all radio buttons with the same name
       const radios = document.querySelectorAll(`input[name="${name}"]`);
