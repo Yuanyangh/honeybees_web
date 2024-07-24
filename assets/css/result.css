@@ -38,6 +38,19 @@ body {
   }
 }
 
+@keyframes fadeInRightMobile {
+  0% {
+    opacity: 0;
+    left: -62%;
+    bottom: 80px;
+  }
+  100% {
+    opacity: 1;
+    left: -60%;
+    bottom: 100px;
+  }
+}
+
 .show-item {
   opacity: 0;
 }
@@ -161,6 +174,11 @@ body {
   animation: fadeInRight 0.5s ease-in-out 0s forwards;
   z-index: 101;
 }
+@media screen and (max-width: 767px) {
+  .waiting-wrapper-bee-container {
+    animation: fadeInRightMobile 0.5s ease-in-out 0s forwards;
+  }
+}
 
 .waiting-wrapper-bee-container-logo {
   width: 80px;
@@ -194,6 +212,7 @@ body {
 }
 
 .waiting-wrapper-container-quote-text {
+  transform: rotate(-1deg);
   display: block;
   font-size: 18px;
   color: #29446D;
@@ -202,6 +221,21 @@ body {
   line-height: 1;
   text-align: left;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .waiting-wrapper-container-quote {
+    width: 201px;
+    height: 83px;
+    top: 37%;
+    right: -42%;
+  }
+  .waiting-wrapper-container-quote img {
+    transform: rotate(0deg);
+  }
+  .waiting-wrapper-container-quote-text {
+    transform: rotate(-4deg);
+    font-size: 14px;
+  }
 }
 
 .waiting-wrapper::before {
@@ -243,7 +277,8 @@ body {
 
 @media (max-width: 767px) {
   .waiting-wrapper .coming-soon {
-    font-size: 25px;
+    padding: 0px 30px;
+    font-size: 30px;
   }
 }
 
