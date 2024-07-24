@@ -321,7 +321,6 @@
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
-  animation: scaleDown 1s ease-in-out forwards; /* Apply the animation */
 }
 .contact-inner {
   background: linear-gradient(
@@ -336,6 +335,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  animation: scaleDown 1s ease-in-out forwards;
 }
 .contact-overlay {
   position: absolute;
