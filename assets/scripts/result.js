@@ -53,7 +53,6 @@ $(document).ready(function () {
     quiz_ratios.logical = calculateRange(quiz_result?.ratios?.FOI);
     quiz_ratios.business = calculateRange(quiz_result?.ratios?.SRI);
     quiz_ratios.careful = calculateRange(quiz_result?.ratios?.SPI);
-    console.log(quiz_ratios);
   }
 
   getQuizResult();
