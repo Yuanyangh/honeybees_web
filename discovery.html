@@ -266,10 +266,30 @@
     <script src="assets/scripts/sound.js"></script>
     <script src="assets/scripts/buzzaction.js"></script>
     <script>
-        function onStart() {
-          window.location.assign('./discovery-questions.html');
+      clearLocalStorage();
+      function clearLocalStorage() {
+        if (localStorage.getItem('quiz_user')) {
+          localStorage.removeItem('quiz_user')
         }
-
+        if (localStorage.getItem('quiz_result')) {
+          localStorage.removeItem('quiz_result')
+        }
+        for ( i = 1; i <=20; i ++) {
+          if (localStorage.getItem(i)) {
+            localStorage.removeItem(i)
+          }
+        }
+      }
+      function onStart() {
+        const user = {
+          first_name: $('#first_name').val(),
+          last_name: $('#last_name').val(),
+          mobile: $('#mobile').val(),
+          email: $('#email').val()
+          };
+        localStorage.setItem('quiz_user', JSON.stringify(user));
+        window.location.assign('./discovery-questions.html');
+      }
     </script>
   </body>
 </html>

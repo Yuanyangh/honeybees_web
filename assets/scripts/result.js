@@ -17,6 +17,14 @@ $(document).ready(function () {
 
   showItems(".show-item");
 
+  function getQuizResult() {
+    const quiz_result = JSON.parse(localStorage.getItem('quiz_result'));
+    console.log(quiz_result);
+  }
+
+  getQuizResult();
+
+
   function animateProgressBar(id, value, color) {
     const progressContainer = document.getElementById(`${id}_container`);
     const progressBar = document.getElementById(`${id}_bar`);

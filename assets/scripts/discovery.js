@@ -8,6 +8,35 @@ $(document).ready(async function () {
     progressBar.style.width = "7%";
   }
 
+  const sections = [1, 2, 3, 4];
+  sections.forEach(section => {
+    const radios = document.querySelectorAll(`.section${section}`);
+    radios.forEach(radio => {
+      radio.addEventListener('change', function () {
+        checkSectionCompletion(section);
+      });
+    });
+  });
+
+  function checkSectionCompletion(section) {
+    const questions = document.querySelectorAll(`#questions-details-wrapper${section} .questions-detail`);
+    let allChecked = true;
+
+    questions.forEach(question => {
+      const radios = question.querySelectorAll(`input[type="radio"]`);
+      if (!Array.from(radios).some(radio => radio.checked)) {
+        allChecked = false;
+      }
+    });
+
+    const button = document.getElementById(section === 4 ? 'submitButton' : `nextButton${section}`);
+    button.disabled = !allChecked;
+    if ( !allChecked )
+      button.classList.add('disabled-btn')
+    else
+      button.classList.remove('disabled-btn')
+  }
+
   document.querySelectorAll('input[type="radio"]').forEach((radio) => {
     radio.addEventListener("change", function () {
       const question_details = document.querySelectorAll(`.questions-detail`);
