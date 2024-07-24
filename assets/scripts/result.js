@@ -17,6 +17,9 @@ $(document).ready(function () {
 
   showItems(".show-item");
 
+  var primary_personality = '';
+  var secondary_personality = '';
+
   const quiz_ratios = {
     risk: 0,
     logical: 0,
@@ -40,15 +43,71 @@ $(document).ready(function () {
 
   function getQuizResult() {
     const quiz_result = JSON.parse(localStorage.getItem('quiz_result'));
-    // console.log(quiz_result);
+    console.log(quiz_result);
     if ( !(quiz_result?.personality && quiz_result?.ratios && quiz_result?.description && quiz_result?.recommendation) ) {
       window.location.assign("./discovery.html");
     }
+    primary_personality = quiz_result?.personality.toLowerCase().split('-')[0];
+    secondary_personality = quiz_result?.personality.toLowerCase().split('-')[1];
+    setLottieFiles();
     showQuizResult(quiz_result);
   }
 
+  function setLottieFiles() {
+    var animation_quiz_main = lottie.loadAnimation({
+      container: document.getElementById("lottie_quiz_main"), // the dom element
+      renderer: "svg",
+      loop: true,
+      autoplay: false,
+      path: `./assets/lotties/quiz/quiz_${primary_personality}.json`, // the path to the animation json
+    });
+    var animation_quiz_primary = lottie.loadAnimation({
+      container: document.getElementById("lottie_quiz_primary"), // the dom element
+      renderer: "svg",
+      loop: true,
+      autoplay: false,
+      path: `./assets/lotties/quiz/quiz_${primary_personality}.json`, // the path to the animation json
+    });
+    var animation_quiz_secondary = lottie.loadAnimation({
+      container: document.getElementById("lottie_quiz_secondary"), // the dom element
+      renderer: "svg",
+      loop: true,
+      autoplay: false,
+      path: `./assets/lotties/quiz/quiz_${secondary_personality}.json`, // the path to the animation json
+    });
+  
+    animation_quiz_main.play();
+    animation_quiz_primary.play();
+    animation_quiz_secondary.play();
+  }
+
   function showQuizResult(quiz_result) {
+
+    const mainImageBG = `./assets/img/quiz/${primary_personality}_bg.png`;
+    const mainImageElementLeft = `./assets/img/quiz/${primary_personality}_element.png`;
+    const mainImageElementRight = `./assets/img/quiz/${secondary_personality}_element.png`;
+    $('.main-image-container .img-bg').attr('src', mainImageBG);
+    $('.main-image-container .img-element.left img').attr('src', mainImageElementLeft);
+    $('.main-image-container .img-element.right img').attr('src', mainImageElementRight);
+
+    const primaryImageBG = `./assets/img/quiz/${primary_personality}_bg.png`;
+    const primaryImageElementLeft = `./assets/img/quiz/${primary_personality}_element.png`;
+    const primaryImageElementRight = `./assets/img/quiz/${primary_personality}_element.png`;
+    $('.sub-image-container.left .img-bg').attr('src', primaryImageBG);
+    $('.sub-image-container.left .img-element.left img').attr('src', primaryImageElementLeft);
+    $('.sub-image-container.left .img-element.right img').attr('src', primaryImageElementRight);
+
+    const secondaryImageBG = `./assets/img/quiz/${secondary_personality}_bg.png`;
+    const secondaryImageElementLeft = `./assets/img/quiz/${secondary_personality}_element.png`;
+    const secondaryImageElementRight = `./assets/img/quiz/${secondary_personality}_element.png`;
+    $('.sub-image-container.right .img-bg').attr('src', secondaryImageBG);
+    $('.sub-image-container.right .img-element.left img').attr('src', secondaryImageElementLeft);
+    $('.sub-image-container.right .img-element.right img').attr('src', secondaryImageElementRight);
+
     $('#quiz_personality').text(quiz_result?.personality);
+    $('#primary_personality').text(primary_personality);
+    $('#secondary_personality').text(secondary_personality);
+
     const description = quiz_result?.description.replace('\n\n', '<br/><br/>')
     document.getElementById("quiz_description").innerHTML = description;
     const recommendation = quiz_result?.recommendation.replace('\n\n', '<br/><br/>')
@@ -124,48 +183,6 @@ $(document).ready(function () {
     showItems(".show-item");
     animateCounterAndProgressBar();
   });
-
-  var animation_quiz_main = lottie.loadAnimation({
-    container: document.getElementById("lottie_quiz_main"), // the dom element
-    renderer: "svg",
-    loop: true,
-    autoplay: false,
-    path: "./assets/lotties/quiz/quiz_healer.json", // the path to the animation json
-  });
-  var animation_quiz_explorer = lottie.loadAnimation({
-    container: document.getElementById("lottie_quiz_explorer"), // the dom element
-    renderer: "svg",
-    loop: true,
-    autoplay: false,
-    path: "./assets/lotties/quiz/quiz_explorer.json", // the path to the animation json
-  });
-  var animation_quiz_healer = lottie.loadAnimation({
-    container: document.getElementById("lottie_quiz_healer"), // the dom element
-    renderer: "svg",
-    loop: true,
-    autoplay: false,
-    path: "./assets/lotties/quiz/quiz_healer.json", // the path to the animation json
-  });
-  var animation_quiz_knight = lottie.loadAnimation({
-    container: document.getElementById("lottie_quiz_knight"), // the dom element
-    renderer: "svg",
-    loop: true,
-    autoplay: false,
-    path: "./assets/lotties/quiz/quiz_knight.json", // the path to the animation json
-  });
-  var animation_quiz_wizard = lottie.loadAnimation({
-    container: document.getElementById("lottie_quiz_wizard"), // the dom element
-    renderer: "svg",
-    loop: true,
-    autoplay: false,
-    path: "./assets/lotties/quiz/quiz_wizard.json", // the path to the animation json
-  });
-
-  animation_quiz_main.play();
-  animation_quiz_explorer.play();
-  animation_quiz_healer.play();
-  animation_quiz_knight.play();
-  animation_quiz_wizard.play();
 
   setTimeout(function () {
     $("#music_icon_description").addClass("fadeOut-scale");
