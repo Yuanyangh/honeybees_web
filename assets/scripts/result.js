@@ -40,6 +40,9 @@ $(document).ready(function () {
 
   function getQuizResult() {
     const quiz_result = JSON.parse(localStorage.getItem('quiz_result'));
+    if ( !quiz_result ) {
+      window.location.assign("./discovery.html");
+    }
     showQuizResult(quiz_result);
   }
 
