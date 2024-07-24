@@ -17,9 +17,43 @@ $(document).ready(function () {
 
   showItems(".show-item");
 
+  const quiz_ratios = {
+    risk: 0,
+    logical: 0,
+    business: 0,
+    careful: 0,
+  }
+
+  function mapRange(sourceValue, sourceMin, sourceMax, targetMin, targetMax) {
+    return targetMin + ( (sourceValue - sourceMin) * (targetMax - targetMin) ) / (sourceMax - sourceMin);
+  }
+
+  function calculateRange(sourceValue) {
+    const sourceMin = 0;
+    const sourceMax = 10;
+    const targetMin = -50;
+    const targetMax = 50;
+    
+    const mappedValue = mapRange(sourceValue, sourceMin, sourceMax, targetMin, targetMax);
+    return mappedValue;
+  }
+
   function getQuizResult() {
     const quiz_result = JSON.parse(localStorage.getItem('quiz_result'));
-    console.log(quiz_result);
+    showQuizResult(quiz_result);
+  }
+
+  function showQuizResult(quiz_result) {
+    $('#quiz_personality').text(quiz_result?.personality);
+    const description = quiz_result?.description.replace('\n\n', '<br/><br/>')
+    document.getElementById("quiz_description").innerHTML = description;
+    const recommendation = quiz_result?.recommendation.replace('\n\n', '<br/><br/>')
+    document.getElementById("quiz_recommendation").innerHTML = recommendation;
+    quiz_ratios.risk = calculateRange(quiz_result?.ratios?.RTI);
+    quiz_ratios.logical = calculateRange(quiz_result?.ratios?.FOI);
+    quiz_ratios.business = calculateRange(quiz_result?.ratios?.SRI);
+    quiz_ratios.careful = calculateRange(quiz_result?.ratios?.SPI);
+    console.log(quiz_ratios);
   }
 
   getQuizResult();
@@ -29,7 +63,7 @@ $(document).ready(function () {
     const progressContainer = document.getElementById(`${id}_container`);
     const progressBar = document.getElementById(`${id}_bar`);
     const progressIcon = document.getElementById(`${id}_icon`);
-    progressBar.style.width = "13%";
+    progressBar.style.width = "50px";
     progressBar.style.backgroundColor = color;
 
     if (value < 0) {
@@ -37,17 +71,7 @@ $(document).ready(function () {
       progressIcon.style.transform = "scaleX(-1)";
     }
 
-    progressBar.style.width = value > 13 ? `${value}%` : "13%";
-
-    // let progress = 0;
-    // const interval = setInterval(() => {
-    //   if (progress >= Math.abs(value)) {
-    //     clearInterval(interval);
-    //   } else {
-    //     progress++;
-    //     progressBar.style.width = progress > 13 ? `${progress}%` : "13%";
-    //   }
-    // }, 50);
+    progressBar.style.width = `calc(${Math.abs(value)}% + 25px)`;
   }
 
   function animateCounter(id, target, duration) {
@@ -85,10 +109,10 @@ $(document).ready(function () {
     }
     if (scroll + height - 200 > offset2 && !flag2) {
       flag2 = true;
-      animateProgressBar("risk", -15, "#4F95FF");
-      animateProgressBar("logical", 25, "#FFCD52");
-      animateProgressBar("business", 40, "#FF6464");
-      animateProgressBar("careful", 25, "#926DC1");
+      animateProgressBar("risk", quiz_ratios.risk, "#4F95FF");
+      animateProgressBar("logical", quiz_ratios.logical, "#FFCD52");
+      animateProgressBar("business", quiz_ratios.business, "#FF6464");
+      animateProgressBar("careful", quiz_ratios.careful, "#926DC1");
     }
   }
 

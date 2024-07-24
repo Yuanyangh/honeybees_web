@@ -654,8 +654,9 @@ body {
   align-items: flex-end;
   padding-right: 10px;
   position: absolute;
-  left: 50%;
-  width: 13%;
+  left: calc(50% - 25px);
+  width: 50px;
+  min-width: 50px;
   transition: width 1s ease;
   /* transform: translateX(-50%); */
 }
