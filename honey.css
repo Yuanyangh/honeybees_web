@@ -345,21 +345,30 @@ section.frame-section {
 }
 
 .mask-group-parent-wrapper {
-  background-image: url("./assests/footer_Honeybees_logo.png");
-  background-size: 1247px 100%;
-  background-position: center;
-  background-repeat: no-repeat;
   margin: auto;
   width: 100%;
   max-width: 1247px;
   height: 100%;
 }
+.mask-group-parent-wrapper::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: scaleX(-1);
+  background-image: url("./assests/footer_Honeybees_logo.png");
+  background-size: 1247px 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 @media (max-width: 767px) {
-  .mask-group-parent-wrapper {
+  .mask-group-parent-wrapper::before {
     background-image: url("./assests/footer_mobile_Honeybees_logo.png");
     background-size: 100% 90%;
-    background-position: end;
   }
 }
 
