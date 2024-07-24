@@ -1022,13 +1022,15 @@ h6 {
   left: 0;
   transition: opacity 0.5s ease, width 0.5s ease, height 0.5s ease;
 }
-.honeybeeLogo:hover .small-logo {
-  opacity: 0;
-  z-index: -1;
-}
-.honeybeeLogo:hover .big-logo {
-  opacity: 1;
-  z-index: 1;
+@media (min-width: 992px) {
+  .honeybeeLogo:hover .small-logo {
+    opacity: 0;
+    z-index: -1;
+  }
+  .honeybeeLogo:hover .big-logo {
+    opacity: 1;
+    z-index: 1;
+  }
 }
 
 .honeybeeMusic {
