@@ -515,6 +515,9 @@ body {
   .text-box p {
     font-size: 14px;
   }
+  .teg-btn ul {
+    justify-content: center;
+  }
   .teg-btn ul li {
     font-size: 12px;
     padding: 5px 25px;
@@ -635,6 +638,7 @@ body {
     font-size: 14px;
   }
   .honeyBeeTeamReview p {
+    text-align: center;
     font-size: 12px;
     line-height: 1.1;
   }
@@ -746,7 +750,8 @@ body {
 
 @media (max-width: 500px) {
   .aboutus-banner-text h3 {
-    font-size: 20px;
+    max-width: 310px;
+    font-size: 30px;
   }
 }
 
@@ -788,11 +793,11 @@ body {
   text-align: center;
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .risk-management-wrapper .text-box, .wealth-management-wrapper .text-box, .corporate-solution-wrapper .text-box {
     text-align: left;
   }
-}
+} */
 
 /* .risk-management-wrapper {
   background: linear-gradient(180deg, #FFE8BACD 0%, #926DC1FF 100%);

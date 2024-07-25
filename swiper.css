@@ -85,6 +85,9 @@
   .swiper-wrapper {
     top: 120px;
   }
+  .swiper-slide-img {
+    text-align: center;
+  }
 }
 
 @media (max-width: 500px) {
