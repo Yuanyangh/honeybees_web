@@ -160,15 +160,15 @@ $(document).ready(function () {
   function animateCounterAndProgressBar () {
     var scroll = $(window).scrollTop();
     var height = $(window).height();
-    var offset1 = $(".shape-container").offset().top;
+    // var offset1 = $(".shape-container").offset().top;
     var offset2 = $(".h-chart-container").offset().top;
-    if (scroll + height - 200 > offset1 && !flag1) {
-      flag1 = true;
-      animateCounter("healer_counter", 37, 1000);
-      animateCounter("explorer_counter", 33, 1000);
-      animateCounter("knight_counter", 26, 1000);
-      animateCounter("wizard_counter", 4, 1000);
-    }
+    // if (scroll + height - 200 > offset1 && !flag1) {
+    //   flag1 = true;
+    //   animateCounter("healer_counter", 37, 1000);
+    //   animateCounter("explorer_counter", 33, 1000);
+    //   animateCounter("knight_counter", 26, 1000);
+    //   animateCounter("wizard_counter", 4, 1000);
+    // }
     if (scroll + height - 200 > offset2 && !flag2) {
       flag2 = true;
       animateProgressBar("risk", quiz_ratios.risk, "#4F95FF");
