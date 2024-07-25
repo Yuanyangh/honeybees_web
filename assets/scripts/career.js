@@ -89,3 +89,15 @@ $(document).ready(async function() {
     $('#music_icon_description').addClass('fadeOut-scale');
   }, 3000);
 });
+
+function onSubmit() {
+  const submittedModal = $("#submittedModal");
+  submittedModal.removeClass("hide");
+  submittedModal.addClass("visible");  
+}
+
+function onClose() {
+  const submittedModal = $("#submittedModal");
+  submittedModal.removeClass("visible");
+  submittedModal.addClass("hide");
+}
