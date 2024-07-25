@@ -131,10 +131,10 @@
   width: 100%;
   padding-top: 20px;
 }
-.left {
+/* .left {
   position: absolute;
   right: 20px !important;
-}
+} */
 .banenrtext {
   font-family: "Agrandir-GrandHeavy";
   text-transform: uppercase;
@@ -1255,6 +1255,7 @@ body.lock-scroll {
 }
 
 .disabled-btn {
-  background-color: lightgray;
+  color: #C4C4C4 !important;
   cursor: not-allowed !important;
+  box-shadow: none !important;
 }

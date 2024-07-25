@@ -314,10 +314,12 @@
 }
 
 .questions-container button {
+  line-height: 1;
+  background-color: #FFFBF5;
   border: 5px solid #eeaf30;
   box-shadow: -4px 4px 0 0 #3061ab;
   border-radius: 25px;
-  padding: 7px 35px;
+  padding: 10px 60px;
   font-family: "Agrandir-GrandHeavy";
   /* text-transform: uppercase; */
   font-size: 18px;
@@ -326,6 +328,7 @@
 @media (max-width: 767px) {
   .questions-container button {
     font-size: 14px;
+    padding: 10px 40px;
   }
 }
 
