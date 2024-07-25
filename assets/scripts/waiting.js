@@ -13,7 +13,7 @@ $(document).ready(function () {
     }
 
 
-    const apiEndpoint = 'http://128.199.93.120/api/websiteQuizMindReaderPost';
+    const apiEndpoint = 'https://honeybees-crm.com/api/websiteQuizMindReaderPost';
 
     fetch(apiEndpoint, {
       method: 'POST',
