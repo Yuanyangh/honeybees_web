@@ -45,6 +45,7 @@ $(document).ready(function () {
     const quiz_result = JSON.parse(localStorage.getItem('quiz_result'));
     console.log(quiz_result);
     if ( !(quiz_result?.personality && quiz_result?.ratios && quiz_result?.description && quiz_result?.recommendation) ) {
+      console.log("You will be redirected to discovery page");
       window.location.assign("./discovery.html");
     }
     primary_personality = quiz_result?.personality.toLowerCase().split('-')[0];

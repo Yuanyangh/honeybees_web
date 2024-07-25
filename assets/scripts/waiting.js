@@ -31,7 +31,12 @@ $(document).ready(function () {
     .then(result => {
       localStorage.setItem('quiz_result', JSON.stringify(result));
       // Redirect to another page
-      window.location.assign("./result.html");
+      if ( (result?.personality && result?.ratios && result?.description && result?.recommendation) ) {
+        window.location.assign("./result.html");
+      } else {
+        console.log(result);
+        alert(result?.error);
+      }
     })
     .catch(error => {
       console.error('Error:', error);
