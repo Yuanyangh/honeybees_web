@@ -317,6 +317,12 @@
   z-index: 0;
 }
 
+@media (max-width: 767px) {
+  .dedicat-mentor:before {
+    transform: scale(2);
+  }
+}
+
 .digital-ecosys {
   background-image: url("../img/digital.png");
 }
@@ -350,16 +356,33 @@
   z-index: 2;
 }
 
+@media (max-width: 767px) {
+  .image-section:before {
+    width: 400px;
+    height: 240px;
+    right: -275px;
+    transform: scale(1.5);
+    bottom: calc(100vh + 35px);
+  }
+  .image-section:after {
+    width: 61px;
+    height: 54px;
+    background-size: 61px 54px;
+    right: 185px;
+    bottom: calc(100vh - 45px);
+  }
+}
+
 
 .process-excel {
   background-image: url("../img/process.png");
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .dedicat-mentor:before, .image-section:before, .image-section:after {
     display: none;
   }
-}
+} */
 
 .career-item-text-wrapper {
   z-index: 3;
