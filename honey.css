@@ -277,6 +277,7 @@ input {
 }
 
 .title_filed {
+  display: none;
   position: relative;
   width: 32%;
 }
@@ -305,7 +306,7 @@ img.icon-chevron-bottom {
 .name_field {
   width: 100% !important;
   text-align: justify;
-  padding-left: 16px;
+  /* padding-left: 16px; */
 }
 
 .name_field input {
@@ -1047,6 +1048,7 @@ li.btn {
 
 .teg-btn ul {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0px;
   padding: 0;
