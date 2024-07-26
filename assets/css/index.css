@@ -430,6 +430,12 @@
   top: 95px;
 }
 
+@media (max-width: 767px) {
+  .index-happen-marquee .index-marquee-content.yellow {
+    top: 60px;
+  }
+}
+
 .index-loren-marquee {
   position: absolute;
   top: -80px;

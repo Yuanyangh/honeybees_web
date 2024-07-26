@@ -44,7 +44,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  animation: marqueeflow 40s linear 0s infinite;
+  animation: marqueeflow 8s linear 0s infinite;
   /* animation-play-state: running;
   animation-delay: 0s;
   animation-direction: normal; */
