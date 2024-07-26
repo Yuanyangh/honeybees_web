@@ -36,5 +36,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
   marquee.classList.add('no-animation');
   setTimeout(() => {
     marquee.classList.remove('no-animation');
-  }, 100);
+  }, 500);
 });
