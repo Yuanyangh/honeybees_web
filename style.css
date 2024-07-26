@@ -1010,6 +1010,11 @@ h6 {
   height: 29px;
   margin-left: 23px;
 }
+@media (max-width: 991px) {
+  .topbar .honeybeeLogo .big-logo {
+    display: none !important;
+  }
+}
 @media (max-width: 767px) {
   .topbar .honeybeeLogo .small-logo {
     margin-left: 0px;
