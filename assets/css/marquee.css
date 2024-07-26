@@ -38,20 +38,22 @@
 }
 
 .marquee {
-  flex: 0 0 auto;
-  min-width: 100%;
+  /* flex: 0 0 auto; */
+  /* min-width: 100%; */
   z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
   animation: marqueeflow 40s linear 0s infinite;
-  animation-play-state: running;
+  /* animation-play-state: running;
   animation-delay: 0s;
-  animation-direction: normal;
+  animation-direction: normal; */
   padding: 10px;
+  white-space: nowrap;
 }
 
 .marquee span {
+  flex: 0 0 auto;
   font-size: 55px;
   line-height: 55px;
   outline: #29446d;
@@ -76,6 +78,7 @@
   -webkit-text-stroke: 3px #fff;
 }
 .marquee img {
+  flex: 0 0 auto;
   margin: 0px 20px;
 }
 
