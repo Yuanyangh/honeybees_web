@@ -45,10 +45,12 @@ function onClose() {
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const marquee = document.querySelector('.marquee');
-  marquee.classList.add('d-none');
-  setTimeout(() => {
-    marquee.classList.remove('d-none');
-  }, 200);
+  if ( marquee ) {
+    marquee.classList.add('d-none');
+    setTimeout(() => {
+      marquee.classList.remove('d-none');
+    }, 200);
+  }
 
   const form = document.getElementById('buzzForm');
   const buzzSubmitButton = document.getElementById('buzzSubmitButton');

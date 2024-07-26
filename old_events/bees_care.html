@@ -279,7 +279,7 @@
             <div class="footer-wrapper">
                 <div class="footer">
                     <div class="footer-inner">
-                        <form class="drop-your-question-and-email-o-parent">
+                        <form id="buzzForm" class="drop-your-question-and-email-o-parent">
                             <h2 class="drop-your-question" id="demo"></h2>    
                             <div class="input-details-group-parent">
                                 <div class="title_filed">
@@ -288,19 +288,18 @@
                                 </div>
     
                                 <div class="name_field">
-                                    <input class="input-details-group yourname" type="text" placeholder="Your Name..." />
+                                    <input id="buzz_name" class="input-details-group yourname" type="text" placeholder="Your Name..." />
                                 </div>
     
                             </div>
     
                             <div class="group-div">
                                 <div class="frame-child5"></div>
-                                <input class="your-email" placeholder="Your Email..." type="text" />
+                                <input id="buzz_email" class="your-email" placeholder="Your Email..." type="text" />
                             </div>
                             <div class="rectangle-parent3">
-    
-                                <textarea id="message"class="whats-on-your" placeholder="What’s On Your Mind?" rows="2"></textarea>
-                                <button class="send-wrapper">
+                                <textarea id="message" class="whats-on-your" placeholder="What’s On Your Mind?" rows="2"></textarea>
+                                <button type="submit" id="buzzSubmitButton" class="send-wrapper">
                                     <div class="send">send</div>
                                 </button>
                             </div>
@@ -338,6 +337,18 @@
         </div>
         </div>
     </section>
+    <div id="submittedModal" class="submitted-modal hide" onclick="onClose()">
+      <div class="submitted-modal-content" onclick="event.stopPropagation()">
+        <img class="submitted-bg d-none d-md-block" src="./assets/img/submitted_quote.png" alt="submitted quote" />
+        <img class="submitted-bg d-block d-md-none" src="./assets/img/mobile_submitted_quote.png" alt="mobile submitted quote" />
+        <div class="submitted-message">
+          <img class="close-icon" src="./assets/img/Close_round.png" alt="close" onclick="onClose()"/>
+          <img class="bee-icon" src="./assets/img/bee-logo.gif" alt="bee"/>
+          <p>Submitted!</p>
+          <span class="mt-1">We will buzz you soon!</span>
+        </div>
+      </div>
+    </div>
     <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="topbar">
