@@ -314,28 +314,28 @@
                 </div>
                 <div class="col-12 career-form-content">
                     <div class="row">
-                        <form action="">
+                        <form action="" id="prospectForm">
                             <div class="form">
                                 <div class="col-12">
                                     <div>
                                         <label for="">Name</label>
-                                        <input type="text">
+                                        <input type="text" id="name" required>
                                     </div>
                                     <div>
                                         <label for="">Age</label>
-                                        <input type="text">
+                                        <input type="text" id="age" required>
                                     </div>
                                 </div>
                                 <div class="col-12 my-3">
                                     <div>
                                         <label for="">Email Address</label>
-                                        <input type="text">
+                                        <input type="text" id="email" required>
                                     </div>
                                     <div>
                                         <label for="">Mobile Number</label>
                                         <div class="input-phone-container">
                                             <span>+65</span>
-                                            <input type="tel" id="phoneNumber" >
+                                            <input type="tel" id="phoneNumber" required>
                                         </div>
                                     </div>
                                 </div>
@@ -343,38 +343,38 @@
                                     <div style="margin-right: 40px;">
                                         <label for="" class="pr-4">Highest Qualification</label>
                                         <div class="d-flex radioint">
-                                            <input type="radio" id="radio_highest_qualification_Degree_Above" name="highest_qualification">
+                                            <input type="radio" id="radio_highest_qualification_Degree_Above" name="highest_qualification" value="Degree and above" required>
                                             <label for="radio_highest_qualification_Degree_Above">Degree and above</label>
                                         </div>
                                         <div class="d-flex radioint">
-                                            <input type="radio" id="radio_highest_qualification_Diploma_Local" name="highest_qualification">
+                                            <input type="radio" id="radio_highest_qualification_Diploma_Local" name="highest_qualification" value="Diploma (Local)" >
                                             <label for="radio_highest_qualification_Diploma_Local">Diploma (Local)</label>
                                         </div>
                                         <div class="d-flex radioint">
-                                            <input type="radio" id="radio_highest_qualification_Diploma_Private_Others" name="highest_qualification">
+                                            <input type="radio" id="radio_highest_qualification_Diploma_Private_Others" name="highest_qualification" value="Diploma (Private/Others)">
                                             <label for="radio_highest_qualification_Diploma_Private_Others">Diploma (Private/Others)</label>
                                         </div>
                                         <div class="d-flex radioint">
                                             <div class="d-flex w-fit">
-                                                <input type="radio" id="radio_highest_qualification_Other" name="highest_qualification">
+                                                <input type="radio" id="radio_highest_qualification_Other" name="highest_qualification" value="Other">
                                                 <label for="radio_highest_qualification_Other">Other</label>
                                             </div>
-                                            <input class="career-other-input" type="text">
+                                            <input id="highest_qualification_other_input" class="career-other-input" type="text">
                                         </div>
 
                                     </div>
                                     <div>
                                         <label for="" class="pr-4">Interested in?</label>
                                         <div class="d-flex radioint">
-                                            <input type="radio" id="radio_interested_career" name="interested">
+                                            <input type="radio" id="radio_interested_career" name="interested" value="Career" required>
                                             <label for="radio_interested_career">The career of a financial services consultant</label>
                                         </div>
                                         <div class="d-flex radioint">
-                                            <input type="radio" id="radio_interested_internship" name="interested">
+                                            <input type="radio" id="radio_interested_internship" name="interested" value="Internship">
                                             <label for="radio_interested_internship">Internship position/programme</label>
                                         </div>
                                         <div class="d-flex radioint">
-                                            <input type="radio" id="radio_interested_other" name="interested">
+                                            <input type="radio" id="radio_interested_other" name="interested" value="Others">
                                             <label for="radio_interested_other">Other job positions</label>
                                         </div>
                                         <div class="d-flex radioint"></div>
@@ -391,13 +391,13 @@
                                             related general administration.</label>
                                     </div>
                                     <div class="d-flex align-items-center">
-                                        <input style="margin: 0px; " type="radio" id="consent_form" name="consent_form">
-                                        <label style="margin-left: 12px; font-weight: 600;" for="consent_form">Yes</label>
+                                        <input style="margin: 0px; " type="radio" id="consent_form" name="consent_form" required>
+                                        <label style="margin-left: 12px; font-weight: 600;" for="consent_form">I Agree</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <button type="button" class="bg-white btn-submit" onclick="onSubmit()">Submit</button>
+                                <button type="submit" class="bg-white btn-submit">Submit</button>
                             </div>
                         </form>
                     </div>

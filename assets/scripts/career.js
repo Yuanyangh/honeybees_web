@@ -90,7 +90,7 @@ $(document).ready(async function() {
   }, 3000);
 });
 
-function onSubmit() {
+function showSubmittedModal() {
   const submittedModal = $("#submittedModal");
   submittedModal.removeClass("hide");
   submittedModal.addClass("visible");  
@@ -101,3 +101,104 @@ function onClose() {
   submittedModal.removeClass("visible");
   submittedModal.addClass("hide");
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('prospectForm');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value.trim();
+    const age = document.getElementById('age').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phoneNumber = document.getElementById('phoneNumber').value.trim();
+    const highestQualification = document.querySelector('input[name="highest_qualification"]:checked');
+    const interested = document.querySelector('input[name="interested"]:checked');
+    const consentForm = document.getElementById('consent_form').checked;
+
+    let isValid = true;
+    let errorMessage = '';
+
+    if (!name) {
+      isValid = false;
+      errorMessage += 'Name is required.\n';
+    }
+
+    if (!age || isNaN(age) || age <= 0) {
+      isValid = false;
+      errorMessage += 'Valid age is required.\n';
+    }
+
+    if (!email || !validateEmail(email)) {
+      isValid = false;
+      errorMessage += 'Valid email is required.\n';
+    }
+
+    if (!phoneNumber || !validatePhoneNumber(phoneNumber)) {
+      isValid = false;
+      errorMessage += 'Valid phone number is required.\n';
+    }
+
+    if (!highestQualification) {
+      isValid = false;
+      errorMessage += 'Please select your highest qualification.\n';
+    }
+
+    if (!interested) {
+      isValid = false;
+      errorMessage += 'Please select your interest.\n';
+    }
+
+    if (!consentForm) {
+      isValid = false;
+      errorMessage += 'You must agree to the consent form.\n';
+    }
+
+    if (isValid) {
+      const payload = {
+        name: name,
+        age: age,
+        email: email,
+        mobile: phoneNumber,
+        qualification: highestQualification.value === 'Other' ? document.getElementById('highest_qualification_other_input').value : highestQualification.value,
+        interested_in: interested.value,
+      };
+      // console.log(payload);
+
+      const apiEndpoint = 'https://honeybees-crm.com/api/add_career_prospect';
+
+      fetch(apiEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(result => {
+        showSubmittedModal();
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
+    } else {
+      alert(errorMessage);
+    }
+    
+  });
+  function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  function validatePhoneNumber(phoneNumber) {
+    const re = /^[+\d\s-]{7,15}$/;  // Allows +, digits, spaces, and dashes with a length between 7 and 15 characters
+    return re.test(String(phoneNumber));
+  }
+});
