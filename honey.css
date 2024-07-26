@@ -410,6 +410,7 @@ h2.drop-your-question {
 }
 
 button.send-wrapper {
+  cursor: pointer;
   background-color: white;
   border-radius: 20px;
   padding: 5px 25px;
@@ -1486,7 +1487,7 @@ li.btn:hover {
   height: 40px;
   /* line-height: 28px; */
   font-family: "AvenirNext" !important;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   padding-left: 20px;
   overflow: hidden;
 }
