@@ -78,11 +78,11 @@
   }
   .yourname,
   .your-email,
-  .whats-in-your {
+  .whats-on-your {
     font-size: 14px;
     height: 30px;
   }
-  .whats-in-your {
+  .whats-on-your {
     padding: 4px 20px;
     overflow: hidden;
     height: auto;

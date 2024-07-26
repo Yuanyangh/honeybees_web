@@ -395,7 +395,7 @@ h2.drop-your-question {
   position: relative;
 }
 
-.whats-in-your {
+.whats-on-your {
   background: white;
   width: 100%;
   margin-top: 10px;
@@ -405,7 +405,7 @@ h2.drop-your-question {
   resize: none;
   /* position: relative; */
 }
-.whats-in-your:focus-visible {
+.whats-on-your:focus-visible {
   outline: none;
 }
 
@@ -1474,7 +1474,7 @@ li.btn:hover {
 
 .yourname,
 .your-email,
-.whats-in-your {
+.whats-on-your {
   box-sizing: border-box;
   font-size: 18px;
   color: #29446d !important;
