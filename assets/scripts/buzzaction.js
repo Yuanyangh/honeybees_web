@@ -33,8 +33,8 @@ function typeWriter() {
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const marquee = document.querySelector('.marquee');
-  marquee.classList.add('no-animation');
+  marquee.classList.add('d-none');
   setTimeout(() => {
-    marquee.classList.remove('no-animation');
-  }, 500);
+    marquee.classList.remove('d-none');
+  }, 200);
 });
