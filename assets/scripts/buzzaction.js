@@ -30,3 +30,11 @@ function typeWriter() {
     document.getElementById("demo").innerHTML = txt;
   }
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const marquee = document.querySelector('.marquee');
+  marquee.classList.add('no-animation');
+  setTimeout(() => {
+    marquee.classList.remove('no-animation');
+  }, 100);
+});
