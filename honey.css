@@ -1304,6 +1304,11 @@ p {
   font-family: "Agrandir-GrandHeavy";
 }
 
+.testimnial-sec h1 .strok_text {
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke: 2px #fffbf5;
+}
+
 .testimnial-sec p {
   color: #fffbf5;
   font-family: "AvenirNext" !important;
