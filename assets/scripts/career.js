@@ -104,6 +104,7 @@ function onClose() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('prospectForm');
+  const submitButton = document.getElementById('submitButton');
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -114,47 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const phoneNumber = document.getElementById('phoneNumber').value.trim();
     const highestQualification = document.querySelector('input[name="highest_qualification"]:checked');
     const interested = document.querySelector('input[name="interested"]:checked');
-    const consentForm = document.getElementById('consent_form').checked;
+    // const consentForm = document.getElementById('consent_form').checked;
 
-    let isValid = true;
-    let errorMessage = '';
-
-    if (!name) {
-      isValid = false;
-      errorMessage += 'Name is required.\n';
-    }
-
-    if (!age || isNaN(age) || age <= 0) {
-      isValid = false;
-      errorMessage += 'Valid age is required.\n';
-    }
-
-    if (!email || !validateEmail(email)) {
-      isValid = false;
-      errorMessage += 'Valid email is required.\n';
-    }
-
-    if (!phoneNumber || !validatePhoneNumber(phoneNumber)) {
-      isValid = false;
-      errorMessage += 'Valid phone number is required.\n';
-    }
-
-    if (!highestQualification) {
-      isValid = false;
-      errorMessage += 'Please select your highest qualification.\n';
-    }
-
-    if (!interested) {
-      isValid = false;
-      errorMessage += 'Please select your interest.\n';
-    }
-
-    if (!consentForm) {
-      isValid = false;
-      errorMessage += 'You must agree to the consent form.\n';
-    }
-
-    if (isValid) {
+    if (checkValidity()) {
       const payload = {
         name: name,
         age: age,
@@ -201,4 +164,72 @@ document.addEventListener('DOMContentLoaded', () => {
     const re = /^[+\d\s-]{7,15}$/;  // Allows +, digits, spaces, and dashes with a length between 7 and 15 characters
     return re.test(String(phoneNumber));
   }
+
+  function checkValidity() {
+    const name = document.getElementById('name').value.trim();
+    const age = document.getElementById('age').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phoneNumber = document.getElementById('phoneNumber').value.trim();
+    const highestQualification = document.querySelector('input[name="highest_qualification"]:checked');
+    const interested = document.querySelector('input[name="interested"]:checked');
+    const consentForm = document.getElementById('consent_form').checked;
+
+    let isValid = true;
+    let errorMessage = '';
+
+    if (!name) {
+      isValid = false;
+      errorMessage += 'Name is required.\n';
+    }
+
+    if (!age || isNaN(age) || age <= 0) {
+      isValid = false;
+      errorMessage += 'Valid age is required.\n';
+    }
+
+    if (!email || !validateEmail(email)) {
+      isValid = false;
+      errorMessage += 'Valid email is required.\n';
+    }
+
+    if (!phoneNumber || !validatePhoneNumber(phoneNumber)) {
+      isValid = false;
+      errorMessage += 'Valid phone number is required.\n';
+    }
+
+    if (!highestQualification) {
+      isValid = false;
+      errorMessage += 'Please select your highest qualification.\n';
+    }
+
+    if (!interested) {
+      isValid = false;
+      errorMessage += 'Please select your interest.\n';
+    }
+
+    if (!consentForm) {
+      isValid = false;
+      errorMessage += 'You must agree to the consent form.\n';
+    }
+
+    return isValid;
+  }
+
+  function checkFormValidity() {
+    if (checkValidity()) {
+      submitButton.disabled = false;
+      submitButton.classList.remove('disabled-btn')
+    } else {
+      submitButton.disabled = true;
+      submitButton.classList.add('disabled-btn')
+    }
+  }
+
+  checkFormValidity();
+
+  const formElements = form.querySelectorAll('input, textarea, select');
+  formElements.forEach(element => {
+    element.addEventListener('input', checkFormValidity);
+  });
+
 });
