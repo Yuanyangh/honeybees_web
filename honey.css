@@ -1423,7 +1423,7 @@ p {
 
 .about_footer {
   margin-top: -143px;
-  z-index: 2;
+  z-index: 5;
   position: relative;
 }
 
