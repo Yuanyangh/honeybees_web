@@ -62,6 +62,11 @@ navbar.about-nav a:hover {
   border-radius: 25px;
 }
 
+navbar.career-nav a:hover {
+  background-color: #eeaf30;
+  border-radius: 25px;
+}
+
 navbar.know-nav a:hover {
   background-color: #ee7430;
   border-radius: 25px;
