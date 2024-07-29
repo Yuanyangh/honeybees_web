@@ -1331,7 +1331,6 @@ body.lock-scroll {
 }
 .bee-icon {
   position: absolute;
-  content: "";
   width: 120px;
   height: 120px;
   bottom: -130px;
