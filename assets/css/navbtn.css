@@ -38,6 +38,7 @@ navbar .col-12 div {
   border-radius: 25px;
   gap: 20px;
   backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 navbar a {
   min-width: 150px;

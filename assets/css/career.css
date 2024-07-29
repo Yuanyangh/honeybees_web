@@ -389,6 +389,7 @@
   padding: 85px 150px;
   border-radius: 50px;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 @media (max-width: 767px) {
