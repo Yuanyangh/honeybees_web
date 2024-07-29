@@ -1269,8 +1269,8 @@ body.lock-scroll {
   width: 100%;
   height: 100vh;
   background-color: #29446D33;
-  backdrop-filter: blur(30px) !important;
-  -webkit-backdrop-filter: blur(30px) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
   display: flex;
   justify-content: center;
   align-items: center;
