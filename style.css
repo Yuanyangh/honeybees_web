@@ -1196,8 +1196,8 @@ h6 {
 
 @media (max-width: 767px) {
   .music-icon-description {
-    width: 200px;
-    height: 64px;
+    width: 180px;
+    height: 58px;
     right: 35px;
   }
 }

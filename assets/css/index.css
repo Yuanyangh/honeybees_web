@@ -1129,6 +1129,7 @@ section.event_section::before {
   }
   .banner-bee-top {
     left: -22%;
+    top: 0%;
   }
   .banner-bee-bottom {
     transform: scale(0.6) translateX(-80%);
