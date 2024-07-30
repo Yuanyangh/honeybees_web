@@ -590,7 +590,9 @@
 }
 
 .progress-bar-courage {
-  width: 20%;
+  display: block;
+  min-width: 70px;
+  width: 70px;
   height: 100%;
   overflow: hidden;
   background-color: #9fc40d;
@@ -602,7 +604,9 @@
 }
 
 .progress-bar-struggling {
-  width: 20%;
+  display: block;
+  min-width: 70px;
+  width: 70px;
   height: 100%;
   background-color: #ee7430;
   border-radius: 50px;
@@ -612,8 +616,21 @@
   -moz-box-shadow: -5px 5px 2px 0px #fc7f3c;
 }
 
+@media (max-width: 767px) {
+  .progress-bar-courage {
+    min-width: 60px;
+    width: 60px;
+  }
+  .progress-bar-struggling {
+    min-width: 60px;
+    width: 60px;  
+  }
+}
+
 .progress-bar-votes {
-  width: 150px;
+  /* width: 150px; */
+  white-space: nowrap;
+  margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;

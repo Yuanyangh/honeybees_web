@@ -2,29 +2,77 @@ $(document).ready(function() {
   const agreeBtnGroup = document.querySelector(".agree-btn-group");
   const progressDetail = document.querySelector(".progress-bar-detail");
 
-  $("#agree-button").click(function() {
+  function sendVote(vote) {
+    const payload = {
+      vote: vote,
+    };
+    // console.log(payload);
+
+    const apiEndpoint = 'https://honeybees-crm.com/api/send_vote';
+
+    fetch(apiEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      return response.json();
+    })
+    .then(result => {
+
+      if ( result?.yes !== undefined && result?.no !== undefined ) {
+        animateProgressBarCourage(result?.yes);
+        $('#description_courage').text(`${result?.yes}% of people found their courage`);
+        $('#percentage_courage').text(`${result?.yes}%`);
+        animateProgressBarStruggling(result?.no);
+        $('#description_struggling').text(`${result?.no}% of people are still struggling`);
+        $('#percentage_struggling').text(`${result?.no}%`);
+      } else {
+        animateProgressBarCourage(0);
+        $('#description_courage').text(`0% of people found their courage`);
+        $('#percentage_courage').text(`0%`);
+        animateProgressBarStruggling(0);
+        $('#description_struggling').text(`0% of people are still struggling`);
+        $('#percentage_struggling').text(`0%`);
+      }
+  
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  }
+
+  $("#agree-button").click(async function() {
     agreeBtnGroup.style.display = "none";
     progressDetail.style.display = "block";
-    animateProgressBarCourage(76, 500);
-    animateProgressBarStruggling(24, 500);
+    sendVote(true);
   });
 
-  $("#disagree-button").click(function() {
+  $("#disagree-button").click(async function() {
     agreeBtnGroup.style.display = "none";
     progressDetail.style.display = "block";
-    animateProgressBarCourage(76, 500);
-    animateProgressBarStruggling(24, 500);
+    sendVote(false);
   });
 
   $("#progress-bar-detail").click(function() {
     const progressBarCourage = document.getElementById("progressbar-courage");
-    const progressBarStruggling = document.getElementById(
-      "progressbar-struggling"
-    );
-    progressBarCourage.style.width = "20%";
-    progressBarStruggling.style.width = "20%";
+    const progressBarStruggling = document.getElementById("progressbar-struggling");
+    const initialWidth = window.innerWidth < 768 ? 60 : 70;
+    progressBarCourage.style.width = `${initialWidth}px`;
+    progressBarStruggling.style.width = `${initialWidth}px`;
     agreeBtnGroup.style.display = "block";
     progressDetail.style.display = "none";
+    animateProgressBarCourage(0);
+    $('#description_courage').text(`0% of people found their courage`);
+    $('#percentage_courage').text(`0%`);
+    animateProgressBarStruggling(0);
+    $('#description_struggling').text(`0% of people are still struggling`);
+    $('#percentage_struggling').text(`0%`);
   });
 
   var doAnimations = function() {
@@ -72,39 +120,18 @@ $(document).ready(function() {
   });
 });
 
-function animateProgressBarCourage(targetWidth, duration) {
+function animateProgressBarCourage(targetWidth) {
+  const initialWidth = window.innerWidth < 768 ? 60 : 70;
   const progressBarCourage = document.getElementById("progressbar-courage");
-  const initialWidthCourage = parseInt(progressBarCourage.style.width) || 0;
-  const stepCourage =
-    (targetWidth - initialWidthCourage) / (duration / 1000 * 60);
-  let currentWidthCourage = initialWidthCourage;
-  const animationIntervalCourage = setInterval(() => {
-    currentWidthCourage += stepCourage;
-    progressBarCourage.style.width = currentWidthCourage + "%";
-
-    if (currentWidthCourage >= targetWidth) {
-      clearInterval(animationIntervalCourage);
-    }
-  }, 10);
+  setTimeout(() => {
+    progressBarCourage.style.width = `calc(${targetWidth}% + ${initialWidth}px)`;
+  }, 50);   // A small delay to allow the initial width to be set
 }
 
-function animateProgressBarStruggling(targetWidth, duration) {
-  const progressBarStruggling = document.getElementById(
-    "progressbar-struggling"
-  );
-  const initialWidthStruggling =
-    parseInt(progressBarStruggling.style.width) || 0;
-  const stepStruggling =
-    (targetWidth - initialWidthStruggling) / (duration / 1000 * 60);
-
-  let currentWidthStruggling = initialWidthStruggling;
-
-  const animationInterval = setInterval(() => {
-    currentWidthStruggling += stepStruggling;
-    progressBarStruggling.style.width = currentWidthStruggling + "%";
-
-    if (currentWidthStruggling >= targetWidth) {
-      clearInterval(animationInterval);
-    }
-  }, 10);
+function animateProgressBarStruggling(targetWidth) {
+  const initialWidth = window.innerWidth < 768 ? 60 : 70;
+  const progressBarCourage = document.getElementById("progressbar-struggling");
+  setTimeout(() => {
+    progressBarCourage.style.width = `calc(${targetWidth}% + ${initialWidth}px)`;
+  }, 50);   // A small delay to allow the initial width to be set
 }
