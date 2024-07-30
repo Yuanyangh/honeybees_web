@@ -244,12 +244,18 @@
 .formsection input {
   box-shadow: -4px 4px 0 0 #3061ab;
   border: 2px solid #29446d;
-  padding: 8px 0;
+  padding: 5px 15px;
+  height: 40px;
+  font-size: 18px;
   border-radius: 25px;
   margin-bottom: 30px;
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+}
+@media (max-width: 767px) {
+  .formsection input {
+    height: 30px;
+    font-size: 14px;
+  }
 }
 .formsection input:focus-visible {
   outline: none;
