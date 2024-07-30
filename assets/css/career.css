@@ -343,7 +343,7 @@
 
 .image-section:after {
   content: "";
-  transform: scaleX(-1) rotate(45deg);
+  transform: scaleX(-1) rotate(0deg);
   background-image: url(../img/Home_Bee_B.gif);
   background-position: 0px 0px;
   width: 110px;
@@ -396,7 +396,7 @@
   .career-item-text-wrapper {
     margin: 0px 20px;
     padding: 30px 20px;
-    border-radius: 30px;
+    border-radius: 50px;
   }
 }
 
@@ -423,6 +423,12 @@
 .lottie-scroll-down-content {
   height: 50px;
   margin: auto;
+}
+
+@media (max-width: 767px) {
+  .lottie-scroll-down-content {
+    height: 40px;
+  }
 }
 
 .career-item-text h3 {
@@ -554,12 +560,13 @@
     background-position: center;
   }
   .image-section h3 {
-    font-size: 20px;
-    line-height: 1;
+    font-size: 24px;
+    line-height: 1.1;
   }
   .image-section p {
     font-size: 14px;
-    line-height: 1;
+    line-height: 1.1;
+    letter-spacing: -0.2px;
   }
 
   .career-dedicate-img img {
