@@ -138,6 +138,10 @@ body {
   position: relative;
 }
 
+.about-hero-text {
+  margin-top: -10vh;
+}
+
 .lottie-hive-content {
   transform: translateY(-10vh);
   height: 120vh;
@@ -370,6 +374,7 @@ body {
   }
   .lottie-hive-content {
     transform: scale(2);
+    height: 100vh;
   }
 
   .corporate-sec {
@@ -417,8 +422,8 @@ body {
   }
 
   .testimnial-bg-after:after {
-    top: 70%;
-    right: -100px;
+    top: 71%;
+    right: -120px;
   }
 }
 
@@ -439,6 +444,9 @@ body {
     width: 90%;
     left: 55%;
   }
+  .about-hero-bee {
+    bottom: 20%;
+  }  
 }
 
 @media (max-width: 600px) {
@@ -485,7 +493,7 @@ body {
   }
   .about-hero-text {
     max-width: 300px;
-    margin: auto;
+    margin: -10vh auto 0;
   }
   .hero-hed-sec-gif {
     width: 85px;
@@ -669,8 +677,8 @@ body {
   .founder-message-bubble {
     top: 85%;
     right: 150px;  
-    width: 175px;
-    height: 80px;  
+    width: 195px;
+    height: 95px;  
     margin-left: 0px;
     transform: rotate(-5deg);
   }
@@ -678,13 +686,20 @@ body {
 
 @media (max-width: 500px) {
   .founder-message-bubble {
-    top: 90%;
-    left: 38%;
+    top: 87%;
+    left: 30%;
   }
 }
 
 .founder-message-bubble img {
   position: absolute;
+}
+
+@media (max-width: 767px) {
+  .founder-message-bubble img {
+    width: 195px;
+    height: 95px;
+  }
 }
 
 .founder-message-bubble-text {
@@ -694,7 +709,7 @@ body {
   font-size: 18px;
   color: #29446d;
   font-family: "AvenirNext-Heavy";
-  margin-top: -24px;
+  margin-top: -27px;
   line-height: 1;
   text-align: left;
   text-transform: uppercase;
