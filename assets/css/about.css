@@ -728,7 +728,7 @@ body {
 }
 @media (max-width: 767px) {
   .aboutus-fixed-container {
-    height: 250vh;
+    height: 230vh;
     background: linear-gradient(180deg, #7BD7FF00 0%, #7BD7FF99 100%), linear-gradient(180deg, #2976ed00 0%, #2976edff 100%);
   }
 }
@@ -796,10 +796,12 @@ body {
 
 @media (max-width: 767px) {
   .journey-wrapper {
-    top: 50vh !important;
+    top: 15vh !important;
     transform: translate(-50%, 0%);
+    background: none !important;
   }
   .journey-wrapper.let-us-protect {
+    top: 30vh !important;
     background: none !important;
   }
 }
