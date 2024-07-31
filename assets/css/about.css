@@ -726,6 +726,12 @@ body {
   /* background: linear-gradient(180deg, #FFE8BA00 20%, #FFE8BACD  33.3%),
               linear-gradient(180deg, #efb12700 6.67%, #efb127FF  33.3%); */
 }
+@media (max-width: 767px) {
+  .aboutus-fixed-container {
+    height: 250vh;
+    background: linear-gradient(180deg, #7BD7FF00 0%, #7BD7FF99 100%), linear-gradient(180deg, #2976ed00 0%, #2976edff 100%);
+  }
+}
 
 .remove-background {
   background: none;
@@ -735,6 +741,11 @@ body {
   height: 100vh;
   width: 100%;
   /* background: linear-gradient(180deg, #FFE8BA00 20%, #FFE8BACD 100%); */
+}
+@media (max-width: 767px) {
+  .aboutus-fixed-container-item {
+    position: relative;
+  }
 }
 
 .fadeIn .text-1 {
@@ -781,6 +792,16 @@ body {
   bottom: 50vh;
   transform: translate(-50%, 50%);
   background: linear-gradient(180deg, #7BD7FF00 0%, #7BD7FF99 100%), linear-gradient(180deg, #2976ed00 0%, #2976edff 100%);
+}
+
+@media (max-width: 767px) {
+  .journey-wrapper {
+    top: 50vh !important;
+    transform: translate(-50%, 0%);
+  }
+  .journey-wrapper.let-us-protect {
+    background: none !important;
+  }
 }
 
 .journey-text-background {

@@ -52,10 +52,11 @@ $(document).ready(function () {
     });
   }  
 
-  let debounceTimer;
+  // let debounceTimer;
   $(window).on('scroll', function() {
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(handleScroll, 5);
+    // clearTimeout(debounceTimer);
+    // debounceTimer = setTimeout(handleScroll, 5);
+    handleScroll();
   });
 
   function handleScroll() {
@@ -65,18 +66,26 @@ $(document).ready(function () {
     const initialOffset = $('#aboutus_fixed_container').offset().top;
     const height = $(window).height();
     const startOffset = window.innerWidth < 768 ? 0.1 * height : 0.5 * height;
-  
-    if (scroll > initialOffset - startOffset && scroll <= (initialOffset + 0.8 * height)) {
-      setClassesForRange1();
-    } else if (scroll > (initialOffset + 0.8 * height) && scroll <= (initialOffset + 2 * height)) {
-      setClassesForRange2();
-    } else if (scroll > (initialOffset + 2 * height) && scroll <= (initialOffset + 3 * height)) {
-      setClassesForRange3();
-    } else if (scroll > (initialOffset + 3 * height)) {
-      resetClasses();
+
+    if ( window.innerWidth >= 768 ) {
+      if (scroll > initialOffset - startOffset && scroll <= (initialOffset + 0.8 * height)) {
+        setClassesForRange1();
+      } else if (scroll > (initialOffset + 0.8 * height) && scroll <= (initialOffset + 2 * height)) {
+        setClassesForRange2();
+      } else if (scroll > (initialOffset + 2 * height) && scroll <= (initialOffset + 3 * height)) {
+        setClassesForRange3();
+      } else if (scroll > (initialOffset + 3 * height)) {
+        resetClasses();
+      } else {
+        resetClasses();
+      }
     } else {
-      resetClasses();
+      $("#aboutus_fixed_container").removeClass("remove-background").css("margin-bottom", `0px`);
+      $(".aboutus-fixed-container-item").removeClass("overlayer_fixed");  
+      $(".top-scale-1").addClass("fadeIn").removeClass("fadeOut");
+      $(".top-scale-2").addClass("fadeIn").removeClass("fadeOut");  
     }
+  
 
     if ( scroll > $("#managements_wrapper").offset().top - 0.8*height && scroll <= $("#managements_wrapper").offset().top + 2 * height) {
       $('.managements-banner-bee').addClass('fadeIn');
