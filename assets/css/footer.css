@@ -3,13 +3,13 @@
 }
 @media (max-width: 1200px) {
   .rematch-quote {
-    padding: 200px 0px 0px;
+    padding: 200px 20px 0px;
     justify-content: space-between;
     gap: 150px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   h2.drop-your-question {
     margin: 20px 0px;
   }
@@ -109,5 +109,44 @@
   }
   button.send-wrapper .send {
     font-size: 14px;
+  }
+}
+
+.disclaimer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  max-width: 957px;
+  margin: auto;
+  margin-top: 100px;
+  color: #FFFBF5;
+  font-family: 'AvenirNext' !important;
+  font-size: 12px;
+}
+.disclaimer-detail {
+  max-width: 600px;
+}
+.terms-conditions-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 10px;
+  max-width: 600px;
+}
+.terms-conditions-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+@media (max-width: 991px) {
+  .disclaimer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .terms-conditions-wrapper {
+    flex-direction: row;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-between;
   }
 }

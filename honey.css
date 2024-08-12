@@ -420,7 +420,8 @@ button.send-wrapper {
 }
 
 .rematch-quote {
-  padding-top: 100px;
+  justify-content: space-between;
+  padding: 100px 20px 0px;
   display: flex;
   text-align: left;
   gap: 236px;
@@ -437,6 +438,12 @@ button.send-wrapper {
   font-size: 17px;
   display: flex;
   align-items: end;
+}
+
+@media (max-width: 767px) {
+  .authorized-representation-a-i {
+    justify-content: center;
+  }
 }
 
 .authorized-representative-msg {
