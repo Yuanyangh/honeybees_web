@@ -162,68 +162,78 @@
     </main>
 
     <section class="frame-section about_footer">
-        <div class="mask-group-parent-wrapper" id="footer">
-            <div class="footer-wrapper">
-                <div class="footer">
-                    <div class="footer-inner">
-                        <form id="buzzForm" class="drop-your-question-and-email-o-parent">
-                            <h2 class="drop-your-question" id="demo"></h2>    
-                            <div class="input-details-group-parent">
-                                <div class="title_filed">
-                                    <input class="input-details-group yourtitle" type="text" placeholder="Your Title" />
-                                    <img class="icon-chevron-bottom" alt="" src="../assests/Vector.png" />
-                                </div>
-    
-                                <div class="name_field">
-                                    <input id="buzz_name" class="input-details-group yourname" type="text" placeholder="Your Name..." />
-                                </div>
-    
-                            </div>
-    
-                            <div class="group-div">
-                                <div class="frame-child5"></div>
-                                <input id="buzz_email" class="your-email" placeholder="Your Email..." type="text" />
-                            </div>
-                            <div class="rectangle-parent3">
-                                <textarea id="message" class="whats-on-your" placeholder="What’s On Your Mind?" rows="2"></textarea>
-                                <button type="submit" id="buzzSubmitButton" class="send-wrapper">
-                                    <div class="send">send</div>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    
+      <div class="mask-group-parent-wrapper" id="footer">
+        <div class="footer-wrapper">
+          <div class="footer">
+            <div class="footer-inner">
+              <form id="buzzForm" class="drop-your-question-and-email-o-parent">
+                <h2 class="drop-your-question" id="demo"></h2>
+                <div class="input-details-group-parent">
+                  <div class="title_filed">
+                      <input class="input-details-group yourtitle" type="text" placeholder="Your Title" />
+                      <img class="icon-chevron-bottom" alt="" src="../assests/Vector.png" />
+                  </div>
+  
+                  <div class="name_field">
+                      <input id="buzz_name" class="input-details-group yourname" type="text" placeholder="Your Name..." />
+                  </div>
                 </div>
-    
-                
+                <div class="group-div">
+                    <div class="frame-child5"></div>
+                    <input id="buzz_email" class="your-email" placeholder="Your Email..." type="text" />
+                </div>
+                <div class="rectangle-parent3">
+                  <textarea id="message" class="whats-on-your" placeholder="What’s On Your Mind?" rows="2"></textarea>
+                  <button type="submit" id="buzzSubmitButton" class="send-wrapper">
+                    <div class="send">send</div>
+                  </button>
+                </div>
+              </form>
             </div>
-            <div class="rematch-quote">
-              <div class="authorized-representation-a-i">
-                  <h2 class="i-think-we">
-                    #NOSTINGSATTACHED
-                  </h2>
-              </div>
-              <div class="social-media-icons">
-                  <a href="https://sg.linkedin.com/company/honeybees-org" target="_blank"><img class="icon-linkedin" loading="eager" alt="" src="../assests/sameediconlinkedin.png" /></a>
-    
-                  <a href="https://www.instagram.com/honeybees.sg" target="_blank"><img class="icon-instagram" loading="eager" alt="" src="../assests/sameediconinstagram.png" /></a>
-                
-                  <!-- <img class="icon-facebook-squared" loading="eager" alt=""
-                      src="../assests/sameed-iconfacebooksquared.png" /> -->
-              </div>
-          </div>
-          <div class="authorized-representative-msg">
-              <div class="sp-honeybees-is-an-container">
-                  <p class="sp-honeybees-is-an">
-                      SP-HONEYBEES is an authorised representative of AIA
-                      Singapore Private Limited (Reg. No. 201106386R)
-                  </p>
-                  <p class="by-sp-honeybees">© 2022 by SP-HONEYBEES</p>
-              </div>
           </div>
         </div>
+        <div class="rematch-quote">
+          <div class="authorized-representation-a-i">
+            <h2 class="i-think-we">
+              #NOSTINGSATTACHED
+            </h2>
+          </div>
+          <div class="social-media-icons">
+            <a href="https://sg.linkedin.com/company/honeybees-org" target="_blank"><img class="icon-linkedin" loading="eager" alt="" src="./assests/sameediconlinkedin.png" /></a>
+            <a href="https://www.instagram.com/honeybees.sg" target="_blank"><img class="icon-instagram" loading="eager" alt="" src="./assests/sameediconinstagram.png" /></a>
+            <!-- <img class="icon-facebook-squared" loading="eager" alt=""
+                src="../assests/sameed-iconfacebooksquared.png" /> -->
+          </div>
         </div>
+        <div class="disclaimer-container">
+          <div class="disclaimer-detail">
+            <span>This is not the official website of AIA Financial Advisers Private Limited (Reg. No. 201715016G) (AIA FA). AIA FA disclaims all warranties of merchantability and fitness for purpose of the materials on this website. AIA FA makes no warranties or representations as to the results of the use of the materials on this website in terms of their correctness, accuracy and reliability. Nothing on this website should be regarded as an offer or solicitation to sell insurance products in any country to any person to whom it is unlawful to make such an invitation or solicitation in such a country.</span>
+          </div>
+          <div class="terms-conditions-wrapper">
+            <span class="terms-conditions-link" onclick="showTermsModal()">Terms & Conditions</span>
+            <span>© 2022 by SP-HONEYBEES</span>
+          </div>
+        </div>
+        <!-- <div class="authorized-representative-msg">
+            <div class="sp-honeybees-is-an-container">
+                <p class="sp-honeybees-is-an">
+                    SP-HONEYBEES is an authorised representative of AIA
+                    Singapore Private Limited (Reg. No. 201106386R)
+                </p>
+                <p class="by-sp-honeybees">© 2022 by SP-HONEYBEES</p>
+            </div>
+        </div> -->
+      </div>
     </section>
+    <div id="termsModal" class="terms-modal hide" onclick="onCloseTerms()">
+      <div class="terms-modal-content" onclick="event.stopPropagation()">
+        <div class="terms-message">
+          <img class="close-terms-icon" src="../assets/img/Close_round.png" alt="close" onclick="onCloseTerms()"/>
+          <p>Terms & Conditions</p>
+          <span class="mt-2">Terms of Use. (1) All trademarks, service marks, trade names, product names, icons and logos of AIA FA are owned by AIA FA and may not be used without prior written permission from AIA FA. (2) All AIA products and AIA FA services referred to in this website (or linked thereto to the website) known as www. [INSERT NAME OF LICENSEE WEBSITE](the “Agency Website”) are offered only in countries where such products and services may lawfully be offered by AIA Singapore and AIA FA respectively. (3) Neither the Agency Website nor the link to the products or services on AIA FA’s corporate website should be regarded as an offer to sell or a solicitation to buy any insurance productor other products of AIA Singapore or services of AIA FA. (4) No warranties regarding non-infringement of third party rights, security, accuracy, fitness for purpose, merchantability or freedom from computer viruses in the Agency Website or the AIA FA corporate website (linked thereto) are given by AIA FA.</span>
+        </div>
+      </div>
+    </div>
     <div id="submittedModal" class="submitted-modal hide" onclick="onClose()">
       <div class="submitted-modal-content" onclick="event.stopPropagation()">
         <img class="submitted-bg d-none d-md-block" src="./assets/img/submitted_quote.png" alt="submitted quote" />
