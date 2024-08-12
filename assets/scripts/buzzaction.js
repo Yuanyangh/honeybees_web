@@ -43,6 +43,18 @@ function onClose() {
   submittedModal.addClass("hide");
 }
 
+function showTermsModal() {
+  const termsModal = $("#termsModal");
+  termsModal.removeClass("hide");
+  termsModal.addClass("visible");  
+}
+
+function onCloseTerms() {
+  const termsModal = $("#termsModal");
+  termsModal.removeClass("visible");
+  termsModal.addClass("hide");
+}
+
 document.addEventListener('DOMContentLoaded', (event) => {
   const marquee = document.querySelector('.marquee');
   if ( marquee ) {
