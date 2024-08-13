@@ -369,7 +369,14 @@ section.frame-section {
 @media (max-width: 767px) {
   .mask-group-parent-wrapper::before {
     background-image: url("./assests/footer_mobile_Honeybees_logo.png");
-    background-size: 100% 90%;
+    background-size: 767px 90%;
+    background-position: bottom;
+  }
+}
+@media (max-width: 500px) {
+  .mask-group-parent-wrapper::before {
+    background-image: url("./assests/footer_mobile_Honeybees_logo.png");
+    background-size: 500px 90%;
   }
 }
 
