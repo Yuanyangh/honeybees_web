@@ -106,6 +106,7 @@ $(document).ready(function () {
     $('.sub-image-container.right .img-element.right img').attr('src', secondaryImageElementRight);
 
     $('#quiz_personality').text(quiz_result?.personality);
+    $('#client_code').text(quiz_result?.client_code)
     $('#primary_personality').text(primary_personality);
     $('#secondary_personality').text(secondary_personality);
 
