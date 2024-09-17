@@ -126,6 +126,14 @@
   }
 }
 
+.questions-container .questions-description {
+  max-width: 550px;
+}
+
+.questions-container .questions-description p {
+  margin-top: 10px;
+}
+
 .start-btn-wrapper {
   margin-top: 10px;
   margin-bottom: 40px;
