@@ -590,7 +590,8 @@
 }
 
 .progress-bar-courage {
-  display: block;
+  display: flex;
+  align-items: center;
   min-width: 70px;
   width: 70px;
   height: 100%;
@@ -604,7 +605,8 @@
 }
 
 .progress-bar-struggling {
-  display: block;
+  display: flex;
+  align-items: center;
   min-width: 70px;
   width: 70px;
   height: 100%;
@@ -645,7 +647,7 @@
 .happen-content-boldtext {
   color: white;
   font-family: "AvenirNext" !important;
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 700;
   margin-left: 10px;
 }
@@ -1158,7 +1160,7 @@ section.event_section::before {
     font-size: 14px;
   }
   .happen-content-boldtext {
-    font-size: 20px;
+    font-size: 18px;
   }
   .loren_sectiom {
     padding: 150px 0px;
