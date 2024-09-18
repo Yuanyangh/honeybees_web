@@ -26,12 +26,15 @@ $(document).ready(function() {
     .then(result => {
 
       if ( result?.yes !== undefined && result?.no !== undefined ) {
-        animateProgressBarCourage(result?.yes);
-        $('#description_courage').text(`${result?.yes}% of people found their courage`);
-        $('#percentage_courage').text(`${result?.yes}%`);
-        animateProgressBarStruggling(result?.no);
-        $('#description_struggling').text(`${result?.no}% of people are still struggling`);
-        $('#percentage_struggling').text(`${result?.no}%`);
+        let adjustedResult = {};
+        adjustedResult.yes = Math.round(result?.yes);
+        adjustedResult.no = 100 - adjustedResult.yes;
+        animateProgressBarCourage(adjustedResult.yes);
+        $('#description_courage').text(`${adjustedResult.yes}% of people found their courage`);
+        $('#percentage_courage').text(`${adjustedResult.yes}%`);
+        animateProgressBarStruggling(adjustedResult.no);
+        $('#description_struggling').text(`${adjustedResult.no}% of people are still struggling`);
+        $('#percentage_struggling').text(`${adjustedResult.no}%`);
       } else {
         animateProgressBarCourage(0);
         $('#description_courage').text(`0% of people found their courage`);
