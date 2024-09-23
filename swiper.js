@@ -2,7 +2,7 @@ $(document).ready(async function () {
   const teamMembers = [
     {
       name: "Agnes Lew",
-      image: "assets/img/TeamMembers/Diana_Low.png",
+      image: "assets/img/TeamMembers/Agnes_Lew.png",
       role: ["Senior Personal Wealth Manager"],
       qualification: ["5x MDRT Qualifier"],
       description: `
