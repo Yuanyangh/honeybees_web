@@ -40,7 +40,7 @@ $(document).ready(async function () {
   document.querySelectorAll('input[type="radio"]').forEach((radio) => {
     radio.addEventListener("change", function () {
       const question_details = document.querySelectorAll(`.questions-detail`);
-      if ( question_details[Number(this.id.split('_')[0])] ) {
+      if ( question_details[Number(this.id.split('_')[0])] && (Number(this.id.split('_')[0]) % 5  !== 0) ) {
         window.scrollTo({
           top: question_details[Number(this.id.split('_')[0])].offsetTop,
           behavior: 'smooth'
