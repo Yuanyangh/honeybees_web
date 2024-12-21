@@ -1,0 +1,230 @@
+@keyframes fadeInMaskBackground {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blurAndZoom {
+  0% {
+    filter: blur(20px);
+    transform: scale(1.05);
+  }
+  50% {
+    filter: blur(0);
+    transform: scale(1.05);
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes floatInStar {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); /* Start above the final position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatInDescription {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px); /* Start above the final position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.discovery {
+  position: relative;
+}
+
+.discovery-section {
+  width: 100%;
+  height: calc(100vh + 60px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#discovery_desktop_1 {
+  background-image: url("../img/discovery/Background/1.1_dream/star_night.png");
+  animation: blurAndZoom 2s ease-in-out forwards;
+}
+#discovery_desktop_1_star {
+  position: absolute;
+  left: calc(50% - 264px / 2); /* 264px = 1.1 * 240px; 1.1: the scale size, 240px: the width of image */
+  top: 20vh;
+  opacity: 0;
+  animation: floatInStar 1s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.mask-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #3061ab 0%, #ee7430 100%);
+  opacity: 0;
+  animation: fadeInMaskBackground 1s ease-in-out forwards;
+  animation-delay: 3s;
+  z-index: 1;
+}
+.discovery-description-container {
+  position: relative;
+  margin-top: 100px;
+  opacity: 0;
+  animation: floatInDescription 1s ease-in-out forwards;
+  animation-delay: 4s;
+  z-index: 2;
+}
+.discovery-description-1 {
+  font-family: "SortsMillGoudy-Regular";
+  font-size: 16px;
+  color: #DABAAD;
+}
+.discovery-description-2 {
+  font-family: "Metal-Regular";
+  font-size: 20px;
+  color: #eeaf30;
+}
+
+.discovery-cards-wrapper {
+  position: relative;
+  z-index: 2;
+  max-height: 356px;
+}
+.discovery-card-container {
+  perspective: 1000px; /* Gives the 3D effect */
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 6s;
+}
+.discovery-card {
+  position: relative;
+  width: 200px;
+  height: 356px;
+  background: transparent;
+  transform-style: preserve-3d; /* Enable 3D transformation for children */
+  transition: transform 0.6s;
+}
+.discovery-card-front, .discovery-card-back {
+  position: absolute;
+  backface-visibility: hidden; /* Hide the back side when rotated */
+  width: 100%;
+  height: 100%;
+}
+.discovery-card-face img {
+  width: 100%;
+  height: 100%;
+}
+.discovery-card-back {
+  transform: rotateY(180deg); /* Initially, the back side is flipped */
+}
+.discovery-card.flipped {
+  transform: rotateY(180deg); /* Flip the card to show the backside */
+}
+
+.split-line {
+  margin: 0px 100px;
+  opacity: 0;
+  animation: floatInDescription 1s ease-in-out forwards;
+  animation-delay: 5s;
+}
+.split-line img {
+  transform: rotate(-45deg);
+}
+.vertical-text {
+  writing-mode: vertical-lr;
+  letter-spacing: 3px;
+  overflow: hidden;
+}
+
+.discovery-progress-wrapper {
+  position: relative;
+  z-index: 100;
+  margin-top: -200px;
+  margin-bottom: 155px;
+  display: flex;
+}
+
+.discovery-progress-wrapper button {
+  line-height: 1;
+  background-color: #FFFBF5;
+  border: 5px solid #eeaf30;
+  box-shadow: -4px 4px 0 0 #3061ab;
+  border-radius: 25px;
+  padding: 10px 60px;
+  font-family: "Agrandir-GrandHeavy";
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  color: #29446d;
+}
+@media (max-width: 767px) {
+  .discovery-progress-wrapper button {
+    font-size: 14px;
+    padding: 10px 40px;
+  }
+}
+
+.custom-progress {
+  height: 40px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid #FFFBF5;
+  overflow: hidden;
+  position: relative;
+  width: 60%;
+  margin: auto;
+}
+
+.custom-progress .progress-bar {
+  background: linear-gradient(90deg, #ffa500, #ff4500);
+  border-radius: 20px;
+  align-items: end;
+  min-width: 50px;
+}
+
+.custom-progress .progress-bar img {
+  margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+  .custom-progress {
+    height: 30px;
+  }
+  .custom-progress .progress-bar {
+    min-width: 30px;
+  }
+  .custom-progress .progress-bar img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }  
+}
+
+@media (max-width: 767px) {
+  .custom-progress {
+    width: 80%;
+  }
+}

@@ -34,6 +34,16 @@
   /* Update the path based on your file structure and font format */
 }
 
+@font-face {
+  font-family: "Metal-Regular";
+  src: url("font/Metal-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SortsMillGoudy-Regular";
+  src: url("font/SortsMillGoudy-Regular.ttf");
+}
+
 @keyframes scaleDown {
   from {
     transform: scale(1.4);
