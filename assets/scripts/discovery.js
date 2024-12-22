@@ -23,16 +23,16 @@ discoveryCards.forEach(card => {
     }
     if ( this.id === 'discovery_desktop_1_card_a' ) {
       choices[0] = Choice.A;
-      if ( !this.classList.contains('flipped') ) {
-        this.classList.toggle('flipped');
-        document.getElementById('discovery_desktop_1_card_b').classList.remove('flipped');
-      }
+      document.getElementById('discovery_desktop_1_card_a').classList.remove('flipped');
+      document.getElementById('discovery_desktop_1_card_b_wrapper').classList.remove('card-selected');
+      document.getElementById('discovery_desktop_1_card_b').classList.add('flipped');
+      document.getElementById('discovery_desktop_1_card_a_wrapper').classList.add('card-selected');
     } else if ( this.id === 'discovery_desktop_1_card_b' ) {
       choices[0] = Choice.B;
-      if ( !this.classList.contains('flipped') ) {
-        this.classList.toggle('flipped');
-        document.getElementById('discovery_desktop_1_card_a').classList.remove('flipped');
-      }
+      document.getElementById('discovery_desktop_1_card_b').classList.remove('flipped');
+      document.getElementById('discovery_desktop_1_card_a_wrapper').classList.remove('card-selected');
+      document.getElementById('discovery_desktop_1_card_a').classList.add('flipped');
+      document.getElementById('discovery_desktop_1_card_b_wrapper').classList.add('card-selected');
     }
   });
 });
