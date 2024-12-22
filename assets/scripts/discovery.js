@@ -42,12 +42,14 @@ function onPrev() {
   if ( current_step < 1 )
     current_step = 1;
   showPrevNextButtons();
+  setWidthOfProgressBar();
 }
 function onNext() {
   current_step++;
   if ( current_step > 20 )
     current_step = 20;
   showPrevNextButtons();
+  setWidthOfProgressBar();
 }
 
 function showPrevNextButtons() {
@@ -67,7 +69,36 @@ function showPrevNextButtons() {
   }
 }
 
-showPrevNextButtons();
+function setWidthOfProgressBar() {
+  var progressBar = document.querySelector(".custom-progress .progress-bar");
+  progressBar.setAttribute("aria-valuenow", 5 * current_step );
+  progressBar.style.width = `${5 * current_step}%`;
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
+  if (current_step == 1) {
+    progressBar.setAttribute("aria-valuenow", 7 );
+    progressBar.style.width = "7%";
+  }
+  if (current_step == 20) {
+    progressBar.setAttribute("aria-valuenow", 100 );
+    progressBar.style.width = "100%";
+  }
+}
+
+function Init() {
+  var progressBar = document.querySelector(".custom-progress .progress-bar");
+  if (progressBar) {
+    progressBar.setAttribute("aria-valuenow", "7");
+    progressBar.style.width = "7%";
+  }
+  showPrevNextButtons();
+}
+
+Init();
 
 $(document).ready(async function () {
 });
