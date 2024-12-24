@@ -16,11 +16,11 @@ const discoveryCards = document.querySelectorAll('.discovery-card');
 
 discoveryCards.forEach(card => {
   card.addEventListener('click', function () {
-    const next_button = document.getElementById('nextButton');
-    if ( current_step < 21 ) {
-      next_button.disabled = false;
-      next_button.classList.remove('disabled-btn')
-    }
+    // const next_button = document.getElementById('nextButton');
+    // if ( current_step < 21 ) {
+    //   next_button.disabled = false;
+    //   next_button.classList.remove('disabled-btn')
+    // }
     for ( let i = 1; i <= 20; i++ ) {
       if ( this.id === `discovery_desktop_${i}_card_a` ) {
         choices[i-1] = Choice.A;
@@ -36,6 +36,9 @@ discoveryCards.forEach(card => {
         document.getElementById(`discovery_desktop_${i}_card_b_wrapper`).classList.add('card-selected');
       }
     }
+    setTimeout(function () {
+      this.onNext();
+    }, 1000);
   });
 });
 
@@ -54,39 +57,37 @@ function onNext() {
   showSection();
   showPrevNextButtons();
   setWidthOfProgressBar();
-  if ( current_step === 21 ) {
-    setTimeout(function () {
-      this.getDiscoveryResult();
-    }, 6000);
-  }
+}
+
+function onReveal() {
+  this.getDiscoveryResult();
 }
 
 function showPrevNextButtons() {
   if ( current_step === 1 ) {
     $("#prevButton").css("visibility", "hidden");
   } else if ( current_step === 21 ) {
-    $('.discovery-progress-wrapper').css("visibility", "hidden");
-    $("#prevButton").css("visibility", "hidden");
-    $("#nextButton").css("visibility", "hidden");
+    $('.discovery-progress-wrapper').css("display", "none");
+    document.getElementById('revealButtonContainer').style.setProperty('display', 'flex', 'important');
   } else {
     $("#prevButton").css("visibility", "visible");
-    $("#nextButton").css("visibility", "visible");
+    // $("#nextButton").css("visibility", "visible");
   }
 
-  if ( current_step === 20 ) {
-    $('#nextButton').text('Reveal');
-  } else {
-    $('#nextButton').text('Next');
-  }
+  // if ( current_step === 20 ) {
+  //   $('#nextButton').text('Reveal');
+  // } else {
+  //   $('#nextButton').text('Next');
+  // }
 
-  const next_button = document.getElementById('nextButton');
-  if ( choices[current_step-1] === Choice.NON_SELECT ) {
-    next_button.disabled = true;
-    next_button.classList.add('disabled-btn')
-  } else {
-    next_button.disabled = false;
-    next_button.classList.remove('disabled-btn')
-  }
+  // const next_button = document.getElementById('nextButton');
+  // if ( choices[current_step-1] === Choice.NON_SELECT ) {
+  //   next_button.disabled = true;
+  //   next_button.classList.add('disabled-btn')
+  // } else {
+  //   next_button.disabled = false;
+  //   next_button.classList.remove('disabled-btn')
+  // }
 }
 
 function setWidthOfProgressBar() {
