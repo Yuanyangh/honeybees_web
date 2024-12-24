@@ -57,7 +57,7 @@ function onNext() {
   if ( current_step === 21 ) {
     setTimeout(function () {
       this.getDiscoveryResult();
-    }, 4000);
+    }, 6000);
   }
 }
 

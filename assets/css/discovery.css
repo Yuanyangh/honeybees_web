@@ -279,8 +279,8 @@
   height: 100%;
   background: linear-gradient(180deg, #28446D 0%, #ee7430 100%);
   opacity: 0;
-  animation: fadeInMaskBackground 1s ease-in-out forwards;
-  animation-delay: 3s;
+  animation: fadeInMaskBackground 0.5s ease-in-out forwards;
+  animation-delay: 1.5s;
   z-index: 1;
 }
 
@@ -288,8 +288,8 @@
   position: relative;
   margin-top: 100px;
   opacity: 0;
-  animation: floatInDescription 1s ease-in-out forwards;
-  animation-delay: 4s;
+  animation: floatInDescription 0.5s ease-in-out forwards;
+  animation-delay: 2s;
   z-index: 2;
 }
 .discovery-description-1 {
@@ -311,8 +311,8 @@
 .discovery-card-container {
   perspective: 1000px; /* Gives the 3D effect */
   opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-  animation-delay: 6s;
+  animation: fadeIn 0.5s ease-in-out forwards;
+  animation-delay: 3s;
   width: 23vh;
   height: 40.94vh;
 }
@@ -353,8 +353,8 @@
 .split-line {
   margin: 0px 100px;
   opacity: 0;
-  animation: floatInDescription 1s ease-in-out forwards;
-  animation-delay: 5s;
+  animation: floatInDescription 0.5s ease-in-out forwards;
+  animation-delay: 2.5s;
 }
 .split-line img {
   transform: rotate(-45deg);
@@ -394,20 +394,20 @@
 
 #discovery_desktop_1 {
   background-image: url("../img/discovery/Background/1.1_dream/star_night.png");
-  animation: blurAndZoomIn 2s ease-in-out forwards;
+  animation: blurAndZoomIn 1s ease-in-out forwards;
 }
 #discovery_desktop_1_star {
   position: absolute;
   left: calc(50% - 264px / 2); /* 264px = 1.1 * 240px; 1.1: the scale size, 240px: the width of image */
   top: 20vh;
   opacity: 0;
-  animation: floatInStar 1s ease-in-out forwards;
-  animation-delay: 2s;
+  animation: floatInStar 0.5s ease-in-out forwards;
+  animation-delay: 1s;
 }
 
 #discovery_desktop_2 {
   background-image: url("../img/discovery/Background/1.2_discuss&annouce/home.png");
-  animation: blueAndMoveRight 2s ease-in-out forwards;
+  animation: blueAndMoveRight 1s ease-in-out forwards;
   width: calc(100% + 30px);
 }
 #discovery_desktop_2_mother {
@@ -420,12 +420,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/1.2_discuss&annouce/mother.png");
-  animation: blueAndMoveLeft 2s ease-in-out forwards;
+  animation: blueAndMoveLeft 1s ease-in-out forwards;
 }
 
 #discovery_desktop_3 {
   background-image: url("../img/discovery/Background/1.3_nw&ltr/outside_home.png");
-  animation: blurAndZoomOut 2s ease-in-out forwards;
+  animation: blurAndZoomOut 1s ease-in-out forwards;
   width: calc(100% + 30px);
 }
 #discovery_desktop_3_man {
@@ -438,7 +438,7 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/1.3_nw&ltr/man.png");
-  animation: blueAndMoveCurve 2s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+  animation: blueAndMoveCurve 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
 }
 #discovery_desktop_3_mother {
   position: absolute;
@@ -446,7 +446,7 @@
   height: 28vh;
   left: 60%;
   bottom: 20vh;
-  animation: blueAndMoveLeftDown 2s ease-in-out forwards;
+  animation: blueAndMoveLeftDown 1s ease-in-out forwards;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -455,7 +455,7 @@
 
 #discovery_desktop_4 {
   background-image: url("../img/discovery/Background/1.4_job&all/grass_ground.png");
-  animation: blueAndMoveRight 2s ease-in-out forwards;
+  animation: blueAndMoveRight 1s ease-in-out forwards;
   width: calc(100% + 30px);
 }
 #discovery_desktop_4_hands {
@@ -468,12 +468,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/1.4_job&all/hands.png");
-  animation: blueAndMoveLeftTop 2s ease-in-out forwards;
+  animation: blueAndMoveLeftTop 1s ease-in-out forwards;
 }
 
 #discovery_desktop_5 {
   background-image: url("../img/discovery/Background/2.1_orphange_kids/house.png");
-  animation: blueAndMoveDown 2s ease-in-out forwards;
+  animation: blueAndMoveDown 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_5_kid_and_lady {
@@ -486,12 +486,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/2.1_orphange_kids/kid_and_lady.png");
-  animation: blurAndZoomOut 2s ease-in-out forwards;
+  animation: blurAndZoomOut 1s ease-in-out forwards;
 }
 
 #discovery_desktop_6 {
   background-image: url("../img/discovery/Background/2.2-3_chatting_old_lady/orphan_house.png");
-  animation: blurAndZoomOut 2s ease-in-out forwards;
+  animation: blurAndZoomOut 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_6_lady {
@@ -504,7 +504,7 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/2.2-3_chatting_old_lady/lady.png");
-  animation: blueAndMoveLeft 2s ease-in-out forwards;
+  animation: blueAndMoveLeft 1s ease-in-out forwards;
 }
 
 #discovery_desktop_7 {
@@ -532,15 +532,15 @@
   animation-delay: 0s !important;
 }
 #discovery_desktop_7 .discovery-card-container {
-  animation-delay: 2s !important;
+  animation-delay: 1s !important;
 }
 #discovery_desktop_7 .split-line {
-  animation-delay: 1s !important;
+  animation-delay: 0.5s !important;
 }
 
 #discovery_desktop_8 {
   background-image: url("../img/discovery/Background/2.4_buy_eggs/stall.png");
-  animation: blurAndZoomOut 2s ease-in-out forwards;
+  animation: blurAndZoomOut 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_8_grocery {
@@ -553,12 +553,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/2.4_buy_eggs/grocery.png");
-  animation: blurAndZoomIn 2s ease-in-out forwards;
+  animation: blurAndZoomIn 1s ease-in-out forwards;
 }
 
 #discovery_desktop_9 {
   background-image: url("../img/discovery/Background/2.5_garden_farmers/farm.png");
-  animation: blurAndZoomOut 2s ease-in-out forwards;
+  animation: blurAndZoomOut 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_9_farmer {
@@ -571,12 +571,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/2.5_garden_farmers/farmer.png");
-  animation: blurAndZoomIn 2s ease-in-out forwards;
+  animation: blurAndZoomIn 1s ease-in-out forwards;
 }
 
 #discovery_desktop_10 {
   background-image: url("../img/discovery/Background/2.6_meet_governor/mansion.png");
-  animation: blurAndZoomOut 2s ease-in-out forwards;
+  animation: blurAndZoomOut 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_10_governer {
@@ -589,12 +589,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/2.6_meet_governor/governer.png");
-  animation: blurAndZoomIn 2s ease-in-out forwards;
+  animation: blurAndZoomIn 1s ease-in-out forwards;
 }
 
 #discovery_desktop_11 {
   background-image: url("../img/discovery/Background/2.7_storybook/kids.png");
-  animation: blurAndZoomOut 2s ease-in-out forwards;
+  animation: blurAndZoomOut 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_11_book {
@@ -607,12 +607,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/2.7_storybook/book.png");
-  animation: blueAndMoveTop 2s ease-in-out forwards;
+  animation: blueAndMoveTop 1s ease-in-out forwards;
 }
 
 #discovery_desktop_12 {
   background-image: url("../img/discovery/Background/2.8_rebels/castle.png");
-  animation: blurAndZoomIn2 2s ease-in-out forwards;
+  animation: blurAndZoomIn2 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_12_villager_marching {
@@ -625,12 +625,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/2.8_rebels/villager_marching.png");
-  animation: blurAndZoomOut2 2s ease-in-out forwards;
+  animation: blurAndZoomOut2 1s ease-in-out forwards;
 }
 
 #discovery_desktop_13 {
   background-image: url("../img/discovery/Background/2.9_festivals/night.png");
-  animation: blurAndZoomOut 2s ease-in-out forwards;
+  animation: blurAndZoomOut 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_13_fest {
@@ -643,12 +643,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/2.9_festivals/fest.png");
-  animation: blurAndZoomIn 2s ease-in-out forwards;
+  animation: blurAndZoomIn 1s ease-in-out forwards;
 }
 
 #discovery_desktop_14 {
   background-image: url("../img/discovery/Background/2.10_argue/village.png");
-  animation: blurAndZoomOut 2s ease-in-out forwards;
+  animation: blurAndZoomOut 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_14_villager {
@@ -661,12 +661,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/2.10_argue/villager.png");
-  animation: blurAndZoomIn 2s ease-in-out forwards;
+  animation: blurAndZoomIn 1s ease-in-out forwards;
 }
 
 #discovery_desktop_15 {
   background-image: url("../img/discovery/Background/2.11_stand_up/village-side.png");
-  animation: blurAndZoomOut 2s ease-in-out forwards;
+  animation: blurAndZoomOut 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_15_man_and_old_lady {
@@ -679,12 +679,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/2.11_stand_up/man_and_old_lady.png");
-  animation: blurAndZoomIn 2s ease-in-out forwards;
+  animation: blurAndZoomIn 1s ease-in-out forwards;
 }
 
 #discovery_desktop_16 {
   background-image: url("../img/discovery/Background/2.12_looking/villagers.png");
-  animation: blurAndZoomIn2 2s ease-in-out forwards;
+  animation: blurAndZoomIn2 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_16_man {
@@ -697,12 +697,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/2.12_looking/man.png");
-  animation: blurAndZoomOut2 2s ease-in-out forwards;
+  animation: blurAndZoomOut2 1s ease-in-out forwards;
 }
 
 #discovery_desktop_17 {
   background-image: url("../img/discovery/Background/2.13_looking_2/village-dark.png");
-  animation: blurAndZoomIn2 2s ease-in-out forwards;
+  animation: blurAndZoomIn2 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_17_man {
@@ -715,12 +715,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/2.13_looking_2/man.png");
-  animation: blurAndZoomOut2 2s ease-in-out forwards;
+  animation: blurAndZoomOut2 1s ease-in-out forwards;
 }
 
 #discovery_desktop_18 {
   background-image: url("../img/discovery/Background/3.1_discuss/houses.png");
-  animation: blurAndZoomOut 2s ease-in-out forwards;
+  animation: blurAndZoomOut 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_18_villager {
@@ -733,12 +733,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/3.1_discuss/villager.png");
-  animation: blurAndZoomIn 2s ease-in-out forwards;
+  animation: blurAndZoomIn 1s ease-in-out forwards;
 }
 
 #discovery_desktop_19 {
   background-image: url("../img/discovery/Background/3.2_preparation/tavern.png");
-  animation: blurAndZoomOut 2s ease-in-out forwards;
+  animation: blurAndZoomOut 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_19_feast {
@@ -751,12 +751,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/3.2_preparation/feast.png");
-  animation: blurAndZoomIn 2s ease-in-out forwards;
+  animation: blurAndZoomIn 1s ease-in-out forwards;
 }
 
 #discovery_desktop_20 {
   background-image: url("../img/discovery/Background/3.3_fight/castle.png");
-  animation: blurAndZoomOut 2s ease-in-out forwards;
+  animation: blurAndZoomOut 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_20_fight {
@@ -769,12 +769,12 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/3.3_fight/fight.png");
-  animation: blurAndZoomIn 2s ease-in-out forwards;
+  animation: blurAndZoomIn 1s ease-in-out forwards;
 }
 
 #discovery_desktop_21 {
   background-image: url("../img/discovery/Background/3.4_lamp/lamp_1.png");
-  animation: blurAndZoomOut 2s ease-in-out forwards;
+  animation: blurAndZoomOut 1s ease-in-out forwards;
   width: calc(100% + 0px);
 }
 #discovery_desktop_21_fight {
@@ -787,7 +787,7 @@
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../img/discovery/Background/3.4_lamp/lamp_2.png");
-  animation: blurAndZoomIn 2s ease-in-out forwards;
+  animation: blurAndZoomIn 1s ease-in-out forwards;
 }
 
 .custom-progress {
