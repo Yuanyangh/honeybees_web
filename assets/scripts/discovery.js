@@ -17,7 +17,7 @@ const discoveryCards = document.querySelectorAll('.discovery-card');
 discoveryCards.forEach(card => {
   card.addEventListener('click', function () {
     const next_button = document.getElementById('nextButton');
-    if ( current_step < 20 ) {
+    if ( current_step < 21 ) {
       next_button.disabled = false;
       next_button.classList.remove('disabled-btn')
     }
@@ -49,21 +49,34 @@ function onPrev() {
 }
 function onNext() {
   current_step++;
-  if ( current_step > 20 )
-    current_step = 20;
+  if ( current_step > 21 )
+    current_step = 21;
   showSection();
   showPrevNextButtons();
   setWidthOfProgressBar();
+  if ( current_step === 21 ) {
+    setTimeout(function () {
+      this.getDiscoveryResult();
+    }, 2000);
+  }
 }
 
 function showPrevNextButtons() {
   if ( current_step === 1 ) {
     $("#prevButton").css("visibility", "hidden");
-  } else if ( current_step === 20 ) {
+  } else if ( current_step === 21 ) {
+    $('.discovery-progress-wrapper').css("visibility", "hidden");
+    $("#prevButton").css("visibility", "hidden");
     $("#nextButton").css("visibility", "hidden");
   } else {
     $("#prevButton").css("visibility", "visible");
     $("#nextButton").css("visibility", "visible");
+  }
+
+  if ( current_step === 20 ) {
+    $('#nextButton').text('Reveal');
+  } else {
+    $('#nextButton').text('Next');
   }
 
   const next_button = document.getElementById('nextButton');
@@ -97,7 +110,7 @@ function setWidthOfProgressBar() {
 }
 
 function showSection() {
-  for ( let i = 1; i <= 20; i++ ) {
+  for ( let i = 1; i <= 21; i++ ) {
     const section = document.getElementById(`discovery_desktop_${i}`);
     if (section) {
       section.style.setProperty('display', 'none', 'important');
@@ -115,6 +128,55 @@ function Init() {
   setWidthOfProgressBar();
   showSection();
   showPrevNextButtons();
+}
+
+function getDiscoveryResult () {
+  const quiz_user = JSON.parse(localStorage.getItem('quiz_user'));
+  const payload = {
+    first_name: quiz_user?.first_name,
+    last_name: quiz_user?.last_name,
+    mobile: quiz_user?.mobile,
+    email: quiz_user?.email,
+    quizAnswer: []
+  };
+  for ( i = 1; i <=20; i ++) {
+    if ( choices[i-1] === Choice.A )
+      payload.quizAnswer.push(1);
+    else if ( choices[i-1] === Choice.B )
+      payload.quizAnswer.push(-1);
+    else
+      payload.quizAnswer.push(0);
+  }
+
+  const apiEndpoint = 'https://honeybees-crm.com/api/websiteQuizMindReaderPost';
+
+  fetch(apiEndpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.json();
+  })
+  .then(result => {
+    localStorage.setItem('quiz_result', JSON.stringify(result));
+    // Redirect to another page
+    if ( (result?.personality && result?.ratios && result?.description && result?.recommendation) ) {
+      window.location.assign("./result.html");
+    } else {
+      console.log(result);
+      alert(result?.error);
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
 }
 
 Init();
