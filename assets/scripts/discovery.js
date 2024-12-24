@@ -21,18 +21,20 @@ discoveryCards.forEach(card => {
       next_button.disabled = false;
       next_button.classList.remove('disabled-btn')
     }
-    if ( this.id === 'discovery_desktop_1_card_a' ) {
-      choices[0] = Choice.A;
-      document.getElementById('discovery_desktop_1_card_a').classList.remove('flipped');
-      document.getElementById('discovery_desktop_1_card_b_wrapper').classList.remove('card-selected');
-      document.getElementById('discovery_desktop_1_card_b').classList.add('flipped');
-      document.getElementById('discovery_desktop_1_card_a_wrapper').classList.add('card-selected');
-    } else if ( this.id === 'discovery_desktop_1_card_b' ) {
-      choices[0] = Choice.B;
-      document.getElementById('discovery_desktop_1_card_b').classList.remove('flipped');
-      document.getElementById('discovery_desktop_1_card_a_wrapper').classList.remove('card-selected');
-      document.getElementById('discovery_desktop_1_card_a').classList.add('flipped');
-      document.getElementById('discovery_desktop_1_card_b_wrapper').classList.add('card-selected');
+    for ( let i = 1; i <= 20; i++ ) {
+      if ( this.id === `discovery_desktop_${i}_card_a` ) {
+        choices[i-1] = Choice.A;
+        document.getElementById(`discovery_desktop_${i}_card_a`).classList.remove('flipped');
+        document.getElementById(`discovery_desktop_${i}_card_b_wrapper`).classList.remove('card-selected');
+        document.getElementById(`discovery_desktop_${i}_card_b`).classList.add('flipped');
+        document.getElementById(`discovery_desktop_${i}_card_a_wrapper`).classList.add('card-selected');
+      } else if ( this.id === `discovery_desktop_${i}_card_b` ) {
+        choices[i-1] = Choice.B;
+        document.getElementById(`discovery_desktop_${i}_card_b`).classList.remove('flipped');
+        document.getElementById(`discovery_desktop_${i}_card_a_wrapper`).classList.remove('card-selected');
+        document.getElementById(`discovery_desktop_${i}_card_a`).classList.add('flipped');
+        document.getElementById(`discovery_desktop_${i}_card_b_wrapper`).classList.add('card-selected');
+      }
     }
   });
 });
@@ -41,6 +43,7 @@ function onPrev() {
   current_step--;
   if ( current_step < 1 )
     current_step = 1;
+  showSection();
   showPrevNextButtons();
   setWidthOfProgressBar();
 }
@@ -48,6 +51,7 @@ function onNext() {
   current_step++;
   if ( current_step > 20 )
     current_step = 20;
+  showSection();
   showPrevNextButtons();
   setWidthOfProgressBar();
 }
@@ -62,10 +66,13 @@ function showPrevNextButtons() {
     $("#nextButton").css("visibility", "visible");
   }
 
+  const next_button = document.getElementById('nextButton');
   if ( choices[current_step-1] === Choice.NON_SELECT ) {
-    const next_button = document.getElementById('nextButton');
     next_button.disabled = true;
     next_button.classList.add('disabled-btn')
+  } else {
+    next_button.disabled = false;
+    next_button.classList.remove('disabled-btn')
   }
 }
 
@@ -89,12 +96,24 @@ function setWidthOfProgressBar() {
   }
 }
 
-function Init() {
-  var progressBar = document.querySelector(".custom-progress .progress-bar");
-  if (progressBar) {
-    progressBar.setAttribute("aria-valuenow", "7");
-    progressBar.style.width = "7%";
+function showSection() {
+  for ( let i = 1; i <= 20; i++ ) {
+    const section = document.getElementById(`discovery_desktop_${i}`);
+    if (section) {
+      section.style.setProperty('display', 'none', 'important');
+    }
   }
+  const currentSection = document.getElementById(`discovery_desktop_${current_step}`);
+  if (currentSection) {
+    currentSection.style.setProperty('display', 'flex', 'important');
+  } else {
+    console.error(`Section discovery_desktop_${current_step} not found.`);
+  }
+}
+
+function Init() {
+  setWidthOfProgressBar();
+  showSection();
   showPrevNextButtons();
 }
 

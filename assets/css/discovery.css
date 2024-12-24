@@ -16,7 +16,7 @@
   }
 }
 
-@keyframes blurAndZoom {
+@keyframes blurAndZoomIn {
   0% {
     filter: blur(20px);
     transform: scale(1.05);
@@ -30,7 +30,6 @@
     transform: scale(1.1);
   }
 }
-
 @keyframes floatInStar {
   0% {
     opacity: 0;
@@ -39,6 +38,142 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes blueAndMoveRight {
+  0% {
+    filter: blur(20px);
+    transform: scale(1.05);
+    background-position-x: -30px;
+  }
+  50% {
+    filter: blur(0);
+    transform: scale(1.05);
+    background-position-x: -30px;
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1.05);
+    background-position-x: 0px;
+  }
+}
+@keyframes blueAndMoveLeft {
+  0% {
+    filter: blur(20px);
+    transform: translateX(30px);
+  }
+  50% {
+    filter: blur(0);
+    transform: translateX(30px);
+  }
+  100% {
+    filter: blur(0);
+    transform: translateX(0px);
+  }
+}
+
+@keyframes blurAndZoomOut {
+  0% {
+    filter: blur(20px);
+    transform: scale(1.05);
+  }
+  50% {
+    filter: blur(0);
+    transform: scale(1.05);
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1.04);
+  }
+}
+@keyframes blueAndMoveCurve {
+  0% {
+    filter: blur(20px);
+    transform: translate3d(30px, -30px, 0);
+  }
+  50% {
+    filter: blur(0);
+    transform: translate3d(30px, -30px, 0);
+  }
+  60% {
+    filter: blur(0);
+    transform: translate3d(25px, -28px, 0);
+  }
+  62% {
+    transform: translate3d(23px, -27px, 0);
+  }
+  65% {
+    transform: translate3d(21px, -25px, 0);
+  }
+  70% {
+    transform: translate3d(18px, -23px, 0);
+  }
+  75% {
+    transform: translate3d(14px, -19px, 0);
+  }
+  80% {
+    transform: translate3d(12px, -18px, 0);
+  }
+  85% {
+    transform: translate3d(8px, -12px, 0);
+  }
+  90% {
+    transform: translate3d(6px, -9px, 0);
+  }
+  95% {
+    transform: translate3d(2px, -3px, 0);
+  }
+  100% {
+    filter: blur(0);
+    transform: translate3d(0px, 0px, 0);
+  }
+}
+@keyframes blueAndMoveLeftDown {
+  0% {
+    filter: blur(20px);
+    transform: translate(10px, -10px);
+  }
+  50% {
+    filter: blur(0);
+    transform: translate(10px, -10px);
+  }
+  100% {
+    filter: blur(0);
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes blueAndMoveLeftTop {
+  0% {
+    filter: blur(20px);
+    transform: translate(30px, 10px);
+  }
+  50% {
+    filter: blur(0);
+    transform: translate(30px, 10px);
+  }
+  100% {
+    filter: blur(0);
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes blueAndMoveDown {
+  0% {
+    filter: blur(20px);
+    transform: scale(1.05);
+    background-position-y: -10px;
+  }
+  50% {
+    filter: blur(0);
+    transform: scale(1.05);
+    background-position-y: -10px;
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1.05);
+    background-position-y: 0px;
   }
 }
 
@@ -84,19 +219,6 @@
   background-position: center;
 }
 
-#discovery_desktop_1 {
-  background-image: url("../img/discovery/Background/1.1_dream/star_night.png");
-  animation: blurAndZoom 2s ease-in-out forwards;
-}
-#discovery_desktop_1_star {
-  position: absolute;
-  left: calc(50% - 264px / 2); /* 264px = 1.1 * 240px; 1.1: the scale size, 240px: the width of image */
-  top: 20vh;
-  opacity: 0;
-  animation: floatInStar 1s ease-in-out forwards;
-  animation-delay: 2s;
-}
-
 .mask-background {
   position: absolute;
   left: 0;
@@ -109,6 +231,7 @@
   animation-delay: 3s;
   z-index: 1;
 }
+
 .discovery-description-container {
   position: relative;
   margin-top: 100px;
@@ -215,6 +338,170 @@
     font-size: 14px;
     padding: 10px 40px;
   }
+}
+
+#discovery_desktop_1 {
+  background-image: url("../img/discovery/Background/1.1_dream/star_night.png");
+  animation: blurAndZoomIn 2s ease-in-out forwards;
+}
+#discovery_desktop_1_star {
+  position: absolute;
+  left: calc(50% - 264px / 2); /* 264px = 1.1 * 240px; 1.1: the scale size, 240px: the width of image */
+  top: 20vh;
+  opacity: 0;
+  animation: floatInStar 1s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+#discovery_desktop_2 {
+  background-image: url("../img/discovery/Background/1.2_discuss&annouce/home.png");
+  animation: blueAndMoveRight 2s ease-in-out forwards;
+  width: calc(100% + 30px);
+}
+#discovery_desktop_2_mother {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("../img/discovery/Background/1.2_discuss&annouce/mother.png");
+  animation: blueAndMoveLeft 2s ease-in-out forwards;
+}
+
+#discovery_desktop_3 {
+  background-image: url("../img/discovery/Background/1.3_nw&ltr/outside_home.png");
+  animation: blurAndZoomOut 2s ease-in-out forwards;
+  width: calc(100% + 30px);
+}
+#discovery_desktop_3_man {
+  position: absolute;
+  width: 50%;
+  height: calc(100vh + 30px);
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("../img/discovery/Background/1.3_nw&ltr/man.png");
+  animation: blueAndMoveCurve 2s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+}
+#discovery_desktop_3_mother {
+  position: absolute;
+  width: 23.5vh;
+  height: 28vh;
+  left: 60%;
+  bottom: 20vh;
+  animation: blueAndMoveLeftDown 2s ease-in-out forwards;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/discovery/Background/1.3_nw&ltr/mother.png");
+}
+
+#discovery_desktop_4 {
+  background-image: url("../img/discovery/Background/1.4_job&all/grass_ground.png");
+  animation: blueAndMoveRight 2s ease-in-out forwards;
+  width: calc(100% + 30px);
+}
+#discovery_desktop_4_hands {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("../img/discovery/Background/1.4_job&all/hands.png");
+  animation: blueAndMoveLeftTop 2s ease-in-out forwards;
+}
+
+#discovery_desktop_5 {
+  background-image: url("../img/discovery/Background/2.1_orphange_kids/house.png");
+  animation: blueAndMoveDown 2s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_5_kid_and_lady {
+  position: absolute;
+  width: 100%;
+  height: 35vh;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("../img/discovery/Background/2.1_orphange_kids/kid_and_lady.png");
+  animation: blurAndZoomOut 2s ease-in-out forwards;
+}
+
+#discovery_desktop_6 {
+  background-image: url("../img/discovery/Background/2.2-3_chatting_old_lady/orphan_house.png");
+  animation: blurAndZoomOut 2s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_6_lady {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("../img/discovery/Background/2.2-3_chatting_old_lady/lady.png");
+  animation: blueAndMoveLeft 2s ease-in-out forwards;
+}
+
+#discovery_desktop_7 {
+  background-image: url("../img/discovery/Background/2.2-3_chatting_old_lady/orphan_house.png");
+  width: calc(100% + 0px);
+  transform: scale(1.04);
+}
+#discovery_desktop_7_lady {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("../img/discovery/Background/2.2-3_chatting_old_lady/lady.png");
+}
+#discovery_desktop_7 .mask-background {
+  animation-delay: 0s !important;
+  animation: none !important;
+  opacity: 0.7 !important;
+}
+#discovery_desktop_7 .discovery-description-container {
+  animation-delay: 0s !important;
+}
+#discovery_desktop_7 .discovery-card-container {
+  animation-delay: 2s !important;
+}
+#discovery_desktop_7 .split-line {
+  animation-delay: 1s !important;
+}
+
+#discovery_desktop_8 {
+  background-image: url("../img/discovery/Background/2.4_buy_eggs/stall.png");
+  animation: blurAndZoomOut 2s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_8_grocery {
+  position: absolute;
+  width: 50%;
+  height: 50vh;
+  left: calc(25%);
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("../img/discovery/Background/2.4_buy_eggs/grocery.png");
+  animation: blurAndZoomIn 2s ease-in-out forwards;
 }
 
 .custom-progress {
