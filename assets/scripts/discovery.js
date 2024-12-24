@@ -57,7 +57,7 @@ function onNext() {
   if ( current_step === 21 ) {
     setTimeout(function () {
       this.getDiscoveryResult();
-    }, 2000);
+    }, 4000);
   }
 }
 
@@ -122,6 +122,11 @@ function showSection() {
   } else {
     console.error(`Section discovery_desktop_${current_step} not found.`);
   }
+
+  if ( current_step === 21 ) {
+    $('.discovery-scene-number').css("visibility", "hidden");
+  }
+  $('#discovery_current_step').text(`${current_step.toString().padStart(2, '0')}/20`);
 }
 
 function Init() {
