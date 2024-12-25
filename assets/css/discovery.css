@@ -18,12 +18,12 @@
 
 @keyframes blurAndZoomIn {
   0% {
-    filter: blur(20px);
-    transform: scale(1.05);
+    filter: blur(10px);
+    transform: scale(1.07);
   }
   50% {
     filter: blur(0);
-    transform: scale(1.05);
+    transform: scale(1.07);
   }
   100% {
     filter: blur(0);
@@ -43,24 +43,24 @@
 
 @keyframes blueAndMoveRight {
   0% {
-    filter: blur(20px);
-    transform: scale(1.05);
+    filter: blur(10px);
+    transform: scale(1.07);
     background-position-x: -30px;
   }
   50% {
     filter: blur(0);
-    transform: scale(1.05);
+    transform: scale(1.07);
     background-position-x: -30px;
   }
   100% {
     filter: blur(0);
-    transform: scale(1.05);
+    transform: scale(1.07);
     background-position-x: 0px;
   }
 }
 @keyframes blueAndMoveLeft {
   0% {
-    filter: blur(20px);
+    filter: blur(10px);
     transform: translateX(30px);
   }
   50% {
@@ -75,21 +75,21 @@
 
 @keyframes blurAndZoomOut {
   0% {
-    filter: blur(20px);
-    transform: scale(1.05);
+    filter: blur(10px);
+    transform: scale(1.07);
   }
   50% {
     filter: blur(0);
-    transform: scale(1.05);
+    transform: scale(1.07);
   }
   100% {
     filter: blur(0);
-    transform: scale(1.04);
+    transform: scale(1.06);
   }
 }
 @keyframes blueAndMoveCurve {
   0% {
-    filter: blur(20px);
+    filter: blur(10px);
     transform: translate3d(30px, -30px, 0);
   }
   50% {
@@ -131,7 +131,7 @@
 }
 @keyframes blueAndMoveLeftDown {
   0% {
-    filter: blur(20px);
+    filter: blur(10px);
     transform: translate(10px, -10px);
   }
   50% {
@@ -146,7 +146,7 @@
 
 @keyframes blueAndMoveLeftTop {
   0% {
-    filter: blur(20px);
+    filter: blur(10px);
     transform: translate(30px, 10px);
   }
   50% {
@@ -161,25 +161,25 @@
 
 @keyframes blueAndMoveDown {
   0% {
-    filter: blur(20px);
-    transform: scale(1.05);
+    filter: blur(10px);
+    transform: scale(1.07);
     background-position-y: -10px;
   }
   50% {
     filter: blur(0);
-    transform: scale(1.05);
+    transform: scale(1.07);
     background-position-y: -10px;
   }
   100% {
     filter: blur(0);
-    transform: scale(1.05);
+    transform: scale(1.07);
     background-position-y: 0px;
   }
 }
 
 @keyframes blueAndMoveTop {
   0% {
-    filter: blur(20px);
+    filter: blur(10px);
     transform: translateY(10px);
   }
   50% {
@@ -194,30 +194,30 @@
 
 @keyframes blurAndZoomIn2 {
   0% {
-    filter: blur(20px);
-    transform: scale(1.05);
+    filter: blur(10px);
+    transform: scale(1.07);
   }
   50% {
     filter: blur(0);
-    transform: scale(1.05);
+    transform: scale(1.07);
   }
   100% {
     filter: blur(0);
-    transform: scale(1.07);
+    transform: scale(1.09);
   }
 }
 @keyframes blurAndZoomOut2 {
   0% {
-    filter: blur(20px);
-    transform: scale(1.05);
+    filter: blur(10px);
+    transform: scale(1.07);
   }
   50% {
     filter: blur(0);
-    transform: scale(1.05);
+    transform: scale(1.07);
   }
   100% {
     filter: blur(0);
-    transform: scale(1.02);
+    transform: scale(1.04);
   }
 }
 
@@ -261,6 +261,7 @@
 
 .discovery {
   position: relative;
+  background-color: black;
 }
 
 .discovery-section {
