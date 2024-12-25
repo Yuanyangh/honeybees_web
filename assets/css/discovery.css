@@ -254,7 +254,8 @@
 .discovery-scene-number {
   position: absolute;
   right: 100px;
-  font-size: 24px;
+  font-family: "Agrandir-GrandHeavy";
+  font-size: 20px;
   line-height: 1;
   font-weight: 600;
 }
