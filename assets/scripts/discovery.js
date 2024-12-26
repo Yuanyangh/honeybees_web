@@ -36,6 +36,21 @@ discoveryCards.forEach(card => {
         document.getElementById(`discovery_desktop_${i}_card_b_wrapper`).classList.add('card-selected');
       }
     }
+    for ( let i = 1; i <= 20; i++ ) {
+      if ( this.id === `discovery_mobile_${i}_card_a` ) {
+        choices[i-1] = Choice.A;
+        document.getElementById(`discovery_mobile_${i}_card_a`).classList.remove('flipped');
+        document.getElementById(`discovery_mobile_${i}_card_b_wrapper`).classList.remove('card-selected');
+        document.getElementById(`discovery_mobile_${i}_card_b`).classList.add('flipped');
+        document.getElementById(`discovery_mobile_${i}_card_a_wrapper`).classList.add('card-selected');
+      } else if ( this.id === `discovery_mobile_${i}_card_b` ) {
+        choices[i-1] = Choice.B;
+        document.getElementById(`discovery_mobile_${i}_card_b`).classList.remove('flipped');
+        document.getElementById(`discovery_mobile_${i}_card_a_wrapper`).classList.remove('card-selected');
+        document.getElementById(`discovery_mobile_${i}_card_a`).classList.add('flipped');
+        document.getElementById(`discovery_mobile_${i}_card_b_wrapper`).classList.add('card-selected');
+      }
+    }
     setTimeout(function () {
       this.onNext();
     }, 1000);
@@ -43,6 +58,7 @@ discoveryCards.forEach(card => {
 });
 
 function onPrev() {
+  moveCardToDownForMobile();
   current_step--;
   if ( current_step < 1 )
     current_step = 1;
@@ -51,6 +67,7 @@ function onPrev() {
   setWidthOfProgressBar();
 }
 function onNext() {
+  moveCardToDownForMobile();
   current_step++;
   if ( current_step > 21 )
     current_step = 21;
@@ -68,7 +85,10 @@ function showPrevNextButtons() {
     $("#prevButton").css("visibility", "hidden");
   } else if ( current_step === 21 ) {
     $('.discovery-progress-wrapper').css("display", "none");
+    $('.mobile-progress').css("display", "none");
+    $('.mobile-button-wrapper #prevButton').css("display", "none");
     document.getElementById('revealButtonContainer').style.setProperty('display', 'flex', 'important');
+    document.getElementById('revealMobileButtonContainer').style.setProperty('display', 'flex', 'important');
   } else {
     $("#prevButton").css("visibility", "visible");
     // $("#nextButton").css("visibility", "visible");
@@ -95,6 +115,12 @@ function setWidthOfProgressBar() {
   progressBar.setAttribute("aria-valuenow", 5 * current_step );
   progressBar.style.width = `${5 * current_step}%`;
 
+  setTimeout(() => {
+    var progressMobileBar = document.querySelector(".mobile-progress.custom-progress .progress-bar");
+    progressMobileBar.setAttribute("aria-valuenow", 5 * current_step );
+    progressMobileBar.style.width = `${5 * current_step}%`;
+  }, 500)
+
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
@@ -110,6 +136,14 @@ function setWidthOfProgressBar() {
   }
 }
 
+function moveCardToDownForMobile() {
+  const elements = document.querySelectorAll('.mobile-discovery-cards-wrapper');
+  elements.forEach((element) => {
+    element.classList.remove('go-to-down');
+  });
+  document.getElementById(`mobile_discovery_cards_wrapper_${current_step}`).classList.add('go-to-down');
+}
+
 function showSection() {
   for ( let i = 1; i <= 21; i++ ) {
     const section = document.getElementById(`discovery_desktop_${i}`);
@@ -117,12 +151,28 @@ function showSection() {
       section.style.setProperty('display', 'none', 'important');
     }
   }
+  setTimeout(() => {
+    for ( let i = 1; i <= 21; i++ ) {
+      const mobile_section = document.getElementById(`discovery_mobile_section_${i}`);
+      if (mobile_section) {
+        mobile_section.style.setProperty('display', 'none', 'important');
+      }
+    }
+  }, 500);  
   const currentSection = document.getElementById(`discovery_desktop_${current_step}`);
   if (currentSection) {
     currentSection.style.setProperty('display', 'flex', 'important');
   } else {
     console.error(`Section discovery_desktop_${current_step} not found.`);
   }
+  setTimeout(() => {
+    const currentMobileSection = document.getElementById(`discovery_mobile_section_${current_step}`);
+    if (currentMobileSection) {
+      currentMobileSection.style.setProperty('display', 'flex', 'important');
+    } else {
+      console.error(`Section discovery_mobile_section_${current_step} not found.`);
+    }
+  }, 500)
 
   if ( current_step === 21 ) {
     $('.discovery-scene-number').css("visibility", "hidden");
