@@ -3,7 +3,7 @@
     opacity: 0;
   }
   to {
-    opacity: 0.7;
+    opacity: 0.8;
   }
 }
 
@@ -680,7 +680,7 @@
 #discovery_desktop_7 .mask-background {
   animation-delay: 0s !important;
   animation: none !important;
-  opacity: 0.7 !important;
+  opacity: 0.8 !important;
 }
 #discovery_desktop_7 .discovery-description-container {
   animation-delay: 0s !important;
@@ -1010,7 +1010,7 @@
 #discovery_mobile_section_7 .mask-background {
   animation-delay: 0s !important;
   animation: none !important;
-  opacity: 0.7 !important;
+  opacity: 0.8 !important;
 }
 #discovery_mobile_section_7 .discovery-description-container {
   animation-delay: 1.5s !important;
