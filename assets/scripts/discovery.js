@@ -14,8 +14,17 @@ var choices = new Array(20).fill(Choice.NON_SELECT);
 
 const discoveryCards = document.querySelectorAll('.discovery-card');
 
+let isTransitioning = false;
+
 discoveryCards.forEach(card => {
   card.addEventListener('click', function () {
+    if (isTransitioning)
+      return;
+    isTransitioning = true;
+    setTimeout(() => {
+      isTransitioning = false;
+    }, 4500);
+  
     // const next_button = document.getElementById('nextButton');
     // if ( current_step < 21 ) {
     //   next_button.disabled = false;
