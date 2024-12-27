@@ -274,25 +274,49 @@
     margin-bottom: 20px;
   }
   100% {
-    margin-bottom: 170px;
+    margin-bottom: 230px;
   }
 }
 @keyframes moveToDown {
   0% {
-    margin-bottom: 170px;
+    margin-bottom: 230px;
   }
   100% {
     margin-bottom: 20px;
   }
 }
 
+.discovery-logo {
+  width: 160px;
+  height: 23.2px;
+}
+
+@media (max-width: 767px) {
+  .honeybeeLogo {
+    margin-top: 15px;    
+  }
+  .honeybeeLogo img {
+    position: relative !important;
+  }
+  .honeybeeMusic {
+    margin-top: 0px;
+    top: 15px;
+  }
+}
+
 .discovery-scene-number {
-  position: absolute;
   right: 100px;
   font-family: "Agrandir-GrandHeavy";
   font-size: 20px;
   line-height: 1;
   font-weight: 600;
+  margin-top: 15px;
+}
+@media (min-width: 768px) {
+  .discovery-scene-number {
+    margin-right: 100px;
+    margin-top: 0px;
+  }
 }
 
 .discovery {
@@ -361,6 +385,9 @@
   color: #eeaf30;
 }
 @media (max-width: 767px) {
+  .discovery-description-container {
+    margin-top: 200px;
+  }
   .discovery-description-1 {
     font-size: 14px;
   }
@@ -397,8 +424,10 @@
   animation: moveToTop 0.5s ease-in-out forwards;
 }
 .discovery-card-container.mobile-discovery-card-container {
-  width: 150px;
-  height: 267px;
+  min-width: 150px;
+  min-height: 267px;
+  width: 45vw;
+  height: 80.1vw;
   opacity: 1;
   animation: none;
 }
