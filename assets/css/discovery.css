@@ -388,7 +388,7 @@
 }
 @media (max-width: 767px) {
   .discovery-description-container {
-    margin-top: 200px;
+    margin-top: 20svh;
   }
   .discovery-description-1 {
     font-size: 14px;
