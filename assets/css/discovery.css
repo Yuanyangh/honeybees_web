@@ -613,7 +613,7 @@
   left: 0;
   top: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/1.3_nw&ltr/man.png");
   animation: blueAndMoveCurve 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
@@ -643,7 +643,7 @@
   left: 0;
   top: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/1.4_job&all/hands.png");
   animation: blueAndMoveLeftTop 1s ease-in-out forwards;
@@ -661,7 +661,7 @@
   left: 0;
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/2.1_orphange_kids/kid_and_lady.png");
   animation: blurAndZoomOut 1s ease-in-out forwards;
@@ -728,7 +728,7 @@
   left: calc(25%);
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/2.4_buy_eggs/grocery.png");
   animation: blurAndZoomIn 1s ease-in-out forwards;
@@ -782,7 +782,7 @@
   left: 0;
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/2.7_storybook/book.png");
   animation: blueAndMoveTop 1s ease-in-out forwards;
@@ -800,7 +800,7 @@
   left: 0;
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/2.8_rebels/villager_marching.png");
   animation: blurAndZoomOut2 1s ease-in-out forwards;
@@ -818,7 +818,7 @@
   left: 0;
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/2.9_festivals/fest.png");
   animation: blurAndZoomIn 1s ease-in-out forwards;
@@ -836,7 +836,7 @@
   left: 0;
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/2.10_argue/villager.png");
   animation: blurAndZoomIn 1s ease-in-out forwards;
@@ -854,7 +854,7 @@
   left: calc(30%);
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/2.11_stand_up/man_and_old_lady.png");
   animation: blurAndZoomIn 1s ease-in-out forwards;
@@ -872,7 +872,7 @@
   left: calc(38%);
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/2.12_looking/man.png");
   animation: blurAndZoomOut2 1s ease-in-out forwards;
@@ -890,7 +890,7 @@
   left: calc(38%);
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/2.13_looking_2/man.png");
   animation: blurAndZoomOut2 1s ease-in-out forwards;
@@ -908,7 +908,7 @@
   left: calc(5%);
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/3.1_discuss/villager.png");
   animation: blurAndZoomIn 1s ease-in-out forwards;
@@ -926,7 +926,7 @@
   left: calc(5%);
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/3.2_preparation/feast.png");
   animation: blurAndZoomIn 1s ease-in-out forwards;
@@ -944,7 +944,7 @@
   left: calc(5%);
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/3.3_fight/fight.png");
   animation: blurAndZoomIn 1s ease-in-out forwards;
@@ -962,7 +962,7 @@
   left: calc(20%);
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url("../img/discovery/Background/3.4_lamp/lamp_2.png");
   animation: blurAndZoomIn 1s ease-in-out forwards;
