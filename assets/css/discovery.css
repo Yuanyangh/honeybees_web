@@ -286,9 +286,30 @@
   }
 }
 
-.discovery-logo {
-  width: 160px;
-  height: 23.2px;
+.honeybeeLogo.discovery-logo .small-logo {
+  opacity: 0;
+}
+.honeybeeLogo.discovery-logo .big-logo {
+  opacity: 1;
+}
+
+.honeybeeLogo.discovery-logo:hover .big-logo {
+  opacity: 0;
+  z-index: -1;
+}
+.honeybeeLogo.discovery-logo:hover .small-logo {
+  opacity: 1;
+  z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .honeybeeLogo.discovery-logo .big-logo {
+    width: 140px;
+    height: 20px;
+  }
+  .honeybeeLogo.discovery-logo .small-logo {
+    display: none !important;
+  }  
 }
 
 @media (max-width: 767px) {

@@ -1030,6 +1030,9 @@ h6 {
   .topbar .honeybeeLogo .big-logo {
     display: none !important;
   }
+  .topbar .honeybeeLogo.discovery-logo .big-logo {
+    display: block !important;
+  }
 }
 @media (max-width: 767px) {
   .topbar .honeybeeLogo .small-logo {
