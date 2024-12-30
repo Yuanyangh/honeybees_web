@@ -1471,3 +1471,11 @@ body.lock-scroll {
 .no-animation {
   animation: none !important;
 }
+
+.discovery-container {
+  height: 110vh;
+}
+
+.discovery-landing-container {
+  padding-bottom: 100px !important;
+}

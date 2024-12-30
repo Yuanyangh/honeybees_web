@@ -19,7 +19,7 @@
     <script src="knowyourself.js"></script>
     <link rel="stylesheet" href="assets/css/navbtn.css" />
     <link rel="stylesheet" href="assets/css/marquee.css" />
-    <link rel="stylesheet" href="assets/css/discovery.css" />
+    <link rel="stylesheet" href="assets/css/know.css" />
     <link rel="stylesheet" href="assets/css/modal.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
 
@@ -27,11 +27,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
     <script src="assets/scripts/lottie-dark.js"></script>
     <script src="assets/scripts/modal.js"></script>
+    <script src="assets/scripts/discovery.js"></script>
   </head>
 
-  <body style="background-color: #1a2c47">
-    <div class="topbar flex-column flex-md-row">
-      <a href="index.html" class="honeybeeLogo discovery-logo w-100 d-flex justify-content-left align-items-center">
+  <body style="background-color: #fff4d5">
+    <div class="topbar">
+      <a href="index.html" class="honeybeeLogo">
         <img class="big-logo" src="assests/Honeybees_logo.svg" alt="HoneybeeLogo">
         <img class="small-logo" src="assests/logo_white_small.png" alt="Small HoneybeeLogo">
       </a>
@@ -61,1843 +62,220 @@
           loop
         ></audio>
       </div>
-      <div class="discovery-scene-number d-flex flex-md-column">
-        <span class="text-white text-bold">Scene</span>
-        <span id="discovery_current_step" class="ml-2 ml-md-0 text-white text-bold">01/20</span>
+    </div>
+    <button id="toggleModalBtn" class="mobile-nav-btn">
+      <div class="menu">
+        <svg width="30px" viewBox="0 0 100 100">
+          <path class="line-honeybee-black line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+          <path class="line-honeybee-black line2" d="M 20,50 H 80" />
+          <path class="line-honeybee-black line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+      </div>
+    </button>
+    <navbar class="know-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div>
+              <a href="index.html" id="homeButton" class="home-btn">
+                  HOME
+              </a>
+              <a href="about.html" id="aboutButton" class="about-btn text-nowrap">
+                  ABOUT US
+              </a>
+              <a href="career.html" id="careerButton" class="career-btn">
+                  CAREER
+              </a>
+              <a href="discovery.html" id="knowButton" class="know-btn text-nowrap">
+                  DISCOVERY
+              </a>
+              <!-- <a href="fearless.html" id="fearlessButton" class="fearless-btn text-nowrap">
+                  Be Fearless
+              </a> -->
+            </div>
+              <!-- <a href="#" class="nav-adv"><img src="asssets/Group 149.png" alt=""></a> -->
+          </div>
+        </div>
+      </div>
+    </navbar>
+    <main class="contact">
+      <div class="contact-inner">
+        <div class="container">
+          <div class="row contact-section discovery-container">
+            <div class="col-12 coming-soon">
+              <form class="questions-container discovery-landing-container">
+                <div class="questions-title">
+                  <h1>WHAT IS<br/>YOUR <span>BEESONA?</span></h1>
+                  <br>
+                  <!-- <h3><p>Roses are Red | Violets are Blue. <br>Answer our questions <br> To find the real you. <br></p></h3> -->
+                  <div class="questions-description">
+                    <p>Just as there are personality tests that give you an insight into your motivations and preferences, your beesona can reveal a lot about your relationship with money and the factors that drive your financial decisions.</p>
+                    <p>Discover yours today with a short quiz and learn how to effectively manage your finances and fearlessly achieve your goals in life.</p>
+                  </div>
+                </div>
+                <!-- <div class="user-info-container">
+                  <div class="user-info">
+                    <div>
+                      <label for="">First Name</label>
+                      <input type="text" id="first_name"/>
+                    </div>
+                    <div>
+                      <label for="">Last Name</label>
+                      <input type="text" id="last_name"/>
+                    </div>
+                    <div>
+                      <label for="">Mobile</label>
+                      <input type="text" id="mobile"/>
+                    </div>
+                    <div>
+                      <label for="">Email Address</label>
+                      <input type="text" id="email"/>
+                    </div>
+                  </div>
+                </div> -->
+                <br>
+                <div class="start-btn-wrapper mx-auto">
+                  <button type="button" style="cursor: pointer" onclick="onStart()">Let's find out!</button>
+                </div>
+              </form>
+            </div>
+            <div class="contact-section-people">
+              <div
+                class="contact-section-people-lottie"
+                id="lottie-animation"
+              ></div>
+              <div
+                class="contact-section-people-lottie2"
+                id="lottie-animation2"
+              ></div>
+              <!-- <img src="./asssets/human_head.png"> -->
+            </div>
+          </div>
+        </div>
+        <div class="contact-overlay"></div>
+      </div>
+    </main>
+    <section class="frame-section about_footer">
+      <div class="mask-group-parent-wrapper" id="footer">
+        <div class="footer-wrapper">
+          <div class="footer">
+            <div class="footer-inner">
+              <form id="buzzForm" class="drop-your-question-and-email-o-parent">
+                 <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAYHorMhUNVcwODBXMUNJNEU0NjJKSzlNOTdKNDk4Ti4u" target="_blank"><h2 class="drop-your-question" id="demo"> <h2></h2></a>
+                <!-- <div class="input-details-group-parent">
+                  <div class="title_filed">
+                      <input class="input-details-group yourtitle" type="text" placeholder="Your Title" />
+                      <img class="icon-chevron-bottom" alt="" src="./assests/Vector.png" />
+                  </div>
+  
+                  <div class="name_field">
+                      <input id="buzz_name" class="input-details-group yourname" type="text" placeholder="Your Name..." />
+                  </div>
+                </div>
+                <div class="group-div">
+                    <div class="frame-child5"></div>
+                    <input id="buzz_email" class="your-email" placeholder="Your Email..." type="text" />
+                </div>
+                <div class="rectangle-parent3">
+                  <textarea id="message" class="whats-on-your" placeholder="What’s On Your Mind?" rows="2"></textarea>
+                  <button type="submit" id="buzzSubmitButton" class="send-wrapper">
+                    <div class="send">send</div>
+                  </button>
+                </div> -->
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="rematch-quote">
+          <div class="authorized-representation-a-i">
+            <h2 class="i-think-we">
+              #NOSTINGSATTACHED
+            </h2>
+          </div>
+          <div class="social-media-icons">
+            <a href="https://sg.linkedin.com/company/honeybees-org" target="_blank"><img class="icon-linkedin" loading="eager" alt="" src="./assests/sameediconlinkedin.png" /></a>
+            <a href="https://www.instagram.com/honeybees.sg" target="_blank"><img class="icon-instagram" loading="eager" alt="" src="./assests/sameediconinstagram.png" /></a>
+            <!-- <img class="icon-facebook-squared" loading="eager" alt=""
+                src="./assests/sameed-iconfacebooksquared.png" /> -->
+          </div>
+        </div>
+        <div class="disclaimer-container">
+          <div class="disclaimer-detail">
+            <p>This is not the official website of AIA Financial Advisers Private Limited (Reg. No. 201715016G) (AIA FA). AIA FA disclaims all warranties of merchantability and fitness for purpose of the materials on this website. AIA FA makes no warranties or representations as to the results of the use of the materials on this website in terms of their correctness, accuracy and reliability. Nothing on this website should be regarded as an offer or solicitation to sell insurance products in any country to any person to whom it is unlawful to make such an invitation or solicitation in such a country.</p>
+            <p>Terms of Use. (1) All trademarks, service marks, trade names, product names, icons and logos of AIA FA are owned by AIA FA and may not be used without prior written permission from AIA FA. (2) All AIA products and AIA FA services referred to in this website (or linked thereto to the website) known as www.honeybees.sg (the “Agency Website”) are offered only in countries where such products and services may lawfully be offered by AIA Singapore and AIA FA respectively. (3) Neither the Agency Website nor the link to the products or services on AIA FA’s corporate website should be regarded as an offer to sell or a solicitation to buy any insurance productor other products of AIA Singapore or services of AIA FA. (4) No warranties regarding non-infringement of third party rights, security, accuracy, fitness for purpose, merchantability or freedom from computer viruses in the Agency Website or the AIA FA corporate website (linked thereto) are given by AIA FA.</p>
+          </div>
+          <div class="terms-conditions-wrapper">
+            <!-- <span class="terms-conditions-link" onclick="showTermsModal()">Terms & Conditions</span> -->
+            <span>© 2022 by SP-HONEYBEES</span>
+          </div>
+        </div>
+        <!-- <div class="authorized-representative-msg">
+            <div class="sp-honeybees-is-an-container">
+                <p class="sp-honeybees-is-an">
+                    SP-HONEYBEES is an authorised representative of AIA
+                    Singapore Private Limited (Reg. No. 201106386R)
+                </p>
+                <p class="by-sp-honeybees">© 2022 by SP-HONEYBEES</p>
+            </div>
+        </div> -->
+      </div>
+    </section>
+    <div id="termsModal" class="terms-modal hide" onclick="onCloseTerms()">
+      <div class="terms-modal-content" onclick="event.stopPropagation()">
+        <div class="terms-message">
+          <img class="close-terms-icon" src="./assets/img/Close_round.png" alt="close" onclick="onCloseTerms()"/>
+          <p>Terms & Conditions</p>
+          <span class="mt-2">Terms of Use. (1) All trademarks, service marks, trade names, product names, icons and logos of AIA FA are owned by AIA FA and may not be used without prior written permission from AIA FA. (2) All AIA products and AIA FA services referred to in this website (or linked thereto to the website) known as www.honeybees.sg (the “Agency Website”) are offered only in countries where such products and services may lawfully be offered by AIA Singapore and AIA FA respectively. (3) Neither the Agency Website nor the link to the products or services on AIA FA’s corporate website should be regarded as an offer to sell or a solicitation to buy any insurance productor other products of AIA Singapore or services of AIA FA. (4) No warranties regarding non-infringement of third party rights, security, accuracy, fitness for purpose, merchantability or freedom from computer viruses in the Agency Website or the AIA FA corporate website (linked thereto) are given by AIA FA.</span>
+        </div>
       </div>
     </div>
-    <main class="discovery">
-
-      <section id="discovery_desktop_1" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_1_star">
-          <img src="assets/img/discovery/Background/1.1_dream/star.png" alt="star" width="240" height="217"/>
+    <div id="submittedModal" class="submitted-modal hide" onclick="onClose()">
+      <div class="submitted-modal-content" onclick="event.stopPropagation()">
+        <img class="submitted-bg d-none d-md-block" src="./assets/img/submitted_quote.png" alt="submitted quote" />
+        <img class="submitted-bg d-block d-md-none" src="./assets/img/mobile_submitted_quote.png" alt="mobile submitted quote" />
+        <div class="submitted-message">
+          <img class="close-icon" src="./assets/img/Close_round.png" alt="close" onclick="onClose()"/>
+          <img class="bee-icon" src="./assets/img/bee-logo.gif" alt="bee"/>
+          <p>Submitted!</p>
+          <span class="mt-1">We will buzz you soon!</span>
         </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">In your dream,<br/>you see two items appear before you.</span>
-            <span class="discovery-description-1">"Tell me, young one, what is it you want in life?"</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">You reach out for...</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_1_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_1_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/01a.png" alt="01a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="wheatbees" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_1_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_1_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/01b.png" alt="01b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_2" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_2_mother">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">To fulfil your aspirations,<br/>you know it’s time to leave your small village and go on an adventure.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">How do you broach the subject with your family?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_2_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_2_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/02a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_2_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_2_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/02b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_3" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_3_man">
-        </div>
-        <div id="discovery_desktop_3_mother">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">You hear your mother call out to you as you cross the village border.<br/>She hands you a coin pouch.</span>
-            <span class="discovery-description-1">"It’s not much, but we’re hoping it can start you off."</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">What do you do with the coins?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_3_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_3_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/03a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_3_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_3_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/03b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_4" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_4_hands">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">Arriving at the inn in the next town, you start unpacking.<br/>Seeing your mother’s coin pouch,<br/>you realise you’ll need a way to make money.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">What’s your plan?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_4_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_4_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/04a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_4_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_4_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/04b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_5" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_5_kid_and_lady">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">While exploring the town,<br/>you come across an orphanage looking for volunteers.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">What service do you provide?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_5_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_5_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/05a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_5_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_5_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/05b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_6" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_6_lady">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">The orphanage groundskeeper tells you her plans to<br/>organise a festival for the children and asks you to help with the shopping.</span>
-            <span class="discovery-description-1">"Unfortunately, this is all we have."</span>
-            <span class="discovery-description-1">She hands you a bag of coins.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">How do you budget the money?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_6_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_6_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/06a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_6_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_6_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/06b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_7" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_7_lady">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1"><br/><br/></span>
-            <span class="discovery-description-1" style="visibility: hidden;">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">And how do you account for your spending?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_7_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_7_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/07a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_7_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_7_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/07b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_8" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_8_grocery">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">Check, check, and check!<br/>All that’s left to get is eggs.</span>
-            <span class="discovery-description-1">"That’ll be 30 coins."</span>
-            <span class="discovery-description-1">"What?!" Eggs shouldn’t cost that much, but this is the only stall selling them.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">What do you do?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_8_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_8_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/08a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_8_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_8_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/08b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_9" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_9_farmer">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">You notice that the town has a community garden where<br/>farmers grow your crop of choice and help you sell them.<br/>You then get a portion of the earnings as returns.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">How do you make use of this garden?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_9_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_9_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/09a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_9_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_9_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/09b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_10" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_10_governer">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">As the new addition to the town,<br/>the governor offers you a job as his second-in-command.</span>
-            <span class="discovery-description-1">The job pays 10,000 gold coins a year,<br/>but you can’t mingle with the townsfolk anymore.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">Do you accept or reject the offer?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_10_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_10_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/10a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_10_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_10_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/10b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_11" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_11_book">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">Curious about the governor,<br/>you ask the orphanage groundskeeper about him.</span>
-            <span class="discovery-description-1">"He keeps increasing taxes, and he’s been making our lives hard,"</span>
-            <span class="discovery-description-1">Knowing this now, you can’t let the townsfolk suffer any longer.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">Inspired by the tale of Robin Hood, you plan to…</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_11_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_11_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/11a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_11_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_11_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/11b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_12" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_12_villager_marching">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">Before you can act on your plan, rebels attack the governor’s mansion.<br/>This is your chance to make a difference, but it could be dangerous for the whole town.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">What’s your next course of action?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_12_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_12_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/12a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_12_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_12_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/12b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_13" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_13_fest">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">The governor is no longer in power, and the<br/>town celebrates during the orphanage’s festival.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">However, monsters controlled by the governor soon attack.</span>
-            <span class="discovery-description-2">Panic erupts.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-1">What do you focus on doing?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_13_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_13_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/13a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_13_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_13_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/13b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_14" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_14_villager">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">After the monsters are killed, the townsfolk start arguing about the right thing to do<br/>- kill the governor or negotiate peace.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">How do you evaluate the situation?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_14_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_14_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/14a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_14_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_14_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/14b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_15" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_15_man_and_old_lady">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">To rationalise your thoughts, you weigh the pros and cons of both solutions.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">How do you do that?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_15_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_15_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/15a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_15_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_15_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/15b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_16" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_16_man">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">You know it’s a tricky situation either way because people will get hurt.<br/>As for the townsfolk’s argument, there’s no clear conclusion in sight.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">What do you do?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_16_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_16_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/16a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_16_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_16_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/16b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_17" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_17_man">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">The townsfolk take a vote on the matter, and it’s a tie.<br/>It’s all up to you now.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">How do you decide?</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_17_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_17_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/17a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_17_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_17_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/17b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_18" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_18_villager">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">The decision is to eliminate the governor once and for all.<br/>Volunteer fighters gather, including you, and the leader of the group shares his plan of attack.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">You’re more focused on…</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_18_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_18_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/18a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_18_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_18_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/18b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_19" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_19_feast">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">Some of the townsfolk gather in the town square to<br/>share a meal with the fighters before the final showdown.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">After that, to mentally recharge and prepare yourself, you…</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_19_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_19_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/19a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_19_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_19_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/19b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_20" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_20_fight">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">It’s a tough fight, but you successfully slay the governor and his monsters.<br/>From the rubble, a glint of gold catches your eye.<br/>You pick up the lamp and wipe it clean, and a genie emerges.</span>
-            <span class="discovery-description-1">"For freeing me, I offer you three wishes,"</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">You choose…</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-between mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_20_card_a_wrapper">
-                <div class="discovery-card" id="discovery_desktop_20_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/20a.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-line d-flex flex-column mt-4">
-              <img src="assets/img/discovery/GraphicElement/wheatbees.png" alt="icon" width="35" height="35"/>
-              <span class="discovery-description-1 vertical-text mt-2">` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            </div>
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_20_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_20_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/20b.png" alt="icon"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_desktop_21" class="discovery-section d-flex justify-content-center">
-        <div id="discovery_desktop_21_fight">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div>
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">With your wish granted, the genie disappears,<br/>and instead of the lamp, you’re now holding a tarot card.<br/>On the back, it reads,</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">"This is who you are. Use it to your advantage."</span>
-          </div>
-          <div class="discovery-cards-wrapper d-flex justify-content-center mt-5">
-            <div class="discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_desktop_21_card_b_wrapper">
-                <div class="discovery-card" id="discovery_desktop_21_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="icon"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="discovery-progress-wrapper container">
-        <button id="prevButton" class="" type="button" style="cursor: pointer" onclick="onPrev()">Prev</button>
-        <div class="progress custom-progress mx-4">
-          <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-            <img src="assets/img/Honeybees_icon.png" alt="icon" width="30" height="30"/>
-          </div>
-        </div>
-        <!-- <button id="nextButton" class="" type="button" style="cursor: pointer" onclick="onNext()" disabled>Next</button> -->
       </div>
-      <div id="revealButtonContainer" class="discovery-progress-wrapper container justify-content-center d-none">
-        <button id="revealButton" class="" type="button" style="cursor: pointer" onclick="onReveal()">Reveal</button>
-      </div>
-    </main>
-    <main class="mobile-discovery">
-
-      <section id="discovery_mobile_section_1" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_1" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">In your dream,<br/>you see two items appear before you.</span>
-            <span class="discovery-description-1">"Tell me, young one, what is it you want in life?"</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">You reach out for...</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_1" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_1_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_1_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/01a.png" alt="01a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_1_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_1_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/01b.png" alt="01b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="topbar">
+          <div class="honeybeeLogo">
+            <img src="./assests/Honeybees_logo (1).png" alt="" />
           </div>
         </div>
-      </section>
-
-      <section id="discovery_mobile_section_2" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_2" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">To fulfil your aspirations,<br/>you know it’s time to leave your small village and go on an adventure.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">How do you broach the subject with your family?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_2" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_2_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_2_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/02a.png" alt="02a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_2_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_2_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/02b.png" alt="02b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_3" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_3" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">You hear your mother call out to you as you cross the village border.<br/>She hands you a coin pouch.</span>
-            <span class="discovery-description-1">"It’s not much, but we’re hoping it can start you off."</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">What do you do with the coins?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_3" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_3_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_3_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/03a.png" alt="03a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_3_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_3_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/03b.png" alt="03b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_4" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_4" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">Arriving at the inn in the next town, you start unpacking.<br/>Seeing your mother’s coin pouch,<br/>you realise you’ll need a way to make money.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">What’s your plan?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_4" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_4_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_4_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/04a.png" alt="04a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_4_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_4_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/04b.png" alt="04b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_5" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_5" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">While exploring the town,<br/>you come across an orphanage looking for volunteers.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">What service do you provide?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_5" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_5_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_5_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/05a.png" alt="05a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_5_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_5_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/05b.png" alt="05b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_6" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_6" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">The orphanage groundskeeper tells you her plans to<br/>organise a festival for the children and asks you to help with the shopping.</span>
-            <span class="discovery-description-1">"Unfortunately, this is all we have."</span>
-            <span class="discovery-description-1">She hands you a bag of coins.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">How do you budget the money?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_6" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_6_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_6_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/06a.png" alt="06a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_6_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_6_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/06b.png" alt="06b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_7" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_7" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1"><br/><br/></span>
-            <span class="discovery-description-1" style="visibility: hidden;">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">And how do you account for your spending?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_7" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_7_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_7_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/07a.png" alt="07a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_7_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_7_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/07b.png" alt="07b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_8" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_8" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">Check, check, and check!<br/>All that’s left to get is eggs.</span>
-            <span class="discovery-description-1">"That’ll be 30 coins."</span>
-            <span class="discovery-description-1">"What?!" Eggs shouldn’t cost that much, but this is the only stall selling them.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">What do you do?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_8" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_8_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_8_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/08a.png" alt="08a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_8_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_8_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/08b.png" alt="08b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_9" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_9" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">You notice that the town has a community garden where<br/>farmers grow your crop of choice and help you sell them.<br/>You then get a portion of the earnings as returns.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">How do you make use of this garden?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_9" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_9_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_9_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/09a.png" alt="09a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_9_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_9_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/09b.png" alt="09b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_10" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_10" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">As the new addition to the town,<br/>the governor offers you a job as his second-in-command.</span>
-            <span class="discovery-description-1">The job pays 10,000 gold coins a year,<br/>but you can’t mingle with the townsfolk anymore.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">Do you accept or reject the offer?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_10" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_10_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_10_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/10a.png" alt="10a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_10_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_10_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/10b.png" alt="10b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_11" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_11" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">Curious about the governor,<br/>you ask the orphanage groundskeeper about him.</span>
-            <span class="discovery-description-1">"He keeps increasing taxes, and he’s been making our lives hard,"</span>
-            <span class="discovery-description-1">Knowing this now, you can’t let the townsfolk suffer any longer.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">Inspired by the tale of Robin Hood, you plan to…</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_11" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_11_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_11_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/11a.png" alt="11a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_11_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_11_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/11b.png" alt="11b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_12" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_12" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">Before you can act on your plan, rebels attack the governor’s mansion.<br/>This is your chance to make a difference, but it could be dangerous for the whole town.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">What’s your next course of action?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_12" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_12_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_12_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/12a.png" alt="12a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_12_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_12_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/12b.png" alt="12b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_13" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_13" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">The governor is no longer in power, and the<br/>town celebrates during the orphanage’s festival.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">However, monsters controlled by the governor soon attack.</span>
-            <span class="discovery-description-2">Panic erupts.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-1">What do you focus on doing?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_13" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_13_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_13_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/13a.png" alt="13a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_13_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_13_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/13b.png" alt="13b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_14" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_14" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">After the monsters are killed, the townsfolk start arguing about the right thing to do<br/>- kill the governor or negotiate peace.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">How do you evaluate the situation?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_14" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_14_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_14_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/14a.png" alt="14a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_14_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_14_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/14b.png" alt="14b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_15" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_15" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">To rationalise your thoughts, you weigh the pros and cons of both solutions.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">How do you do that?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_15" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_15_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_15_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/15a.png" alt="15a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_15_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_15_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/15b.png" alt="15b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_16" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_16" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">You know it’s a tricky situation either way because people will get hurt.<br/>As for the townsfolk’s argument, there’s no clear conclusion in sight.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">What do you do?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_16" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_16_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_16_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/16a.png" alt="16a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_16_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_16_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/16b.png" alt="16b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_17" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_17" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">The townsfolk take a vote on the matter, and it’s a tie.<br/>It’s all up to you now.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">How do you decide?</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_17" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_17_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_17_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/17a.png" alt="17a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_17_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_17_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/17b.png" alt="17b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_18" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_18" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">The decision is to eliminate the governor once and for all.<br/>Volunteer fighters gather, including you, and the leader of the group shares his plan of attack.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">You’re more focused on…</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_18" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_18_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_18_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/18a.png" alt="18a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_18_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_18_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/18b.png" alt="18b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_19" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_19" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">Some of the townsfolk gather in the town square to<br/>share a meal with the fighters before the final showdown.</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">After that, to mentally recharge and prepare yourself, you…</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_19" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_19_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_19_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/19a.png" alt="19a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_19_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_19_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/19b.png" alt="19b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_20" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_20" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">It’s a tough fight, but you successfully slay the governor and his monsters.<br/>From the rubble, a glint of gold catches your eye.<br/>You pick up the lamp and wipe it clean, and a genie emerges.</span>
-            <span class="discovery-description-1">"For freeing me, I offer you three wishes,"</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">You choose…</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_20" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_20_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_20_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/20a.png" alt="20a"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_20_card_b_wrapper">
-                <div class="discovery-card" id="discovery_mobile_20_card_b">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/20b.png" alt="20b"/>
-                  </div>
-                  <div class="discovery-card-face discovery-card-back">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="discovery_mobile_section_21" class="mobile-discovery-section d-flex justify-content-center">
-        <div id="discovery_mobile_21" class="mobile-image-background">
-        </div>
-        <div class="mask-background">
-        </div>
-        <div class="bottom-div">
-        </div>
-        <div class="w-100 h-100 px-2 d-flex flex-column justify-content-between">
-          <div class="discovery-description-container text-center d-flex flex-column">
-            <span class="discovery-description-1">With your wish granted, the genie disappears,<br/>and instead of the lamp, you’re now holding a tarot card.<br/>On the back, it reads,</span>
-            <span class="discovery-description-1">` ` ` ` ` ` ` ` ` ` ` ` ` `</span>
-            <span class="discovery-description-2">"This is who you are. Use it to your advantage."</span>
-          </div>
-          <div id="mobile_discovery_cards_wrapper_21" class="discovery-cards-wrapper mobile-discovery-cards-wrapper d-flex justify-content-around mt-3">
-            <div class="discovery-card-container mobile-discovery-card-container">
-              <div class="discovery-card-wrapper" id="discovery_mobile_21_card_a_wrapper">
-                <div class="discovery-card" id="discovery_mobile_21_card_a">
-                  <div class="discovery-card-face discovery-card-front">
-                    <img src="assets/img/discovery/Cards/00_bg.png" alt="00_bg"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="mobile-discovery-progress-wrapper container flex-column">
-        <div class="px-2 mobile-button-wrapper">
-          <button id="prevButton" class="" type="button" style="cursor: pointer" onclick="onPrev()">Prev</button>
-          <div id="revealMobileButtonContainer" class="d-none justify-content-center">
-            <button id="revealButton" class="" type="button" style="cursor: pointer" onclick="onReveal()">Reveal</button>
-          </div>
-        </div>
-        <div class="mobile-progress custom-progress w-100 mx-0">
-          <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="nav-modal-link-content">
+          <a href="index.html" class="nav-modal-link">
+            HOME
+          </a>
+          <a href="about.html" class="nav-modal-link text-nowrap">
+            ABOUT US
+          </a>
+          <a href="career.html" class="nav-modal-link">
+            CAREER
+          </a>
+          <a href="discovery.html" class="nav-modal-link text-nowrap">
+            DISCOVERY
+          </a>
+          <!-- <a href="fearless.html" class="nav-modal-link-last text-nowrap">
+            Be Fearless
+          </a> -->
+        </div>
+        <div>
+          <!-- <button class="close-nav-modal">
+            <img src="./assets/img/Close_round.png" alt="close" />
+            <span>Close</span>
+          </button> -->
+          <div class="mobile-modal-upcoming">
+            <img src="asssets/Group 149.png" alt="">
           </div>
         </div>
       </div>
-
-    </main>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -1907,7 +285,6 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
-      
     ></script>
     <script
       src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
@@ -1916,6 +293,31 @@
     ></script>
     <script src="assets/scripts/sound.js"></script>
     <script src="assets/scripts/buzzaction.js"></script>
-    <script src="assets/scripts/discovery.js"></script>
+    <script>
+      clearLocalStorage();
+      function clearLocalStorage() {
+        if (localStorage.getItem('quiz_user')) {
+          localStorage.removeItem('quiz_user')
+        }
+        if (localStorage.getItem('quiz_result')) {
+          localStorage.removeItem('quiz_result')
+        }
+        for ( i = 1; i <=20; i ++) {
+          if (localStorage.getItem(i)) {
+            localStorage.removeItem(i)
+          }
+        }
+      }
+      function onStart() {
+        const user = {
+          first_name: $('#first_name').val(),
+          last_name: $('#last_name').val(),
+          mobile: $('#mobile').val(),
+          email: $('#email').val()
+          };
+        localStorage.setItem('quiz_user', JSON.stringify(user));
+        window.location.assign('./discovery-questions.html');
+      }
+    </script>
   </body>
 </html>
