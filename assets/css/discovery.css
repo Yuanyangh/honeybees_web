@@ -274,12 +274,12 @@
     margin-bottom: 20px;
   }
   100% {
-    margin-bottom: 230px;
+    margin-bottom: 110px;
   }
 }
 @keyframes moveToDown {
   0% {
-    margin-bottom: 230px;
+    margin-bottom: 110px;
   }
   100% {
     margin-bottom: 20px;
@@ -388,7 +388,7 @@
 }
 @media (max-width: 767px) {
   .discovery-description-container {
-    margin-top: 20svh;
+    margin-top: 15svh;
   }
   .discovery-description-1 {
     font-size: 14px;
@@ -542,7 +542,7 @@
   }
 
   .mobile-button-wrapper {
-    padding-top: 20px;
+    padding-top: 10px;
   }
 }
 
@@ -970,7 +970,7 @@
 }
 
 #revealMobileButtonContainer {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 #discovery_mobile_1 {
@@ -1128,7 +1128,7 @@
   .custom-progress {
     width: 80%;
     height: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
     border: none;
   }
   .custom-progress .progress-bar {
