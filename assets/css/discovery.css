@@ -274,12 +274,12 @@
     margin-bottom: 20px;
   }
   100% {
-    margin-bottom: 110px;
+    margin-bottom: 90px;
   }
 }
 @keyframes moveToDown {
   0% {
-    margin-bottom: 110px;
+    margin-bottom: 90px;
   }
   100% {
     margin-bottom: 20px;
@@ -412,7 +412,7 @@
     /* margin-top: 15svh; */
     flex-grow: 1;
     justify-content: center;
-    max-height: calc(100svh - 80.1vw - 110px - 1rem - 100px);   /* 80.vw: height of card; 110px: margin-bottom of .mobile-discovery-cards-wrapper; 1rem: margin-top of .mobile-discovery-cards-wrapper; 100px: margin-top of .discovery-description-container*/
+    max-height: calc(100svh - 80.1vw - 90px - 1rem - 100px);   /* 80.vw: height of card; 90px: margin-bottom of .mobile-discovery-cards-wrapper; 1rem: margin-top of .mobile-discovery-cards-wrapper; 100px: margin-top of .discovery-description-container*/
   }
   .discovery-description-1 {
     font-size: 14px;
