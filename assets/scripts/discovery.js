@@ -71,6 +71,13 @@ function onPrev() {
   current_step--;
   if ( current_step < 1 )
     current_step = 1;
+  choices[current_step-1] = Choice.NON_SELECT;
+  document.querySelectorAll('div.discovery-card').forEach(div => {
+    div.classList.remove('flipped');
+  });
+  document.querySelectorAll('div.discovery-card-wrapper').forEach(div => {
+    div.classList.remove('card-selected');
+  });
   showSection();
   showPrevNextButtons();
   setWidthOfProgressBar();
