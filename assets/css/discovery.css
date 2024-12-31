@@ -663,12 +663,12 @@
 #discovery_desktop_5_kid_and_lady {
   position: absolute;
   width: 100%;
-  height: 35vh;
+  height: 42vh;
   left: 0;
   bottom: 0;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-image: url("../img/discovery/Background/2.1_orphange_kids/kid_and_lady.png");
   animation: blurAndZoomOut 1s ease-in-out forwards;
 }
