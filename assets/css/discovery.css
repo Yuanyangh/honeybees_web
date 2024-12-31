@@ -271,7 +271,7 @@
 }
 @keyframes moveToTop {
   0% {
-    margin-bottom: 20px;
+    margin-bottom: -20px;
   }
   100% {
     margin-bottom: 90px;
@@ -282,7 +282,7 @@
     margin-bottom: 90px;
   }
   100% {
-    margin-bottom: 20px;
+    margin-bottom: -20px;
   }
 }
 
@@ -438,7 +438,7 @@
 }
 .discovery-cards-wrapper.mobile-discovery-cards-wrapper {
   /* max-height: 267px; */
-  margin-bottom: 20px;
+  margin-bottom: -20px;
   animation: moveToTop 0.5s ease-in-out forwards;
   animation-delay: 1s;
   transition: 0.5s;
