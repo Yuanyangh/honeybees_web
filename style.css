@@ -1479,3 +1479,7 @@ body.lock-scroll {
 .discovery-landing-container {
   padding-bottom: 100px !important;
 }
+
+.w-60px {
+  width: 60px;
+}

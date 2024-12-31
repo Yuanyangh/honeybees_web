@@ -61,7 +61,7 @@
           loop
         ></audio>
       </div>
-      <div class="discovery-scene-number d-flex flex-md-column">
+      <div class="discovery-scene-number d-none d-md-flex flex-md-column">
         <span class="text-white text-bold">Scene</span>
         <span id="discovery_current_step" class="ml-2 ml-md-0 text-white text-bold">01/20</span>
       </div>
@@ -1884,7 +1884,16 @@
 
       <div class="mobile-discovery-progress-wrapper container flex-column">
         <div class="px-2 mobile-button-wrapper">
-          <button id="prevButton" class="" type="button" style="cursor: pointer" onclick="onPrev()">Prev</button>
+          <div class="d-flex justify-content-between">
+            <button id="prevButton" class="" type="button" style="cursor: pointer" onclick="onPrev()">
+              <img class="back-icon" src="assets/img/discovery/back-btn.svg" alt="back icon">
+            </button>
+            <div class="discovery-scene-number d-flex flex-md-column">
+              <span class="text-white text-bold">Scene</span>
+              <span id="discovery_mobile_current_step" class="ml-2 ml-md-0 text-white text-bold">01/20</span>
+            </div>
+            <div class="w-60px"></div>
+          </div>
           <div id="revealMobileButtonContainer" class="d-none justify-content-center">
             <button id="revealButton" class="" type="button" style="cursor: pointer" onclick="onReveal()">Reveal</button>
           </div>

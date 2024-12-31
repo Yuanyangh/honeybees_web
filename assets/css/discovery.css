@@ -409,10 +409,10 @@
 }
 @media (max-width: 767px) {
   .discovery-description-container {
-    /* margin-top: 15svh; */
+    margin-top: 60px;
     flex-grow: 1;
     justify-content: center;
-    max-height: calc(100svh - 80.1vw - 90px - 1rem - 100px);   /* 80.vw: height of card; 90px: margin-bottom of .mobile-discovery-cards-wrapper; 1rem: margin-top of .mobile-discovery-cards-wrapper; 100px: margin-top of .discovery-description-container*/
+    max-height: calc(100svh - 80.1vw - 90px - 1rem - 60px);   /* 80.vw: height of card; 90px: margin-bottom of .mobile-discovery-cards-wrapper; 1rem: margin-top of .mobile-discovery-cards-wrapper; 60px: margin-top of .discovery-description-container*/
   }
   .discovery-description-1 {
     font-size: 14px;
@@ -567,6 +567,11 @@
 
   .mobile-button-wrapper {
     padding-top: 10px;
+  }
+
+  #prevButton {
+    width: 60px;
+    padding: 10px 10px;
   }
 }
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="12.84" height="16.33" viewBox="0 0 12.84 16.33">
+  <defs>
+    <style>
+      .d {
+        fill: none;
+        stroke: #28446d;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <g id="c" data-name="mobile">
+    <path class="d" d="M11.6,14.76L3.23,8.16,11.6,1.57"/>
+  </g>
+</svg>

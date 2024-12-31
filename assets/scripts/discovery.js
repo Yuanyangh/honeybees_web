@@ -194,6 +194,7 @@ function showSection() {
     $('.discovery-scene-number').css("visibility", "hidden");
   }
   $('#discovery_current_step').text(`${current_step.toString().padStart(2, '0')}/20`);
+  $('#discovery_mobile_current_step').text(`${current_step.toString().padStart(2, '0')}/20`);
 }
 
 function Init() {
