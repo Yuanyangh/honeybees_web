@@ -733,8 +733,8 @@
   left: calc(25%);
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: bottom;
   background-image: url("../img/discovery/Background/2.4_buy_eggs/grocery.png");
   animation: blurAndZoomIn 1s ease-in-out forwards;
 }
@@ -859,8 +859,8 @@
   left: calc(30%);
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: bottom;
   background-image: url("../img/discovery/Background/2.11_stand_up/man_and_old_lady.png");
   animation: blurAndZoomIn 1s ease-in-out forwards;
 }
@@ -895,8 +895,8 @@
   left: calc(38%);
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: bottom;
   background-image: url("../img/discovery/Background/2.13_looking_2/man.png");
   animation: blurAndZoomOut2 1s ease-in-out forwards;
 }
@@ -931,8 +931,8 @@
   left: calc(5%);
   bottom: 0;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: bottom;
   background-image: url("../img/discovery/Background/3.2_preparation/feast.png");
   animation: blurAndZoomIn 1s ease-in-out forwards;
 }
