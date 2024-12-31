@@ -328,13 +328,14 @@
 .discovery-scene-number {
   right: 100px;
   font-family: "Agrandir-GrandHeavy";
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1;
   font-weight: 600;
   margin-top: 15px;
 }
 @media (min-width: 768px) {
   .discovery-scene-number {
+    font-size: 20px;  
     margin-right: 100px;
     margin-top: 0px;
   }
