@@ -132,6 +132,7 @@
 
 .questions-container .questions-description p {
   margin-top: 10px;
+  line-height: 1.2;
 }
 
 .start-btn-wrapper {
@@ -353,6 +354,9 @@
   .questions-container button {
     font-size: 14px;
     padding: 10px 40px;
+  }
+  .start-btn-wrapper button {
+    font-size: 18px;
   }
 }
 .questions-container ol button {

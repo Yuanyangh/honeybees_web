@@ -34,6 +34,16 @@
   /* Update the path based on your file structure and font format */
 }
 
+@font-face {
+  font-family: "Metal-Regular";
+  src: url("font/Metal-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SortsMillGoudy-Regular";
+  src: url("font/SortsMillGoudy-Regular.ttf");
+}
+
 @keyframes scaleDown {
   from {
     transform: scale(1.4);
@@ -1020,6 +1030,9 @@ h6 {
   .topbar .honeybeeLogo .big-logo {
     display: none !important;
   }
+  .topbar .honeybeeLogo.discovery-logo .big-logo {
+    display: block !important;
+  }
 }
 @media (max-width: 767px) {
   .topbar .honeybeeLogo .small-logo {
@@ -1457,4 +1470,16 @@ body.lock-scroll {
 
 .no-animation {
   animation: none !important;
+}
+
+.discovery-container {
+  height: 110vh;
+}
+
+.discovery-landing-container {
+  padding-bottom: 100px !important;
+}
+
+.w-60px {
+  width: 60px;
 }

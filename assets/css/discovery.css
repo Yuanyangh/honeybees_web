@@ -1,0 +1,1168 @@
+@keyframes fadeInMaskBackground {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blurAndZoomIn {
+  0% {
+    filter: blur(10px);
+    transform: scale(1.07);
+  }
+  50% {
+    filter: blur(0);
+    transform: scale(1.07);
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1.1);
+  }
+}
+@keyframes floatInStar {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); /* Start above the final position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blueAndMoveRight {
+  0% {
+    filter: blur(10px);
+    transform: scale(1.07);
+    background-position-x: -30px;
+  }
+  50% {
+    filter: blur(0);
+    transform: scale(1.07);
+    background-position-x: -30px;
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1.07);
+    background-position-x: 0px;
+  }
+}
+@keyframes blueAndMoveLeft {
+  0% {
+    filter: blur(10px);
+    transform: translateX(30px);
+  }
+  50% {
+    filter: blur(0);
+    transform: translateX(30px);
+  }
+  100% {
+    filter: blur(0);
+    transform: translateX(0px);
+  }
+}
+
+@keyframes blurAndZoomOut {
+  0% {
+    filter: blur(10px);
+    transform: scale(1.07);
+  }
+  50% {
+    filter: blur(0);
+    transform: scale(1.07);
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1.06);
+  }
+}
+@keyframes blueAndMoveCurve {
+  0% {
+    filter: blur(10px);
+    transform: translate3d(30px, -30px, 0);
+  }
+  50% {
+    filter: blur(0);
+    transform: translate3d(30px, -30px, 0);
+  }
+  60% {
+    filter: blur(0);
+    transform: translate3d(25px, -28px, 0);
+  }
+  62% {
+    transform: translate3d(23px, -27px, 0);
+  }
+  65% {
+    transform: translate3d(21px, -25px, 0);
+  }
+  70% {
+    transform: translate3d(18px, -23px, 0);
+  }
+  75% {
+    transform: translate3d(14px, -19px, 0);
+  }
+  80% {
+    transform: translate3d(12px, -18px, 0);
+  }
+  85% {
+    transform: translate3d(8px, -12px, 0);
+  }
+  90% {
+    transform: translate3d(6px, -9px, 0);
+  }
+  95% {
+    transform: translate3d(2px, -3px, 0);
+  }
+  100% {
+    filter: blur(0);
+    transform: translate3d(0px, 0px, 0);
+  }
+}
+@keyframes blueAndMoveLeftDown {
+  0% {
+    filter: blur(10px);
+    transform: translate(10px, -10px);
+  }
+  50% {
+    filter: blur(0);
+    transform: translate(10px, -10px);
+  }
+  100% {
+    filter: blur(0);
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes blueAndMoveLeftTop {
+  0% {
+    filter: blur(10px);
+    transform: translate(30px, 10px);
+  }
+  50% {
+    filter: blur(0);
+    transform: translate(30px, 10px);
+  }
+  100% {
+    filter: blur(0);
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes blueAndMoveDown {
+  0% {
+    filter: blur(10px);
+    transform: scale(1.07);
+    background-position-y: -10px;
+  }
+  50% {
+    filter: blur(0);
+    transform: scale(1.07);
+    background-position-y: -10px;
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1.07);
+    background-position-y: 0px;
+  }
+}
+
+@keyframes blueAndMoveTop {
+  0% {
+    filter: blur(10px);
+    transform: translateY(10px);
+  }
+  50% {
+    filter: blur(0);
+    transform: translateY(10px);
+  }
+  100% {
+    filter: blur(0);
+    transform: translateY(0px);
+  }
+}
+
+@keyframes blurAndZoomIn2 {
+  0% {
+    filter: blur(10px);
+    transform: scale(1.07);
+  }
+  50% {
+    filter: blur(0);
+    transform: scale(1.07);
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1.09);
+  }
+}
+@keyframes blurAndZoomOut2 {
+  0% {
+    filter: blur(10px);
+    transform: scale(1.07);
+  }
+  50% {
+    filter: blur(0);
+    transform: scale(1.07);
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1.04);
+  }
+}
+
+@keyframes floatInDescription {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px); /* Start above the final position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes selectedEffect {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes mobileBlurAndZoomOut {
+  0% {
+    filter: blur(10px);
+    transform: scale(1.07);
+  }
+  33.33% {
+    filter: blur(0);
+    transform: scale(1.07);
+  }
+  66.67% {
+    filter: blur(0);
+    transform: scale(1.06);
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1.04);
+  }
+}
+@keyframes moveToTop {
+  0% {
+    margin-bottom: -20px;
+  }
+  100% {
+    margin-bottom: 110px;
+  }
+}
+@keyframes moveToDown {
+  0% {
+    margin-bottom: 110px;
+  }
+  100% {
+    margin-bottom: -20px;
+  }
+}
+
+.honeybeeLogo.discovery-logo .small-logo {
+  opacity: 0;
+}
+.honeybeeLogo.discovery-logo .big-logo {
+  opacity: 1;
+}
+
+.honeybeeLogo.discovery-logo:hover .big-logo {
+  opacity: 0;
+  z-index: -1;
+}
+.honeybeeLogo.discovery-logo:hover .small-logo {
+  opacity: 1;
+  z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .honeybeeLogo.discovery-logo .big-logo {
+    width: 140px;
+    height: 20px;
+  }
+  .honeybeeLogo.discovery-logo .small-logo {
+    display: none !important;
+  }  
+}
+
+@media (max-width: 767px) {
+  .honeybeeLogo {
+    margin-top: 15px;    
+  }
+  .honeybeeLogo img {
+    position: relative !important;
+  }
+  .honeybeeMusic {
+    margin-top: 0px;
+    top: 15px;
+  }
+}
+
+.discovery-scene-number {
+  right: 100px;
+  font-family: "Agrandir-GrandHeavy";
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 600;
+  margin-top: 15px;
+}
+@media (min-width: 768px) {
+  .discovery-scene-number {
+    font-size: 20px;  
+    margin-right: 100px;
+    margin-top: 0px;
+  }
+}
+
+.discovery {
+  position: relative;
+  background-color: black;
+}
+@media (max-width: 767px) {
+  .discovery {
+    display: none;
+  }
+}
+
+.mobile-discovery {
+  display: block;
+  background-color: black;
+}
+@media (min-width: 768px) {
+  .mobile-discovery {
+    display: none;
+  }
+}
+
+.discovery-section {
+  width: 100%;
+  height: calc(100vh + 0px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mobile-discovery-section {
+  position: relative;
+  overflow: hidden;
+  height: 100svh;
+  max-height: -webkit-fill-available;
+}
+
+.mask-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #28446D 0%, #ee7430 100%);
+  opacity: 0;
+  animation: fadeInMaskBackground 0.5s ease-in-out forwards;
+  animation-delay: 1.5s;
+  z-index: 1;
+}
+
+.discovery-description-container {
+  position: relative;
+  margin-top: 100px;
+  opacity: 0;
+  animation: floatInDescription 0.5s ease-in-out forwards;
+  animation-delay: 2s;
+  z-index: 2;
+}
+.discovery-description-1 {
+  font-family: "SortsMillGoudy-Regular";
+  font-size: 16px;
+  color: #DABAAD;
+}
+.discovery-description-2 {
+  font-family: "Metal-Regular";
+  font-weight: 600;
+  font-size: 20px;
+  color: #eeaf30;
+}
+@media (max-width: 767px) {
+  .discovery-description-container {
+    margin-top: 60px;
+    flex-grow: 1;
+    justify-content: center;
+    max-height: calc(100svh - 80.1vw - 110px - 1rem - 60px);   /* 80.vw: height of card; 110px: margin-bottom of .mobile-discovery-cards-wrapper; 1rem: margin-top of .mobile-discovery-cards-wrapper; 60px: margin-top of .discovery-description-container*/
+  }
+  .discovery-description-1 {
+    font-size: 14px;
+  }
+  .discovery-description-2 {
+    font-size: 18px;
+  }
+}
+
+
+.discovery-cards-wrapper {
+  position: relative;
+  z-index: 2;
+  max-height: 356px;
+}
+.discovery-card-container {
+  perspective: 1000px; /* Gives the 3D effect */
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+  animation-delay: 3s;
+  width: 23vh;
+  height: 40.94vh;
+}
+.discovery-cards-wrapper.mobile-discovery-cards-wrapper {
+  /* max-height: 267px; */
+  margin-bottom: -20px;
+  animation: moveToTop 0.5s ease-in-out forwards;
+  animation-delay: 1s;
+  transition: 0.5s;
+}
+.discovery-cards-wrapper.mobile-discovery-cards-wrapper.go-to-down {
+  animation: moveToDown 0.5s ease-in-out forwards;
+}
+.discovery-cards-wrapper.mobile-discovery-cards-wrapper.go-to-top {
+  animation: moveToTop 0.5s ease-in-out forwards;
+}
+.discovery-card-container.mobile-discovery-card-container {
+  min-width: 150px;
+  min-height: 267px;
+  width: 45vw;
+  height: 80.1vw;
+  opacity: 1;
+  animation: none;
+}
+.discovery-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform-style: preserve-3d; /* Enable 3D transformation for children */
+  transition: transform 0.6s;
+  transition-delay: 0s;
+}
+.discovery-card-front, .discovery-card-back {
+  position: absolute;
+  backface-visibility: hidden; /* Hide the back side when rotated */
+  width: 100%;
+  height: 100%;
+}
+.discovery-card-face img {
+  width: 100%;
+  height: 100%;
+}
+.discovery-card-back {
+  transform: rotateY(180deg); /* Initially, the back side is flipped */
+}
+.discovery-card.flipped {
+  transform: rotateY(180deg); /* Flip the card to show the backside */
+}
+.discovery-card-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.discovery-card-wrapper.card-selected {
+  animation: selectedEffect 0.3s ease-in-out forwards;
+}
+
+.split-line {
+  margin: 0px 100px;
+  opacity: 0;
+  animation: floatInDescription 0.5s ease-in-out forwards;
+  animation-delay: 2.5s;
+}
+@media (max-width: 991px) {
+  .split-line {
+    margin: 0px 30px;
+  }
+}
+.split-line img {
+  transform: rotate(-45deg);
+}
+.vertical-text {
+  writing-mode: vertical-lr;
+  letter-spacing: 3px;
+  overflow: hidden;
+}
+
+.discovery-progress-wrapper {
+  position: relative;
+  z-index: 100;
+  margin-top: -85px;
+  margin-bottom: 37px; /* 48px: the height of button; 85px - 48px = 37px */
+  display: flex;
+}
+
+.discovery-progress-wrapper button {
+  line-height: 1;
+  background-color: #FFFBF5;
+  border: 5px solid #eeaf30;
+  box-shadow: -4px 4px 0 0 #3061ab;
+  border-radius: 25px;
+  padding: 10px 60px;
+  font-family: "Agrandir-GrandHeavy";
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  color: #29446d;
+}
+@media (max-width: 767px) {
+  .mobile-discovery-progress-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    width: calc(100% - 0px);
+    padding: 0px;
+    margin-top: -94px;
+    margin-bottom: 0px; /* 48px: the height of button; 85px - 48px = 37px */
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    background-color: #1a2c47;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .mobile-discovery-progress-wrapper button {
+    line-height: 1;
+    background-color: #FFFBF5;
+    border: 5px solid #eeaf30;
+    box-shadow: none;
+    border-radius: 25px;
+    padding: 10px 60px;
+    font-family: "Agrandir-GrandHeavy";
+    /* text-transform: uppercase; */
+    font-size: 14px;
+    color: #29446d;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile-button-wrapper {
+    padding-top: 10px;
+  }
+
+  #prevButton {
+    width: 60px;
+    padding: 10px 10px;
+  }
+}
+
+#discovery_desktop_1 {
+  background-image: url("../img/discovery/Background/1.1_dream/star_night.png");
+  animation: blurAndZoomIn 1s ease-in-out forwards;
+}
+#discovery_desktop_1_star {
+  position: absolute;
+  left: calc(50% - 264px / 2); /* 264px = 1.1 * 240px; 1.1: the scale size, 240px: the width of image */
+  top: 20vh;
+  opacity: 0;
+  animation: floatInStar 0.5s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+#discovery_desktop_2 {
+  background-image: url("../img/discovery/Background/1.2_discuss&annouce/home.png");
+  animation: blueAndMoveRight 1s ease-in-out forwards;
+  width: calc(100% + 30px);
+}
+#discovery_desktop_2_mother {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-image: url("../img/discovery/Background/1.2_discuss&annouce/mother.png");
+  animation: blueAndMoveLeft 1s ease-in-out forwards;
+}
+
+#discovery_desktop_3 {
+  background-image: url("../img/discovery/Background/1.3_nw&ltr/outside_home.png");
+  animation: blurAndZoomOut 1s ease-in-out forwards;
+  width: calc(100% + 30px);
+}
+#discovery_desktop_3_man {
+  position: absolute;
+  width: 50%;
+  height: calc(100vh + 30px);
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/discovery/Background/1.3_nw&ltr/man.png");
+  animation: blueAndMoveCurve 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+}
+#discovery_desktop_3_mother {
+  position: absolute;
+  width: 23.5vh;
+  height: 28vh;
+  left: 60%;
+  bottom: 20vh;
+  animation: blueAndMoveLeftDown 1s ease-in-out forwards;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/discovery/Background/1.3_nw&ltr/mother.png");
+}
+
+#discovery_desktop_4 {
+  background-image: url("../img/discovery/Background/1.4_job&all/grass_ground.png");
+  animation: blueAndMoveRight 1s ease-in-out forwards;
+  width: calc(100% + 30px);
+}
+#discovery_desktop_4_hands {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/discovery/Background/1.4_job&all/hands.png");
+  animation: blueAndMoveLeftTop 1s ease-in-out forwards;
+}
+
+#discovery_desktop_5 {
+  background-image: url("../img/discovery/Background/2.1_orphange_kids/house.png");
+  animation: blueAndMoveDown 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_5_kid_and_lady {
+  position: absolute;
+  width: 100%;
+  height: 42vh;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-image: url("../img/discovery/Background/2.1_orphange_kids/kid_and_lady.png");
+  animation: blurAndZoomOut 1s ease-in-out forwards;
+}
+
+#discovery_desktop_6 {
+  background-image: url("../img/discovery/Background/2.2-3_chatting_old_lady/orphan_house.png");
+  animation: blurAndZoomOut 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_6_lady {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-image: url("../img/discovery/Background/2.2-3_chatting_old_lady/lady.png");
+  animation: blueAndMoveLeft 1s ease-in-out forwards;
+}
+
+#discovery_desktop_7 {
+  background-image: url("../img/discovery/Background/2.2-3_chatting_old_lady/orphan_house.png");
+  width: calc(100% + 0px);
+  transform: scale(1.06);
+}
+#discovery_desktop_7_lady {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-image: url("../img/discovery/Background/2.2-3_chatting_old_lady/lady.png");
+}
+#discovery_desktop_7 .mask-background {
+  animation-delay: 0s !important;
+  animation: none !important;
+  opacity: 0.8 !important;
+}
+#discovery_desktop_7 .discovery-description-container {
+  animation-delay: 0s !important;
+}
+#discovery_desktop_7 .discovery-card-container {
+  animation-delay: 1s !important;
+}
+#discovery_desktop_7 .split-line {
+  animation-delay: 0.5s !important;
+}
+
+#discovery_desktop_8 {
+  background-image: url("../img/discovery/Background/2.4_buy_eggs/stall.png");
+  animation: blurAndZoomOut 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_8_grocery {
+  position: absolute;
+  width: 50%;
+  height: 50vh;
+  left: calc(25%);
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-image: url("../img/discovery/Background/2.4_buy_eggs/grocery.png");
+  animation: blurAndZoomIn 1s ease-in-out forwards;
+}
+
+#discovery_desktop_9 {
+  background-image: url("../img/discovery/Background/2.5_garden_farmers/farm.png");
+  animation: blurAndZoomOut 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_9_farmer {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-image: url("../img/discovery/Background/2.5_garden_farmers/farmer.png");
+  animation: blurAndZoomIn 1s ease-in-out forwards;
+}
+
+#discovery_desktop_10 {
+  background-image: url("../img/discovery/Background/2.6_meet_governor/mansion.png");
+  animation: blurAndZoomOut 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_10_governer {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-image: url("../img/discovery/Background/2.6_meet_governor/governer.png");
+  animation: blurAndZoomIn 1s ease-in-out forwards;
+}
+
+#discovery_desktop_11 {
+  background-image: url("../img/discovery/Background/2.7_storybook/kids.png");
+  animation: blurAndZoomOut 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_11_book {
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/discovery/Background/2.7_storybook/book.png");
+  animation: blueAndMoveTop 1s ease-in-out forwards;
+}
+
+#discovery_desktop_12 {
+  background-image: url("../img/discovery/Background/2.8_rebels/castle.png");
+  animation: blurAndZoomIn2 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_12_villager_marching {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/discovery/Background/2.8_rebels/villager_marching.png");
+  animation: blurAndZoomOut2 1s ease-in-out forwards;
+}
+
+#discovery_desktop_13 {
+  background-image: url("../img/discovery/Background/2.9_festivals/night.png");
+  animation: blurAndZoomOut 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_13_fest {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/discovery/Background/2.9_festivals/fest.png");
+  animation: blurAndZoomIn 1s ease-in-out forwards;
+}
+
+#discovery_desktop_14 {
+  background-image: url("../img/discovery/Background/2.10_argue/village.png");
+  animation: blurAndZoomOut 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_14_villager {
+  position: absolute;
+  width: 100%;
+  height: 65vh;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/discovery/Background/2.10_argue/villager.png");
+  animation: blurAndZoomIn 1s ease-in-out forwards;
+}
+
+#discovery_desktop_15 {
+  background-image: url("../img/discovery/Background/2.11_stand_up/village-side.png");
+  animation: blurAndZoomOut 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_15_man_and_old_lady {
+  position: absolute;
+  width: 40%;
+  height: 75vh;
+  left: calc(30%);
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-image: url("../img/discovery/Background/2.11_stand_up/man_and_old_lady.png");
+  animation: blurAndZoomIn 1s ease-in-out forwards;
+}
+
+#discovery_desktop_16 {
+  background-image: url("../img/discovery/Background/2.12_looking/villagers.png");
+  animation: blurAndZoomIn2 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_16_man {
+  position: absolute;
+  width: 24%;
+  height: 80vh;
+  left: calc(38%);
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/discovery/Background/2.12_looking/man.png");
+  animation: blurAndZoomOut2 1s ease-in-out forwards;
+}
+
+#discovery_desktop_17 {
+  background-image: url("../img/discovery/Background/2.13_looking_2/village-dark.png");
+  animation: blurAndZoomIn2 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_17_man {
+  position: absolute;
+  width: 24%;
+  height: 80vh;
+  left: calc(38%);
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-image: url("../img/discovery/Background/2.13_looking_2/man.png");
+  animation: blurAndZoomOut2 1s ease-in-out forwards;
+}
+
+#discovery_desktop_18 {
+  background-image: url("../img/discovery/Background/3.1_discuss/houses.png");
+  animation: blurAndZoomOut 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_18_villager {
+  position: absolute;
+  width: 90%;
+  height: 80vh;
+  left: calc(5%);
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/discovery/Background/3.1_discuss/villager.png");
+  animation: blurAndZoomIn 1s ease-in-out forwards;
+}
+
+#discovery_desktop_19 {
+  background-image: url("../img/discovery/Background/3.2_preparation/tavern.png");
+  animation: blurAndZoomOut 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_19_feast {
+  position: absolute;
+  width: 90%;
+  height: 65vh;
+  left: calc(5%);
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-image: url("../img/discovery/Background/3.2_preparation/feast.png");
+  animation: blurAndZoomIn 1s ease-in-out forwards;
+}
+
+#discovery_desktop_20 {
+  background-image: url("../img/discovery/Background/3.3_fight/castle.png");
+  animation: blurAndZoomOut 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_20_fight {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: calc(5%);
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/discovery/Background/3.3_fight/fight.png");
+  animation: blurAndZoomIn 1s ease-in-out forwards;
+}
+
+#discovery_desktop_21 {
+  background-image: url("../img/discovery/Background/3.4_lamp/lamp_1.png");
+  animation: blurAndZoomOut 1s ease-in-out forwards;
+  width: calc(100% + 0px);
+}
+#discovery_desktop_21_fight {
+  position: absolute;
+  width: 50%;
+  height: 70vh;
+  left: calc(20%);
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/discovery/Background/3.4_lamp/lamp_2.png");
+  animation: blurAndZoomIn 1s ease-in-out forwards;
+}
+
+.mobile-image-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.bottom-div {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 35vh;
+  min-height: calc(267px + 50px);
+  background-color: #29446d;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+#revealMobileButtonContainer {
+  margin-bottom: 20px;
+}
+
+#discovery_mobile_1 {
+  background-image: url("../img/discovery/Background_M/1.1.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_2 {
+  background-image: url("../img/discovery/Background_M/1.2.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_3 {
+  background-image: url("../img/discovery/Background_M/1.3.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_4 {
+  background-image: url("../img/discovery/Background_M/1.4.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_5 {
+  background-image: url("../img/discovery/Background_M/2.1.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_6 {
+  background-image: url("../img/discovery/Background_M/2.2-3.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_7 {
+  background-image: url("../img/discovery/Background_M/2.2-3.png");
+  animation: none;
+  transform: scale(1.04);
+}
+#discovery_mobile_section_7 .mask-background {
+  animation-delay: 0s !important;
+  animation: none !important;
+  opacity: 0.8 !important;
+}
+#discovery_mobile_section_7 .discovery-description-container {
+  animation-delay: 1.5s !important;
+}
+/* #discovery_mobile_section_7 .discovery-card-container {
+  animation-delay: 0s !important;
+} */
+
+#discovery_mobile_8 {
+  background-image: url("../img/discovery/Background_M/2.4.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_9 {
+  background-image: url("../img/discovery/Background_M/2.5.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_10 {
+  background-image: url("../img/discovery/Background_M/2.6.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_11 {
+  background-image: url("../img/discovery/Background_M/2.7.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_12 {
+  background-image: url("../img/discovery/Background_M/2.8.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_13 {
+  background-image: url("../img/discovery/Background_M/2.9.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_14 {
+  background-image: url("../img/discovery/Background_M/2.10.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_15 {
+  background-image: url("../img/discovery/Background_M/2.11.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_16 {
+  background-image: url("../img/discovery/Background_M/2.12.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_17 {
+  background-image: url("../img/discovery/Background_M/2.13.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_18 {
+  background-image: url("../img/discovery/Background_M/3.1.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_19 {
+  background-image: url("../img/discovery/Background_M/3.2.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_20 {
+  background-image: url("../img/discovery/Background_M/3.3.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+#discovery_mobile_21 {
+  background-image: url("../img/discovery/Background_M/3.4.png");
+  animation: mobileBlurAndZoomOut 1.5s ease-in-out forwards;
+}
+
+.custom-progress {
+  height: 40px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid #FFFBF5;
+  overflow: hidden;
+  position: relative;
+  width: 60%;
+  margin: auto;
+}
+
+.custom-progress .progress-bar {
+  background: linear-gradient(90deg, #ffa500, #ff4500);
+  border-radius: 20px;
+  align-items: end;
+  min-width: 50px;
+}
+
+.custom-progress .progress-bar img {
+  margin-right: 10px;
+}
+
+@media (max-width: 991px) {
+  .custom-progress {
+    width: 42%;
+  }
+  .custom-progress .progress-bar {
+    min-width: 40px;
+  }
+  .custom-progress .progress-bar img {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-progress {
+    width: 80%;
+    height: 10px;
+    margin-top: 10px;
+    border: none;
+  }
+  .custom-progress .progress-bar {
+    height: 10px;
+    min-width: 30px;
+  }
+}
