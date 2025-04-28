@@ -15,6 +15,7 @@ var choices = new Array(20).fill(Choice.NON_SELECT);
 const discoveryCards = document.querySelectorAll('.discovery-card');
 
 let isTransitioning = false;
+let isGettingResult = false;
 
 discoveryCards.forEach(card => {
   card.addEventListener('click', function () {
@@ -92,8 +93,10 @@ function onNext() {
   setWidthOfProgressBar();
 }
 
-function onReveal() {
-  this.getDiscoveryResult();
+async function onReveal() {
+  setGettingResultState(true);
+  await this.getDiscoveryResult();
+  setGettingResultState(false);
 }
 
 function showPrevNextButtons() {
@@ -203,7 +206,21 @@ function Init() {
   showPrevNextButtons();
 }
 
-function getDiscoveryResult () {
+function setGettingResultState(isGettingResult) {
+  isGettingResult = isGettingResult;
+  const revealButtons = document.querySelectorAll('.' + 'reveal-button');
+  if (isGettingResult) {
+    revealButtons.forEach(button => {
+      button.disabled = true;
+    });
+  } else {
+    revealButtons.forEach(button => {
+      button.disabled = false;
+    });
+  }
+}
+
+async function getDiscoveryResult () {
   const quiz_user = JSON.parse(localStorage.getItem('quiz_user'));
   const payload = {
     first_name: quiz_user?.first_name,
@@ -212,10 +229,10 @@ function getDiscoveryResult () {
     email: quiz_user?.email,
     quizAnswer: []
   };
-  for ( i = 1; i <=20; i ++) {
-    if ( choices[i-1] === Choice.A )
+  for (let i = 1; i <= 20; i++) {
+    if (choices[i - 1] === Choice.A)
       payload.quizAnswer.push(1);
-    else if ( choices[i-1] === Choice.B )
+    else if (choices[i - 1] === Choice.B)
       payload.quizAnswer.push(-1);
     else
       payload.quizAnswer.push(0);
@@ -223,34 +240,33 @@ function getDiscoveryResult () {
 
   const apiEndpoint = 'https://honeybees-crm.com/api/websiteQuizMindReaderPost';
 
-  fetch(apiEndpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(payload)
-  })
-  .then(response => {
+  try {
+    const response = await fetch(apiEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
     if (!response.ok) {
       throw new Error('Network response was not ok ' + response.statusText);
     }
-    return response.json();
-  })
-  .then(result => {
+
+    const result = await response.json();
     localStorage.setItem('quiz_result', JSON.stringify(result));
-    // Redirect to another page
-    if ( (result?.personality && result?.ratios && result?.description && result?.recommendation) ) {
+
+    if (result?.personality && result?.ratios && result?.description && result?.recommendation) {
       window.location.assign("./result.html");
     } else {
       console.log(result);
-      alert(result?.error);
+      // alert(result?.error);
     }
-  })
-  .catch(error => {
+  } catch (error) {
     console.error('Error:', error);
-  });
-
+  }
 }
+
 
 Init();
 
