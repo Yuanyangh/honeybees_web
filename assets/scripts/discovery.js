@@ -222,13 +222,17 @@ function setGettingResultState(isGettingResult) {
 
 async function getDiscoveryResult () {
   const quiz_user = JSON.parse(localStorage.getItem('quiz_user'));
+  const urlParams = new URLSearchParams(window.location.search);
+  const token = urlParams.get('token');
   const payload = {
     first_name: quiz_user?.first_name,
     last_name: quiz_user?.last_name,
     mobile: quiz_user?.mobile,
     email: quiz_user?.email,
+    token: token,
     quizAnswer: []
   };
+
   for (let i = 1; i <= 20; i++) {
     if (choices[i - 1] === Choice.A)
       payload.quizAnswer.push(1);

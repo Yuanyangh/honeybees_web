@@ -316,7 +316,13 @@
           email: $('#email').val()
           };
         localStorage.setItem('quiz_user', JSON.stringify(user));
-        window.location.assign('./discovery-questions.html');
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get('token');
+        let url = './discovery-questions.html';
+        if (token) {
+          url += '?token='+token;
+        }
+        window.location.assign(url);
       }
     </script>
   </body>
