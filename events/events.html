@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Honeybees | THE BIG BUZZ</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/x-icon" href="../images/favicon-32x32.ico">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../honey.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/navbtn.css" />
+    <link rel="stylesheet" href="../assets/css/modal.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/css/events.css" />
+    
+    <!-- Swiper's JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="../assets/scripts/navbtn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+    <script src="../assets/scripts/lottie-dark.js"></script>
+    <script src="../assets/scripts/modal.js"></script>
+  </head>
+
+  <body style="background-color: #fff4d5">
+    <div class="topbar">
+      <a href="../index.html" class="honeybeeLogo">
+        <img class="big-logo" src="../assests/Honeybees_logo.svg" alt="HoneybeeLogo">
+        <img class="small-logo" src="../assests/logo_white_small.png" alt="Small HoneybeeLogo">
+      </a>
+      <div class="honeybeeMusic">
+        <div class="music-icon" onclick="toggleSound()">
+          <div class="lottie-sound" id="lottie-sound"></div>
+          <!-- <img
+            class="playing-music"
+            src="../assests/music_light.svg"
+            alt="Music"
+          /> -->
+          <img
+            class="mute-music"
+            src="../assests/music_light_mute.svg"
+            alt="Mute Music"
+          />
+        </div>
+        <!-- <div class="music-icon-description" id="music_icon_description">
+          <img class="d-block" src="../assets/img/music_icon_quote.png" alt="quote"/>
+          <span class="music-icon-description-quote-text">
+            vibee with us
+          </span>
+        </div> -->
+        <audio
+          id="myAudio"
+          src="../HB_assest/good-night-160166.mp3"
+          loop
+        ></audio>
+      </div>
+    </div>
+    <button id="toggleModalBtn" class="mobile-nav-btn">
+      <div class="menu">
+        <svg width="30px" viewBox="0 0 100 100">
+          <path class="line-honeybee-black line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+          <path class="line-honeybee-black line2" d="M 20,50 H 80" />
+          <path class="line-honeybee-black line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+      </div>
+    </button>
+    <navbar class="know-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div>
+              <a href="../index.html" id="homeButton" class="home-btn">
+                  HOME
+              </a>
+              <a href="../about.html" id="aboutButton" class="about-btn text-nowrap">
+                  ABOUT US
+              </a>
+              <a href="../career.html" id="careerButton" class="career-btn">
+                  CAREER
+              </a>
+              <a href="../discovery.html" id="knowButton" class="know-btn text-nowrap">
+                  DISCOVERY
+              </a>
+              <!-- <a href="../fearless.html" id="fearlessButton" class="fearless-btn text-nowrap">
+                  Be Fearless
+              </a> -->
+            </div>
+              <!-- <a href="../#" class="nav-adv"><img src="asssets/Group 149.png" alt=""></a> -->
+          </div>
+        </div>
+      </div>
+    </navbar>
+    <main class="events big-buzz">
+      <div class="events-inner">
+        <div class="container">
+          <div class="position-relative d-flex justify-content-center">
+            <div class="caption-div text-center">
+              <h1 class="events-title">🎀 The Big Buzz 🎀</h1>
+            </div>
+          </div>
+          <div class="position-relative d-flex flex-column justify-content-center align-items-center">
+            <div class="swiper eventSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_1.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_2.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_3.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_4.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_5.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_6.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_7.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_8.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_9.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_10.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_11.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_12.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_13.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_14.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_15.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_16.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_17.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_18.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_19.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_20.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_21.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_22.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_23.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_24.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_25.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/events/events_26.webp" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="d-flex flex-column events-desc-wrapper" style="text-align:center">
+              <span class="event-item events-desc mt-4">From movie nights to ballroom dinners with performances, we love creating moments that go beyond business!</span>
+              <span class="event-item events-desc mt-4">Every event we host is a chance to connect, celebrate and make memories that last.</span>
+              <span class="event-item events-desc mt-4">Most importantly, it’s our way of showing appreciation to our clients for their trust in us - because they deserve nothing less.</span>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <section class="frame-section about_footer">
+      <div class="mask-group-parent-wrapper" id="footer">
+        <div class="footer-wrapper">
+          <div class="footer">
+            <div class="footer-inner">
+              <form id="buzzForm" class="drop-your-question-and-email-o-parent">
+                 <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAYHorMhUNVcwODBXMUNJNEU0NjJKSzlNOTdKNDk4Ti4u" target="_blank"><h2 class="drop-your-question" id="demo"> <h2></h2></a>
+                <!-- <div class="input-details-group-parent">
+                  <div class="title_filed">
+                      <input class="input-details-group yourtitle" type="text" placeholder="Your Title" />
+                      <img class="icon-chevron-bottom" alt="" src="./assests/Vector.png" />
+                  </div>
+  
+                  <div class="name_field">
+                      <input id="buzz_name" class="input-details-group yourname" type="text" placeholder="Your Name..." />
+                  </div>
+                </div>
+                <div class="group-div">
+                    <div class="frame-child5"></div>
+                    <input id="buzz_email" class="your-email" placeholder="Your Email..." type="text" />
+                </div>
+                <div class="rectangle-parent3">
+                  <textarea id="message" class="whats-on-your" placeholder="What’s On Your Mind?" rows="2"></textarea>
+                  <button type="submit" id="buzzSubmitButton" class="send-wrapper">
+                    <div class="send">send</div>
+                  </button>
+                </div> -->
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="rematch-quote">
+          <div class="authorized-representation-a-i">
+            <h2 class="i-think-we">
+              #NOSTINGSATTACHED
+            </h2>
+          </div>
+          <div class="social-media-icons">
+            <a href="https://sg.linkedin.com/company/honeybees-org" target="_blank"><img class="icon-linkedin" loading="eager" alt="" src="../assests/sameediconlinkedin.png" /></a>
+            <a href="https://www.instagram.com/honeybees.sg" target="_blank"><img class="icon-instagram" loading="eager" alt="" src="../assests/sameediconinstagram.png" /></a>
+            <!-- <img class="icon-facebook-squared" loading="eager" alt=""
+                src="../assests/sameed-iconfacebooksquared.png" /> -->
+          </div>
+        </div>
+        <div class="disclaimer-container">
+          <div class="disclaimer-detail">
+            <p>This is not the official website of AIA Financial Advisers Private Limited (Reg. No. 201715016G) (AIA FA). AIA FA disclaims all warranties of merchantability and fitness for purpose of the materials on this website. AIA FA makes no warranties or representations as to the results of the use of the materials on this website in terms of their correctness, accuracy and reliability. Nothing on this website should be regarded as an offer or solicitation to sell insurance products in any country to any person to whom it is unlawful to make such an invitation or solicitation in such a country.</p>
+            <p>Terms of Use. (1) All trademarks, service marks, trade names, product names, icons and logos of AIA FA are owned by AIA FA and may not be used without prior written permission from AIA FA. (2) All AIA products and AIA FA services referred to in this website (or linked thereto to the website) known as www.honeybees.sg (the “Agency Website”) are offered only in countries where such products and services may lawfully be offered by AIA Singapore and AIA FA respectively. (3) Neither the Agency Website nor the link to the products or services on AIA FA’s corporate website should be regarded as an offer to sell or a solicitation to buy any insurance productor other products of AIA Singapore or services of AIA FA. (4) No warranties regarding non-infringement of third party rights, security, accuracy, fitness for purpose, merchantability or freedom from computer viruses in the Agency Website or the AIA FA corporate website (linked thereto) are given by AIA FA.</p>
+          </div>
+          <div class="terms-conditions-wrapper">
+            <!-- <span class="terms-conditions-link" onclick="showTermsModal()">Terms & Conditions</span> -->
+            <span>© 2022 by SP-HONEYBEES</span>
+          </div>
+        </div>
+        <!-- <div class="authorized-representative-msg">
+            <div class="sp-honeybees-is-an-container">
+                <p class="sp-honeybees-is-an">
+                    SP-HONEYBEES is an authorised representative of AIA
+                    Singapore Private Limited (Reg. No. 201106386R)
+                </p>
+                <p class="by-sp-honeybees">© 2022 by SP-HONEYBEES</p>
+            </div>
+        </div> -->
+      </div>
+    </section>
+    <div id="termsModal" class="terms-modal hide" onclick="onCloseTerms()">
+      <div class="terms-modal-content" onclick="event.stopPropagation()">
+        <div class="terms-message">
+          <img class="close-terms-icon" src="../assets/img/Close_round.png" alt="close" onclick="onCloseTerms()"/>
+          <p>Terms & Conditions</p>
+          <span class="mt-2">Terms of Use. (1) All trademarks, service marks, trade names, product names, icons and logos of AIA FA are owned by AIA FA and may not be used without prior written permission from AIA FA. (2) All AIA products and AIA FA services referred to in this website (or linked thereto to the website) known as www.honeybees.sg (the “Agency Website”) are offered only in countries where such products and services may lawfully be offered by AIA Singapore and AIA FA respectively. (3) Neither the Agency Website nor the link to the products or services on AIA FA’s corporate website should be regarded as an offer to sell or a solicitation to buy any insurance productor other products of AIA Singapore or services of AIA FA. (4) No warranties regarding non-infringement of third party rights, security, accuracy, fitness for purpose, merchantability or freedom from computer viruses in the Agency Website or the AIA FA corporate website (linked thereto) are given by AIA FA.</span>
+        </div>
+      </div>
+    </div>
+    <div id="submittedModal" class="submitted-modal hide" onclick="onClose()">
+      <div class="submitted-modal-content" onclick="event.stopPropagation()">
+        <img class="submitted-bg d-none d-md-block" src="../assets/img/submitted_quote.png" alt="submitted quote" />
+        <img class="submitted-bg d-block d-md-none" src="../assets/img/mobile_submitted_quote.png" alt="mobile submitted quote" />
+        <div class="submitted-message">
+          <img class="close-icon" src="../assets/img/Close_round.png" alt="close" onclick="onClose()"/>
+          <img class="bee-icon" src="../assets/img/bee-logo.gif" alt="bee"/>
+          <p>Submitted!</p>
+          <span class="mt-1">We will buzz you soon!</span>
+        </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="topbar">
+          <div class="honeybeeLogo">
+            <img src="../assests/Honeybees_logo (1).png" alt="" />
+          </div>
+        </div>
+        <div class="nav-modal-link-content">
+          <a href="../index.html" class="nav-modal-link">
+            HOME
+          </a>
+          <a href="../about.html" class="nav-modal-link text-nowrap">
+            ABOUT US
+          </a>
+          <a href="../career.html" class="nav-modal-link">
+            CAREER
+          </a>
+          <a href="../discovery.html" class="nav-modal-link text-nowrap">
+            DISCOVERY
+          </a>
+          <!-- <a href="../fearless.html" class="nav-modal-link-last text-nowrap">
+            Be Fearless
+          </a> -->
+        </div>
+        <div>
+          <!-- <button class="close-nav-modal">
+            <img src="../assets/img/Close_round.png" alt="close" />
+            <span>Close</span>
+          </button> -->
+          <div class="mobile-modal-upcoming">
+            <img src="../asssets/Group 149.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../assets/scripts/sound.js"></script>
+    <script src="../assets/scripts/buzzaction.js"></script>
+    <script src="../assets/scripts/events.js"></script>
+    <script>
+        const images = [
+          "../assets/img/events/swiper_imgs/events/events_1.webp",
+          "../assets/img/events/swiper_imgs/events/events_2.webp",
+          "../assets/img/events/swiper_imgs/events/events_3.webp",
+          "../assets/img/events/swiper_imgs/events/events_4.webp",
+          "../assets/img/events/swiper_imgs/events/events_5.webp",
+          "../assets/img/events/swiper_imgs/events/events_6.webp",
+          "../assets/img/events/swiper_imgs/events/events_7.webp",
+          "../assets/img/events/swiper_imgs/events/events_8.webp",
+          "../assets/img/events/swiper_imgs/events/events_9.webp",
+          "../assets/img/events/swiper_imgs/events/events_10.webp",
+          "../assets/img/events/swiper_imgs/events/events_11.webp",
+          "../assets/img/events/swiper_imgs/events/events_12.webp",
+          "../assets/img/events/swiper_imgs/events/events_13.webp",
+          "../assets/img/events/swiper_imgs/events/events_14.webp",
+          "../assets/img/events/swiper_imgs/events/events_15.webp",
+          "../assets/img/events/swiper_imgs/events/events_16.webp",
+          "../assets/img/events/swiper_imgs/events/events_17.webp",
+          "../assets/img/events/swiper_imgs/events/events_18.webp",
+          "../assets/img/events/swiper_imgs/events/events_19.webp",
+          "../assets/img/events/swiper_imgs/events/events_20.webp",
+          "../assets/img/events/swiper_imgs/events/events_21.webp",
+          "../assets/img/events/swiper_imgs/events/events_22.webp",
+          "../assets/img/events/swiper_imgs/events/events_23.webp",
+          "../assets/img/events/swiper_imgs/events/events_24.webp",
+          "../assets/img/events/swiper_imgs/events/events_25.webp",
+          "../assets/img/events/swiper_imgs/events/events_26.webp",
+        ];
+
+        var swiper = new Swiper(".eventSwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          loop: true,
+          slidesPerView: 1,
+          coverflowEffect: {
+            rotate: 10,
+            stretch: 10,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true
+          },
+          // autoHeight: (window.innerWidth < 992) ? true : false,
+          autoHeight: false,
+          autoplay: { delay: 10000, disableOnInteraction: false },  // 10000 milisecond
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+              return (
+                '<span class="pagination-image ' + className + '" role="button" aria-label="Go to slide ' + (index + 1) + '">' +
+                  '<img class="d-none d-lg-block" src="' + images[index] + '" alt="' + images[index] + '">' +
+                '</span>'
+              );
+            },
+          },
+        });
+    </script>
+  </body>
+</html>
