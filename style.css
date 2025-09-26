@@ -1001,6 +1001,7 @@ h6 {
 }
 .topbar {
   position: fixed;
+  pointer-events: none;
   z-index: 100;
   top: 0;
   left: 0;
@@ -1014,6 +1015,7 @@ h6 {
 .topbar .honeybeeLogo {
   cursor: pointer;
   position: relative;
+  pointer-events: auto;
   height: 29px;
 }
 .topbar .honeybeeLogo .big-logo {
@@ -1059,6 +1061,7 @@ h6 {
 
 .honeybeeMusic {
   position: absolute;
+  pointer-events: auto;
   right: 20px;
 }
 /* contact */
@@ -1267,6 +1270,22 @@ h6 {
 
 .mt-24 {
   margin-top: 96px;
+}
+
+.mt-20px {
+  margin-top: 20px;
+}
+
+.mb-n20px {
+  margin-bottom: -20px;
+}
+
+.mt-n30px {
+  margin-top: -30px;
+}
+
+.mb-30px {
+  margin-bottom: 30px;
 }
 
 .fadeOut-scale {
@@ -1482,4 +1501,70 @@ body.lock-scroll {
 
 .w-60px {
   width: 60px;
+}
+
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.tab-button {
+  position: relative;
+  border: none !important;
+  line-height: 1;
+  font-size: 45px;
+  background: none;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.tab-button:active, .tab-button:focus {
+  border: none !important;
+  outline: none !important;
+}
+.tab-button.active {
+  background: none;
+  color: white;
+}
+.tab-content {
+  display: none !important;
+}
+.tab-content.active {
+  display: block !important;
+} 
+.divider-line {
+  width: 4px;
+  height: 45px;
+  background-color: black;
+}
+/* .tab-button:not(:last-child):after {
+  position: absolute;
+  right: calc(-0.5rem - 2px);
+  content: '';
+  width: 4px;
+  height: 45px;
+  background-color: white;
+}
+.tab-button.active:not(:last-child):after {
+  background-color: black;
+} */
+@media (max-width: 767px) {
+  .tab-button {
+    font-size: 30px;
+  }
+  .divider-line {
+    height: 30px;
+  }
+}
+
+navbar {
+  z-index: 999 !important;
+  pointer-events: none;
+}
+
+navbar .container .col-12 div {
+  pointer-events: auto;
 }

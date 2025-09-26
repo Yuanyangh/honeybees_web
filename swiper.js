@@ -4,7 +4,7 @@ $(document).ready(async function () {
       name: "Agnes Lew",
       image: "assets/img/TeamMembers/Agnes_Lew.png",
       role: ["Senior Personal Wealth Manager"],
-      qualification: ["5x MDRT Qualifier"],
+      qualification: ["4x MDRT Qualifier"],
       description: `
         Before joining Honeybees, I worked as a sales associate at a logistics company, where the daily grind felt uninspiring.
         <br><br>
@@ -19,7 +19,7 @@ $(document).ready(async function () {
       name: "Ian Lin",
       image: "assets/img/TeamMembers/Ian_Lin.png",
       role: ["Personal Wealth Manager"],
-      qualification: ["2x COT Qualifier", "4x MDRT Qualifier"],
+      qualification: ["3x COT Qualifier", "8x MDRT Qualifier"],
       description: `
         Despite graduating from NUS with a Chemical Engineering degree, I decided to enter the insurance industry, and prior to joining Honeybees, I had briefly worked with another insurer and even considered a career as a civil servant.
         <br><br>
@@ -34,7 +34,7 @@ $(document).ready(async function () {
       name: "Wang Yaxiang",
       image: "assets/img/TeamMembers/Wang_Yaxiang.png",
       role: ["Senior Personal Wealth Manager"],
-      qualification: ["1x COT Qualifier", "4x MDRT Qualifier"],
+      qualification: ["3x COT Qualifier", "7x MDRT Qualifier"],
       description: `
         Work life before Honeybees primarily involved desk-bound tasks in the finance department at a listed company. 
         <br><br>
@@ -51,7 +51,7 @@ $(document).ready(async function () {
       name: "Kylie Ng",
       image: "assets/img/TeamMembers/Kylie_Ng.png",
       role: ["Financial Services Consultant"],
-      qualification: ["2x MDRT Qualifier"],
+      qualification: ["5x MDRT Qualifier"],
       description: `
         I was a second-year SMU undergraduate balancing studies with part-time roles in the F&B industry and tutoring when I joined Honeybees.
         <br><br>
@@ -68,7 +68,7 @@ $(document).ready(async function () {
       name: "Kenneth Chng",
       image: "assets/img/TeamMembers/Kenneth_Chng.png",
       role: ["Personal Wealth Manager"],
-      qualification: ["3x MDRT Qualifier"],
+      qualification: ["5x MDRT Qualifier"],
       description: `
         I was a fresh graduate interning at a bank before joining Honeybees.
         <br><br>
@@ -83,7 +83,7 @@ $(document).ready(async function () {
       name: "Pamela Ng",
       image: "assets/img/TeamMembers/Pamela_Ng.png",
       role: ["Senior Personal Wealth Manager"],
-      qualification: ["2x MDRT Qualifier"],
+      qualification: ["4x MDRT Qualifier"],
       description: `
         Financial advisory wasn’t a career path I’d imagined for myself, but I gave it a chance after discovering I have a knack for connecting with strangers while working as a telemarketer. It’s been over 15 years since I started on this journey with a different insurer, and now I’m happily part of Honeybees.
         <br><br>
@@ -98,7 +98,7 @@ $(document).ready(async function () {
       name: "Jacqueline Tan",
       image: "assets/img/TeamMembers/Jacqueline_Tan.png",
       role: ["Personal Wealth Manager"],
-      qualification: ["2x MDRT Qualifier"],
+      qualification: ["1x COT Qualifier", "4x MDRT Qualifier"],
       description: `
         I had spent eight years in the hospitality and healthcare sectors before deciding to do a mid-career switch to financial advisory. The transition was inspired by a reunion with a college friend, Ryan, who is now my mentor and manager at Honeybees. Witnessing his growth as an individual helped me see my untapped potential, which was what made me take the leap of faith. Today, I am proud to be an Associate Director, contributing to our mission of protecting lives, preserving wealth and piloting dreams.
         <br><br>
@@ -113,7 +113,7 @@ $(document).ready(async function () {
       name: "Goh Li Ying",
       image: "assets/img/TeamMembers/Goh_Li_Ying.png",
       role: ["Financial Services Consultant"],
-      qualification: ["2x MDRT Qualifier"],
+      qualification: ["4x MDRT Qualifier"],
       description: `
         I was a fresh graduate from the University of New South Wales with a bachelor’s degree in Commerce specialising in Finance and Management, and I was looking for a job in the finance sector when I had an opportunity to speak to my current mentor through a friend’s referral.
         <br><br>
@@ -128,7 +128,7 @@ $(document).ready(async function () {
       name: "Lim Yu Heng",
       image: "assets/img/TeamMembers/Lim_Yu_Heng.png",
       role: ["Personal Wealth Manager"],
-      qualification: ["2x MDRT Qualifier"],
+      qualification: ["4x MDRT Qualifier"],
       description: `
         I was a sales engineer with a degree in Mechanical Engineering enjoying a comfortable life before joining Honeybees.
         <br><br>
