@@ -236,15 +236,15 @@
     height: 100%;
 }
 
-.big-buzz .swiper {
-    padding-bottom: 50px;
-}
-
 .bees-go-brrrrrr .tab-content.active.swiper#events-2024 {
     padding-bottom: 50px;
 }
 
 .bees-care .tab-content.active.swiper#events-2024 {
+    padding-bottom: 50px;
+}
+
+.big-buzz .tab-content.active.swiper#events-2024 {
     padding-bottom: 50px;
 }
 
