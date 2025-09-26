@@ -1001,6 +1001,7 @@ h6 {
 }
 .topbar {
   position: fixed;
+  pointer-events: none;
   z-index: 100;
   top: 0;
   left: 0;
@@ -1014,6 +1015,7 @@ h6 {
 .topbar .honeybeeLogo {
   cursor: pointer;
   position: relative;
+  pointer-events: auto;
   height: 29px;
 }
 .topbar .honeybeeLogo .big-logo {
@@ -1059,6 +1061,7 @@ h6 {
 
 .honeybeeMusic {
   position: absolute;
+  pointer-events: auto;
   right: 20px;
 }
 /* contact */
