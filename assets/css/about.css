@@ -259,11 +259,11 @@ body {
 }
 
 .his-line-img img {
-  width: 90vw;
+  width: 93vw;
 }
 
 .his-line-img.line-mask.show {
-  animation: revealLine 2s ease forwards; /* Adjust animation duration */
+  animation: revealLine 3s ease forwards; /* Adjust animation duration */
   transform-origin: left center;
 }
 
