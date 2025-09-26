@@ -1512,7 +1512,7 @@ body.lock-scroll {
   line-height: 1;
   font-size: 45px;
   background: none;
-  color: white;
+  color: black;
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
@@ -1524,7 +1524,7 @@ body.lock-scroll {
 }
 .tab-button.active {
   background: none;
-  color: black;
+  color: white;
 }
 .tab-content {
   display: none !important;
@@ -1535,7 +1535,7 @@ body.lock-scroll {
 .divider-line {
   width: 4px;
   height: 45px;
-  background-color: white;
+  background-color: black;
 }
 /* .tab-button:not(:last-child):after {
   position: absolute;
