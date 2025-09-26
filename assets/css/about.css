@@ -278,7 +278,7 @@ body {
 }
 
 .his-mobile-line-img.line-mask.show {
-  animation: revealVerticalLine 2s ease forwards; /* Adjust animation duration */
+  animation: revealVerticalLine 3s ease forwards; /* Adjust animation duration */
   transform-origin: top center;
 }
 
