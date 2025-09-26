@@ -1559,3 +1559,11 @@ body.lock-scroll {
     height: 30px;
   }
 }
+
+navbar {
+  pointer-events: none;
+}
+
+navbar .container .col-12 div {
+  pointer-events: auto;
+}
