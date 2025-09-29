@@ -111,13 +111,48 @@
             </div>
           </div>
           <div class="tabs justify-content-center">
-            <button class="tab-button active" data-tab="events-2024">2024</button>
+            <button class="tab-button active" data-tab="events-2025">2025</button>
+            <div class="divider-line"></div>
+            <button class="tab-button" data-tab="events-2024">2024</button>
             <div class="divider-line"></div>
             <button class="tab-button" data-tab="events-2023">2023</button>
           </div>
 
           <div class="position-relative d-flex flex-column justify-content-center align-items-center">
-            <div class="swiper eventSwiper tab-content active" id="events-2024">
+            <div class="swiper eventSwiper tab-content active" id="events-2025">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2025/2025_beewards_night_1.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2025/2025_beewards_night_2.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2025/2025_beewards_night_3.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2025/2025_beewards_night_4.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2025/2025_beewards_night_5.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2025/2025_beewards_night_6.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2025/2025_beewards_night_7.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2025/2025_beewards_night_8.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2025/2025_beewards_night_9.webp" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="swiper eventSwiper tab-content" id="events-2024">
               <div class="swiper-wrapper">
                 <div class="swiper-slide event-item">
                   <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2024/2024_beewards_night_1.webp" alt="">
@@ -139,6 +174,18 @@
                 </div>
                 <div class="swiper-slide event-item">
                   <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2024/2024_beewards_night_7.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2024/2024_beewards_night_8.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2024/2024_beewards_night_9.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2024/2024_beewards_night_10.webp" alt="">
+                </div>
+                <div class="swiper-slide event-item">
+                  <img class="events-img-wrapper" src="../assets/img/events/swiper_imgs/beewards_night/2024/2024_beewards_night_11.webp" alt="">
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -382,7 +429,8 @@
       }
 
       initSwiper("2023", 11);
-      initSwiper("2024", 7);
+      initSwiper("2024", 11);
+      initSwiper("2025", 9);
 
       document.querySelectorAll(".tab-button").forEach(btn => {
         btn.addEventListener("click", () => {
