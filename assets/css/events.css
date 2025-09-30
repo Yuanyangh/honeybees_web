@@ -123,8 +123,8 @@
 
 /* MERRY BEEMAS page */
 
-.merry-beemas-2024 {
-    background: linear-gradient(180deg, #D1585233 10%, #D1585233 20%, #D15852FF 80%, #D15852FF 100%), url("../img/events/merry_beemas_2024/bg_beemas.png");
+.merry-beemas {
+    background: linear-gradient(180deg, #D1585233 10%, #D1585233 20%, #D15852FF 80%, #D15852FF 100%), url("../img/events/merry_beemas/merry_beemas.webp");
     background-size: cover !important;
     background-position: top !important;
     background-repeat: no-repeat !important;
@@ -132,8 +132,8 @@
 }
 
 @media (max-width: 992px) {
-    .merry-beemas-2024 {
-        background: linear-gradient(180deg, #D1585233 10%, #D1585233 20%, #D15852FF 50%, #D15852FF 100%), url("../img/events/merry_beemas_2024/mobile/mobile_bg_beemas.png");
+    .merry-beemas {
+        background: linear-gradient(180deg, #D1585233 10%, #D1585233 20%, #D15852FF 50%, #D15852FF 100%), url("../img/events/merry_beemas/merry_beemas.webp");
     }
 }
 
@@ -141,7 +141,7 @@
 
 /* BEEWARDS NIGHT page */
 
-.bees-awards {
+.spotlight-moments {
     background: linear-gradient(180deg, #3B6CC733 10%, #3B6CC733 20%, #3B6CC7FF 80%, #3B6CC7FF 100%), url("../img/events/bees_awards/bg_bees_awards.png");
     background-size: cover !important;
     background-position: top !important;
@@ -150,7 +150,7 @@
 }
 
 @media (max-width: 992px) {
-    .bees-awards {
+    .spotlight-moments {
         background: linear-gradient(180deg, #3B6CC733 10%, #3B6CC733 20%, #3B6CC7FF 50%, #3B6CC7FF 100%), url("../img/events/bees_awards/mobile/mobile_bg_bees_awards.png");
     }
 }
@@ -159,8 +159,8 @@
 
 /* SENSE OF BEELONGING page */
 
-.bees-on-the-sea {
-    background: linear-gradient(180deg, #F4BF5233 10%, #F4BF5233 20%, #F4BF52FF 80%, #F4BF52FF 100%), url("../img/events/bees_on_the_sea/bg_sea.png");
+.hive-goals {
+    background: linear-gradient(180deg, #F4BF5233 10%, #F4BF5233 20%, #F4BF52FF 80%, #F4BF52FF 100%), url("../img/events/bees_on_the_sea/hive_goals.webp");
     background-size: cover !important;
     background-position: top !important;
     background-repeat: no-repeat !important;
@@ -168,8 +168,8 @@
 }
 
 @media (max-width: 992px) {
-    .bees-on-the-sea {
-        background: linear-gradient(180deg, #F4BF5233 10%, #F4BF5233 20%, #F4BF52FF 50%, #F4BF52FF 100%), url("../img/events/bees_on_the_sea/mobile/mobile_bg_sea.png");
+    .hive-goals {
+        background: linear-gradient(180deg, #F4BF5233 10%, #F4BF5233 20%, #F4BF52FF 50%, #F4BF52FF 100%), url("../img/events/bees_on_the_sea/hive_goals.webp");
     }
 }
 
@@ -177,8 +177,8 @@
 
 /* HAPPY BEECATION page */
 
-.bees-go-brrrrrr {
-    background: linear-gradient(180deg, #D47B4133 10%, #D47B4133 20%, #D47B41FF 80%, #D47B41FF 100%), url("../img/events/bees_go_brrrrrr/bg_go_brrrrrr.png");
+.ready-set-fly {
+    background: linear-gradient(180deg, #D47B4133 10%, #D47B4133 20%, #D47B41FF 80%, #D47B41FF 100%), url("../img/events/bees_go_brrrrrr/ready_set_fly.webp");
     background-size: cover !important;
     background-position: top !important;
     background-repeat: no-repeat !important;
@@ -186,8 +186,8 @@
 }
 
 @media (max-width: 992px) {
-    .bees-go-brrrrrr {
-        background: linear-gradient(180deg, #D47B4133 10%, #D47B4133 20%, #D47B41FF 50%, #D47B41FF 100%), url("../img/events/bees_go_brrrrrr/mobile/mobile_bg_go_brrrrrr.png");
+    .ready-set-fly {
+        background: linear-gradient(180deg, #D47B4133 10%, #D47B4133 20%, #D47B41FF 50%, #D47B41FF 100%), url("../img/events/bees_go_brrrrrr/ready_set_fly.webp");
     }
 }
 
@@ -195,7 +195,7 @@
 
 /* VOLUNBEEING MATTERS page */
 
-.bees-care {
+.hearts-in-action {
     background: linear-gradient(180deg, #2F436A33 10%, #2F436A33 20%, #2F436AFF 80%, #2F436AFF 100%), url("../img/events/bees_care/bg_bees_care.png");
     background-size: cover !important;
     background-position: top !important;
@@ -204,7 +204,7 @@
 }
 
 @media (max-width: 992px) {
-    .bees-care {
+    .hearts-in-action {
         background: linear-gradient(180deg, #2F436A33 10%, #2F436A33 20%, #2F436AFF 50%, #2F436AFF 100%), url("../img/events/bees_care/mobile/mobile_bg_bees_care.png");
     }
 }
@@ -214,7 +214,7 @@
 /* THE BIG BUZZ page */
 
 .big-buzz {
-    background: linear-gradient(180deg, #2F436A33 10%, #2F436A33 20%, #2F436AFF 80%, #2F436AFF 100%), url("../img/events/events/bg_events.webp");
+    background: linear-gradient(180deg, #2F436A33 10%, #2F436A33 20%, #2F436AFF 80%, #2F436AFF 100%), url("../img/events/events/the_big_buzz.webp");
     background-size: cover !important;
     background-position: top !important;
     background-repeat: no-repeat !important;
@@ -223,7 +223,7 @@
 
 @media (max-width: 992px) {
     .big-buzz {
-        background: linear-gradient(180deg, #2F436A33 10%, #2F436A33 20%, #2F436AFF 50%, #2F436AFF 100%), url("../img/events/events/bg_events.webp");
+        background: linear-gradient(180deg, #2F436A33 10%, #2F436A33 20%, #2F436AFF 50%, #2F436AFF 100%), url("../img/events/events/the_big_buzz.webp");
     }
 }
 
