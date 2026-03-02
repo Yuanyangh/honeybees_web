@@ -1,0 +1,944 @@
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<style>
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  .mq * { box-sizing: border-box; }
+  .mq {
+    --bg: #0C0B0F;
+    --surface: #16141E;
+    --surface-up: #1E1C28;
+    --border: #282636;
+    --border-lit: #38354A;
+    --gold: #D4A843;
+    --gold-soft: rgba(212,168,67,0.14);
+    --gold-glow: rgba(212,168,67,0.07);
+    --text: #F0EDE5;
+    --text-sub: #9E99A8;
+    --text-mute: #625E6E;
+    --red: #D4534B;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Outfit', system-ui, sans-serif;
+    --accent: var(--gold);
+    --accent-glow: var(--gold-glow);
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    align-items: safe center;
+    justify-content: center;
+    /* padding: 48px 24px; */
+    position: relative;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+
+    /* Break out of Softr container constraints */
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Particle canvas */
+  #mq-particles {
+    position: absolute; inset: 0;
+    z-index: 0; pointer-events: none;
+  }
+
+  /* Grain overlay */
+  .mq::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.03'/%3E%3C/svg%3E");
+    background-size: 180px;
+    pointer-events: none; z-index: 0;
+    mix-blend-mode: overlay;
+  }
+
+  .mq-box {
+    position: relative; z-index: 1;
+    width: 100%; max-width: 580px;
+    margin: 0 auto;
+    max-height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  .mq-box::-webkit-scrollbar { display: none; }
+
+  /* ═══ WELCOME ═══ */
+  .mq-welcome { text-align: center; padding: 24px 0; }
+  .mq-eyebrow {
+    font-family: var(--sans); font-size: 11px; font-weight: 600;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold); margin: 0 0 28px; padding: 0;
+  }
+  .mq-hero {
+    font-family: var(--serif); font-size: clamp(36px, 6vw, 56px);
+    font-weight: 400; color: var(--text); line-height: 1.1;
+    margin: 0 0 16px; padding: 0;
+  }
+  .mq-hero em { font-style: italic; font-weight: 700; color: var(--gold); }
+  .mq-rule {
+    width: 48px; height: 1px; margin: 0 auto 24px; padding: 0;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.5; border: none;
+  }
+  .mq-tagline {
+    font-family: var(--serif); font-size: 17px; font-style: italic;
+    font-weight: 400; color: var(--text-sub); line-height: 1.6;
+    margin: 0 0 20px; padding: 0;
+  }
+  .mq-desc {
+    font-size: 13.5px; font-weight: 300; color: var(--text-mute);
+    line-height: 1.75; margin: 0 0 36px; padding: 0;
+  }
+  .mq-cta {
+    display: inline-block; font-family: var(--sans); font-size: 13px;
+    font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--bg); background: var(--gold); border: none;
+    border-radius: 6px; padding: 15px 48px; margin: 0;
+    cursor: pointer; line-height: 1;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 24px rgba(212,168,67,0.2);
+  }
+  .mq-cta:hover { background: #DEB550; }
+  .mq-meta {
+    font-size: 11px; font-weight: 400; color: var(--text-mute);
+    letter-spacing: 0.04em; margin: 28px 0 0; padding: 0;
+  }
+
+  /* ═══ QUIZ ═══ */
+  .mq-quiz { padding: 8px 0; }
+  .mq-top-row {
+    display: flex; align-items: center; justify-content: space-between;
+    margin: 0 0 36px; padding: 0;
+  }
+  .mq-dim {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--accent);
+    margin: 0; padding: 0;
+  }
+  .mq-counter {
+    font-size: 11px; font-weight: 500; color: var(--text-mute);
+    letter-spacing: 0.03em; font-variant-numeric: tabular-nums;
+    white-space: nowrap; margin: 0; padding: 0;
+  }
+  .mq-bar {
+    width: 100%; height: 3px; background: var(--border);
+    border-radius: 2px; overflow: hidden; margin: 0 0 40px; padding: 0;
+  }
+  .mq-bar-fill {
+    height: 100%; background: linear-gradient(90deg, var(--gold), var(--accent));
+    border-radius: 2px; transition: width 0.5s cubic-bezier(0.22,1,0.36,1);
+    box-shadow: 0 0 8px rgba(212,168,67,0.35); margin: 0; padding: 0;
+  }
+  .mq-qtext {
+    font-family: var(--serif); font-size: 21px; font-weight: 400;
+    line-height: 1.4; color: var(--accent); text-align: center;
+    margin: 0 0 36px; padding: 0;
+  }
+  .mq-opts {
+    display: grid; grid-template-columns: 1fr auto 1fr;
+    align-items: center; gap: 0;
+    margin: 0; padding: 0;
+  }
+  .mq-opt {
+    padding: 16px 24px; margin: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .mq-opt:first-child { text-align: right; }
+  .mq-opt:last-child { text-align: left; }
+  .mq-opt-text {
+    font-family: var(--serif); font-size: 16.5px; font-style: italic;
+    font-weight: 400; line-height: 1.6;
+    color: var(--text-sub);
+    transition: all 0.3s ease;
+    margin: 0; padding: 0;
+  }
+  .mq-opt:hover .mq-opt-text {
+    color: var(--text);
+    transform: translateY(-1px);
+  }
+  .mq-opt.sel .mq-opt-text {
+    color: var(--gold); font-weight: 500;
+    text-shadow: 0 0 24px var(--gold-glow);
+  }
+  .mq-opt.lock { pointer-events: none; }
+  .mq-opt.rej .mq-opt-text { color: var(--text-mute); opacity: 0.35; }
+  .mq-or {
+    display: flex; align-items: center; justify-content: center;
+    padding: 0 2px; margin: 0;
+    font-family: var(--sans); font-size: 10px; font-weight: 500;
+    color: var(--text-mute); letter-spacing: 0.06em;
+  }
+  .mq-nav { margin: 28px 0 0; padding: 0; text-align: center; }
+  .mq-back {
+    font-family: var(--sans); font-size: 12.5px; font-weight: 500;
+    color: var(--text-sub); background: none; border: none;
+    cursor: pointer; padding: 8px 12px; margin: 0;
+    transition: all 0.2s ease; letter-spacing: 0.01em; line-height: 1;
+  }
+  .mq-back:hover { color: var(--text); transform: translateX(-2px); }
+
+  /* ═══ INTERSTITIAL ═══ */
+  .mq-inter { text-align: center; padding: 80px 24px; position: relative; }
+  .mq-inter-glow {
+    position: absolute; top: 50%; left: 50%;
+    width: 260px; height: 260px; transform: translate(-50%,-50%);
+    background: radial-gradient(circle, var(--accent-glow), transparent 65%);
+    opacity: 0; margin: 0; padding: 0;
+  }
+  .mq-inter-tag {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.25em;
+    text-transform: uppercase; color: var(--accent);
+    margin: 0 0 20px; padding: 0; position: relative;
+  }
+  .mq-inter-line {
+    font-family: var(--serif); font-size: 28px; font-style: italic;
+    font-weight: 400; color: var(--text); line-height: 1.35;
+    margin: 0; padding: 0; position: relative;
+  }
+  .mq-inter-orn {
+    font-size: 18px; color: var(--text-mute);
+    margin: 24px 0 0; padding: 0; position: relative;
+  }
+
+  /* ═══ LOADING ═══ */
+  .mq-loading { text-align: center; padding: 80px 24px; }
+  .mq-orb-box {
+    width: 52px; height: 52px; margin: 0 auto 28px;
+    position: relative; padding: 0;
+  }
+  .mq-orb {
+    position: absolute; inset: 0; border-radius: 50%;
+    background: radial-gradient(circle at 38% 38%, var(--gold), rgba(212,168,67,0.08));
+    margin: 0; padding: 0;
+  }
+  .mq-orb-r1 {
+    position: absolute; inset: -7px; border: 1px solid rgba(212,168,67,0.18);
+    border-radius: 50%; margin: 0; padding: 0;
+  }
+  .mq-orb-r2 {
+    position: absolute; inset: -18px; border: 1px solid rgba(212,168,67,0.06);
+    border-radius: 50%; margin: 0; padding: 0;
+  }
+  .mq-loading-text {
+    font-family: var(--serif); font-size: 18px; font-style: italic;
+    font-weight: 400; color: var(--text-sub); margin: 0; padding: 0;
+  }
+
+  /* ═══ RESULTS ═══ */
+  .mq-results { position: relative; padding: 16px 0; }
+  .mq-res-glow {
+    position: absolute; top: -20px; left: 50%;
+    width: 440px; height: 440px; transform: translateX(-50%);
+    background: radial-gradient(circle, var(--accent-glow), transparent 55%);
+    pointer-events: none; opacity: 0; margin: 0; padding: 0;
+  }
+
+  /* Hero unit: avatar + identity fused together */
+  .mq-hero-unit {
+    text-align: center; position: relative;
+    margin: 0 0 32px; padding: 0;
+  }
+  .mq-avatar-frame {
+    width: 200px; height: 200px; margin: 0 auto 20px;
+    position: relative; border-radius: 50%; padding: 0;
+  }
+  .mq-avatar-ring {
+    position: absolute; inset: -5px; border-radius: 50%;
+    border: 2px solid var(--accent); opacity: 0.3;
+    margin: 0; padding: 0;
+  }
+  .mq-avatar-ring2 {
+    position: absolute; inset: -16px; border-radius: 50%;
+    border: 1px solid var(--accent); opacity: 0.1;
+    margin: 0; padding: 0;
+  }
+  .mq-avatar-img {
+    width: 100%; height: 100%; border-radius: 50%;
+    object-fit: cover; display: block;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4), 0 0 60px var(--accent-glow);
+  }
+  .mq-res-you {
+    font-family: var(--serif); font-size: 15px; font-style: italic;
+    font-weight: 400; color: var(--text-sub);
+    margin: 0 0 2px; padding: 0;
+  }
+  .mq-res-name {
+    font-family: var(--serif); font-size: clamp(38px, 7vw, 56px);
+    font-weight: 700; color: var(--text); line-height: 1.05;
+    margin: 0 0 4px; padding: 0;
+  }
+  .mq-res-sub {
+    font-family: var(--serif); font-size: 16px; font-style: italic;
+    font-weight: 400; color: var(--text-mute);
+    margin: 0; padding: 0;
+  }
+
+  /* Divider between hero and body */
+  .mq-res-divider {
+    display: flex; align-items: center; gap: 16px;
+    margin: 0 0 28px; padding: 0;
+  }
+  .mq-res-divider-line {
+    flex: 1; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-lit), transparent);
+  }
+  .mq-res-code {
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent);
+    white-space: nowrap; padding: 0; margin: 0; line-height: 1;
+  }
+
+  /* Primary description — open text, no box */
+  .mq-desc {
+    font-size: 15px; font-weight: 300; line-height: 1.9;
+    color: var(--text-sub); text-align: center;
+    margin: 0 0 28px; padding: 0 8px;
+  }
+
+  /* Secondary archetype */
+  .mq-sec-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 24px;
+    margin: 0 0 10px; text-align: left;
+    display: flex; gap: 16px; align-items: flex-start;
+    position: relative; overflow: hidden;
+  }
+  .mq-sec-card::before {
+    content: ''; position: absolute; top: 0; left: 0; bottom: 0;
+    width: 3px; background: var(--sec-accent, var(--accent)); opacity: 0.4;
+    border-radius: 3px 0 0 3px;
+  }
+  .mq-sec-avatar {
+    flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%;
+    object-fit: cover; box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  }
+  .mq-sec-text { flex: 1; min-width: 0; }
+  .mq-sec-title {
+    font-family: var(--serif); font-size: 15px; font-weight: 700;
+    color: var(--text); margin: 0 0 6px; padding: 0; line-height: 1.3;
+  }
+  .mq-sec-body {
+    font-size: 13px; font-weight: 300; line-height: 1.75;
+    color: var(--text-sub); margin: 0; padding: 0;
+  }
+
+  .mq-retake { margin: 28px 0 0; padding: 0; text-align: center; }
+  .mq-retake-btn {
+    font-family: var(--sans); font-size: 12.5px; font-weight: 500;
+    color: var(--text-sub); background: none;
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 10px 24px; margin: 0; cursor: pointer; line-height: 1;
+    transition: all 0.25s cubic-bezier(0.22,1,0.36,1);
+    letter-spacing: 0.02em;
+  }
+  .mq-retake-btn:hover { border-color: var(--text-mute); color: var(--text); }
+
+  .mq-error { text-align: center; padding: 32px; }
+  .mq-error-msg { color: var(--red); font-size: 14px; margin: 0 0 16px; padding: 0; }
+  .mq-error-btn {
+    font-family: var(--sans); font-size: 13px; font-weight: 600;
+    color: var(--bg); background: var(--gold); border: none;
+    border-radius: 6px; padding: 12px 24px; margin: 0;
+    cursor: pointer; line-height: 1; transition: background 0.2s ease;
+  }
+  .mq-error-btn:hover { background: #DEB550; }
+
+  @media (max-width: 480px) {
+    .mq { padding: 32px 16px; }
+    .mq-hero { font-size: 32px; }
+    .mq-cta { padding: 14px 36px; font-size: 12px; }
+    .mq-qtext { font-size: 19px; margin: 0 0 28px; }
+    .mq-opt { padding: 12px 8px; }
+    .mq-opt-text { font-size: 14.5px; }
+    .mq-or { padding: 0; }
+    .mq-avatar-frame { width: 160px; height: 160px; margin: 0 auto 16px; }
+    .mq-res-name { font-size: 34px; }
+    .mq-desc { font-size: 14px; padding: 0 4px; }
+    .mq-sec-card { padding: 18px 20px; gap: 14px; }
+    .mq-sec-avatar { width: 44px; height: 44px; }
+    .mq-inter { padding: 60px 16px; }
+    .mq-inter-line { font-size: 22px; }
+  }
+</style>
+
+<div class="mq" id="mq-root">
+  <canvas id="mq-particles"></canvas>
+  <div class="mq-box" id="mq-box"></div>
+</div>
+
+<script>
+function mqInit() {
+  if (typeof gsap === 'undefined') { setTimeout(mqInit, 50); return; }
+  const WORKER = 'https://hb-mindreader.yawonnliow001.workers.dev';
+  const root = document.getElementById('mq-root');
+  const box = document.getElementById('mq-box');
+  if (!root || !box) { setTimeout(mqInit, 50); return; }
+
+  // Break out of Softr's max-width containers
+  var p = root.parentElement;
+  while (p && p !== document.body) {
+    p.style.maxWidth = 'none';
+    p.style.padding = '0';
+    p = p.parentElement;
+  }
+
+  const G = gsap;
+
+  /* ══════════════════════════════
+     PARTICLE SYSTEM (event-driven)
+     ══════════════════════════════ */
+  let particleEvent, setParticleColor; // exposed to quiz logic
+  (function initParticles() {
+    const c = document.getElementById('mq-particles');
+    const ctx = c.getContext('2d');
+    let W, H;
+    const particles = [];
+    const COUNT = 55;
+
+    // Colour system — lerps smoothly between targets
+    let pR = 212, pG = 168, pB = 67; // current (gold default)
+    let tR = 212, tG = 168, tB = 67; // target
+    const COLOR_LERP = 0.025; // blend speed per frame
+
+    function hexToRgb(hex) {
+      const r = parseInt(hex.slice(1, 3), 16);
+      const g = parseInt(hex.slice(3, 5), 16);
+      const b = parseInt(hex.slice(5, 7), 16);
+      return [r, g, b];
+    }
+
+    setParticleColor = function(hex) {
+      const [r, g, b] = hexToRgb(hex);
+      tR = r; tG = g; tB = b;
+    };
+
+    // Event forces — temporary, decay each frame
+    let evtForce = null; // { type, x, y, strength, decay }
+
+    function resize() {
+      const container = c.parentElement;
+      W = c.width = container.offsetWidth || window.innerWidth;
+      H = c.height = container.offsetHeight || window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    // Expose event trigger
+    particleEvent = function(type, x, y) {
+      if (type === 'attract') {
+        evtForce = { type: 'attract', x, y, strength: 0.6, decay: 0.97 };
+      } else if (type === 'scatter') {
+        evtForce = { type: 'scatter', x: W / 2, y: H / 2, strength: 1.2, decay: 0.94 };
+      } else if (type === 'calm') {
+        evtForce = { type: 'calm', x: 0, y: 0, strength: 0.8, decay: 0.985 };
+      } else if (type === 'burst') {
+        evtForce = { type: 'scatter', x: x || W / 2, y: y || H / 2, strength: 2.5, decay: 0.92 };
+      }
+    };
+
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * W;
+        this.y = Math.random() * H;
+        this.r = Math.random() * 1.8 + 0.4;
+        this.vx = (Math.random() - 0.5) * 0.3;
+        this.vy = (Math.random() - 0.5) * 0.3 - 0.1;
+        this.alpha = Math.random() * 0.4 + 0.05;
+        this.baseAlpha = this.alpha;
+        this.life = Math.random() * 400 + 200;
+        this.age = 0;
+      }
+      update() {
+        // Apply event force if active
+        if (evtForce && evtForce.strength > 0.01) {
+          const dx = this.x - evtForce.x;
+          const dy = this.y - evtForce.y;
+          const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+
+          if (evtForce.type === 'attract') {
+            // Pull toward point
+            const f = evtForce.strength * Math.min(1, 200 / dist);
+            this.vx -= (dx / dist) * f;
+            this.vy -= (dy / dist) * f;
+          } else if (evtForce.type === 'scatter') {
+            // Push away from point
+            const f = evtForce.strength * Math.min(1, 300 / dist);
+            this.vx += (dx / dist) * f;
+            this.vy += (dy / dist) * f;
+          } else if (evtForce.type === 'calm') {
+            // Slow everything down
+            this.vx *= 0.92;
+            this.vy *= 0.92;
+          }
+        }
+
+        this.vx *= 0.98;
+        this.vy *= 0.98;
+        this.x += this.vx;
+        this.y += this.vy;
+        this.age++;
+
+        const lifeRatio = this.age / this.life;
+        if (lifeRatio < 0.1) this.alpha = this.baseAlpha * (lifeRatio / 0.1);
+        else if (lifeRatio > 0.8) this.alpha = this.baseAlpha * (1 - (lifeRatio - 0.8) / 0.2);
+        else this.alpha = this.baseAlpha;
+
+        if (this.age > this.life || this.x < -20 || this.x > W + 20 || this.y < -20 || this.y > H + 20) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(' + (pR|0) + ',' + (pG|0) + ',' + (pB|0) + ',' + this.alpha + ')';
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < COUNT; i++) particles.push(new Particle());
+
+    function loop() {
+      ctx.clearRect(0, 0, W, H);
+
+      // Decay event force
+      if (evtForce) {
+        evtForce.strength *= evtForce.decay;
+        if (evtForce.strength < 0.01) evtForce = null;
+      }
+
+      // Smooth colour lerp toward target
+      pR += (tR - pR) * COLOR_LERP;
+      pG += (tG - pG) * COLOR_LERP;
+      pB += (tB - pB) * COLOR_LERP;
+
+      for (const p of particles) { p.update(); p.draw(); }
+
+      // Faint connecting lines
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const d = dx * dx + dy * dy;
+          if (d < 14000) {
+            const a = (1 - d / 14000) * 0.06;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = 'rgba(' + (pR|0) + ',' + (pG|0) + ',' + (pB|0) + ',' + a + ')';
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(loop);
+    }
+    loop();
+  })();
+
+  /* ══════════════════════════════
+     DOM HELPERS
+     ══════════════════════════════ */
+  function el(tag, props, ...kids) {
+    const n = document.createElement(tag);
+    if (props) {
+      for (const [k, v] of Object.entries(props)) {
+        if (k === 'cls') n.className = v;
+        else if (k === 'on') { for (const [ev, fn] of Object.entries(v)) n.addEventListener(ev, fn); }
+        else if (k === 'disabled') { n.disabled = !!v; }
+        else if (k === 'style') n.setAttribute('style', v);
+        else n.setAttribute(k, v);
+      }
+    }
+    for (const c of kids) {
+      if (c == null) continue;
+      n.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+    }
+    return n;
+  }
+  function clear(n) { while (n.firstChild) n.removeChild(n.firstChild); }
+  function setVar(k, v) { root.style.setProperty(k, v); }
+  function accent(c) { setVar('--accent', c); }
+  function accentGlow(c) { setVar('--accent-glow', c); }
+
+  /* ══════════════════════════════
+     DATA
+     ══════════════════════════════ */
+  const ARCH_CLR = {
+    KNIGHT:   { accent: '#C46B6B', glow: 'rgba(196,107,107,0.08)' },
+    WIZARD:   { accent: '#6B8DC4', glow: 'rgba(107,141,196,0.08)' },
+    EXPLORER: { accent: '#6BAA7E', glow: 'rgba(107,170,126,0.08)' },
+    HEALER:   { accent: '#C4A84C', glow: 'rgba(196,168,76,0.08)' },
+  };
+  const DIM_CLR = { RTI: '#D4A843', FOI: '#6B8DC4', SRI: '#C46B6B', SPI: '#6BAA7E' };
+  const DIMS = [
+    { key: 'RTI', friendly: 'How You Recharge', teaser: "Let\u2019s explore how you draw your energy\u2026", orn: '\u2726' },
+    { key: 'FOI', friendly: 'How You Focus',    teaser: "Now let\u2019s look at how you see the world\u2026", orn: '\u25C7' },
+    { key: 'SRI', friendly: 'How You Decide',   teaser: "Next, how you weigh your choices\u2026", orn: '\u2736' },
+    { key: 'SPI', friendly: 'How You Organise', teaser: "Finally, how you structure your financial life\u2026", orn: '\u2722' },
+  ];
+  const QS = [
+    { q: 'When thinking about your financial decisions, do you:', a: 'Enjoy engaging in discussions with friends or family', b: 'Prefer to mull things over privately' },
+    { q: "If you're considering a major purchase, you tend to:", a: 'Seek insights and advice from trusted friends, family or experts', b: 'Research on your own and make the decision independently' },
+    { q: 'Do you find yourself being more inclined to:', a: 'Get yourself fully engaged in the conversation', b: 'Listen and observe what is being said' },
+    { q: 'When rationalizing your thoughts, you usually:', a: 'Use others as a sounding board', b: 'Think it over in your head' },
+    { q: 'You find yourself most recharged when you:', a: 'Are able to relax with friends or family', b: 'Are able to be in solitude' },
+    { q: 'Which one appeals to you more:', a: 'The physical, tangible things and people', b: 'The abstract, intangible ideas and concepts' },
+    { q: 'When it comes to a hobby, you prefer:', a: 'Activities that are hands-on, like cooking or sports', b: 'Activities that are abstract, like writing or reading' },
+    { q: 'Are you more interested in what is:', a: 'Actual', b: 'Possible' },
+    { q: 'When discussing your financial future:', a: 'Focus on concrete numbers and targets', b: 'Focus on concepts and/or dreams' },
+    { q: 'Do you prefer to be communicated with:', a: 'Specifics over General Concepts', b: 'General Concepts over Specifics' },
+    { q: 'When making financial decisions, you tend to consider:', a: 'Objective facts and logical analysis', b: 'Your personal values and the potential impact on others' },
+    { q: 'When evaluating the communication of others, you tend to:', a: 'Take a detached, 3rd party approach', b: 'Take a personal, 1st party approach' },
+    { q: "You're considering two jobs. One has a high salary but is impersonal, the other pays less but is deeply rewarding. You would:", a: 'Choose the high-salary job because it makes financial sense', b: 'Choose the rewarding job because it aligns with your values' },
+    { q: 'In financial negotiations, do you:', a: 'Stick to your guns for what you believe is a fair price', b: 'Prioritize maintaining a good relationship over getting the best deal' },
+    { q: 'In a financial emergency, do you:', a: 'Stick to the numbers and make logical decisions', b: 'Prioritize the emotional well-being of everyone involved' },
+    { q: 'When creating a budget, do you:', a: 'Stick strictly to your planned amounts', b: 'Allow for flexibility based on unexpected expenses' },
+    { q: 'When investing, do you prefer to:', a: 'Create a set plan and follow it consistently', b: 'Keep options open and adapt as markets change' },
+    { q: 'When tracking your spending, you:', a: 'Keep records of each transaction', b: 'Have a rough idea of where your money is going' },
+    { q: 'Do you generally prefer to have:', a: 'A set and predictable income stream', b: 'A setup for unexpected financial windfalls' },
+    { q: 'Are you someone who:', a: 'Budgets intentionally and carefully', b: 'Saves, invests and spends according to what feels right' },
+  ];
+  const ARCHS = {
+    KNIGHT:   { title: 'The Knight',   img: 'https://res.cloudinary.com/dlsmdedmc/image/upload/v1772088111/rwhsetesdw6dtxc0mote.jpg', desc: "You are decisive and grounded. You trust what you can see, measure, and plan. Structure isn\u2019t a constraint for you \u2014 it\u2019s how you build confidence and control over your financial future. You prefer clear systems, concrete data, and a disciplined approach to growing your wealth." },
+    WIZARD:   { title: 'The Wizard',   img: 'https://res.cloudinary.com/dlsmdedmc/image/upload/v1772088111/rpxz2sgwxvoonvwkahmy.jpg', desc: "Your mind works in patterns and possibilities. Where others see numbers, you see systems. You\u2019re drawn to innovative strategies and long-term frameworks that turn abstract ideas into real wealth. You think independently, plan strategically, and are always looking beyond the obvious." },
+    EXPLORER: { title: 'The Explorer', img: 'https://res.cloudinary.com/dlsmdedmc/image/upload/v1772088111/xmml3svmzfpf4bsvepwt.jpg', desc: "You follow your values and intuition. Financial decisions aren\u2019t just numbers to you \u2014 they\u2019re expressions of who you are. You keep your options open, adapt as life unfolds, and believe the best financial plan is one that feels authentically yours." },
+    HEALER:   { title: 'The Healer',   img: 'https://res.cloudinary.com/dlsmdedmc/image/upload/v1772088111/zhafaaxxhpuzkeslniuj.jpg', desc: "People are at the centre of everything for you. Your financial decisions consider not just the bottom line, but the wellbeing of those around you. Trust and harmony guide your choices. You\u2019re collaborative, nurturing, and believe that true wealth is measured in the strength of your relationships." },
+  };
+
+  let qi = 0, ans = new Array(20).fill(null), busy = false;
+  const INTER_AT = [5, 10, 15];
+
+  /* ══════════════════════════════
+     GSAP SCREEN TRANSITIONS
+     ══════════════════════════════ */
+  function exitScreen() {
+    return G.to(box.children, {
+      opacity: 0, y: -20, duration: 0.3,
+      ease: 'power2.in', stagger: 0.03
+    });
+  }
+
+  /* ═══ WELCOME ═══ */
+  function showWelcome() {
+    clear(box); accent('#D4A843'); accentGlow('rgba(212,168,67,0.08)');
+    setParticleColor('#D4A843');
+    const heroEm = el('em', null, 'Financial Persona');
+    box.appendChild(
+      el('div', { cls: 'mq-welcome' },
+        el('p', { cls: 'mq-eyebrow' }, 'Honeybees Financial Persona'),
+        el('h1', { cls: 'mq-hero' }, 'Discover Your ', heroEm),
+        el('hr', { cls: 'mq-rule' }),
+        el('p', { cls: 'mq-tagline' }, '20 questions to reveal the persona behind your financial decisions'),
+        el('p', { cls: 'mq-desc' }, "Everyone has a unique relationship with money. This short quiz uncovers your financial persona \u2014 a lens into how you think, decide, and grow your wealth."),
+        el('button', { cls: 'mq-cta', on: { click: startQuiz } }, 'Begin'),
+        el('p', { cls: 'mq-meta' }, 'Takes about 2 minutes \u00B7 No right or wrong answers'),
+      )
+    );
+    // GSAP entrance
+    const items = box.querySelector('.mq-welcome').children;
+    G.fromTo(items, { opacity: 0, y: 24 }, {
+      opacity: 1, y: 0, duration: 0.7,
+      ease: 'power3.out', stagger: 0.09
+    });
+    // CTA special treatment — scale bounce
+    G.fromTo(box.querySelector('.mq-cta'),
+      { scale: 0.9 },
+      { scale: 1, duration: 0.6, ease: 'back.out(2)', delay: 0.55 }
+    );
+  }
+
+  function startQuiz() {
+    const tl = G.timeline();
+    tl.to(box.querySelector('.mq-welcome').children, {
+      opacity: 0, y: -16, duration: 0.25,
+      ease: 'power2.in', stagger: 0.03
+    });
+    tl.call(() => {
+      qi = 0; ans = new Array(20).fill(null);
+      accent(DIM_CLR[DIMS[0].key]);
+      showQuestion();
+    });
+  }
+
+  /* ═══ INTERSTITIAL ═══ */
+  function showInterstitial(di, cb) {
+    clear(box);
+    particleEvent('calm');
+    const d = DIMS[di];
+    accent(DIM_CLR[d.key]);
+    setParticleColor(DIM_CLR[d.key]);
+    box.appendChild(
+      el('div', { cls: 'mq-inter' },
+        el('div', { cls: 'mq-inter-glow' }),
+        el('p', { cls: 'mq-inter-tag' }, 'Part ' + (di + 1) + ' of 4'),
+        el('p', { cls: 'mq-inter-line' }, d.teaser),
+        el('p', { cls: 'mq-inter-orn' }, d.orn),
+      )
+    );
+    const tl = G.timeline();
+    const glow = box.querySelector('.mq-inter-glow');
+    const tag = box.querySelector('.mq-inter-tag');
+    const line = box.querySelector('.mq-inter-line');
+    const orn = box.querySelector('.mq-inter-orn');
+
+    tl.fromTo(glow, { opacity: 0, scale: 0.4 }, { opacity: 0.6, scale: 1.2, duration: 1.2, ease: 'power2.out' });
+    tl.fromTo(tag, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.1);
+    tl.fromTo(line, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, 0.25);
+    tl.fromTo(orn, { opacity: 0 }, { opacity: 0.25, duration: 0.4 }, 0.5);
+    // Exit after pause
+    tl.to([tag, line, orn], { opacity: 0, y: -10, duration: 0.3, ease: 'power2.in', stagger: 0.04 }, '+=0.6');
+    tl.to(glow, { opacity: 0, duration: 0.3 }, '<');
+    tl.call(cb);
+  }
+
+  /* ═══ QUESTION ═══ */
+  function showQuestion() {
+    clear(box); busy = false;
+    const d = DIMS[Math.floor(qi / 5)];
+    accent(DIM_CLR[d.key]);
+    setParticleColor(DIM_CLR[d.key]);
+    const q = QS[qi];
+    const pct = ((qi + 1) / 20) * 100;
+
+    const optA = mkOpt(q.a, -1, ans[qi] === -1);
+    const optB = mkOpt(q.b, 1, ans[qi] === 1);
+
+    const orDiv = el('div', { cls: 'mq-or' }, 'or');
+
+    box.appendChild(
+      el('div', { cls: 'mq-quiz' },
+        el('div', { cls: 'mq-top-row' },
+          el('span', { cls: 'mq-dim' }, d.friendly),
+          el('span', { cls: 'mq-counter' }, (qi + 1) + ' of 20'),
+        ),
+        el('div', { cls: 'mq-bar' }, el('div', { cls: 'mq-bar-fill', style: 'width:' + pct + '%' })),
+        el('p', { cls: 'mq-qtext' }, q.q),
+        el('div', { cls: 'mq-opts' }, optA, orDiv, optB),
+        el('div', { cls: 'mq-nav' },
+          el('button', { cls: 'mq-back',
+            on: { click: () => { if (busy) return; if (qi === 0) showWelcome(); else { qi--; showQuestion(); } } }
+          }, '\u2190 Back')
+        ),
+      )
+    );
+
+    // GSAP entrance
+    const topEls = [box.querySelector('.mq-top-row'), box.querySelector('.mq-bar'), box.querySelector('.mq-qtext')];
+    G.fromTo(topEls, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power3.out', stagger: 0.05 });
+    // Text options fade in from their respective sides
+    G.fromTo(optA, { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.5, ease: 'power2.out', delay: 0.2 });
+    G.fromTo(optB, { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.5, ease: 'power2.out', delay: 0.25 });
+    G.fromTo(orDiv, { opacity: 0 }, { opacity: 1, duration: 0.4, delay: 0.3 });
+    G.fromTo(box.querySelector('.mq-nav'), { opacity: 0 }, { opacity: 1, duration: 0.3, delay: 0.4 });
+  }
+
+  function mkOpt(text, val, isSel) {
+    const o = el('div', { cls: 'mq-opt' + (isSel ? ' sel' : '') },
+      el('span', { cls: 'mq-opt-text' }, text),
+    );
+    o.addEventListener('click', () => {
+      if (busy) return;
+      ans[qi] = val; busy = true;
+      const all = o.parentNode.querySelectorAll('.mq-opt');
+      all.forEach(x => { x.classList.remove('sel'); x.classList.add('lock'); });
+      o.classList.add('sel');
+
+      // Fade the rejected option
+      all.forEach(x => { if (x !== o) x.classList.add('rej'); });
+
+      // Particle drift toward chosen text
+      const rect = o.getBoundingClientRect();
+      particleEvent('attract', rect.left + rect.width / 2, rect.top + rect.height / 2);
+
+      // Exit and advance
+      const tl = G.timeline({ delay: 0.45 });
+      tl.to(box.querySelector('.mq-quiz'), {
+        opacity: 0, y: -12, duration: 0.3, ease: 'power2.in'
+      });
+      tl.call(() => {
+        if (qi === 19) { submitQuiz(); }
+        else {
+          const next = qi + 1; qi = next;
+          if (INTER_AT.includes(next)) showInterstitial(Math.floor(next / 5), showQuestion);
+          else showQuestion();
+        }
+      });
+    });
+    return o;
+  }
+
+  /* ═══ LOADING ═══ */
+  function showLoading() {
+    clear(box); accent('#D4A843');
+    box.appendChild(
+      el('div', { cls: 'mq-loading' },
+        el('div', { cls: 'mq-orb-box' },
+          el('div', { cls: 'mq-orb' }),
+          el('div', { cls: 'mq-orb-r1' }),
+          el('div', { cls: 'mq-orb-r2' }),
+        ),
+        el('p', { cls: 'mq-loading-text' }, "Revealing your financial persona\u2026"),
+      )
+    );
+    const orb = box.querySelector('.mq-orb');
+    const r1 = box.querySelector('.mq-orb-r1');
+    const r2 = box.querySelector('.mq-orb-r2');
+    const txt = box.querySelector('.mq-loading-text');
+
+    G.fromTo(orb, { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(2)' });
+    G.to(orb, { scale: 0.85, duration: 1.2, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 0.6 });
+    G.fromTo(r1, { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: 'power2.out', delay: 0.2 });
+    G.to(r1, { scale: 1.1, opacity: 0, duration: 1.5, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 0.8 });
+    G.fromTo(r2, { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 0.5, duration: 0.8, ease: 'power2.out', delay: 0.4 });
+    G.to(r2, { scale: 1.15, opacity: 0, duration: 1.8, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 1 });
+    G.fromTo(txt, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', delay: 0.4 });
+  }
+
+  /* ═══ RESULTS ═══ */
+  function showResults(data) {
+    clear(box);
+    const { insightCode, clientQuizIndexScores } = data;
+    const [pri, sec] = insightCode.split('-');
+    const a = ARCHS[pri], a2 = ARCHS[sec], clr = ARCH_CLR[pri];
+    accent(clr.accent); accentGlow(clr.glow);
+    setParticleColor(clr.accent);
+
+    // Secondary archetype card (if different) — uses its own colour
+    let secCard = null;
+    if (pri !== sec) {
+      const secClr = ARCH_CLR[sec];
+      secCard = el('div', { cls: 'mq-sec-card', style: '--sec-accent:' + secClr.accent },
+        el('img', { cls: 'mq-sec-avatar', src: a2.img, alt: a2.title }),
+        el('div', { cls: 'mq-sec-text' },
+          el('p', { cls: 'mq-sec-title' }, a2.title + ' Influence'),
+          el('p', { cls: 'mq-sec-body' }, a2.desc),
+        ),
+      );
+    }
+
+    const resWrap = el('div', { cls: 'mq-results' },
+      el('div', { cls: 'mq-res-glow' }),
+      // Hero unit: avatar + identity as one block
+      el('div', { cls: 'mq-hero-unit' },
+        el('div', { cls: 'mq-avatar-frame' },
+          el('div', { cls: 'mq-avatar-ring' }),
+          el('div', { cls: 'mq-avatar-ring2' }),
+          el('img', { cls: 'mq-avatar-img', src: a.img, alt: a.title }),
+        ),
+        el('p', { cls: 'mq-res-you' }, 'You are'),
+        el('h2', { cls: 'mq-res-name' }, a.title),
+        el('p', { cls: 'mq-res-sub' }, pri !== sec ? 'with ' + a2.title + ' tendencies' : 'through and through'),
+      ),
+      // Divider with insight code inline
+      el('div', { cls: 'mq-res-divider' },
+        el('span', { cls: 'mq-res-divider-line' }),
+        el('span', { cls: 'mq-res-code' }, insightCode),
+        el('span', { cls: 'mq-res-divider-line' }),
+      ),
+      // Description — open flowing text
+      el('p', { cls: 'mq-desc' }, a.desc),
+      secCard,
+      el('div', { cls: 'mq-retake' },
+        el('button', { cls: 'mq-retake-btn', on: { click: () => { accentGlow('rgba(212,168,67,0.08)'); showWelcome(); } } }, 'Take Again'),
+      ),
+    );
+    box.appendChild(resWrap);
+
+    // GSAP cinematic reveal
+    const tl = G.timeline({ defaults: { ease: 'power3.out' } });
+    const glow = box.querySelector('.mq-res-glow');
+    const frame = box.querySelector('.mq-avatar-frame');
+    const ring = box.querySelector('.mq-avatar-ring');
+    const ring2 = box.querySelector('.mq-avatar-ring2');
+    const img = box.querySelector('.mq-avatar-img');
+    const youAre = box.querySelector('.mq-res-you');
+    const name = box.querySelector('.mq-res-name');
+    const sub = box.querySelector('.mq-res-sub');
+    const divider = box.querySelector('.mq-res-divider');
+    const desc = box.querySelector('.mq-desc');
+    const secEl = box.querySelector('.mq-sec-card');
+    const retake = box.querySelector('.mq-retake');
+
+    // Initial states
+    G.set(glow, { opacity: 0 });
+    G.set(frame, { opacity: 0 });
+    G.set(img, { scale: 0.65, opacity: 0 });
+    G.set(ring, { scale: 0.5, opacity: 0 });
+    G.set(ring2, { scale: 0.4, opacity: 0 });
+    G.set([youAre, sub], { opacity: 0, y: 10 });
+    G.set(name, { opacity: 0, y: 12, scale: 0.88 });
+    G.set([divider, desc, retake], { opacity: 0, y: 16 });
+    if (secEl) G.set(secEl, { opacity: 0, y: 16 });
+
+    // Phase 1: Avatar materialises
+    tl.to(glow, { opacity: 1, duration: 1.6 }, 0);
+    tl.to(frame, { opacity: 1, duration: 0.1 }, 0.1);
+    tl.to(img, { scale: 1, opacity: 1, duration: 0.9, ease: 'back.out(1.3)' }, 0.15);
+    tl.to(ring, { scale: 1, opacity: 0.3, duration: 0.7, ease: 'power2.out' }, 0.55);
+    tl.to(ring2, { scale: 1, opacity: 0.1, duration: 0.9, ease: 'power2.out' }, 0.7);
+
+    // Phase 2: Identity reveals beneath avatar
+    tl.to(youAre, { opacity: 1, y: 0, duration: 0.4 }, 0.8);
+    tl.to(name, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: 'back.out(1.5)' }, 0.9);
+    tl.call(() => particleEvent('burst'), null, 0.9);
+    tl.to(sub, { opacity: 1, y: 0, duration: 0.4 }, 1.15);
+
+    // Phase 3: Content unfolds
+    tl.to(divider, { opacity: 1, y: 0, duration: 0.5 }, 1.35);
+    tl.to(desc, { opacity: 1, y: 0, duration: 0.5 }, 1.5);
+    if (secEl) tl.to(secEl, { opacity: 1, y: 0, duration: 0.5 }, 1.75);
+    tl.to(retake, { opacity: 1, y: 0, duration: 0.4 }, secEl ? 2.0 : 1.75);
+  }
+
+  /* ═══ ERROR ═══ */
+  function showError(msg) {
+    clear(box);
+    box.appendChild(
+      el('div', { cls: 'mq-error' },
+        el('p', { cls: 'mq-error-msg' }, msg || 'Something went wrong. Please try again.'),
+        el('button', { cls: 'mq-error-btn', on: { click: () => { qi = 19; showQuestion(); } } }, 'Try Again'),
+      )
+    );
+    G.fromTo(box.querySelector('.mq-error').children, { opacity: 0, y: 12 }, {
+      opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', stagger: 0.1
+    });
+  }
+
+  /* ═══ SUBMIT ═══ */
+  async function submitQuiz() {
+    if (ans.some(a => a === null)) return;
+    showLoading();
+    try {
+      const r = await fetch(WORKER + '/client-quiz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ quizAnswer: ans }),
+      });
+      if (!r.ok) {
+        const e = await r.json().catch(() => null);
+        throw new Error((e && e.detail && e.detail[0] && e.detail[0].msg) || ('API error (' + r.status + ')'));
+      }
+      showResults(await r.json());
+    } catch (e) { showError(e.message); }
+  }
+
+  /* ═══ INIT ═══ */
+  showWelcome();
+
+  if (window.SOFTR_PAGE) {
+    window.SOFTR_PAGE.beforeUnload(() => {
+      clear(box);
+      accent('#D4A843');
+      accentGlow('rgba(212,168,67,0.08)');
+    });
+  }
+}
+mqInit();
+</script>

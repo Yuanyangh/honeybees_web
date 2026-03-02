@@ -1,4 +1,4 @@
-@keyframes floatInNavbar {
+﻿@keyframes floatInNavbar {
   0% {
     /* opacity: 0; */
     transform: translateY(50px); /* Start above the final position */
@@ -31,7 +31,7 @@ navbar .col-12 {
 navbar .col-12 div {
   display: flex;
   width: 100%;
-  max-width: 720px;
+  max-width: 870px;
   background-color: #ffffff4d;
   justify-content: space-between;
   margin: auto;
@@ -169,18 +169,19 @@ navbar .container {
 
 @media (min-width: 768px) {
   navbar .container {
-    max-width: 720px;
+    max-width: 870px;
   }
 }
 
 @media (min-width: 992px) {
   navbar .container {
-    max-width: 960px;
+    max-width: 1110px;
   }
 }
 
 @media (min-width: 1200px) {
   navbar .container {
-    max-width: 1140px;
+    max-width: 1290px;
   }
 }
+
