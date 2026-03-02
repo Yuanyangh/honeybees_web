@@ -1,9 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+<title>Honeybees | Quiz</title>
+<link rel="icon" type="image/x-icon" href="./images/favicon-32x32.ico">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="honey.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/navbtn.css">
+<link rel="stylesheet" href="assets/css/modal.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 <style>
   body {
     padding: 0;
     margin: 0;
+  }
+  .topbar {
+    position: fixed;
+    pointer-events: none;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .topbar .honeybeeLogo {
+    cursor: pointer;
+    position: relative;
+    pointer-events: auto;
+    height: 29px;
+  }
+  .topbar .honeybeeLogo .big-logo {
+    width: 200px;
+    height: 29px;
+    opacity: 0;
+  }
+  .topbar .honeybeeLogo .small-logo {
+    width: 29px;
+    height: 29px;
+    margin-left: 23px;
+  }
+  .honeybeeLogo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease, width 0.5s ease, height 0.5s ease;
+  }
+  @media (min-width: 992px) {
+    .honeybeeLogo:hover .small-logo {
+      opacity: 0;
+      z-index: -1;
+    }
+    .honeybeeLogo:hover .big-logo {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+  @media (max-width: 991px) {
+    .topbar .honeybeeLogo .big-logo {
+      display: none !important;
+    }
+    .topbar .honeybeeLogo .small-logo {
+      margin-left: 0;
+    }
+  }
+  .honeybeeMusic {
+    position: absolute;
+    pointer-events: auto;
+    right: 20px;
+  }
+  .music-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 23px;
+  }
+  .music-icon .lottie-sound {
+    display: none;
+  }
+  .music-icon.playing .lottie-sound {
+    display: block;
+  }
+  .music-icon.playing .mute-music {
+    display: none;
+  }
+  .lottie-sound {
+    width: 30px;
+    height: 30px;
   }
   .mq * { box-sizing: border-box; }
   .mq {
@@ -31,7 +122,7 @@
     display: flex;
     align-items: safe center;
     justify-content: center;
-    /* padding: 48px 24px; */
+    padding: 92px 24px 120px;
     position: relative;
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
@@ -366,6 +457,72 @@
     .mq-inter-line { font-size: 22px; }
   }
 </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html" class="honeybeeLogo">
+    <img class="big-logo" src="assests/Honeybees_logo.svg" alt="HoneybeeLogo">
+    <img class="small-logo" src="assests/logo_white_small.png" alt="Small HoneybeeLogo">
+  </a>
+  <div class="honeybeeMusic">
+    <div class="music-icon" onclick="toggleSound()">
+      <div class="lottie-sound" id="lottie-sound"></div>
+      <img class="mute-music" src="assests/music_light_mute.svg" alt="Mute Music">
+    </div>
+    <audio id="myAudio" src="./HB_assest/good-night-160166.mp3" loop></audio>
+  </div>
+</div>
+
+<button id="toggleModalBtn" class="mobile-nav-btn">
+  <div class="menu">
+    <svg width="30px" viewBox="0 0 100 100">
+      <path class="line-honeybee-black line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+      <path class="line-honeybee-black line2" d="M 20,50 H 80" />
+      <path class="line-honeybee-black line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+    </svg>
+  </div>
+</button>
+
+<navbar class="quiz-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div>
+          <a href="index.html" id="homeButton" class="home-btn">HOME</a>
+          <a href="about.html" id="aboutButton" class="about-btn text-nowrap">ABOUT US</a>
+          <a href="career.html" id="careerButton" class="career-btn">CAREER</a>
+          <a href="embed.html" id="quizButton" class="quiz-btn">QUIZ</a>
+          <a href="discovery.html" id="knowButton" class="know-btn text-nowrap">DISCOVERY</a>
+          <!-- <a href="fearless.html" id="fearlessButton" class="fearless-btn text-nowrap">Be Fearless</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</navbar>
+
+<div id="myModal" class="mobile-nav-modal modal">
+  <div class="modal-content">
+    <div class="topbar">
+      <div class="honeybeeLogo">
+        <img src="./assests/Honeybees_logo (1).png" alt="">
+      </div>
+    </div>
+    <div class="nav-modal-link-content">
+      <a href="index.html" class="nav-modal-link">HOME</a>
+      <a href="about.html" class="nav-modal-link text-nowrap">ABOUT US</a>
+      <a href="career.html" class="nav-modal-link">CAREER</a>
+      <a href="embed.html" class="nav-modal-link">QUIZ</a>
+      <a href="discovery.html" class="nav-modal-link text-nowrap">DISCOVERY</a>
+      <!-- <a href="fearless.html" class="nav-modal-link-last text-nowrap">Be Fearless</a> -->
+    </div>
+    <div>
+      <div class="mobile-modal-upcoming">
+        <img src="asssets/Group 149.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="mq" id="mq-root">
   <canvas id="mq-particles"></canvas>
@@ -942,3 +1099,9 @@ function mqInit() {
 }
 mqInit();
 </script>
+<script src="assets/scripts/modal.js"></script>
+<script src="assets/scripts/lottie-dark.js"></script>
+<script src="assets/scripts/navbtn.js"></script>
+<script src="assets/scripts/sound.js"></script>
+</body>
+</html>

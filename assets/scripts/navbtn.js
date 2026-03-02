@@ -20,6 +20,8 @@ function changeButtonColor(route) {
     buttonId = "careerButton";
   } else if (route === "discovery.html") {
     buttonId = "knowButton";
+  } else if (route === "embed.html") {
+    buttonId = "quizButton";
   } else if (route === "fearless.html") {
     buttonId = "fearlessButton";
   }

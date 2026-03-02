@@ -73,6 +73,11 @@ navbar.know-nav a:hover {
   border-radius: 25px;
 }
 
+navbar.quiz-nav a:hover {
+  background-color: #DEB550;
+  border-radius: 25px;
+}
+
 navbar.fearless-nav a:hover {
   background-color: #ff6464;
   border-radius: 25px;
@@ -105,6 +110,12 @@ navbar.know-nav a:hover {
   color: white;
 }
 
+navbar.quiz-nav a,
+navbar.quiz-nav a:hover {
+  text-decoration: none;
+  color: white;
+}
+
 navbar.fearless-nav a,
 navbar.fearless-nav a:hover {
   text-decoration: none;
@@ -129,6 +140,10 @@ navbar a:last-child:hover {
 }
 .know-btn.nav-active {
   background-color: #ee7430;
+  border-radius: 25px;
+}
+.quiz-btn.nav-active {
+  background-color: #DEB550;
   border-radius: 25px;
 }
 
