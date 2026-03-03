@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="assets/css/modal.css">
   <link rel="stylesheet" href="assets/css/footer.css">
   <style>
-
     div#img-container {
       display: flex;
       flex-direction: row;
@@ -286,6 +285,7 @@
       outline: none;
       display: block;
     }
+
     #canvas3d {
       position: absolute;
       top: 0;
@@ -298,42 +298,43 @@
     }
 
     .text-caption {
-        visibility: hidden;
-        /* -webkit-text-stroke: 2px #29446D;
-        -moz-text-stroke: 2px #29446D; */
-        /* color: transparent; */
-        /* animation: floatInAndColorChange 1s ease-in-out 2s forwards; */
-        /* animation-fill-mode: forwards; */
-        color: #29446d; 
-        -webkit-text-stroke: 0.1px #29446d;
-        /* -webkit-text-fill-color: transparent; */
-        text-shadow: 
-          0 0 0 #29446d,
-          0 0 0 #29446d,
-          0 0 0 #29446d,
-          0 0 0 #29446d;
+      visibility: hidden;
+      /* -webkit-text-stroke: 2px #29446D;
+      -moz-text-stroke: 2px #29446D; */
+      /* color: transparent; */
+      /* animation: floatInAndColorChange 1s ease-in-out 2s forwards; */
+      /* animation-fill-mode: forwards; */
+      color: #29446d;
+      -webkit-text-stroke: 0.1px #29446d;
+      /* -webkit-text-fill-color: transparent; */
+      text-shadow:
+        0 0 0 #29446d,
+        0 0 0 #29446d,
+        0 0 0 #29446d,
+        0 0 0 #29446d;
     }
 
     .text-caption2 {
-        visibility: hidden;
-        color: transparent;
-        animation: floatInAndColorChange2 0.5s ease-in-out 2s forwards; /* Delay animation */
-        animation-fill-mode: forwards; /* Keep the final state after animation ends */
-        /* white-space: nowrap; */
+      visibility: hidden;
+      color: transparent;
+      animation: floatInAndColorChange2 0.5s ease-in-out 2s forwards; /* Delay animation */
+      animation-fill-mode: forwards; /* Keep the final state after animation ends */
+      /* white-space: nowrap; */
     }
 
     @keyframes floatInMarquee {
-        0% {
-            /* opacity: 0; */
-            transform: translateY(50px); /* Start above the final position */
-            visibility:visible;
-        }
-        100% {
-            /* opacity: 1; */
-            transform: translateY(0);
-            visibility:visible;
-            transform: rotate(1deg);
-        }
+      0% {
+        /* opacity: 0; */
+        transform: translateY(50px); /* Start above the final position */
+        visibility: visible;
+      }
+
+      100% {
+        /* opacity: 1; */
+        transform: translateY(0);
+        visibility: visible;
+        transform: rotate(1deg);
+      }
     }
 
     .runnng_white_two1 {
@@ -346,37 +347,39 @@
     }
 
     @keyframes floatInTopdown {
-        0% {
-            /* opacity: 0; */
-            transform: translateY(-50px); /* Start above the final position */
-            visibility:visible;
-        }
-        100% {
-            /* opacity: 1; */
-            transform: translateY(0);
-            visibility:visible;
-        }
+      0% {
+        /* opacity: 0; */
+        transform: translateY(-50px); /* Start above the final position */
+        visibility: visible;
+      }
+
+      100% {
+        /* opacity: 1; */
+        transform: translateY(0);
+        visibility: visible;
+      }
     }
 
     @keyframes amiStrokYellowText {
-        0% {
-            color: #29446d;
-        }
-        100% {
-            color: #eeaf30;
-            -webkit-text-fill-color: #eeaf30 !important;
-            /* -webkit-text-stroke: 2px #ffffff; */
-            text-shadow: 
-              -2px -2px 0 #ffffff,  
-              2px -2px 0 #ffffff,
-              -2px  2px 0 #ffffff, 
-              2px  2px 0 #ffffff,
-              -2px  0px 0 #ffffff,
-              2px  0px 0 #ffffff,
-              0px -2px 0 #ffffff,
-              0px  2px 0 #ffffff;
+      0% {
+        color: #29446d;
+      }
 
-        }
+      100% {
+        color: #eeaf30;
+        -webkit-text-fill-color: #eeaf30 !important;
+        /* -webkit-text-stroke: 2px #ffffff; */
+        text-shadow:
+          -2px -2px 0 #ffffff,
+          2px -2px 0 #ffffff,
+          -2px 2px 0 #ffffff,
+          2px 2px 0 #ffffff,
+          -2px 0px 0 #ffffff,
+          2px 0px 0 #ffffff,
+          0px -2px 0 #ffffff,
+          0px 2px 0 #ffffff;
+
+      }
     }
 
     .animate_strok_yellow_text {
@@ -384,69 +387,68 @@
     }
 
     @keyframes amiStrokText {
-        0% {
-            color: white;
-        }
-        100% {
-            color: #29446d;
-            -webkit-text-fill-color: #29446d !important;
-            /* -webkit-text-stroke: 2px #ffffff; */
-            text-shadow: 
-              -2px -2px 0 #ffffff,  
-              2px -2px 0 #ffffff,
-              -2px  2px 0 #ffffff, 
-              2px  2px 0 #ffffff,
-              -2px  0px 0 #ffffff,
-              2px  0px 0 #ffffff,
-              0px -2px 0 #ffffff,
-              0px  2px 0 #ffffff;
+      0% {
+        color: white;
+      }
 
-        }
+      100% {
+        color: #29446d;
+        -webkit-text-fill-color: #29446d !important;
+        /* -webkit-text-stroke: 2px #ffffff; */
+        text-shadow:
+          -2px -2px 0 #ffffff,
+          2px -2px 0 #ffffff,
+          -2px 2px 0 #ffffff,
+          2px 2px 0 #ffffff,
+          -2px 0px 0 #ffffff,
+          2px 0px 0 #ffffff,
+          0px -2px 0 #ffffff,
+          0px 2px 0 #ffffff;
+
+      }
     }
 
     .animate_strok_text {
       animation: amiStrokText 1s ease-in-out forwards;
     }
-
-
   </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-    <script src="assets/scripts/lottie-light.js"></script>
-    <script src="assets/scripts/navbtn.js"></script>
-    <script src="assets/scripts/modal.js"></script>
-    <script src="assets/scripts/mouse-animation.js"></script>
-    <script src="assets/scripts/overlayer.js"></script>
-    <script src="assets/scripts/action.js"></script>
-    <script>
-      // Function to check if the element is in the viewport
-      function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-      }
-      
-      // Function to run on scroll
-      function runOnScroll() {
-        const elements = document.querySelectorAll('.strok_yellow_text');
-        for (let i = 0; i < elements.length; i++) {
-          if (isInViewport(elements[i])) {
-            elements[i].classList.add('animate_strok_yellow_text');
-          }
-        }
-        const elements2 = document.querySelectorAll('.strok_text');
-        for (let i = 0; i < elements2.length; i++) {
-          if (isInViewport(elements2[i])) {
-            elements2[i].classList.add('animate_strok_text');
-          }
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  <script src="assets/scripts/lottie-light.js"></script>
+  <script src="assets/scripts/navbtn.js"></script>
+  <script src="assets/scripts/modal.js"></script>
+  <script src="assets/scripts/mouse-animation.js"></script>
+  <script src="assets/scripts/overlayer.js"></script>
+  <script src="assets/scripts/action.js"></script>
+  <script>
+    // Function to check if the element is in the viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    // Function to run on scroll
+    function runOnScroll() {
+      const elements = document.querySelectorAll('.strok_yellow_text');
+      for (let i = 0; i < elements.length; i++) {
+        if (isInViewport(elements[i])) {
+          elements[i].classList.add('animate_strok_yellow_text');
         }
       }
-      window.addEventListener('scroll', runOnScroll);
-    </script>
+      const elements2 = document.querySelectorAll('.strok_text');
+      for (let i = 0; i < elements2.length; i++) {
+        if (isInViewport(elements2[i])) {
+          elements2[i].classList.add('animate_strok_text');
+        }
+      }
+    }
+    window.addEventListener('scroll', runOnScroll);
+  </script>
 
 </head>
 
@@ -469,7 +471,7 @@
         <img class="mute-music" src="assests/music_dark_mute.svg" alt="Mute Music">
       </div>
       <div class="music-icon-description" id="music_icon_description">
-        <img class="d-block" src="assets/img/music_icon_quote.png" alt="quote"/>
+        <img class="d-block" src="assets/img/music_icon_quote.png" alt="quote" />
         <span class="music-icon-description-quote-text">
           vibee with us
         </span>
@@ -488,39 +490,39 @@
   </button>
   <navbar>
     <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div>
-              <a target='_blank' href="index.html" id="homeButton" class="home-btn">
-                  HOME
-              </a>
-              <a target='_blank' href="about.html" id="aboutButton" class="about-btn text-nowrap">
-                  ABOUT US
-              </a>
-              <a target='_blank' href="career.html" id="careerButton" class="career-btn">
-                  CAREER
-              </a>
-              <a target='_blank' href="embed.html" id="quizButton" class="quiz-btn">
-                  QUIZ
-              </a>
-              <a href="discovery.html" id="knowButton" class="know-btn text-nowrap">
-                  DISCOVERY
-              </a>
-              <!-- <a href="fearless.html" id="fearlessButton" class="fearless-btn text-nowrap">
-                  Be Fearless
-              </a> -->
-            </div>
-              <!-- <a href="#" class="nav-adv"><img src="asssets/Group 149.png" alt=""></a> -->
+      <div class="row">
+        <div class="col-12">
+          <div>
+            <a target='_blank' href="index.html" id="homeButton" class="home-btn">
+              HOME
+            </a>
+            <a target='_blank' href="about.html" id="aboutButton" class="about-btn text-nowrap">
+              ABOUT US
+            </a>
+            <a target='_blank' href="career.html" id="careerButton" class="career-btn">
+              CAREER
+            </a>
+            <a target='_blank' href="embed.html" id="quizButton" class="quiz-btn">
+              QUIZ
+            </a>
+            <a href="discovery.html" id="knowButton" class="know-btn text-nowrap">
+              DISCOVERY
+            </a>
+            <!-- <a href="fearless.html" id="fearlessButton" class="fearless-btn text-nowrap">
+              Be Fearless
+            </a> -->
           </div>
+          <!-- <a href="#" class="nav-adv"><img src="asssets/Group 149.png" alt=""></a> -->
         </div>
       </div>
+    </div>
   </navbar>
   <div class="position-relative">
     <div class="scale-container" id="scale-container">
       <section class="top-scale-1 scale-background levelup-container" id="levelup-container">
-        <div class="levelup-content position-relative d-flex flex-column align-items-center"> 
+        <div class="levelup-content position-relative d-flex flex-column align-items-center">
           <h1 class="levelup-title levelup-title-animation" id="levelup-title">
-              Level up life’s game
+            Level up life’s game
           </h1>
           <!-- <div class="scroll-down-content scroll-down-content-animation">
             <div class="lottie-scroll-down-content" id="lottie-scroll-down"></div>
@@ -533,29 +535,29 @@
       <section class="top-scale-2 scale-background" id="unleash-container">
         <div class="banner-container">
           <div class="banner-bee-top">
-            <img src="./assets/img/Home_Bee_A.png" alt="beeA"/>
-            <img src="./assets/img/Home_Bee_A.gif" alt="beeA_gif" class="bee-gif-A"/>
+            <img src="./assets/img/Home_Bee_A.png" alt="beeA" />
+            <img src="./assets/img/Home_Bee_A.gif" alt="beeA_gif" class="bee-gif-A" />
           </div>
           <div class="banner-bee-mid">
-            <img src="./assets/img/Home_Bee_B.png" alt="beeB" class="bee-gif-line"/>
-            <img src="./assets/img/Home_Bee_B.gif" alt="beeB_gif" class="bee-gif-B"/>
+            <img src="./assets/img/Home_Bee_B.png" alt="beeB" class="bee-gif-line" />
+            <img src="./assets/img/Home_Bee_B.gif" alt="beeB_gif" class="bee-gif-B" />
           </div>
           <div class="banner-bee-bottom">
-            <img src="./assets/img/Home_Bee_C.png" alt="beeC"/>
-            <img src="./assets/img/Home_Bee_C.gif" alt="beeC_gif" class="bee-gif-C"/>
+            <img src="./assets/img/Home_Bee_C.png" alt="beeC" />
+            <img src="./assets/img/Home_Bee_C.gif" alt="beeC_gif" class="bee-gif-C" />
           </div>
-          <div class="main_head_content">   
+          <div class="main_head_content">
             <h1 class="text-caption w-fit">
               <span class="unleash-title-styled"> UNLEASH YOUR </span>
               <span class="animated-unleash-title-styled">#FEARLESS </span>
-            </h1>  
-              <!-- <h1 class="text-caption" style="text-align:center">YOUR FEARLESS LIFE AWAITS</h1> -->
+            </h1>
+            <!-- <h1 class="text-caption" style="text-align:center">YOUR FEARLESS LIFE AWAITS</h1> -->
             <!-- <h1 class="text-caption">
             WHERE A  <BR></BR>  TRULY<BR></BR>  <span class="strok_text">FEARLESS</span> LIFE <BR></BR>AWAITS. 
             
             </h1> -->
             <!-- -->
-    
+
           </div>
           <div class="index-banner-marquee index-marquee-content rotate white">
             <div class="marquee">
@@ -624,7 +626,7 @@
           <img src="./assests/bluebees.png" alt="">
           <span>FIND YOUR FEARLESS</span>
           <img src="./assests/bluebees.png" alt="">
-      
+
         </div>
         <div class="marquee">
           <span>FIND YOUR FEARLESS</span>
@@ -642,10 +644,10 @@
       <div class="position-relative empty-div"></div>
       <section class="blue_bg" style="background-image: url(./assests/bluebg.png);" id="happen-container">
         <div class="index-happen-content">
-          <h1> 
+          <h1>
             <span class="strok_text">COURAGE</span> IS NOT AN ABSENCE OF FEAR, <br>
-            BUT THE <span class="strok_text">TRIUMPH</span> OVER IT. 
-           </h1>
+            BUT THE <span class="strok_text">TRIUMPH</span> OVER IT.
+          </h1>
           <p>- Gandhi Said It, Not Us. -</p>
           <div class="row agree-btn-group">
             <button class="sign_up btn_agree" id="agree-button">Agree?</button>
@@ -678,92 +680,92 @@
           <h1> Embark on an Adventure</h1>
           <p>No Tickets Required. You Just Need To Be Fearless!</p>
         </div>
-    
+
         <div class="blocks_container">
           <div class="blocks">
-              <div class="block blockImage">
-                  <div class="overlay" onclick="toggleDialog('lorem_first')">
-                      <div class="overlay_icon">
-                          <div class="marquee_text">
-                              <marquee direction="left" style="margin: 0;" loop hspace="10">Discover <img style="width: 50px;"> Discover Discover Discover Discover Discover Discover Discover Discover Discover Discover Discover Discover Discover Discover Discover Discover</marquee>
-                          </div>
-                          <img src="./assests/VectorFace.png" alt="VectorFace">
-                      </div>
+            <div class="block blockImage">
+              <div class="overlay" onclick="toggleDialog('lorem_first')">
+                <div class="overlay_icon">
+                  <div class="marquee_text">
+                    <marquee direction="left" style="margin: 0;" loop hspace="10">Discover <img style="width: 50px;"> Discover Discover Discover Discover Discover Discover Discover Discover Discover Discover Discover Discover Discover Discover Discover Discover</marquee>
                   </div>
-    
-                  <div class="block_content_container">
-                      <div class="honeybee-story-dark-bg"></div>
-                      <img class="honeybee-story-bg" src="./assets/img/Home_SmallHead.png" alt="Honeybees_head">
-                      <div class="block_content z-10">
-                          <h3>Your individuality Matters The Most</h3>
-                          <!-- <p>Embark on a quirky quest to uncover more of your unique charm! A quick quiz whirl where every answer unveils a slice of your special buzz. Ready to see what makes you, you?</p> -->
-                          <a target='_blank' href="./discovery.html" class="button-74 adventure-btn" role="button">Buzz</a>
-                      </div>
-                  </div>
-              </div>
-    
-              <div class="block blockImage">
-                <div class="overlay" onclick="toggleDialog('lorem_second')">
-                    <div class="overlay_icon">
-                        <div class="marquee_text">
-                            <marquee>Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story  Story</marquee>
-                        </div>
-                        <img src="assests/hive.png" alt="Hive">
-                    </div>
-                </div>
-    
-                <div class="block_content_container">
-                    <div class="honeybee-story-dark-bg"></div>
-                    <img class="honeybee-story-bg" src="./assets/img/Home_SmallHive.png" alt="Honeybees_hive">
-                    <div class="block_content z-10">
-                        <h3>The Honeybees Story</h3>
-                        <!-- <p>Explore the tale of The Honeybees turning bold ideas into fearless adventures. From our very first buzz to our thriving hive , all stitched together with a dash of fearlessness. </p> -->
-                        <a target='_blank' href="./about.html" class="button-74 adventure-btn" role="button">Buzzzz</a>
-                    </div>
+                  <img src="./assests/VectorFace.png" alt="VectorFace">
                 </div>
               </div>
-    
-              <div class="block blockImage">
-                <div class="overlay" onclick="toggleDialog('lorem_third')">
-                    <div class="overlay_icon">
-                        <div class="marquee_text">
-                            <marquee>Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz  Buzz</marquee>
-                        </div>
-                        <img src="./assests/Honeybees_shape.png" alt="Honeybees_shape">
-                    </div>
+
+              <div class="block_content_container">
+                <div class="honeybee-story-dark-bg"></div>
+                <img class="honeybee-story-bg" src="./assets/img/Home_SmallHead.png" alt="Honeybees_head">
+                <div class="block_content z-10">
+                  <h3>Your individuality Matters The Most</h3>
+                  <!-- <p>Embark on a quirky quest to uncover more of your unique charm! A quick quiz whirl where every answer unveils a slice of your special buzz. Ready to see what makes you, you?</p> -->
+                  <a target='_blank' href="./discovery.html" class="button-74 adventure-btn" role="button">Buzz</a>
                 </div>
-    
-                <div class="block_content_container">
-                    <div class="honeybee-story-dark-bg"></div>
-                    <img class="honeybee-story-bg" src="./assets/img/Home_SmallBee.png" alt="Honeybees_bee">
-                    <div class="block_content z-10">
-                        <h3>Making a Buzz in the Business</h3>
-                        <!-- <p>Make your mark in the business with The Honeybees! We're looking for dreamers, doers, and daring thinkers to join our hive. Buzz into a world of fearless innovation and thrive</p> -->
-                        <a target='_blank' href="./career.html" class="button-74 adventure-btn" role="button">Buzzzzzz</a>
-                    </div>
-                </div>
+              </div>
             </div>
-            
+
+            <div class="block blockImage">
+              <div class="overlay" onclick="toggleDialog('lorem_second')">
+                <div class="overlay_icon">
+                  <div class="marquee_text">
+                    <marquee>Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story Story</marquee>
+                  </div>
+                  <img src="assests/hive.png" alt="Hive">
+                </div>
+              </div>
+
+              <div class="block_content_container">
+                <div class="honeybee-story-dark-bg"></div>
+                <img class="honeybee-story-bg" src="./assets/img/Home_SmallHive.png" alt="Honeybees_hive">
+                <div class="block_content z-10">
+                  <h3>The Honeybees Story</h3>
+                  <!-- <p>Explore the tale of The Honeybees turning bold ideas into fearless adventures. From our very first buzz to our thriving hive , all stitched together with a dash of fearlessness. </p> -->
+                  <a target='_blank' href="./about.html" class="button-74 adventure-btn" role="button">Buzzzz</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="block blockImage">
+              <div class="overlay" onclick="toggleDialog('lorem_third')">
+                <div class="overlay_icon">
+                  <div class="marquee_text">
+                    <marquee>Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz Buzz</marquee>
+                  </div>
+                  <img src="./assests/Honeybees_shape.png" alt="Honeybees_shape">
+                </div>
+              </div>
+
+              <div class="block_content_container">
+                <div class="honeybee-story-dark-bg"></div>
+                <img class="honeybee-story-bg" src="./assets/img/Home_SmallBee.png" alt="Honeybees_bee">
+                <div class="block_content z-10">
+                  <h3>Making a Buzz in the Business</h3>
+                  <!-- <p>Make your mark in the business with The Honeybees! We're looking for dreamers, doers, and daring thinkers to join our hive. Buzz into a world of fearless innovation and thrive</p> -->
+                  <a target='_blank' href="./career.html" class="button-74 adventure-btn" role="button">Buzzzzzz</a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
         <div class="block_text_container" id="holdon-content">
           <div class="block_text animatable">
             <div class="block_text_bee_left">
               <span>
-                <img src="assets/img/left-bee.png" alt="bee"/>
+                <img src="assets/img/left-bee.png" alt="bee" />
               </span>
               <span class="block_text_bee_left_logo">
-                <img src="assets/img/bee-logo2.gif" alt="bee"/>
+                <img src="assets/img/bee-logo2.gif" alt="bee" />
               </span>
             </div>
             <h1>Hold on, <br>it gets even buzzier <br>from here!</h1>
             <!-- <p>Wilder, but in a positive sense. Let's explore the exciting experiences waiting for us here.</p> -->
             <div class="block_text_bee_right">
               <span class="block_text_bee_right_logo">
-                <img src="assets/img/bee-logo2.gif" alt="bee"/>
+                <img src="assets/img/bee-logo2.gif" alt="bee" />
               </span>
               <span>
-                <img src="assets/img/bee_mesage.png" alt="bee"/>
+                <img src="assets/img/bee_mesage.png" alt="bee" />
               </span>
             </div>
           </div>
@@ -871,12 +873,12 @@
         <div class="last-events-container">
           <div class="last-events-title custo-main">
             <h1 class="upcoming-events">Beehind THE SCENES</h1>
-            <p class="upcoming-events-desc">Honeybees doesn’t just work hard for our clients to enjoy the fruits of our labour.<br/>We also take the time to savour our own sweet honey!</p>
+            <p class="upcoming-events-desc">Honeybees doesn’t just work hard for our clients to enjoy the fruits of our labour.<br />We also take the time to savour our own sweet honey!</p>
           </div>
           <div class="last-events-content">
             <a target='_blank' href="events/merry_beemas.html" class="last-events-item bg-D15852">
-              <img class="d-none d-md-block event-img-desktop" src="assets/img/events/merry_beemas/merry_beemas.webp" alt="merry_beemas"/>
-              <img class="d-block d-md-none event-img-mobile" src="assets/img/events/merry_beemas/merry_beemas.webp" alt="mobile_merry_beemas"/>
+              <img class="d-none d-md-block event-img-desktop" src="assets/img/events/merry_beemas/merry_beemas.webp" alt="merry_beemas" />
+              <img class="d-block d-md-none event-img-mobile" src="assets/img/events/merry_beemas/merry_beemas.webp" alt="mobile_merry_beemas" />
               <div class="last-events-item-text-wrapper">
                 <h3 class="last-events-item-title text-honeybee-white">
                   🎄 Merry Beemas 🎄
@@ -887,8 +889,8 @@
               </div>
             </a>
             <a target='_blank' href="events/beewards_night.html" class="last-events-item bg-3B6CC7">
-              <img class="d-none d-md-block event-img-desktop" src="assets/img/events/bees_awards/bees_awards.png" alt="bees_awards"/>
-              <img class="d-block d-md-none event-img-mobile" src="assets/img/events/bees_awards/mobile/mobile_bees_awards.png" alt="mobile_bees_awards"/>
+              <img class="d-none d-md-block event-img-desktop" src="assets/img/events/bees_awards/bees_awards.png" alt="bees_awards" />
+              <img class="d-block d-md-none event-img-mobile" src="assets/img/events/bees_awards/mobile/mobile_bees_awards.png" alt="mobile_bees_awards" />
               <div class="last-events-item-text-wrapper">
                 <h3 class="last-events-item-title text-honeybee-white">
                   🏆 Spotlight Moments 🏆
@@ -901,8 +903,8 @@
           </div>
           <div class="last-events-content">
             <a target='_blank' href="events/sense_of_beelonging.html" class="last-events-item bg-F4BF52">
-              <img class="d-none d-md-block event-img-desktop" src="assets/img/events/bees_on_the_sea/hive_goals.webp" alt="hive_goals"/>
-              <img class="d-block d-md-none event-img-mobile" src="assets/img/events/bees_on_the_sea/hive_goals.webp" alt="mobile_hive_goals"/>
+              <img class="d-none d-md-block event-img-desktop" src="assets/img/events/bees_on_the_sea/hive_goals.webp" alt="hive_goals" />
+              <img class="d-block d-md-none event-img-mobile" src="assets/img/events/bees_on_the_sea/hive_goals.webp" alt="mobile_hive_goals" />
               <div class="last-events-item-text-wrapper mt-3">
                 <h3 class="last-events-item-title text-honeybee-white">
                   🏠 Hive Goals 🏠
@@ -913,8 +915,8 @@
               </div>
             </a>
             <a target='_blank' href="events/happy_beecation.html" class="last-events-item bg-D47B41">
-              <img class="d-none d-md-block event-img-desktop" src="assets/img/events/bees_go_brrrrrr/ready_set_fly.webp" alt="ready_set_fly"/>
-              <img class="d-block d-md-none event-img-mobile" src="assets/img/events/bees_go_brrrrrr/ready_set_fly.webp" alt="mobile_ready_set_fly"/>
+              <img class="d-none d-md-block event-img-desktop" src="assets/img/events/bees_go_brrrrrr/ready_set_fly.webp" alt="ready_set_fly" />
+              <img class="d-block d-md-none event-img-mobile" src="assets/img/events/bees_go_brrrrrr/ready_set_fly.webp" alt="mobile_ready_set_fly" />
               <div class="last-events-item-text-wrapper">
                 <h3 class="last-events-item-title text-honeybee-white">
                   ✈️ Ready, Set, Fly ✈️
@@ -938,25 +940,25 @@
           </div>
           <div class="last-events-content">
             <a target='_blank' href="events/volunbeeing_matters.html" class="last-events-item bg-2F436A">
-              <img class="d-none d-md-block event-img-desktop" src="assets/img/events/bees_care/bees_care.png" alt="bees_care"/>
-              <img class="d-block d-md-none event-img-mobile" src="assets/img/events/bees_care/mobile/mobile_bees_care.png" alt="mobile_bees_care"/>
+              <img class="d-none d-md-block event-img-desktop" src="assets/img/events/bees_care/bees_care.png" alt="bees_care" />
+              <img class="d-block d-md-none event-img-mobile" src="assets/img/events/bees_care/mobile/mobile_bees_care.png" alt="mobile_bees_care" />
               <div class="last-events-item-text-wrapper">
                 <h3 class="last-events-item-title text-honeybee-white">
                   💛 Hearts in Action 💛
                 </h3>
-                <p class="last-events-item-desc text-honeybee-white mt-1" >
+                <p class="last-events-item-desc text-honeybee-white mt-1">
                   Bee generous! Bee kind! Buzz along with us as we spread warmth and joy to the different communities around us.
                 </p>
               </div>
             </a>
             <a target='_blank' href="events/events.html" class="last-events-item bg-99B173">
-              <img class="d-none d-md-block event-img-desktop" src="assets/img/events/events/the_big_buzz.webp" alt="the_big_buzz"/>
-              <img class="d-block d-md-none event-img-mobile" src="assets/img/events/events/the_big_buzz.webp" alt="mobile_the_big_buzz"/>
+              <img class="d-none d-md-block event-img-desktop" src="assets/img/events/events/the_big_buzz.webp" alt="the_big_buzz" />
+              <img class="d-block d-md-none event-img-mobile" src="assets/img/events/events/the_big_buzz.webp" alt="mobile_the_big_buzz" />
               <div class="last-events-item-text-wrapper">
                 <h3 class="last-events-item-title text-honeybee-white">
                   🎀 The Big Buzz 🎀
                 </h3>
-                <p class="last-events-item-desc text-honeybee-white mt-1" >
+                <p class="last-events-item-desc text-honeybee-white mt-1">
                   The support of our clients makes our work possible, and we’re always finding new ways to thank them. Find out what it’s like at our events!
                 </p>
               </div>
@@ -966,24 +968,24 @@
         <div class="honey_bee_section" id="still-here">
           <div class="content_container custo-main animatable">
             <h1 class="honey_bee_section_heading">
-              Still here? 
+              Still here?
             </h1>
             <p>
               Don’t be a stranger. Drop us a buzz!
             </p>
             <div class="content_container_bee_right">
               <div class="content_container_quote" id="content_container_quote">
-                <img class="d-none d-md-block" src="assets/img/quote.png" alt="quote"/>
-                <img class="d-block d-md-none" src="assets/img/mobile_quote.png" alt="quote"/>
+                <img class="d-none d-md-block" src="assets/img/quote.png" alt="quote" />
+                <img class="d-block d-md-none" src="assets/img/mobile_quote.png" alt="quote" />
                 <span class="content_container_quote_text" id="content_container_quote_text">
-                  I'm a big fan of<br/>happy vibes!
+                  I'm a big fan of<br />happy vibes!
                 </span>
               </div>
               <span>
-                <img src="assets/img/bee_content_line.png" alt="bee"/>
+                <img src="assets/img/bee_content_line.png" alt="bee" />
               </span>
               <span class="content_container_bee_right_logo">
-                <img src="assets/img/bee-logo.gif" alt="bee"/>
+                <img src="assets/img/bee-logo.gif" alt="bee" />
               </span>
             </div>
           </div>
@@ -995,23 +997,25 @@
     <div class="mask-group-parent-wrapper" id="footer">
       <div class="footer-wrapper">
         <div class="footer">
-          
+
           <div class="footer-inner">
             <form id="buzzForm" class="drop-your-question-and-email-o-parent">
-               <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAYHorMhUNVcwODBXMUNJNEU0NjJKSzlNOTdKNDk4Ti4u" target="_blank"><h2 class="drop-your-question" id="demo"> <h2></h2></a>
+              <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAYHorMhUNVcwODBXMUNJNEU0NjJKSzlNOTdKNDk4Ti4u" target="_blank">
+                <h2 class="drop-your-question" id="demo"></h2>
+              </a>
               <!-- <div class="input-details-group-parent">
                 <div class="title_filed">
-                    <input class="input-details-group yourtitle" type="text" placeholder="Your Title" />
-                    <img class="icon-chevron-bottom" alt="" src="./assests/Vector.png" />
+                  <input class="input-details-group yourtitle" type="text" placeholder="Your Title" />
+                  <img class="icon-chevron-bottom" alt="" src="./assests/Vector.png" />
                 </div>
 
                 <div class="name_field">
-                    <input id="buzz_name" class="input-details-group yourname" type="text" placeholder="Your Name..." />
+                  <input id="buzz_name" class="input-details-group yourname" type="text" placeholder="Your Name..." />
                 </div>
               </div>
               <div class="group-div">
-                  <div class="frame-child5"></div>
-                  <input id="buzz_email" class="your-email" placeholder="Your Email..." type="text" />
+                <div class="frame-child5"></div>
+                <input id="buzz_email" class="your-email" placeholder="Your Email..." type="text" />
               </div>
               <div class="rectangle-parent3">
                 <textarea id="message" class="whats-on-your" placeholder="What’s On Your Mind?" rows="2"></textarea>
@@ -1033,7 +1037,7 @@
           <a href="https://sg.linkedin.com/company/honeybees-org" target="_blank"><img class="icon-linkedin" loading="eager" alt="" src="./assests/sameediconlinkedin.png" /></a>
           <a href="https://www.instagram.com/honeybees.sg" target="_blank"><img class="icon-instagram" loading="eager" alt="" src="./assests/sameediconinstagram.png" /></a>
           <!-- <img class="icon-facebook-squared" loading="eager" alt=""
-              src="./assests/sameed-iconfacebooksquared.png" /> -->
+            src="./assests/sameed-iconfacebooksquared.png" /> -->
         </div>
       </div>
       <div class="disclaimer-container">
@@ -1047,17 +1051,14 @@
         </div>
       </div>
       <!-- <div class="authorized-representative-msg">
-          <div class="sp-honeybees-is-an-container">
-              <p class="sp-honeybees-is-an">
-                  SP-HONEYBEES is an authorised representative of AIA
-                  Singapore Private Limited (Reg. No. 201106386R)
-              </p>
-              <p class="by-sp-honeybees">© 2022 by SP-HONEYBEES</p>
-          </div>
+        <div class="sp-honeybees-is-an-container">
+          <p class="sp-honeybees-is-an">SP-HONEYBEES is an authorised representative of AIA Singapore Private Limited (Reg. No. 201106386R)</p>
+          <p class="by-sp-honeybees">© 2022 by SP-HONEYBEES</p>
+        </div>
       </div> -->
     </div>
   </section>
-  
+
   <script>
     $(document).ready(function () {
       $('.block_cus_one').hover(function () {
@@ -1096,7 +1097,7 @@
   <div id="termsModal" class="terms-modal hide" onclick="onCloseTerms()">
     <div class="terms-modal-content" onclick="event.stopPropagation()">
       <div class="terms-message">
-        <img class="close-terms-icon" src="./assets/img/Close_round.png" alt="close" onclick="onCloseTerms()"/>
+        <img class="close-terms-icon" src="./assets/img/Close_round.png" alt="close" onclick="onCloseTerms()" />
         <p>Terms & Conditions</p>
         <span class="mt-2">Terms of Use. (1) All trademarks, service marks, trade names, product names, icons and logos of AIA FA are owned by AIA FA and may not be used without prior written permission from AIA FA. (2) All AIA products and AIA FA services referred to in this website (or linked thereto to the website) known as www.honeybees.sg (the “Agency Website”) are offered only in countries where such products and services may lawfully be offered by AIA Singapore and AIA FA respectively. (3) Neither the Agency Website nor the link to the products or services on AIA FA’s corporate website should be regarded as an offer to sell or a solicitation to buy any insurance productor other products of AIA Singapore or services of AIA FA. (4) No warranties regarding non-infringement of third party rights, security, accuracy, fitness for purpose, merchantability or freedom from computer viruses in the Agency Website or the AIA FA corporate website (linked thereto) are given by AIA FA.</span>
       </div>
@@ -1107,13 +1108,13 @@
       <img class="submitted-bg d-none d-md-block" src="./assets/img/submitted_quote.png" alt="submitted quote" />
       <img class="submitted-bg d-block d-md-none" src="./assets/img/mobile_submitted_quote.png" alt="mobile submitted quote" />
       <div class="submitted-message">
-        <img class="close-icon" src="./assets/img/Close_round.png" alt="close" onclick="onClose()"/>
-        <img class="bee-icon" src="./assets/img/bee-logo.gif" alt="bee"/>
+        <img class="close-icon" src="./assets/img/Close_round.png" alt="close" onclick="onClose()" />
+        <img class="bee-icon" src="./assets/img/bee-logo.gif" alt="bee" />
         <p>Submitted!</p>
         <span class="mt-1">We will buzz you soon!</span>
       </div>
     </div>
-  </div>  
+  </div>
   <div id="myModal" class="modal">
     <div class="modal-content">
       <div class="topbar">
@@ -1153,41 +1154,45 @@
     _linkedin_partner_id = "6008404";
     window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
     window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-    </script><script type="text/javascript">
-    (function(l) {
-    if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
-    window.lintrk.q=[]}
-    var s = document.getElementsByTagName("script")[0];
-    var b = document.createElement("script");
-    b.type = "text/javascript";b.async = true;
-    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-    s.parentNode.insertBefore(b, s);})(window.lintrk);
+  </script>
+  <script type="text/javascript">
+    (function (l) {
+      if (!l) {
+        window.lintrk = function (a, b) { window.lintrk.q.push([a, b]) };
+        window.lintrk.q = []
+      }
+      var s = document.getElementsByTagName("script")[0];
+      var b = document.createElement("script");
+      b.type = "text/javascript"; b.async = true;
+      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+      s.parentNode.insertBefore(b, s);
+    })(window.lintrk);
   </script>
   <noscript>
     <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=6008404&fmt=gif" />
   </noscript>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
   <script src="slick/slick.min.js"></script>
   <script src="assets/scripts/sound.js"></script>
   <script src="assets/scripts/buzzaction.js"></script>
   <script>
     $(document).ready(function () {
-        $(".option").click(function(){
-            $(".option").removeClass("active");
-            $(this).addClass("active");
-        });
+      $(".option").click(function () {
+        $(".option").removeClass("active");
+        $(this).addClass("active");
+      });
     })
   </script>
 
-  
+
 </body>
 
 </html>
