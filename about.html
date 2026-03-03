@@ -2,1046 +2,678 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
-    <title>Honeybees | About Us</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.ico">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css'>
-    <link rel="stylesheet" href="slick/slick-theme.css">
-    <link rel="stylesheet" href="slick/slick.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="honey.css">
-    <link rel="stylesheet" href="contact.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+  <title>Honeybees | About Us</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.ico">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css'>
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="honey.css">
+  <link rel="stylesheet" href="contact.css">
 
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="swiper.css">
-    
-    <!-- Swiper's JS -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="swiper.js"></script>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="swiper.css">
 
-    <link rel="stylesheet" href="assets/css/navbtn.css">
-    <link rel="stylesheet" href="assets/css/marquee.css">
-    <link rel="stylesheet" href="assets/css/about.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/modal.css">
+  <!-- Swiper's JS -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="swiper.js"></script>
 
-    <script src="assets/scripts/navbtn.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
-    <script src="assets/scripts/lottie-dark.js"></script>
-    <script src="assets/scripts/hive.js"></script>
-    <script src="assets/scripts/modal.js"></script>
+  <link rel="stylesheet" href="assets/css/navbtn.css">
+  <link rel="stylesheet" href="assets/css/marquee.css">
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/modal.css">
+
+  <script src="assets/scripts/navbtn.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script src="assets/scripts/lottie-dark.js"></script>
+  <script src="assets/scripts/hive.js"></script>
+  <script src="assets/scripts/modal.js"></script>
 </head>
-<style>
-    #carousel {
-        margin-top: 100px !important;
-        margin: 0 auto;
-        height: 400px;
-        width: 550px;
-        /* border: 1px solid black; */
-        overflow: hidden;
-        position: relative;
-    }
-
-    ul.caro_ul li {
-        display: inline-block;
-        height: 400px;
-        width: 400px;
-        list-style: none;
-        float: left;
-    }
-
-    .caro_ul {
-        margin: 0 auto;
-        padding: 0;
-        /* width: 2000px; */
-        position: absolute;
-    }
-
-    [class*="carousel-button"] {
-        position: absolute;
-        transform: translate(0, -50%);
-        height: 30px;
-        width: 20px;
-        background-color: rgba(0, 0, 0, 0.5);
-        cursor: pointer;
-        transition: 0.5s;
-    }
-
-    .carousel-button-slide-left {
-        display: none;
-        left: 0;
-        top: 50%;
-        z-index: 2;
-    }
-
-    .carousel-button-slide-left:hover span {
-        color: grey;
-        cursor: pointer;
-        transition: 0.5s;
-    }
-
-    .carousel-button-slide-left span {
-        color: white;
-        top: 50%;
-        transform: translate(0, -50%);
-        position: absolute;
-        transition: 0.5s;
-        font-size: 30px;
-    }
-
-    .carousel-button-slide-left span:hover {
-        color: grey;
-        cursor: pointer;
-        transition: 0.5s;
-    }
-
-    .carousel-button-slide-right {
-        display: none;
-        right: 0;
-        top: 50%;
-    }
-
-    .carousel-button-slide-right:hover span {
-        color: grey;
-        cursor: pointer;
-        transition: 0.5s;
-    }
-
-    .carousel-button-slide-right span {
-        color: white;
-        top: 50%;
-        transform: translate(0, -50%);
-        position: absolute;
-        transition: 0.5s;
-        font-size: 30px;
-        right: 0;
-    }
-
-    .carousel-button-slide-right span:hover {
-        color: grey;
-        cursor: pointer;
-        transition: 0.5s;
-    }
-
-    .carousel-controls {
-        position: absolute;
-        bottom: 0;
-        display: block;
-        text-align: center;
-        width: 400px;
-    }
-
-    .dot {
-        background-color: #ccd4e2;
-        width: 8px;
-        height: 8px;
-        border: 1px solid #ccd4e2;
-        display: inline-block;
-        margin-left: 3px;
-        margin-right: 3px;
-    }
-
-    .active {
-        width: 8px;
-        height: 8px;
-        background-color: #293df2;
-        border-color: #293df2;
-        display: inline-block;
-    }
-
-    .inactive {
-        background-color: #ccd4e2;
-        width: 8px;
-        height: 8px;
-        border: 1px solid #ccd4e2;
-        display: inline-block;
-    }
-
-    .owl-item.active {
-        /* margin-right: 0px !important; */
-        background: none;
-    }
-
-    .owl-nav {
-        display: none;
-    }
-</style>
-<style>
-    div#custom_slider_testimonial label {
-        opacity: 0;
-    }
-
-    .container_cus {
-        width: 50%;
-        min-height: 315px;
-        margin: 0 auto;
-        position: relative;
-        padding-bottom: 30px;
-        overflow: hidden;
-    }
-
-    #custom_slider_testimonial h1 {
-        text-align: center;
-        text-shadow: 0 1px white;
-        color: #02303F;
-    }
-
-    #custom_slider_testimonial h2 {
-        color: white;
-        margin: 15px 0 5px;
-        /* text-shadow:0 1px rgba(255,255,255,0.5); */
-    }
-
-    #custom_slider_testimonial h6 {
-        color: white;
-        margin: 0;
-    }
-
-    input[type="radio"] {
-        position: absolute;
-        width: 1px;
-        /* Setting this to 0 make it invisible for VoiceOver */
-        height: 1px;
-        /* Setting this to 0 make it invisible for VoiceOver */
-        padding: 0;
-        margin: -1px;
-        border: 0;
-        clip: rect(0 0 0 0);
-        overflow: hidden;
-    }
-
-    #custom_slider_testimonial label {
-        display: block;
-        width: 32%;
-        border: 4px solid white;
-        position: absolute;
-        bottom: 5px;
-        cursor: pointer;
-        transition: border-color 0.3s linear;
-    }
-
-    label.second {
-        left: 34%;
-    }
-
-    label.third {
-        left: 68%;
-    }
-
-    blockquote {
-        margin: 0;
-        padding: 30px;
-        width: 570px;
-        /* background-color: white; */
-        color: black;
-        box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
-        position: relative;
-        transition: background-color 0.6s linear;
-        font-weight: 600;
-        border-radius: 20px;
-        /* border: 4px solid #eeaf30; */
-        background-image: url("./assests/Union.png");
-        height: 104px;
-    }
-
-    /* blockquote:after { 
-  content: " "; 
-  height: 0; 
-  width: 0; 
-  position: absolute; 
-  top: 100%; 
-  border: solid transparent; 
-  border-top-color: #DA532B;
-  border-left-color:#DA532B;
-  border-width: 10px; 
-  left: 10%; 
-}  */
-    /* #second:checked ~ .two blockquote {
-  background-color:purple;
-} */
-    .two blockquote:after {
-        border: solid transparent;
-        border-top-color: purple;
-        border-left-color: purple;
-        border-width: 10px;
-    }
-
-    /* #third:checked ~ .three blockquote{
-  background-color:#54885F;
-} */
-    .three blockquote:after {
-        border: solid transparent;
-        border-top-color: #54885F;
-        border-left-color: #54885F;
-        border-width: 10px;
-    }
-
-    .quotes {
-        position: absolute;
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 5em;
-    }
-
-    .leftq {
-        top: -25px;
-        left: 5px;
-    }
-
-    .rightq {
-        bottom: -10px;
-        right: 5px;
-    }
-
-    #custom_slider_testimonial img {
-        float: left;
-        margin-right: 20px;
-        width: 65px;
-        height: 65px;
-        margin-top: 23px;
-        border-radius: 100%;
-        object-fit: cover;
-        /* border: solid 4px #eeaf30; */
-    }
-
-    .slide {
-        position: absolute;
-        left: -100%;
-        opacity: 0;
-        transition: all 0.6s ease-in;
-    }
-
-    #first:checked~label.first {
-        border-width: 6px;
-        border-color: #eeaf30;
-    }
-
-    #second:checked~label.second {
-        border-width: 6px;
-        border-color: #eeaf30;
-    }
-
-    #third:checked~label.third {
-        border: 6px solid #eeaf30;
-    }
-
-    #first:checked~div.one {
-        left: 0;
-        opacity: 1;
-    }
-
-    #second:checked~div.two {
-        left: 0;
-        opacity: 1;
-    }
-
-    #third:checked~div.three {
-        left: 0;
-        opacity: 1;
-    }
-
-    .gtco-testimonials {
-        position: relative;
-        margin-top: 80px;
-    }
-
-    .gtco-testimonials .active {
-        opacity: 0.5;
-        transition: all 0.3s;
-    }
-
-    .gtco-testimonials .center {
-        opacity: 1;
-    }
-
-    .owl-stage {
-        height: 300px;
-    }
-
-    .owl-dot {
-        width: 10px;
-        height: 10px;
-        margin: 5px 7px;
-        span {
-            transition: none !important;
-            background-color: black !important;
-            opacity: 0.2 !important;
-            margin: 0px !important;
-        }
-    }
-
-    .owl-dot.active span {
-        background: #eeaf30 !important;
-        opacity: 1 !important;
-    }
-
-
-
-    @keyframes floatInAndColorChangeHeroSec {
-        0% {
-            opacity: 0;
-            transform: translateY(-50px);
-            /* Start above the final position */
-            color: transparent;
-            visibility: visible;
-        }
-
-        50% {
-            opacity: 1;
-            transform: translateY(0);
-            color: transparent;
-        }
-
-        100% {
-            color: #ffffff;
-            /* End with the same color as the border */
-            visibility: visible;
-        }
-    }
-
-</style>
-
 
 <body>
-    <div class="topbar">
-        <a href="index.html" class="honeybeeLogo">
-            <img class="big-logo" src="assests/Honeybees_logo.svg" alt="HoneybeeLogo">
-            <img class="small-logo" src="assests/logo_white_small.png" alt="Small HoneybeeLogo">
-        </a>
-        <div class="honeybeeMusic">
-            <div class="music-icon" onclick="toggleSound()">
-                <div class="lottie-sound" id="lottie-sound"></div>
-                <!-- <img class="playing-music" src="assests/music_light.svg" alt="Music"> -->
-                <img class="mute-music" src="assests/music_light_mute.svg" alt="Mute Music">
-            </div>
-            <!-- <div class="music-icon-description" id="music_icon_description">
-                <img class="d-block" src="assets/img/music_icon_quote.png" alt="quote"/>
-                <span class="music-icon-description-quote-text">
-                  vibee with us
-                </span>
-            </div> -->
-            <audio id="myAudio" src="./HB_assest/good-night-160166.mp3" loop></audio>     
-        </div>
+  <div class="topbar">
+    <a href="index.html" class="honeybeeLogo">
+      <img class="big-logo" src="assests/Honeybees_logo.svg" alt="HoneybeeLogo">
+      <img class="small-logo" src="assests/logo_white_small.png" alt="Small HoneybeeLogo">
+    </a>
+    <div class="honeybeeMusic">
+      <div class="music-icon" onclick="toggleSound()">
+        <div class="lottie-sound" id="lottie-sound"></div>
+        <!-- <img class="playing-music" src="assests/music_light.svg" alt="Music"> -->
+        <img class="mute-music" src="assests/music_light_mute.svg" alt="Mute Music">
+      </div>
+      <!-- <div class="music-icon-description" id="music_icon_description">
+        <img class="d-block" src="assets/img/music_icon_quote.png" alt="quote"/>
+        <span class="music-icon-description-quote-text">
+          vibee with us
+        </span>
+      </div> -->
+      <audio id="myAudio" src="./HB_assest/good-night-160166.mp3" loop></audio>
     </div>
-    <button id="toggleModalBtn" class="mobile-nav-btn">
-        <div class="menu">
-            <svg width="30px" viewBox="0 0 100 100">
-                <path class="line-honeybee-black line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                <path class="line-honeybee-black line2" d="M 20,50 H 80" />
-                <path class="line-honeybee-black line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-            </svg>
-        </div>
-    </button>
-    <navbar class="about-nav">
-        <div class="container">
-            <div class="row">    
-                <div class="col-12">
-                    <div>
-                        <a href="index.html" id="homeButton" class="home-btn">
-                            HOME
-                        </a>
-                        <a href="about.html" id="aboutButton" class="about-btn text-nowrap">
-                            ABOUT US
-                        </a>
-                        <a href="career.html" id="careerButton" class="career-btn">
-                            CAREER
-                        </a>
-                        <a href="embed.html" id="quizButton" class="quiz-btn">
-                            QUIZ
-                        </a>
-                        <a href="discovery.html" id="knowButton" class="know-btn text-nowrap">
-                            DISCOVERY
-                        </a>
-                        <!-- <a href="fearless.html" id="fearlessButton" class="fearless-btn text-nowrap">
-                            Be Fearless
-                        </a> -->
-                    </div>
-                        <!-- <a href="#" class="nav-adv"><img src="asssets/Group 149.png" alt=""></a> -->
-                </div>
-            </div>
-          </div>
-      </navbar>
-    <section class="hero-sec">
-        <div class="">
-            <div class="section-wrapper">
-                <div class="section-wrapper-bg">
-                </div>
-    
-                <div class="hero-hed-sec">
-                    <div class="gray-mask"></div>
-                    <div class="lottie-hive-content" id="lottie-hive"></div>
-                    <div class="about-hero-text">
-                        <h1 class="hero-hed-sec-text-caption">
-                            Our Journey of  <br>a Thousand Buzzes
-                        </h1>
-                    </div>
-                    <div class="about-hero-bee mt-3">
-                        <div class="hero-hed-sec-img">
-                            <img class="d-none d-md-block" src="assets/img/aboutus_quote.png" alt="quote"/>
-                            <img class="d-block d-md-none" src="assets/img/mobile_aboutus_quote.png" alt="quote"/>
-                            <span class="hero-hed-sec-text">
-                              This is my story
-                            </span>
-                        </div>            
-                        <img class="hero-hed-sec-gif" src="./assests/bee-logo2.gif">
-                    </div>
-                </div>
-               
-                
-                <div class="about-history-marquee">
-                    <div class="index-marquee-content rotate orange">
-                        <div class="marquee">
-                            <span>SHORT SWEET & FEARLESS</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>SHORT SWEET & FEARLESS</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>SHORT SWEET & FEARLESS</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>SHORT SWEET & FEARLESS</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>SHORT SWEET & FEARLESS</span>
-                            <img src="./assests/whitebees.png" alt="">
-                        </div>
-                        <div class="marquee">
-                            <span>SHORT SWEET & FEARLESS</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>SHORT SWEET & FEARLESS</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>SHORT SWEET & FEARLESS</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>SHORT SWEET & FEARLESS</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>SHORT SWEET & FEARLESS</span>
-                            <img src="./assests/whitebees.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="history-sec" id="history-sec">
-                    <h1 class="full-text">Flight Path</h1>
-                    <h1 class="mobile-text">Flight Path</h1>
-                    <div class="about-history-sec">
-                        <div class="box-wrap">
-                            <div class="his-line-img line-mask">
-                                <img class="" src="./assets/img/history_line.png" alt="line" id="his-line">
-                            </div>
-                            <div class="his-mobile-line-img line-mask">
-                                <img class="" src="./assets/img/mobile_history_line_2.png" alt="">
-                            </div>
-                            <div class="his-text-box">
-                                <img class="his-mobile-img" src="./assets/img/journey_circle.png" alt="">
-                                <div class="his-text">
-                                    <h2>2020</h2>
-                                    <h5 style="color:#FFFBF5" >Joined AIA Singapore</h5>
-                                    <ul style="color:#FFFBF5">
-                                        <li>📚  Creation of The Honeybees Knowledge Repository </li>
-                                        <li>📈 Achieved Top Productivity within AIA in 5 months </li>
-                                        <li>📈 Achieved MDRT (Top 10%) Agencies and Districts  </li>
-                                        <li style="display:none"></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="his-text-box">
-                                <img class="his-mobile-img" src="./assets/img/journey_circle.png" alt="">
-                                <div class="his-text">
-                                    <h2>2021</h2>
-                                    <h5 style="color:#FFFBF5" >Foundation Building</h5>
-                                    <ul style="color:#FFFBF5">
-                                        <li> 📖 Developed a comprehensive training guide to equip all agents </li>
-                                        <li> 📈 Achieved 140% Growth in Production </li>
-                                        <li> 📈 Achieved 120% Growth in MDRT Producers - <br> 
-                                            10% First Time Qualifiers (FTQ) </li>
-                                        <li style="display:none"></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="his-text-box">
-                                <img class="his-mobile-img" src="./assets/img/journey_circle.png" alt="">
-                                <div class="his-text">
-                                    <h2>2022</h2>
-                                    <h5 style="color:#FFFBF5" >Going Strong</h5>
-                                    <ul style="color:#FFFBF5">
-                                        <li>📊 Adopted a data-centric management approach </li>
-                                        <li>🏆 Top New Financial Services Associate Director Award</li>
-                                        <li>🏆 Top 5 Financial Services Manager Award</li>
-                                        <li>📈 Individual record of achieving MDRT in 2 months </li>
-                                        <li>📈 100% qualification for the Pinnacle Club and MDRT Agency</li>
-                                        <li>📈 100% Growth in MDRT Producers - 15% FTQ. </li>
-                                        <li style="display:none"></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="his-text-box">
-                                <img class="his-mobile-img" src="./assets/img/journey_circle.png" alt="">
-                                <div class="his-text">
-                                    <h2>2023</h2>
-                                    <h5 style="color:#FFFBF5" >Buzzing Forth! </h5>
-                                    <ul style="color:#FFFBF5">
-                                        <li> 🌈 AIAFA Harmonisation  </li>
-                                        <li> 🏆 Became the Top 5 Districts </li>
-                                        <li> 🏆 Top 5 Directors Award</li>
-                                        <li> 🏆 Qualified for Top of the Table (TOT) </li>
-                                        <li> 🏆 Top Financial Consultant Award</li>
-                                        <li> 🎉 Keynote Speaker for the China Directors' Forum </li>
-                                        <li> 🎉 Promotion of 1 Director </li>
-                                        <li> 🎉 Promotion of 2 Associate Directors </li>  
-                                        <li style="display:none"></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="his-text-box">
-                                <img class="his-mobile-img mt-20px mb-n20px" src="./assets/img/journey_circle.png" alt="">
-                                <div class="his-text">
-                                    <h2>2024</h2>
-                                    <h5 style="color:#FFFBF5" >Rising Higher</h5>
-                                    <ul style="color:#FFFBF5">
-                                        <li> 📈 Achieved 150% growth in Production </li>
-                                        <li> 🎉 Promotion of 2 Associate Directors </li>
-                                        <li> 🎉 Promotion of 1 Senior Director</li>
-                                        <li> 🏆 Qualified for Top of the Table (TOT) </li>
-                                        <li> 🏆 Produced 3 Court of the Table (COT) Qualifiers</li>
-                                        <li> 🏆 High Net Worth District </li>
-                                        <li> 🏆 Master Zenith Club </li>
-                                        <li style="display:none"></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="his-text-box">
-                                <img class="his-mobile-img mt-n30px mb-30px" src="./assets/img/journey_circle.png" alt="">
-                                <div class="his-text">
-                                    <h2>2025</h2>
-                                    <h5 style="color:#FFFBF5" > Breaking Barriers!</h5>
-                                    <ul style="color:#FFFBF5">
-                                        <li> 🎉 Promotion of 1 Associate Director </li>
-                                        <li> 🎉 Promotion of 1 Senior Director </li>
-                                        <li> ... and more to come! </li>
-                                        <li style="display:none"></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-    
-                <div class="testimnial-bg-after">
-                    <div class="testimnial-sec">
-                        <h1>
-                            “Do 
-                            <span class="strok_text">
-                                good
-                            </span> things <br> enjoy the journey <br>finish with 
-                            <span class="strok_text">
-                                heart
-                            </span>
-                            ”
-                        </h1>
-                        <img src="assets/img/TeamMembers/Hoo_Yuan_Shyuan.png" alt="photo">
-                        <p> Hoo Yuan Shyuan , Founder <br> Father | Son | Honeybee <br></p>
-                    </div>
-                    <div class="founder-message-bubble">
-                        <img class="d-none d-md-block" src="assets/img/aboutus_quote.png" alt="quote"/>
-                        <img class="d-block d-md-none" src="assets/img/mobile_aboutus_quote.png" alt="quote"/>
-                        <span class="founder-message-bubble-text">
-                            And my journey<br/>doesn’t stop here
-                        </span>
-                    </div>
-                </div>    
-            </div>
-
-            <div class="honeybees-sec">
-                <div class="about-Honeybees-marquee">
-                    <div class="index-marquee-content rotate-half-down yellow">
-                        <div class="marquee">
-                            <span>WAY TO BE FEARLESS THROUGH LIFE</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>WAY TO BE FEARLESS THROUGH LIFE</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>WAY TO BE FEARLESS THROUGH LIFE</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>WAY TO BE FEARLESS THROUGH LIFE</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>WAY TO BE FEARLESS THROUGH LIFE</span>
-                            <img src="./assests/whitebees.png" alt="">
-                        </div>
-                        <div class="marquee">
-                            <span>WAY TO BE FEARLESS THROUGH LIFE</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>WAY TO BE FEARLESS THROUGH LIFE</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>WAY TO BE FEARLESS THROUGH LIFE</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>WAY TO BE FEARLESS THROUGH LIFE</span>
-                            <img src="./assests/whitebees.png" alt="">
-                            <span>WAY TO BE FEARLESS THROUGH LIFE</span>
-                            <img src="./assests/whitebees.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <h1 class="honeybees-title">BEES IN THE SPOTLIGHT</h1>
-
-                <div class="text-box mt-1" style="text-align:center">
-                    <p class="mx-2">We have bees from all walks of life! Let them tell you their #Fearless story.</p>
-                </div>
-               
-                <!-- Swiper -->
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper" id="swiper-wrapper">
-                    </div>
-                    <div class="ing-text-wrap">
-                        <div class="text-box-center">
-                             <div class="honeyBeeTeam" id="honeyBeeTeam">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                
-                <div class="aboutus-fixed-container" id="aboutus_fixed_container">
-                    <div class="aboutus-fixed-container-item top-scale-1">
-                        <div class="journey-wrapper let-us-protect">
-                            <div class="z-10 position-relative h-100">
-                                <div class="journey-text-background text-center aboutus-banner-text top-scale-1">
-                                    <h3 class="text-1">
-                                        Let us Protect your journey
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aboutus-fixed-container-item top-scale-2">
-                        <div class="journey-wrapper">
-                            <div class="z-10 position-relative h-100">
-                                <div class="journey-text-background text-center aboutus-banner-text top-scale-2">
-                                    <h3 class="text-1">
-                                        so that you can travel it fearlessly
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- <div class="last-sec">
-                    <h1>From the bees' mouth</h1>
-                </div>
-                <div class="gtco-testimonials-container">
-                    <div class="gtco-testimonials">
-                        <div class="owl-carousel owl-carousel1 owl-theme">
-                            <div class="testimonial-item-content">
-                                <div class="testimonial-quote">
-                                    <img class="testimonial-quote-image-large" src="./assets/img/Union_large.png" alt="quote_background"/>
-                                    <img class="testimonial-quote-image-small" src="./assets/img/Union_mobile.png" alt="quote_background"/>
-                                    <div class="testimonial-quote-text">
-                                        I have always thought of the importance of savings and getting insurance for myself but I do not know where to start from. Kylie is very knowledgable and has been nice patient as she answers my queries. Thanks to her, I now understand how to manage my financials better!
-                                    </div>
-                                </div>
-                                <div class="testimonial-item-logo">
-                                    <img src="./image/Mask group.png" alt="">
-                                    <div class="testimonial-item-title">
-                                        <div class="testimonial-item-title-name">Eileen Goh</div>
-                                        <div  class="testimonial-item-title-title1">Human Resource Executive </div>
-                                        <div  class="testimonial-item-title-title2">Client of Kylie Ng</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-item-content">
-                                <div class="testimonial-quote">
-                                    <img class="testimonial-quote-image-large" src="./assets/img/Union_large.png" alt="quote_background"/>
-                                    <img class="testimonial-quote-image-small" src="./assets/img/Union_mobile.png" alt="quote_background"/>
-                                    <div class="testimonial-quote-text">
-                                        I have always thought of the importance of savings and getting insurance for myself but I do not know where to start from. Kylie is very knowledgable and has been nice patient as she answers my queries. Thanks to her, I now understand how to manage my financials better!
-                                    </div>
-                                </div>
-                                <div class="testimonial-item-logo">
-                                    <img src="./image/Mask group.png" alt="">
-                                    <div class="testimonial-item-title">
-                                        <div class="testimonial-item-title-name">Eileen Goh</div>
-                                        <div  class="testimonial-item-title-title1">Human Resource Executive </div>
-                                        <div  class="testimonial-item-title-title2">Client of Kylie Ng</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-item-content">
-                                <div class="testimonial-quote">
-                                    <img class="testimonial-quote-image-large" src="./assets/img/Union_large.png" alt="quote_background"/>
-                                    <img class="testimonial-quote-image-small" src="./assets/img/Union_mobile.png" alt="quote_background"/>
-                                    <div class="testimonial-quote-text">
-                                        I have always thought of the importance of savings and getting insurance for myself but I do not know where to start from. Kylie is very knowledgable and has been nice patient as she answers my queries. Thanks to her, I now understand how to manage my financials better!
-                                    </div>
-                                </div>
-                                <div class="testimonial-item-logo">
-                                    <img src="./image/Mask group.png" alt="">
-                                    <div class="testimonial-item-title">
-                                        <div class="testimonial-item-title-name">Eileen Goh</div>
-                                        <div  class="testimonial-item-title-title1">Human Resource Executive </div>
-                                        <div  class="testimonial-item-title-title2">Client of Kylie Ng</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-
-            <div id="managements_wrapper">
-                <!-- <div class="managements-banner-bee">
-                    <img src="./assets/img/horizontal_line_1.png" alt="horizontal line 1"/>
-                    <img src="./assets/img/Home_Bee_C.gif" alt="beeC_gif" class="managements-bee-gif"/>
-                </div>             -->
-                <div class="risk-management-wrapper section">
-                    <div class="corporate-sec">
-                        <div class="img-box managements-show">
-                            <div class="lottie-crystalball" id="lottie_crystalball"></div>
-                            <!-- <img src="assets/img/travel/crystal ball.png" alt="crystal"> -->
-                        </div>
-                        <div class="text-box">
-                            <h1 class="managements-show">Risk Management</h1>
-                            <p class="managements-show">We cannot predict the unforeseen circumstances in life, but we can certainly be prepared for them despite the uncertainties. With insurance as a financial safety net that protects you, we’ll help you identify the right coverage you need to live life at ease without having to worry about rainy days.
-                            </p>
-                            <div class="teg-btn managements-show">
-                                <ul>
-                                    <li>Life Insurance</li>
-                                    <li>Health Insurance</li>
-                                    <li>Critical Illness Insurance</li>
-                                    <li>Maternity Insurance</li>
-                                    <li>Personal Accident</li>
-                                    <li>Disability Income</li>
-        
-                                </ul>
-                            </div>
-                        </div>
-                    </div>    
-                </div>
-
-                <div class="wealth-management-wrapper section">
-                    <div class="corporate-sec">
-                        <div class="img-box managements-show">
-                            <div class="lottie-map" id="lottie_map"></div>
-                            <!-- <img src="assets/img/travel/map.png" alt="map"> -->
-                        </div>
-                        <div class="text-box">
-                            <h1 class="managements-show">Wealth Management</h1>
-                            <p class="managements-show">Whether you’re investing to grow your wealth or seeking to protect it as part of legacy planning, we’re here to review your portfolios and offer holistic strategies based on your financial situation, risk tolerance and goals. </p>
-                            <div class="teg-btn managements-show">
-                                <ul>
-                                    <li>Savings & Investments</li>
-                                    <li>Legacy Planning</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="corporate-solution-wrapper section">
-                    <div class="corporate-sec">
-                        <div class="img-box managements-show">
-                            <div class="lottie-tools" id="lottie_tools"></div>
-                            <!-- <img src="assets/img/travel/tools.png" alt="tools"> -->
-                        </div>
-                        <div class="text-box">
-                            <h1 class="managements-show">Corporate solution</h1>
-                            <p class="managements-show"> Every organisation needs a workplace wellness package tailored specifically for the benefits they want to provide, and we’ll advise you on the best ways to ensure that your employees’ well-being is being taken care of.</p>
-                            <div class="teg-btn managements-show">
-                                <ul>
-                                    <li>Employee Health & Benefits</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
-            </div>
-            
-        </div>
-    </section>
-
-    <section class="frame-section about_footer">
-        <div class="mask-group-parent-wrapper" id="footer">
-            <div class="footer-wrapper">
-                <div class="footer">
-                    <div class="footer-inner">
-                        <form id="buzzForm" class="drop-your-question-and-email-o-parent">
-                           <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAYHorMhUNVcwODBXMUNJNEU0NjJKSzlNOTdKNDk4Ti4u" target="_blank"><h2 class="drop-your-question" id="demo"> <h2></h2></a>
-                          <!-- <div class="input-details-group-parent">
-                            <div class="title_filed">
-                                <input class="input-details-group yourtitle" type="text" placeholder="Your Title" />
-                                <img class="icon-chevron-bottom" alt="" src="./assests/Vector.png" />
-                            </div>
-            
-                            <div class="name_field">
-                                <input id="buzz_name" class="input-details-group yourname" type="text" placeholder="Your Name..." />
-                            </div>
-                          </div>
-                          <div class="group-div">
-                              <div class="frame-child5"></div>
-                              <input id="buzz_email" class="your-email" placeholder="Your Email..." type="text" />
-                          </div>
-                          <div class="rectangle-parent3">
-                            <textarea id="message" class="whats-on-your" placeholder="What’s On Your Mind?" rows="2"></textarea>
-                            <button type="submit" id="buzzSubmitButton" class="send-wrapper">
-                              <div class="send">send</div>
-                            </button>
-                          </div> -->
-                        </form>
-                      </div>
-
-                </div>
-            </div>
-            <div class="rematch-quote">
-                <div class="authorized-representation-a-i">
-                    <h2 class="i-think-we">
-                        #NOSTINGSATTACHED
-                    </h2>
-                </div>
-                <div class="social-media-icons">
-                    <a href="https://sg.linkedin.com/company/honeybees-org" target="_blank"><img class="icon-linkedin" loading="eager" alt="" src="./assests/sameediconlinkedin.png" /></a>
-
-                    <a href="https://www.instagram.com/honeybees.sg" target="_blank"><img class="icon-instagram" loading="eager" alt="" src="./assests/sameediconinstagram.png" /></a>
-
-                    <!-- <img class="icon-facebook-squared" loading="eager" alt=""
-                        src="./assests/sameed-iconfacebooksquared.png" /> -->
-                </div>
-            </div>
-            <div class="disclaimer-container">
-                <div class="disclaimer-detail">
-                    <p>This is not the official website of AIA Financial Advisers Private Limited (Reg. No. 201715016G) (AIA FA). AIA FA disclaims all warranties of merchantability and fitness for purpose of the materials on this website. AIA FA makes no warranties or representations as to the results of the use of the materials on this website in terms of their correctness, accuracy and reliability. Nothing on this website should be regarded as an offer or solicitation to sell insurance products in any country to any person to whom it is unlawful to make such an invitation or solicitation in such a country.</p>
-                    <p>Terms of Use. (1) All trademarks, service marks, trade names, product names, icons and logos of AIA FA are owned by AIA FA and may not be used without prior written permission from AIA FA. (2) All AIA products and AIA FA services referred to in this website (or linked thereto to the website) known as www.honeybees.sg (the “Agency Website”) are offered only in countries where such products and services may lawfully be offered by AIA Singapore and AIA FA respectively. (3) Neither the Agency Website nor the link to the products or services on AIA FA’s corporate website should be regarded as an offer to sell or a solicitation to buy any insurance productor other products of AIA Singapore or services of AIA FA. (4) No warranties regarding non-infringement of third party rights, security, accuracy, fitness for purpose, merchantability or freedom from computer viruses in the Agency Website or the AIA FA corporate website (linked thereto) are given by AIA FA.</p>
-                </div>
-                <div class="terms-conditions-wrapper">
-                    <!-- <span class="terms-conditions-link" onclick="showTermsModal()">Terms & Conditions</span> -->
-                    <span>© 2022 by SP-HONEYBEES</span>
-                </div>
-            </div>
-            <!-- <div class="authorized-representative-msg">
-                <div class="sp-honeybees-is-an-container">
-                    <p class="sp-honeybees-is-an">
-                        SP-HONEYBEES is an authorised representative of AIA
-                        Singapore Private Limited (Reg. No. 201106386R)
-                    </p>
-                    <p class="by-sp-honeybees">© 2022 by SP-HONEYBEES</p>
-                </div>
-            </div> -->
-        </div>
-    </section>
-    <div id="termsModal" class="terms-modal hide" onclick="onCloseTerms()">
-        <div class="terms-modal-content" onclick="event.stopPropagation()">
-            <div class="terms-message">
-                <img class="close-terms-icon" src="./assets/img/Close_round.png" alt="close" onclick="onCloseTerms()"/>
-                <p>Terms & Conditions</p>
-                <span class="mt-2">Terms of Use. (1) All trademarks, service marks, trade names, product names, icons and logos of AIA FA are owned by AIA FA and may not be used without prior written permission from AIA FA. (2) All AIA products and AIA FA services referred to in this website (or linked thereto to the website) known as www.honeybees.sg (the “Agency Website”) are offered only in countries where such products and services may lawfully be offered by AIA Singapore and AIA FA respectively. (3) Neither the Agency Website nor the link to the products or services on AIA FA’s corporate website should be regarded as an offer to sell or a solicitation to buy any insurance productor other products of AIA Singapore or services of AIA FA. (4) No warranties regarding non-infringement of third party rights, security, accuracy, fitness for purpose, merchantability or freedom from computer viruses in the Agency Website or the AIA FA corporate website (linked thereto) are given by AIA FA.</span>
-            </div>
-        </div>
+  </div>
+  <button id="toggleModalBtn" class="mobile-nav-btn">
+    <div class="menu">
+      <svg width="30px" viewBox="0 0 100 100">
+        <path class="line-honeybee-black line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+        <path class="line-honeybee-black line2" d="M 20,50 H 80" />
+        <path class="line-honeybee-black line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+      </svg>
     </div>
-    <div id="submittedModal" class="submitted-modal hide" onclick="onClose()">
-        <div class="submitted-modal-content" onclick="event.stopPropagation()">
-            <img class="submitted-bg d-none d-md-block" src="./assets/img/submitted_quote.png" alt="submitted quote" />
-            <img class="submitted-bg d-block d-md-none" src="./assets/img/mobile_submitted_quote.png" alt="mobile submitted quote" />
-            <div class="submitted-message">
-                <img class="close-icon" src="./assets/img/Close_round.png" alt="close" onclick="onClose()"/>
-                <img class="bee-icon" src="./assets/img/bee-logo.gif" alt="bee"/>
-                <p>Submitted!</p>
-                <span class="mt-1">We will buzz you soon!</span>
-            </div>
-        </div>
-    </div>
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-        <div class="topbar">
-            <div class="honeybeeLogo">
-            <img src="./assests/Honeybees_logo (1).png" alt="">
-            </div>
-        </div>
-        <div class="nav-modal-link-content">
-            <a href="index.html" class="nav-modal-link">
+  </button>
+  <navbar class="about-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div>
+            <a href="index.html" id="homeButton" class="home-btn">
               HOME
             </a>
-            <a href="about.html" class="nav-modal-link text-nowrap">
+            <a href="about.html" id="aboutButton" class="about-btn text-nowrap">
               ABOUT US
             </a>
-            <a href="career.html" class="nav-modal-link">
+            <a href="career.html" id="careerButton" class="career-btn">
               CAREER
             </a>
-            <a href="embed.html" class="nav-modal-link">
+            <a href="embed.html" id="quizButton" class="quiz-btn">
               QUIZ
             </a>
-            <a href="discovery.html" class="nav-modal-link text-nowrap">
+            <a href="discovery.html" id="knowButton" class="know-btn text-nowrap">
               DISCOVERY
             </a>
-            <!-- <a href="fearless.html" class="nav-modal-link-last text-nowrap">
+            <!-- <a href="fearless.html" id="fearlessButton" class="fearless-btn text-nowrap">
               Be Fearless
             </a> -->
+          </div>
+          <!-- <a href="#" class="nav-adv"><img src="asssets/Group 149.png" alt=""></a> -->
         </div>
-        <div>
-            <!-- <button class="close-nav-modal">
-                <img src="./assets/img/Close_round.png" alt="close"/>
-                <span>Close</span>
-            </button> -->
-            <div class="mobile-modal-upcoming">
-                <img src="asssets/Group 149.png" alt="">
-            </div>
-        </div>
-        </div>
+      </div>
     </div>
+  </navbar>
+  <section class="hero-sec">
+    <div class="">
+      <div class="section-wrapper">
+        <div class="section-wrapper-bg">
+        </div>
+
+        <div class="hero-hed-sec">
+          <div class="gray-mask"></div>
+          <div class="lottie-hive-content" id="lottie-hive"></div>
+          <div class="about-hero-text">
+            <h1 class="hero-hed-sec-text-caption">
+              Our Journey of <br>a Thousand Buzzes
+            </h1>
+          </div>
+          <div class="about-hero-bee mt-3">
+            <div class="hero-hed-sec-img">
+              <img class="d-none d-md-block" src="assets/img/aboutus_quote.png" alt="quote" />
+              <img class="d-block d-md-none" src="assets/img/mobile_aboutus_quote.png" alt="quote" />
+              <span class="hero-hed-sec-text">
+                This is my story
+              </span>
+            </div>
+            <img class="hero-hed-sec-gif" src="./assests/bee-logo2.gif">
+          </div>
+        </div>
 
 
-    <script>
-        $(document).ready(function () {
-            $('.carousel').carousel();
+        <div class="about-history-marquee">
+          <div class="index-marquee-content rotate orange">
+            <div class="marquee">
+              <span>SHORT SWEET & FEARLESS</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>SHORT SWEET & FEARLESS</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>SHORT SWEET & FEARLESS</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>SHORT SWEET & FEARLESS</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>SHORT SWEET & FEARLESS</span>
+              <img src="./assests/whitebees.png" alt="">
+            </div>
+            <div class="marquee">
+              <span>SHORT SWEET & FEARLESS</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>SHORT SWEET & FEARLESS</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>SHORT SWEET & FEARLESS</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>SHORT SWEET & FEARLESS</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>SHORT SWEET & FEARLESS</span>
+              <img src="./assests/whitebees.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="history-sec" id="history-sec">
+          <h1 class="full-text">Flight Path</h1>
+          <h1 class="mobile-text">Flight Path</h1>
+          <div class="about-history-sec">
+            <div class="box-wrap">
+              <div class="his-line-img line-mask">
+                <img class="" src="./assets/img/history_line.png" alt="line" id="his-line">
+              </div>
+              <div class="his-mobile-line-img line-mask">
+                <img class="" src="./assets/img/mobile_history_line_2.png" alt="">
+              </div>
+              <div class="his-text-box">
+                <img class="his-mobile-img" src="./assets/img/journey_circle.png" alt="">
+                <div class="his-text">
+                  <h2>2020</h2>
+                  <h5 style="color:#FFFBF5">Joined AIA Singapore</h5>
+                  <ul style="color:#FFFBF5">
+                    <li>📚 Creation of The Honeybees Knowledge Repository </li>
+                    <li>📈 Achieved Top Productivity within AIA in 5 months </li>
+                    <li>📈 Achieved MDRT (Top 10%) Agencies and Districts </li>
+                    <li style="display:none"></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="his-text-box">
+                <img class="his-mobile-img" src="./assets/img/journey_circle.png" alt="">
+                <div class="his-text">
+                  <h2>2021</h2>
+                  <h5 style="color:#FFFBF5">Foundation Building</h5>
+                  <ul style="color:#FFFBF5">
+                    <li> 📖 Developed a comprehensive training guide to equip all agents </li>
+                    <li> 📈 Achieved 140% Growth in Production </li>
+                    <li> 📈 Achieved 120% Growth in MDRT Producers - <br>
+                      10% First Time Qualifiers (FTQ) </li>
+                    <li style="display:none"></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="his-text-box">
+                <img class="his-mobile-img" src="./assets/img/journey_circle.png" alt="">
+                <div class="his-text">
+                  <h2>2022</h2>
+                  <h5 style="color:#FFFBF5">Going Strong</h5>
+                  <ul style="color:#FFFBF5">
+                    <li>📊 Adopted a data-centric management approach </li>
+                    <li>🏆 Top New Financial Services Associate Director Award</li>
+                    <li>🏆 Top 5 Financial Services Manager Award</li>
+                    <li>📈 Individual record of achieving MDRT in 2 months </li>
+                    <li>📈 100% qualification for the Pinnacle Club and MDRT Agency</li>
+                    <li>📈 100% Growth in MDRT Producers - 15% FTQ. </li>
+                    <li style="display:none"></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="his-text-box">
+                <img class="his-mobile-img" src="./assets/img/journey_circle.png" alt="">
+                <div class="his-text">
+                  <h2>2023</h2>
+                  <h5 style="color:#FFFBF5">Buzzing Forth! </h5>
+                  <ul style="color:#FFFBF5">
+                    <li> 🌈 AIAFA Harmonisation </li>
+                    <li> 🏆 Became the Top 5 Districts </li>
+                    <li> 🏆 Top 5 Directors Award</li>
+                    <li> 🏆 Qualified for Top of the Table (TOT) </li>
+                    <li> 🏆 Top Financial Consultant Award</li>
+                    <li> 🎉 Keynote Speaker for the China Directors' Forum </li>
+                    <li> 🎉 Promotion of 1 Director </li>
+                    <li> 🎉 Promotion of 2 Associate Directors </li>
+                    <li style="display:none"></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="his-text-box">
+                <img class="his-mobile-img mt-20px mb-n20px" src="./assets/img/journey_circle.png" alt="">
+                <div class="his-text">
+                  <h2>2024</h2>
+                  <h5 style="color:#FFFBF5">Rising Higher</h5>
+                  <ul style="color:#FFFBF5">
+                    <li> 📈 Achieved 150% growth in Production </li>
+                    <li> 🎉 Promotion of 2 Associate Directors </li>
+                    <li> 🎉 Promotion of 1 Senior Director</li>
+                    <li> 🏆 Qualified for Top of the Table (TOT) </li>
+                    <li> 🏆 Produced 3 Court of the Table (COT) Qualifiers</li>
+                    <li> 🏆 High Net Worth District </li>
+                    <li> 🏆 Master Zenith Club </li>
+                    <li style="display:none"></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="his-text-box">
+                <img class="his-mobile-img mt-n30px mb-30px" src="./assets/img/journey_circle.png" alt="">
+                <div class="his-text">
+                  <h2>2025</h2>
+                  <h5 style="color:#FFFBF5"> Breaking Barriers!</h5>
+                  <ul style="color:#FFFBF5">
+                    <li> 🎉 Promotion of 1 Associate Director </li>
+                    <li> 🎉 Promotion of 1 Senior Director </li>
+                    <li> ... and more to come! </li>
+                    <li style="display:none"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="testimnial-bg-after">
+          <div class="testimnial-sec">
+            <h1>
+              “Do
+              <span class="strok_text">
+                good
+              </span> things <br> enjoy the journey <br>finish with
+              <span class="strok_text">
+                heart
+              </span>
+              ”
+            </h1>
+            <img src="assets/img/TeamMembers/Hoo_Yuan_Shyuan.png" alt="photo">
+            <p> Hoo Yuan Shyuan , Founder <br> Father | Son | Honeybee <br></p>
+          </div>
+          <div class="founder-message-bubble">
+            <img class="d-none d-md-block" src="assets/img/aboutus_quote.png" alt="quote" />
+            <img class="d-block d-md-none" src="assets/img/mobile_aboutus_quote.png" alt="quote" />
+            <span class="founder-message-bubble-text">
+              And my journey<br />doesn’t stop here
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="honeybees-sec">
+        <div class="about-Honeybees-marquee">
+          <div class="index-marquee-content rotate-half-down yellow">
+            <div class="marquee">
+              <span>WAY TO BE FEARLESS THROUGH LIFE</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>WAY TO BE FEARLESS THROUGH LIFE</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>WAY TO BE FEARLESS THROUGH LIFE</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>WAY TO BE FEARLESS THROUGH LIFE</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>WAY TO BE FEARLESS THROUGH LIFE</span>
+              <img src="./assests/whitebees.png" alt="">
+            </div>
+            <div class="marquee">
+              <span>WAY TO BE FEARLESS THROUGH LIFE</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>WAY TO BE FEARLESS THROUGH LIFE</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>WAY TO BE FEARLESS THROUGH LIFE</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>WAY TO BE FEARLESS THROUGH LIFE</span>
+              <img src="./assests/whitebees.png" alt="">
+              <span>WAY TO BE FEARLESS THROUGH LIFE</span>
+              <img src="./assests/whitebees.png" alt="">
+            </div>
+          </div>
+        </div>
+        <h1 class="honeybees-title">BEES IN THE SPOTLIGHT</h1>
+
+        <div class="text-box mt-1" style="text-align:center">
+          <p class="mx-2">We have bees from all walks of life! Let them tell you their #Fearless story.</p>
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper" id="swiper-wrapper">
+          </div>
+          <div class="ing-text-wrap">
+            <div class="text-box-center">
+              <div class="honeyBeeTeam" id="honeyBeeTeam">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="aboutus-fixed-container" id="aboutus_fixed_container">
+          <div class="aboutus-fixed-container-item top-scale-1">
+            <div class="journey-wrapper let-us-protect">
+              <div class="z-10 position-relative h-100">
+                <div class="journey-text-background text-center aboutus-banner-text top-scale-1">
+                  <h3 class="text-1">
+                    Let us Protect your journey
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="aboutus-fixed-container-item top-scale-2">
+            <div class="journey-wrapper">
+              <div class="z-10 position-relative h-100">
+                <div class="journey-text-background text-center aboutus-banner-text top-scale-2">
+                  <h3 class="text-1">
+                    so that you can travel it fearlessly
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- <div class="last-sec">
+          <h1>From the bees' mouth</h1>
+        </div>
+        <div class="gtco-testimonials-container">
+          <div class="gtco-testimonials">
+            <div class="owl-carousel owl-carousel1 owl-theme">
+              <div class="testimonial-item-content">
+                <div class="testimonial-quote">
+                  <img class="testimonial-quote-image-large" src="./assets/img/Union_large.png" alt="quote_background"/>
+                  <img class="testimonial-quote-image-small" src="./assets/img/Union_mobile.png" alt="quote_background"/>
+                  <div class="testimonial-quote-text">
+                    I have always thought of the importance of savings and getting insurance for myself but I do not know where to start from. Kylie is very knowledgable and has been nice patient as she answers my queries. Thanks to her, I now understand how to manage my financials better!
+                  </div>
+                </div>
+                <div class="testimonial-item-logo">
+                  <img src="./image/Mask group.png" alt="">
+                  <div class="testimonial-item-title">
+                    <div class="testimonial-item-title-name">Eileen Goh</div>
+                    <div class="testimonial-item-title-title1">Human Resource Executive </div>
+                    <div class="testimonial-item-title-title2">Client of Kylie Ng</div>
+                  </div>
+                </div>
+            </div>
+            <div class="testimonial-item-content">
+                <div class="testimonial-quote">
+                  <img class="testimonial-quote-image-large" src="./assets/img/Union_large.png" alt="quote_background"/>
+                  <img class="testimonial-quote-image-small" src="./assets/img/Union_mobile.png" alt="quote_background"/>
+                  <div class="testimonial-quote-text">
+                    I have always thought of the importance of savings and getting insurance for myself but I do not know where to start from. Kylie is very knowledgable and has been nice patient as she answers my queries. Thanks to her, I now understand how to manage my financials better!
+                  </div>
+                </div>
+                <div class="testimonial-item-logo">
+                  <img src="./image/Mask group.png" alt="">
+                  <div class="testimonial-item-title">
+                    <div class="testimonial-item-title-name">Eileen Goh</div>
+                    <div  class="testimonial-item-title-title1">Human Resource Executive </div>
+                    <div  class="testimonial-item-title-title2">Client of Kylie Ng</div>
+                  </div>
+                </div>
+            </div>
+            <div class="testimonial-item-content">
+                <div class="testimonial-quote">
+                  <img class="testimonial-quote-image-large" src="./assets/img/Union_large.png" alt="quote_background"/>
+                  <img class="testimonial-quote-image-small" src="./assets/img/Union_mobile.png" alt="quote_background"/>
+                  <div class="testimonial-quote-text">
+                    I have always thought of the importance of savings and getting insurance for myself but I do not know where to start from. Kylie is very knowledgable and has been nice patient as she answers my queries. Thanks to her, I now understand how to manage my financials better!
+                  </div>
+                </div>
+                <div class="testimonial-item-logo">
+                  <img src="./image/Mask group.png" alt="">
+                  <div class="testimonial-item-title">
+                    <div class="testimonial-item-title-name">Eileen Goh</div>
+                    <div  class="testimonial-item-title-title1">Human Resource Executive </div>
+                    <div  class="testimonial-item-title-title2">Client of Kylie Ng</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <div id="managements_wrapper">
+        <!-- <div class="managements-banner-bee">
+          <img src="./assets/img/horizontal_line_1.png" alt="horizontal line 1"/>
+          <img src="./assets/img/Home_Bee_C.gif" alt="beeC_gif" class="managements-bee-gif"/>
+        </div> -->
+        <div class="risk-management-wrapper section">
+          <div class="corporate-sec">
+            <div class="img-box managements-show">
+              <div class="lottie-crystalball" id="lottie_crystalball"></div>
+              <!-- <img src="assets/img/travel/crystal ball.png" alt="crystal"> -->
+            </div>
+            <div class="text-box">
+              <h1 class="managements-show">Risk Management</h1>
+              <p class="managements-show">We cannot predict the unforeseen circumstances in life, but we can certainly be prepared for them despite the uncertainties. With insurance as a financial safety net that protects you, we’ll help you identify the right coverage you need to live life at ease without having to worry about rainy days.</p>
+              <div class="teg-btn managements-show">
+                <ul>
+                  <li>Life Insurance</li>
+                  <li>Health Insurance</li>
+                  <li>Critical Illness Insurance</li>
+                  <li>Maternity Insurance</li>
+                  <li>Personal Accident</li>
+                  <li>Disability Income</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wealth-management-wrapper section">
+          <div class="corporate-sec">
+            <div class="img-box managements-show">
+              <div class="lottie-map" id="lottie_map"></div>
+              <!-- <img src="assets/img/travel/map.png" alt="map"> -->
+            </div>
+            <div class="text-box">
+              <h1 class="managements-show">Wealth Management</h1>
+              <p class="managements-show">Whether you’re investing to grow your wealth or seeking to protect it as part of legacy planning, we’re here to review your portfolios and offer holistic strategies based on your financial situation, risk tolerance and goals. </p>
+              <div class="teg-btn managements-show">
+                <ul>
+                  <li>Savings & Investments</li>
+                  <li>Legacy Planning</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="corporate-solution-wrapper section">
+          <div class="corporate-sec">
+            <div class="img-box managements-show">
+              <div class="lottie-tools" id="lottie_tools"></div>
+              <!-- <img src="assets/img/travel/tools.png" alt="tools"> -->
+            </div>
+            <div class="text-box">
+              <h1 class="managements-show">Corporate solution</h1>
+              <p class="managements-show"> Every organisation needs a workplace wellness package tailored specifically for the benefits they want to provide, and we’ll advise you on the best ways to ensure that your employees’ well-being is being taken care of.</p>
+              <div class="teg-btn managements-show">
+                <ul>
+                  <li>Employee Health & Benefits</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="frame-section about_footer">
+    <div class="mask-group-parent-wrapper" id="footer">
+      <div class="footer-wrapper">
+        <div class="footer">
+          <div class="footer-inner">
+            <form id="buzzForm" class="drop-your-question-and-email-o-parent">
+              <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAYHorMhUNVcwODBXMUNJNEU0NjJKSzlNOTdKNDk4Ti4u" target="_blank">
+                <h2 class="drop-your-question" id="demo"></h2>
+              </a>
+              <!-- <div class="input-details-group-parent">
+                <div class="title_filed">
+                  <input class="input-details-group yourtitle" type="text" placeholder="Your Title" />
+                  <img class="icon-chevron-bottom" alt="" src="./assests/Vector.png" />
+                </div>
+
+                <div class="name_field">
+                  <input id="buzz_name" class="input-details-group yourname" type="text" placeholder="Your Name..." />
+                </div>
+              </div>
+              <div class="group-div">
+                <div class="frame-child5"></div>
+                <input id="buzz_email" class="your-email" placeholder="Your Email..." type="text" />
+              </div>
+              <div class="rectangle-parent3">
+                <textarea id="message" class="whats-on-your" placeholder="What’s On Your Mind?" rows="2"></textarea>
+                <button type="submit" id="buzzSubmitButton" class="send-wrapper">
+                  <div class="send">send</div>
+                </button>
+              </div> -->
+            </form>
+          </div>
+
+        </div>
+      </div>
+      <div class="rematch-quote">
+        <div class="authorized-representation-a-i">
+          <h2 class="i-think-we">
+            #NOSTINGSATTACHED
+          </h2>
+        </div>
+        <div class="social-media-icons">
+          <a href="https://sg.linkedin.com/company/honeybees-org" target="_blank">
+            <img class="icon-linkedin" loading="eager" alt="" src="./assests/sameediconlinkedin.png" />
+          </a>
+
+          <a href="https://www.instagram.com/honeybees.sg" target="_blank">
+            <img class="icon-instagram" loading="eager" alt="" src="./assests/sameediconinstagram.png" />
+          </a>
+
+          <!-- <img class="icon-facebook-squared" loading="eager" alt=""
+            src="./assests/sameed-iconfacebooksquared.png" /> -->
+        </div>
+      </div>
+      <div class="disclaimer-container">
+        <div class="disclaimer-detail">
+          <p>This is not the official website of AIA Financial Advisers Private Limited (Reg. No. 201715016G) (AIA FA). AIA FA disclaims all warranties of merchantability and fitness for purpose of the materials on this website. AIA FA makes no warranties or representations as to the results of the use of the materials on this website in terms of their correctness, accuracy and reliability. Nothing on this website should be regarded as an offer or solicitation to sell insurance products in any country to any person to whom it is unlawful to make such an invitation or solicitation in such a country.</p>
+          <p>Terms of Use. (1) All trademarks, service marks, trade names, product names, icons and logos of AIA FA are owned by AIA FA and may not be used without prior written permission from AIA FA. (2) All AIA products and AIA FA services referred to in this website (or linked thereto to the website) known as www.honeybees.sg (the “Agency Website”) are offered only in countries where such products and services may lawfully be offered by AIA Singapore and AIA FA respectively. (3) Neither the Agency Website nor the link to the products or services on AIA FA’s corporate website should be regarded as an offer to sell or a solicitation to buy any insurance productor other products of AIA Singapore or services of AIA FA. (4) No warranties regarding non-infringement of third party rights, security, accuracy, fitness for purpose, merchantability or freedom from computer viruses in the Agency Website or the AIA FA corporate website (linked thereto) are given by AIA FA.</p>
+        </div>
+        <div class="terms-conditions-wrapper">
+          <!-- <span class="terms-conditions-link" onclick="showTermsModal()">Terms & Conditions</span> -->
+          <span>© 2022 by SP-HONEYBEES</span>
+        </div>
+      </div>
+      <!-- <div class="authorized-representative-msg">
+        <div class="sp-honeybees-is-an-container">
+          <p class="sp-honeybees-is-an">SP-HONEYBEES is an authorised representative of AIA Singapore Private Limited (Reg. No. 201106386R)</p>
+          <p class="by-sp-honeybees">© 2022 by SP-HONEYBEES</p>
+        </div>
+      </div> -->
+    </div>
+  </section>
+  <div id="termsModal" class="terms-modal hide" onclick="onCloseTerms()">
+    <div class="terms-modal-content" onclick="event.stopPropagation()">
+      <div class="terms-message">
+        <img class="close-terms-icon" src="./assets/img/Close_round.png" alt="close" onclick="onCloseTerms()" />
+        <p>Terms & Conditions</p>
+        <span class="mt-2">Terms of Use. (1) All trademarks, service marks, trade names, product names, icons and logos of AIA FA are owned by AIA FA and may not be used without prior written permission from AIA FA. (2) All AIA products and AIA FA services referred to in this website (or linked thereto to the website) known as www.honeybees.sg (the “Agency Website”) are offered only in countries where such products and services may lawfully be offered by AIA Singapore and AIA FA respectively. (3) Neither the Agency Website nor the link to the products or services on AIA FA’s corporate website should be regarded as an offer to sell or a solicitation to buy any insurance productor other products of AIA Singapore or services of AIA FA. (4) No warranties regarding non-infringement of third party rights, security, accuracy, fitness for purpose, merchantability or freedom from computer viruses in the Agency Website or the AIA FA corporate website (linked thereto) are given by AIA FA.</span>
+      </div>
+    </div>
+  </div>
+  <div id="submittedModal" class="submitted-modal hide" onclick="onClose()">
+    <div class="submitted-modal-content" onclick="event.stopPropagation()">
+      <img class="submitted-bg d-none d-md-block" src="./assets/img/submitted_quote.png" alt="submitted quote" />
+      <img class="submitted-bg d-block d-md-none" src="./assets/img/mobile_submitted_quote.png" alt="mobile submitted quote" />
+      <div class="submitted-message">
+        <img class="close-icon" src="./assets/img/Close_round.png" alt="close" onclick="onClose()" />
+        <img class="bee-icon" src="./assets/img/bee-logo.gif" alt="bee" />
+        <p>Submitted!</p>
+        <span class="mt-1">We will buzz you soon!</span>
+      </div>
+    </div>
+  </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="topbar">
+        <div class="honeybeeLogo">
+          <img src="./assests/Honeybees_logo (1).png" alt="">
+        </div>
+      </div>
+      <div class="nav-modal-link-content">
+        <a href="index.html" class="nav-modal-link">
+          HOME
+        </a>
+        <a href="about.html" class="nav-modal-link text-nowrap">
+          ABOUT US
+        </a>
+        <a href="career.html" class="nav-modal-link">
+          CAREER
+        </a>
+        <a href="embed.html" class="nav-modal-link">
+          QUIZ
+        </a>
+        <a href="discovery.html" class="nav-modal-link text-nowrap">
+          DISCOVERY
+        </a>
+        <!-- <a href="fearless.html" class="nav-modal-link-last text-nowrap">
+          Be Fearless
+        </a> -->
+      </div>
+      <div>
+        <!-- <button class="close-nav-modal">
+          <img src="./assets/img/Close_round.png" alt="close"/>
+          <span>Close</span>
+        </button> -->
+        <div class="mobile-modal-upcoming">
+          <img src="asssets/Group 149.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    $(document).ready(function () {
+      $('.carousel').carousel();
+    });
+  </script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+  <script src="slick/slick.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+  <script src="about.js"></script>
+  <script src="assets/scripts/sound.js"></script>
+  <script src="assets/scripts/buzzaction.js"></script>
+
+  <script>
+    $.fn.isInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+
+    function runOnScroll() {
+      if ($('#history-sec').isInViewport()) {
+        // historysec.classList.add('animated-history-sec');
+        var hisTextBoxes = document.querySelectorAll(".his-text-box");
+        hisTextBoxes.forEach(function (box, index) {
+          setTimeout(function () {
+            box.classList.add("show");
+          }, index * 500); // Adjust the delay between each element
         });
-    </script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-    <script src="slick/slick.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
-    <script src="about.js"></script>
-    <script src="assets/scripts/sound.js"></script>
-    <script src="assets/scripts/buzzaction.js"></script>
+        var hislineMasks = document.querySelectorAll(".line-mask");
+        hislineMasks.forEach(function (line, index) {
+          line.classList.add("show");
+        });
 
-    <script>
-        $.fn.isInViewport = function() {
-            var elementTop = $(this).offset().top;
-            var elementBottom = elementTop + $(this).outerHeight();
+      }
 
-            var viewportTop = $(window).scrollTop();
-            var viewportBottom = viewportTop + $(window).height();
+      if ($('.strok_text').isInViewport()) {
+        $('.strok_text').addClass('animate_strok_text');
+      }
 
-            return elementBottom > viewportTop && elementTop < viewportBottom;
-        };
-
-        function runOnScroll() {
-            if ($('#history-sec').isInViewport()){
-                // historysec.classList.add('animated-history-sec');
-                var hisTextBoxes = document.querySelectorAll(".his-text-box");
-                hisTextBoxes.forEach(function(box, index) {
-                    setTimeout(function() {
-                    box.classList.add("show");
-                    }, index * 500); // Adjust the delay between each element
-                });
-
-                var hislineMasks = document.querySelectorAll(".line-mask");
-                hislineMasks.forEach(function(line, index) {
-                  line.classList.add("show");
-                });
-
-            }
-
-            if ( $('.strok_text').isInViewport() ) {
-                $('.strok_text').addClass('animate_strok_text');
-            }
-
-            if ( $('.founder-message-bubble').isInViewport() ) {
-                $('.founder-message-bubble').addClass('animate_scale_up');
-            }
-        }
-      window.addEventListener('scroll', runOnScroll);
-    </script>
+      if ($('.founder-message-bubble').isInViewport()) {
+        $('.founder-message-bubble').addClass('animate_scale_up');
+      }
+    }
+    window.addEventListener('scroll', runOnScroll);
+  </script>
 </body>
 
 </html>
